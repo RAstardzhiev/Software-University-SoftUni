@@ -1,4 +1,4 @@
-<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
   <tr>
     <td><img src="http://conf.softuni.bg/wp-content/uploads/2015/01/SoftUni-Logo-Flat_square-blue-300x235.png"></td>
     <td><h1 style="text-align:center">SoftUni C#</h1></td>
