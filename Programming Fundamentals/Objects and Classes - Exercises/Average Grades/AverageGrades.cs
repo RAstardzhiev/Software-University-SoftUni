@@ -14,7 +14,12 @@
 
         public static void PrintBestStudents(Student[] students)
         {
-            Student[] bestStudents = students.OrderBy(x => x.Name).ThenBy(x => -x.AvarageGrade).Where(x => x.AvarageGrade >= 5).ToArray();
+            Student[] bestStudents = students
+                .OrderBy(x => x.Name)
+                .ThenBy(x => -x.AvarageGrade)
+                .Where(x => x.AvarageGrade >= 5)
+                .ToArray();
+
             foreach (Student student in bestStudents)
             {
                 Console.WriteLine($"{student.Name} -> {student.AvarageGrade:F2}");
@@ -44,7 +49,10 @@
                     j++;
                 }
 
-                students[i].Grades = studentData.Skip(j).Select(double.Parse).ToList();
+                students[i].Grades = studentData
+                    .Skip(j)
+                    .Select(double.Parse)
+                    .ToList();
             }
 
             return students;

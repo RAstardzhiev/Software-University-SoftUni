@@ -14,7 +14,11 @@
 
         public static Rectangle ReadRectanglge()
         {
-            double[] input = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+            double[] input = Console.ReadLine()
+                .Split(' ')
+                .Select(double.Parse)
+                .ToArray();
+
             Rectangle result = new Rectangle(input[0], input[1], input[2], input[3]);
             return result;
         }

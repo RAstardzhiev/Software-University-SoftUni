@@ -27,7 +27,12 @@
         private static void PrintTheResult(Dictionary<string, DateTime> result)
         {
             DateTime initialDate = DateTime.ParseExact(Console.ReadLine(), "d.M.yyyy", CultureInfo.InvariantCulture);
-            result = result.OrderBy(x => x.Value).ThenBy(x => x.Key).Where(x => x.Value > initialDate).ToDictionary(x => x.Key, y => y.Value);
+            result = result
+                .OrderBy(x => x.Value)
+                .ThenBy(x => x.Key)
+                .Where(x => x.Value > initialDate)
+                .ToDictionary(x => x.Key, y => y.Value);
+
             Console.WriteLine(string.Join("\n", result.Select(x => x.Key + " -> " + x.Value.ToString("dd.MM.yyyy"))));
         }
 

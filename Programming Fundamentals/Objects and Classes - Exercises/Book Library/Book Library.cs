@@ -28,7 +28,10 @@
                 }
             }
 
-            moneyByAuthors = moneyByAuthors.OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
+            moneyByAuthors = moneyByAuthors
+                .OrderByDescending(x => x.Value)
+                .ThenBy(x => x.Key)
+                .ToDictionary(x => x.Key, x => x.Value);
 
             foreach (KeyValuePair<string, double> author in moneyByAuthors)
             {

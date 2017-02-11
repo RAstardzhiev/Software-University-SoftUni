@@ -9,9 +9,14 @@
         {
             int n = int.Parse(Console.ReadLine());
             Point[] points = new Point[n];
+
             for (int i = 0; i < points.Length; i++)
             {
-                double[] xy = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+                double[] xy = Console.ReadLine()
+                    .Split(' ')
+                    .Select(double.Parse)
+                    .ToArray();
+
                 points[i] = new Point(xy[0], xy[1]);
             }
 

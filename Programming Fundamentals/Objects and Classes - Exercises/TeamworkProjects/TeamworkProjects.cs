@@ -50,7 +50,12 @@
                     break;
                 }
 
-                string[] userAndTeam = input.Split('-', '>').ToArray().Where(x => x.Length > 0).ToArray();
+                string[] userAndTeam = input
+                    .Split('-', '>')
+                    .ToArray()
+                    .Where(x => x.Length > 0)
+                    .ToArray();
+
                 if (!teams.Any(x => x.Name.Equals(userAndTeam[1])))
                 {
                     messages.Add($"Team {userAndTeam[1]} does not exist!");
@@ -61,7 +66,10 @@
                 }
                 else
                 {
-                    teams.Where(x => x.Name.Equals(userAndTeam[1])).Select(x => { x.Users.Add(userAndTeam[0]); return x; }).ToList();
+                    teams
+                        .Where(x => x.Name.Equals(userAndTeam[1]))
+                        .Select(x => { x.Users.Add(userAndTeam[0]); return x; })
+                        .ToList();
                 }
             }
 
@@ -91,8 +99,15 @@
 
         private static List<Team> GetCorrectOrdering(List<Team> teams)
         {
-            teams = teams.OrderByDescending(x => x.Users.Count).ThenBy(x => x.Name).ToList();
-            teams = teams.Select(x => { x.Users = x.Users.OrderBy(user => user).ToList(); return x; }).ToList();
+            teams = teams
+                .OrderByDescending(x => x.Users.Count)
+                .ThenBy(x => x.Name)
+                .ToList();
+
+            teams = teams
+                .Select(x => { x.Users = x.Users.OrderBy(user => user).ToList(); return x; })
+                .ToList();
+
             return teams;
         }
     }

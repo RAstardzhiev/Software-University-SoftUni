@@ -15,7 +15,11 @@
         public static Circle GetInputAndSetCircle()
         {
             Circle result = new Circle();
-            double[] input = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+            double[] input = Console.ReadLine()
+                .Split(' ')
+                .Select(double.Parse)
+                .ToArray();
+
             result.Center = new Point() { X = input[0], Y = input[1] };
             result.Radius = input[2];
             return result;

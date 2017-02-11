@@ -17,7 +17,10 @@
                     break;
                 }
 
-                input = input.Select(x => x.Substring(x.IndexOf('=') + 1)).ToArray();
+                input = input
+                    .Select(x => x.Substring(x.IndexOf('=') + 1))
+                    .ToArray();
+
                 if (userIpCount.ContainsKey(input[2]))
                 {
                     if (userIpCount[input[2]].ContainsKey(input[0]))

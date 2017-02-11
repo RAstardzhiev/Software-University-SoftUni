@@ -54,14 +54,23 @@
                 {
                     // Town => Seats 
                     // e.g. Plovdiv => 5 seats
-                    string[] townAndSeats = command.Split('=', '>').Where(x => x.Length > 0).Select(x => x.Trim()).ToArray();
+                    string[] townAndSeats = command
+                        .Split('=', '>')
+                        .Where(x => x.Length > 0)
+                        .Select(x => x.Trim())
+                        .ToArray();
+
                     towns.Add(new Town() { Name = townAndSeats[0], SeatsAvalable = int.Parse(townAndSeats[1].Substring(0, townAndSeats[1].IndexOf(' '))) });
                 }
                 else
                 {
                     // Name           | Email                   | Registered Date
                     // Stefka Petrova |   st96@abv.bg           | 26-May-2016
-                    string[] nameEmailDate = command.Split('|').Select(x => x.Trim()).ToArray();
+                    string[] nameEmailDate = command
+                        .Split('|')
+                        .Select(x => x.Trim())
+                        .ToArray();
+
                     towns[towns.Count - 1].Students.Add(new Student() { Name = nameEmailDate[0], Email = nameEmailDate[1], DateOfRegistration = DateTime.ParseExact(nameEmailDate[2], "d-MMM-yyyy", CultureInfo.InvariantCulture) } );
                 }
             }
@@ -95,7 +104,11 @@
             towns = towns.OrderBy(x => x.Name).ToList();
             foreach (Town town in towns)
             {
-                town.Students = town.Students.OrderBy(x => x.DateOfRegistration).ThenBy(x => x.Name).ThenBy(x => x.Email).ToList();
+                town.Students = town.Students
+                    .OrderBy(x => x.DateOfRegistration)
+                    .ThenBy(x => x.Name)
+                    .ThenBy(x => x.Email)
+                    .ToList();
             }
 
             return towns;

@@ -9,10 +9,14 @@
     {
         public static void Main(string[] args)
         {
-            string[] keys = File.ReadAllText("Src/words.txt").ToLower().Split(' ');
+            string[] keys = File.ReadAllText("Src/words.txt")
+                .ToLower()
+                .Split(' ');
+
             string[] text = File.ReadAllText("Src/text.txt")
                 .ToLower()
                 .Split(new char[] { '\n', '\r', ' ', '.', ',', '!', '?', '-' }, StringSplitOptions.RemoveEmptyEntries);
+
             File.WriteAllLines("Src/Keys Count.txt", KeysCount(keys, text).Select(x => $"{x.Key} - {x.Value}"));
         }
 
@@ -32,7 +36,9 @@
                 }
             }
 
-            return keyCount.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, y => y.Value);
+            return keyCount
+                .OrderByDescending(x => x.Value)
+                .ToDictionary(x => x.Key, y => y.Value);
         }
     }
 }

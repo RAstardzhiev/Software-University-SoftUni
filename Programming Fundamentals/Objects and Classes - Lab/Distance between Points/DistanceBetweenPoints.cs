@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    public class DistanceDetweenPoints
+    public class DistanceBetweenPoints
     {
         public static void Main(string[] args)
         {
@@ -14,7 +14,11 @@
 
         public static Point SetPoint()
         {
-            double[] input = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+            double[] input = Console.ReadLine()
+                .Split(' ')
+                .Select(double.Parse)
+                .ToArray();
+
             Point p = new Point(input[0], input[1]);
 
             return p;

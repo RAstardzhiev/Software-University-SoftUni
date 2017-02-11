@@ -64,7 +64,9 @@
             students = students.OrderBy(x => x.Name).ToList();
             foreach (Student student in students)
             {
-                student.AttendedDates = student.AttendedDates.OrderBy(x => x).ToList();
+                student.AttendedDates = student.AttendedDates
+                    .OrderBy(x => x)
+                    .ToList();
             }
 
             return students;
@@ -94,7 +96,11 @@
                 {
                     Student temp = new Student();
                     temp.Name = nameAndDates[0];
-                    temp.AttendedDates = nameAndDates[1].Split(',').Select(x => DateTime.ParseExact(x, "d/M/yyyy", CultureInfo.InvariantCulture)).ToList();
+                    temp.AttendedDates = nameAndDates[1]
+                        .Split(',')
+                        .Select(x => DateTime.ParseExact(x, "d/M/yyyy", CultureInfo.InvariantCulture))
+                        .ToList();
+
                     students.Add(temp);
                 }
             }

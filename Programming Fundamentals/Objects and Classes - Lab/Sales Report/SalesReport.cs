@@ -9,7 +9,10 @@
         public static void Main(string[] args)
         {
             int numberOfSales = int.Parse(Console.ReadLine());
-            List<Sale> allSales = GatherSales(numberOfSales).OrderBy(x => x.Town).ToList();
+            List<Sale> allSales = GatherSales(numberOfSales)
+                .OrderBy(x => x.Town)
+                .ToList();
+
             foreach (Sale sale in allSales)
             {
                 Console.WriteLine($"{sale.Town} -> {sale.Money:F2}");

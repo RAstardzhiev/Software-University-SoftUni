@@ -27,7 +27,9 @@
                 populations[input[1]][input[0]] = long.Parse(input[2]);
             }
 
-            populations = populations.OrderByDescending(x => x.Value.Values.Sum()).ToDictionary(x => x.Key, x => x.Value);
+            populations = populations
+                .OrderByDescending(x => x.Value.Values.Sum())
+                .ToDictionary(x => x.Key, x => x.Value);
 
             PrintDicts(populations);
         }

@@ -15,7 +15,10 @@
 
         private static void PrintTotalBill(Dictionary<string, decimal> menu, List<Customer> customers)
         {
-            customers = customers.OrderBy(x => x.Name).ToList();
+            customers = customers
+                .OrderBy(x => x.Name)
+                .ToList();
+
             decimal totalBill = 0M;
             foreach (Customer client in customers)
             {

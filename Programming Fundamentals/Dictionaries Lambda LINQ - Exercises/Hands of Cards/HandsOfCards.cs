@@ -20,15 +20,23 @@
 
                 string player = comand.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries)[0];
                 comand = comand.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries)[1];
-                string[] cards = comand.Split(' ', ',').Where(x => !x.Equals(string.Empty)).ToArray();
+                string[] cards = comand
+                    .Split(' ', ',')
+                    .Where(x => !x.Equals(string.Empty))
+                    .ToArray();
 
                 if (cardsGame.ContainsKey(player))
                 {
-                    cardsGame[player] = cardsGame[player].Concat(cards).Distinct().ToArray();
+                    cardsGame[player] = cardsGame[player]
+                        .Concat(cards)
+                        .Distinct()
+                        .ToArray();
                 }
                 else
                 {
-                    cardsGame[player] = cards.Distinct().ToArray();
+                    cardsGame[player] = cards
+                        .Distinct()
+                        .ToArray();
                 }
             }
 
