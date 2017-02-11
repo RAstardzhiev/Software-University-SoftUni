@@ -9,7 +9,7 @@
         {
             Point p1 = SetPoint();
             Point p2 = SetPoint();
-            Console.WriteLine("{0:F3}", Point.GetDistance(p1, p2));
+            Console.WriteLine("{0:F3}", GetDistance(p1, p2));
         }
 
         public static Point SetPoint()
@@ -19,31 +19,14 @@
                 .Select(double.Parse)
                 .ToArray();
 
-            Point p = new Point(input[0], input[1]);
+            Point p = new Point { X = input[0], Y = input[1] };
 
             return p;
         }
 
-        public class Point
+        public static double GetDistance(Point p1, Point p2)
         {
-            private double x, y;
-
-            public Point()
-            {
-                this.x = 0;
-                this.y = 0;
-            }
-
-            public Point(double x, double y)
-            {
-                this.x = x;
-                this.y = y;
-            }
-
-            public static double GetDistance(Point p1, Point p2)
-            {
-                return Math.Sqrt(Math.Pow(p1.x - p2.x, 2) + Math.Pow(p1.y - p2.y, 2));
-            }
+            return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
     }
 }

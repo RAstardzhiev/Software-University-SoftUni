@@ -5,27 +5,7 @@
     using System.Globalization;
     using System.Linq;
 
-    public class Student
-    {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public DateTime DateOfRegistration { get; set; }
-    }
-
-    public class Town
-    {
-        public string Name { get; set; }
-        public int SeatsAvalable { get; set; }
-        public List<Student> Students  = new List<Student>();
-    }
-
-    public class Group
-    {
-        public Town Town { get; set; }
-        public List<Student> Students = new List<Student>();
-    }
-
-    public class Student_Groups
+    public class StudentGroups
     {
         public static void Main(string[] args)
         {

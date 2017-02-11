@@ -36,7 +36,7 @@
                         continue;
                     }
 
-                    double distance = Point.GetDistance(points[i], points[j]);
+                    double distance = GetDistance(points[i], points[j]);
                     if (distance < minDistance)
                     {
                         minDistance = distance;
@@ -49,20 +49,9 @@
             Console.WriteLine($"{minDistance:F3}\n({points[minIndexes[0]].X}, {points[minIndexes[0]].Y})\n({points[minIndexes[1]].X}, {points[minIndexes[1]].Y})");
         }
 
-        public class Point
+        public static double GetDistance(Point p1, Point p2)
         {
-            public double X, Y;
-
-            public Point(double x, double y)
-            {
-                this.X = x;
-                this.Y = y;
-            }
-
-            public static double GetDistance(Point p1, Point p2)
-            {
-                return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
-            }
+            return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
     }
 }

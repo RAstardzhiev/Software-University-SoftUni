@@ -1,7 +1,6 @@
 ﻿namespace Average_Grades
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
 
     public class AverageGrades
@@ -56,18 +55,6 @@
             }
 
             return students;
-        }
-    }
-
-    public class Student
-    {
-        public string Name { get; set; }
-
-        public List<double> Grades { get; set; }
-
-        public double AvarageGrade
-        {
-            get { return this.Grades.Sum() / this.Grades.Count; }
         }
     }
 }
