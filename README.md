@@ -18,9 +18,6 @@
 <p><a title="Programming Basics" href="https://softuni.bg/certificates/details/15477/8823af04" target="_blank">Certificate</a></p>
 </th></tr>
 <tr>
-<td colspan="2"><p><a title="Simple Calculation" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Simple-Conditions" target="_blank">Simple Calculation</a></p></td>
- </tr>
-<tr>
  <td colspan="2"><p><a title="Logical Checks" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Simple-Conditions" target="_blank">Logical Checks</a></p></td>
 </tr>
   <tr>
