@@ -1,0 +1,10 @@
+Test 1: 1 2 3 3
+Output: 2
+Test 2: 1 2
+Output: no
+Test 3: 1
+Output: 0
+Test 4: 1 2 3
+Output: no
+Test 5: 10 5 5 99 3 4 2 5 1 1 4
+Output: 3

@@ -1,0 +1,23 @@
+Letter -> Place in alphabet
+Text: abcz
+a -> 1
+b -> 2
+c -> 3
+z -> 26
+
+Letter -> Place in alphabet
+Text: softuni
+s -> 19
+o -> 15
+f -> 6
+t -> 20
+u -> 21
+n -> 14
+i -> 9
+
+Letter -> Place in alphabet
+Text: its
+i -> 9
+t -> 20
+s -> 19
+
