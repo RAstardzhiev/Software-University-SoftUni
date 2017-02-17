@@ -25,45 +25,41 @@
              * Otherwise you print “No shake.”, the remains of the main string, and you end the program. 
              */
 
-            string randomChars = Console.ReadLine();
+            string text = Console.ReadLine();
             string pattern = Console.ReadLine();
-            Shake(randomChars, pattern);
+            Shake(text, pattern);
         }
 
-        private static void Shake(string randomChars, string pattern)
+        private static void Shake(string text, string pattern)
         {
-            int patternOccurances = CountOcurances(randomChars, pattern);
+            int patternOccurances = CountOcurances(text, pattern);
 
             if (patternOccurances > 1)
             {
                 Console.WriteLine("Shaked it.");
 
-                randomChars = randomChars.Remove(randomChars.IndexOf(pattern), pattern.Length);
-                randomChars = randomChars.Remove(randomChars.LastIndexOf(pattern), pattern.Length);
+                text = text.Remove(text.IndexOf(pattern), pattern.Length);
+                text = text.Remove(text.LastIndexOf(pattern), pattern.Length);
                 pattern = pattern.Remove(pattern.Length / 2, 1);
 
-                Shake(randomChars, pattern);
+                Shake(text, pattern);
             }
             else
             {
                 Console.WriteLine("No shake.");
-                if (randomChars.Length > 0)
-                {
-                    Console.WriteLine(randomChars);
-                }
-                
+                Console.WriteLine(text);
                 return;
             }
         }
 
-        private static int CountOcurances(string randomChars, string pattern)
+        private static int CountOcurances(string text, string pattern)
         {
-            int index = randomChars.IndexOf(pattern);
+            int index = text.IndexOf(pattern);
             int count = 0;
             while (index >= 0 && pattern.Length > 0)
             {
                 count++;
-                index = randomChars.IndexOf(pattern, index + 1);
+                index = text.IndexOf(pattern, index + 1);
             }
 
             return count;
