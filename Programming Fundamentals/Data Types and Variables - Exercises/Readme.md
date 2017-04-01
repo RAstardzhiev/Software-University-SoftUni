@@ -1,0 +1,3 @@
+<h1>Exercises: Data Types and Variables</h1>
+<p>Problems for exercises and homework for the <a href="https://softuni.bg/courses/programming-fundamentals">&ldquo;Programming Fundamentals&rdquo; course @ SoftUni</a>.</p>
+<p>You can check your solutions here: <a href="https://judge.softuni.bg/Contests/206/Data-Types-and-Variables-Exercises">https://judge.softuni.bg/Contests/206/Data-Types-and-Variables-Exercises</a>.</p>
