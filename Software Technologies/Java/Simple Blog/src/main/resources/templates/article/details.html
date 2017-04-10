@@ -1,0 +1,28 @@
+<main>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12">
+                <article>
+                    <header>
+                        <h2 th:text="${article.title}"></h2>
+                    </header>
+
+                    <p th:text="${article.content}"> </p>
+
+                    <small class="author" th:text="${article.author.fullName}"></small>
+
+                    <footer>
+
+                        <div class="pull-right">
+                            <th:block sec:authorize="isAuthenticated()" th:if="${user.isAdmin() OR user.isAuthor(article)}">
+                            <a class="btn btn-success btn-xs" th:href="@{/article/edit/{id}(id = ${article.id})}">Edit</a>
+                            <a class="btn btn-danger btn-xs" th:href="@{/article/delete/{id}(id = ${article.id})}">Delete</a>
+                            </th:block>
+                            <a class="btn btn-default btn-xs" th:href="@{/}">back &raquo;</a>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>
