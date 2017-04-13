@@ -16,6 +16,148 @@ namespace Blog.Controllers
         }
 
         //
+        // GET: Article/List
+        public ActionResult List()
+        {
+            using (var database = new BlogDbContext())
+            {
+                // Get articles from the database
+                var articles = database.Articles
+                    .Include(a => a.Author)
+                    .ToList();
+
+                return View(articles);
+            }
+        }
+
+        //
+        // GET: Article/Edit
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            using (var database = new BlogDbContext())
+            {
+                // Get article from the database
+                var article = database.Articles
+                    .Where(a => a.Id == id)
+                    .First();
+
+                // Check if the article exists
+                if (article == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Create the view model
+                var model = new ArticleViewModel();
+                model.Id = article.Id;
+                model.Title = article.Title;
+                model.Content = article.Content;
+
+                // Pass the view mode to view
+                return View(model);
+            }
+        }
+
+        //
+        // POST: Article/Edit
+        [HttpPost]
+        public ActionResult Edit(ArticleViewModel model)
+        {
+            // Check if model state is valid
+            if (ModelState.IsValid)
+            {
+                using (var database = new BlogDbContext())
+                {
+                    // Get article from database
+                    var article = database.Articles
+                        .FirstOrDefault(a => a.Id == model.Id);
+
+                    // Set article properties
+                    article.Title = model.Title;
+                    article.Content = model.Content;
+
+                    // Save article state in database
+                    database.Entry(article).State = EntityState.Modified;
+                    database.SaveChanges();
+
+                    // Redirect to index page
+                    return RedirectToAction("Index");
+                }
+            }
+
+            // If model state is invalid return the same view
+            return View(model);
+        }
+
+        //
+        // GET: Article/Delete
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            using (var database = new BlogDbContext())
+            {
+                // Get article from database
+                var article = database.Articles
+                    .Where(a => a.Id == id)
+                    .Include(a => a.Author)
+                    .First();
+
+                // Check if the article exists
+                if (article == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Pass article to view
+                return View(article);
+            }
+        }
+
+        //
+        // POST: Article/Delete
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            using (var database = new BlogDbContext())
+            {
+                // Get article from database
+                var article = database.Articles
+                    .Where(a => a.Id == id)
+                    .Include(a => a.Author)
+                    .First();
+
+                // Check if article exists
+                if (article == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Delete article from database
+                database.Articles.Remove(article);
+                database.SaveChanges();
+
+                // Redirect to index page
+                return RedirectToAction("Index");
+            }
+        }
+
+
+        //
         // GET: Article/Create
         public ActionResult Create()
         {
@@ -49,21 +191,6 @@ namespace Blog.Controllers
             }
 
             return View(article);
-        }
-
-        //
-        // GET: Article/List
-        public ActionResult List()
-        {
-            using (var database = new BlogDbContext())
-            {
-                // Get articles from the database
-                var articles = database.Articles
-                    .Include(a => a.Author)
-                    .ToList();
-
-                return View(articles);
-            }
         }
 
         //
