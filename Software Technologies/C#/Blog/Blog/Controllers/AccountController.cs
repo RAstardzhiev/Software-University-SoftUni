@@ -153,6 +153,9 @@ namespace Blog.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, FullName = model.FullName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
+
+                var addRoleResult = UserManager.AddToRole(user.Id, "User");
+
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

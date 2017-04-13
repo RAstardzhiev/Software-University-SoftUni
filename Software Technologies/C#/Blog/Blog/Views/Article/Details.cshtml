@@ -18,8 +18,11 @@
             --author @Model.Author.FullName
         </small>
         <footer class="pull-right">
-            @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs" })
-            @Html.ActionLink("Delete", "Delete", "Article", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs" })
+            @if (User.IsInRole("Admin") || Model.IsAuthor(User.Identity.Name))
+            {
+                @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs" })
+                @Html.ActionLink("Delete", "Delete", "Article", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs" })
+            }
             @Html.ActionLink("Back", "Index", "Article", null, new { @class = "btn btn-default btn-xs" })
         </footer>
     </article>
