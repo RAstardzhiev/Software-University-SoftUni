@@ -1,0 +1,53 @@
+﻿@model Calculator_CSharp.Models.Calculator
+
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<div class="well">
+    @using (Html.BeginForm("Calculate", "Home", FormMethod.Post, new { @class = "form-inline" }))
+    {
+        <fieldset>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    @Html.TextBoxFor(model => model.LeftOperand, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4">
+                    @Html.DropDownListFor(model => model.Operator,
+                    new[] {
+                        new SelectListItem { Text = "+", Value = "+" },
+                        new SelectListItem { Text = "-", Value = "-" },
+                        new SelectListItem { Text = "*", Value = "*" },
+                        new SelectListItem { Text = "/", Value = "/" },
+                        new SelectListItem { Text = "Reminder", Value = "Reminder" }
+                    }, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    @Html.TextBoxFor(model => model.RightOperand, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-2 ">
+                    <p>=</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-2">
+                    @Html.TextBoxFor(model => model.Result, null, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        </fieldset>
+    }
+</div>
