@@ -1,0 +1,41 @@
+﻿@model List<Blog.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="container">
+    <div class="well">
+        <h2>Users</h2>
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    if (ViewBag.Admins.Contains(user.UserName))
+                    {
+                        @:<tr class="info">
+                    }
+                    else
+                    {
+                        @:<tr>
+                    }
+                    <td>@user.Id</td>
+                    <td>@user.Email</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "User", new { @id = user.Id }, null)
+                        @Html.ActionLink("Delete", "Delete", "User", new { @id = user.Id }, null)
+                    </td>
+                }
+</tbody>
+        </table>
+    </div>
+</div>
