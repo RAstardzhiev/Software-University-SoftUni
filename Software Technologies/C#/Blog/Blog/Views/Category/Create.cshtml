@@ -1,0 +1,27 @@
+﻿@model Blog.Models.Category
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container">
+    <div class="well">
+        <h2>Create Category</h2>
+        @using (@Html.BeginForm("Create", "Category", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            <div class="form-group span=8 offset=2">
+                @Html.LabelFor(m => m.Name, new { @class = "control-label col-sm-4" })
+                <div class="col-sm-4">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-4">
+                    @Html.ActionLink("Cancel", "Index", "Category", new { @class = "btn btn-default" })
+                    <input type="submit" value="Create" class="btn btn-success" />
+                </div>
+            </div>
+        }
+    </div>
+</div>

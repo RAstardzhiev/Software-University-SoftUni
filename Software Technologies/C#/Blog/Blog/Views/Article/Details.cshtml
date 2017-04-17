@@ -15,6 +15,10 @@
             @Model.Content
         </p>
         <small class="author">
+            <p>
+                <div>Category: @Html.ActionLink(Model.Category.Name, "ListArticles", "Home", new { @categoryId = Model.Category.Id }, null)</div>
+                <div>Tags: ...</div>
+            </p>
             --author @Model.Author.FullName
         </small>
         <footer class="pull-right">

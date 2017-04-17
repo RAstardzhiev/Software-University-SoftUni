@@ -62,6 +62,8 @@ namespace Blog.Controllers
                 model.Id = article.Id;
                 model.Title = article.Title;
                 model.Content = article.Content;
+                model.CategoryId = article.CategoryId;
+                model.Categories = database.Categories.OrderBy(c => c.Name).ToList();
 
                 // Pass the view mode to view
                 return View(model);
@@ -85,13 +87,14 @@ namespace Blog.Controllers
                     // Set article properties
                     article.Title = model.Title;
                     article.Content = model.Content;
+                    article.CategoryId = model.CategoryId;
 
                     // Save article state in database
                     database.Entry(article).State = EntityState.Modified;
                     database.SaveChanges();
 
                     // Redirect to index page
-                    return RedirectToAction("Index");
+                    return RedirectToAction("ListArticles", "Home", new { categoryId = article.CategoryId });
                 }
             }
 
@@ -127,8 +130,15 @@ namespace Blog.Controllers
                     return HttpNotFound();
                 }
 
+                // Create article view model
+                var model = new ArticleViewModel();
+                model.Title = article.Title;
+                model.Content = article.Content;
+                model.CategoryId = article.CategoryId;
+                model.Category = article.Category;
+
                 // Pass article to view
-                return View(article);
+                return View(model);
             }
         }
 
@@ -172,14 +182,20 @@ namespace Blog.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            return View();
+            using (var database = new BlogDbContext())
+            {
+                var model = new ArticleViewModel();
+                model.Categories = database.Categories.OrderBy(c => c.Name).ToList();
+
+                return View(model);
+            }
         }
 
         //
         // POST: Article/Create
         [HttpPost]
         [Authorize]
-        public ActionResult Create(Article article)
+        public ActionResult Create(ArticleViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -191,18 +207,18 @@ namespace Blog.Controllers
                         .First()
                         .Id;
 
-                    // Set article's author
-                    article.AuthorId = authorId;
+                    // Create article
+                    var article = new Article(authorId, model.Title, model.Content, model.CategoryId);
 
                     // Save article in DB
                     database.Articles.Add(article);
                     database.SaveChanges();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("ListArticles", "Home", new { categoryId = article.CategoryId });
                 }
             }
 
-            return View(article);
+            return View(model);
         }
 
         //
@@ -220,6 +236,7 @@ namespace Blog.Controllers
                 var article = database.Articles
                     .Where(a => a.Id == id)
                     .Include(a => a.Author)
+                    .Include(a => a.Category)
                     .First();
 
                 if (article == null)

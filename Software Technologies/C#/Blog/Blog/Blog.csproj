@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Admin\UserController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
+    <Compile Include="Controllers\Admin\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -209,6 +210,7 @@
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\BlogDbContext.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\EditUserViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Role.cs" />
@@ -278,6 +280,12 @@
     <Content Include="Views\User\List.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\Category\List.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Home\ListArticles.cshtml" />
+    <Content Include="Views\Home\ListCategories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

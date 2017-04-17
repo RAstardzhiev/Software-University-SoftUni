@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Blog.Models
 {
@@ -14,5 +15,13 @@ namespace Blog.Models
         public string Content { get; set; }
 
         public string AuthorId { get; set; }
+
+        public int CategoryId { get; set; }
+
+        public virtual Category Category { get; set; }
+
+        public ICollection<Article> Articles { get; set; }
+
+        public virtual IList<Category> Categories { get; set; }
     }
 }

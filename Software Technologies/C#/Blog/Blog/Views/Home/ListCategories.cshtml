@@ -1,0 +1,23 @@
+﻿@model List<Blog.Models.Category>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (var category in Model)
+        {
+            <div class="col-sm-6 text-center text-uppercase">
+                <p>
+                    <h2>
+                        @Html.ActionLink(string.Format($"{category.Name} ({category.Articles.Count})"),
+                        "ListArticles", "Home", new { @categoryId = category.Id }, null)
+                    </h2>
+                </p>
+            </div>
+        }
+    </div>
+</div>
+<hr />
+

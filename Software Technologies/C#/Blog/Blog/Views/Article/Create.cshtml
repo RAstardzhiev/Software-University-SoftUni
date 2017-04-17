@@ -1,4 +1,4 @@
-﻿@model Blog.Models.Article
+﻿@model Blog.Models.ArticleViewModel
 @{
     ViewBag.Title = "Create";
 }
@@ -21,6 +21,15 @@
                 @Html.LabelFor(m => m.Content, new { @class = "control-label col-sm-4" })
                 <div class="col-sm-4">
                     @Html.TextAreaFor(m => m.Content, new { @class = "form-control", @rows = "7" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.CategoryId, new { @class = "col-sm-4 control-label" })
+                <div class="dropdown col-sm-4">
+                    @Html.DropDownListFor(m => m.CategoryId,
+                        new SelectList(Model.Categories, "Id", "Name"),
+                        new { @class = "btn btn-info col-sm-12" })
                 </div>
             </div>
 
