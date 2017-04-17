@@ -18,14 +18,8 @@
                     <p>
                         @article.Content
                     </p>
-                    <footer>
-                        <div class="pull-left">
-                            @foreach (var tag in article.Tags)
-                            {
-                                @Html.ActionLink(tag.Name, "List", "Tag", new { @id = tag.Id }, new { @class = "btn btn-default btn-xs" })
-                            }
-                        </div>
-                        <small class="author pull-right">
+                    <footer class="pull-right">
+                        <small class="author">
                             --author @article.Author.FullName
                         </small>
                     </footer>
@@ -35,3 +29,4 @@
     </div>
 </div>
 <hr />
+

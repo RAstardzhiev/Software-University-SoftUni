@@ -23,5 +23,7 @@ namespace Blog.Models
         public ICollection<Article> Articles { get; set; }
 
         public virtual IList<Category> Categories { get; set; }
+
+        public string Tags { get; set; }
     }
 }

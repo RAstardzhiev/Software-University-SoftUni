@@ -33,6 +33,21 @@
             </div>
 
             <div class="form-group">
+                @Html.LabelFor(m => m.Category, new { @class = "control-label col-sm-4" })
+                <div class="col-sm-4">
+                    @Html.TextBoxFor(m => m.Category.Name, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Tags, new { @class = "control-label col-sm-4" })
+                <div class="col-sm-4">
+                    @Html.TextBox("tagsString", (object)ViewBag.TagsString, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
                 <div class="col-sm-4 col-sm-offset-4">
                     @Html.ActionLink("Cancel", "Index", "Article", null, new { @class = "btn btn-default" })
                     <input type="submit" value="Delete" class="btn btn-danger" />

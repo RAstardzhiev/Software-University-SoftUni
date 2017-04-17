@@ -1,12 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Blog.Models
 {
     public class Article
     {
+        private ICollection<Tag> tags;
+
         public Article()
         {
+            this.tags = new HashSet<Tag>();
         }
 
         public Article(string authorId, string title, string content, int categoryId)
@@ -15,6 +19,7 @@ namespace Blog.Models
             this.Title = title;
             this.Content = content;
             this.CategoryId = categoryId;
+            this.tags = new HashSet<Tag>();
         }
 
         [Key]
@@ -39,6 +44,12 @@ namespace Blog.Models
         public bool IsAuthor(string name)
         {
             return this.Author.UserName.Equals(name);
+        }
+
+        public virtual ICollection<Tag> Tags
+        {
+            get { return this.tags; }
+            set { this.tags = value; }
         }
     }
 }

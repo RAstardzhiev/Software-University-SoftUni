@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using System;
 
 namespace Blog.Controllers
 {
@@ -24,6 +25,7 @@ namespace Blog.Controllers
                 // Get articles from the database
                 var articles = database.Articles
                     .Include(a => a.Author)
+                    .Include(a => a.Tags)
                     .ToList();
 
                 return View(articles);
@@ -64,6 +66,7 @@ namespace Blog.Controllers
                 model.Content = article.Content;
                 model.CategoryId = article.CategoryId;
                 model.Categories = database.Categories.OrderBy(c => c.Name).ToList();
+                model.Tags = string.Join(", ", article.Tags.Select(t => t.Name));
 
                 // Pass the view mode to view
                 return View(model);
@@ -88,6 +91,7 @@ namespace Blog.Controllers
                     article.Title = model.Title;
                     article.Content = model.Content;
                     article.CategoryId = model.CategoryId;
+                    this.SetArticleTags(article, model, database);
 
                     // Save article state in database
                     database.Entry(article).State = EntityState.Modified;
@@ -136,6 +140,8 @@ namespace Blog.Controllers
                 model.Content = article.Content;
                 model.CategoryId = article.CategoryId;
                 model.Category = article.Category;
+
+                ViewBag.TagsString = string.Join(", ", article.Tags.Select(t => t.Name));
 
                 // Pass article to view
                 return View(model);
@@ -210,6 +216,8 @@ namespace Blog.Controllers
                     // Create article
                     var article = new Article(authorId, model.Title, model.Content, model.CategoryId);
 
+                    this.SetArticleTags(article, model, database);
+
                     // Save article in DB
                     database.Articles.Add(article);
                     database.SaveChanges();
@@ -236,6 +244,7 @@ namespace Blog.Controllers
                 var article = database.Articles
                     .Where(a => a.Id == id)
                     .Include(a => a.Author)
+                    .Include(a => a.Tags)
                     .Include(a => a.Category)
                     .First();
 
@@ -254,6 +263,35 @@ namespace Blog.Controllers
             bool isAuthor = article.IsAuthor(this.User.Identity.Name);
 
             return isAdmin || isAuthor;
+        }
+
+        private void SetArticleTags(Article article, ArticleViewModel model, BlogDbContext database)
+        {
+            // Spli tags
+            var tagsStrings = model.Tags
+                .Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(t => t.ToLower())
+                .Distinct();
+
+            // Clear current article tags
+            article.Tags.Clear();
+
+            // Set new article tags
+            foreach (var tagStering in tagsStrings)
+            {
+                // Get tag from databaase by its name
+                Tag tag = database.Tags.FirstOrDefault(t => t.Name.Equals(tagStering));
+
+                // If the tag is null, create new tag
+                if (tag == null)
+                {
+                    tag = new Tag() { Name = tagStering };
+                    database.Tags.Add(tag);
+                }
+
+                // Add tag to article tags
+                article.Tags.Add(tag);
+            }
         }
     }
 }
