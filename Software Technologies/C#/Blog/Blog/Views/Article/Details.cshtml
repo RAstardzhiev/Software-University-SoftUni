@@ -20,17 +20,25 @@
                 <div>Tags: 
                 @foreach (var tag in Model.Tags)
                 {
-                    @Html.ActionLink(tag.Name, "List", "Tag", new { @id = tag.Id }, new { @class = "btn btn-link btn-xs" })
+                    @Html.ActionLink(tag.Name, "List", "Tag", new { @id = tag.Id }, new { @class = "btn btn-default btn-xs btn-addDistance" })
                 }
                 </div>
             </p>
-            --author @Model.Author.FullName
+            <div>
+                Author: @Model.Author.FullName
+            </div>
+            <div>
+                Date: @ViewBag.DateString
+            </div>
+            <div>
+                Visits: @Model.Visits
+            </div>
         </small>
         <footer class="pull-right">
             @if (User.IsInRole("Admin") || Model.IsAuthor(User.Identity.Name))
             {
-                @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs" })
-                @Html.ActionLink("Delete", "Delete", "Article", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs" })
+                @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs btn-addDistance" })
+                @Html.ActionLink("Delete", "Delete", "Article", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs btn-addDistance" })
             }
             @Html.ActionLink("Back", "Index", "Article", null, new { @class = "btn btn-default btn-xs" })
         </footer>

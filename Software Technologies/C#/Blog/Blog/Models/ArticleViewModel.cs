@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Blog.Models
@@ -24,6 +25,7 @@ namespace Blog.Models
 
         public virtual IList<Category> Categories { get; set; }
 
+        [Required]
         public string Tags { get; set; }
     }
 }

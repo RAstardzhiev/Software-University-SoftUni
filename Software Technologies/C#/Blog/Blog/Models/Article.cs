@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,6 +21,7 @@ namespace Blog.Models
             this.Content = content;
             this.CategoryId = categoryId;
             this.tags = new HashSet<Tag>();
+            this.DateCreated = DateTime.Now;
         }
 
         [Key]
@@ -35,6 +37,10 @@ namespace Blog.Models
         public string AuthorId { get; set; }
 
         public virtual ApplicationUser Author { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
+        public int Visits { get; set; }
 
         [ForeignKey("Category")]
         public int CategoryId { get; set; }

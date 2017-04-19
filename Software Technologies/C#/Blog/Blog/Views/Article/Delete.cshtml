@@ -26,13 +26,6 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(m => m.Category.Name, new { @class = "control-label col-sm-4" })
-                <div class="col-sm-4">
-                    @Html.ActionLink(Model.Category.Name, "ListArticles", "Home", new { @categoryId = Model.Category.Id }, new { @class = "btn btn-default" })
-                </div>
-            </div>
-
-            <div class="form-group">
                 @Html.LabelFor(m => m.Category, new { @class = "control-label col-sm-4" })
                 <div class="col-sm-4">
                     @Html.TextBoxFor(m => m.Category.Name, new { @class = "form-control", @readonly = "readonly" })

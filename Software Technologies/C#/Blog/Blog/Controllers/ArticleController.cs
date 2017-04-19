@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace Blog.Controllers
 {
@@ -103,7 +104,11 @@ namespace Blog.Controllers
             }
 
             // If model state is invalid return the same view
-            return View(model);
+            using (var database = new BlogDbContext())
+            {
+                model.Categories = database.Categories.OrderBy(c => c.Name).ToList();
+                return View(model);
+            }
         }
 
         //
@@ -226,7 +231,12 @@ namespace Blog.Controllers
                 }
             }
 
-            return View(model);
+            // Create Categories
+            using (var database = new BlogDbContext())
+            {
+                model.Categories = database.Categories.OrderBy(c => c.Name).ToList();
+                return View(model);
+            }
         }
 
         //
@@ -246,12 +256,22 @@ namespace Blog.Controllers
                     .Include(a => a.Author)
                     .Include(a => a.Tags)
                     .Include(a => a.Category)
-                    .First();
+                    .FirstOrDefault();
 
                 if (article == null)
                 {
                     return HttpNotFound();
                 }
+
+                string userAgent = System.Web.HttpContext.Current.Request.UserAgent.ToLower();
+                if (!IsCrawlByBot(userAgent))
+                {
+                    article.Visits++;
+                    database.Entry(article).State = EntityState.Modified;
+                    database.SaveChanges();
+                }
+
+                ViewBag.DateString = DateToString(article.DateCreated);
 
                 return View(article);
             }
@@ -292,6 +312,30 @@ namespace Blog.Controllers
                 // Add tag to article tags
                 article.Tags.Add(tag);
             }
+        }
+
+        private string DateToString(DateTime date)
+        {
+            return date.ToString("dd-MM-yyyy");
+        }
+
+        public static bool IsCrawlByBot(string userAgent)
+        {
+            List<string> Crawlers = new List<string>()
+            {
+                "googlebot","bingbot","yandexbot","ahrefsbot","msnbot","linkedinbot","exabot","compspybot",
+                "yesupbot","paperlibot","tweetmemebot","semrushbot","gigabot","voilabot","adsbot-google",
+                "botlink","alkalinebot","araybot","undrip bot","borg-bot","boxseabot","yodaobot","admedia bot",
+                "ezooms.bot","confuzzledbot","coolbot","internet cruiser robot","yolinkbot","diibot","musobot",
+                "dragonbot","elfinbot","wikiobot","twitterbot","contextad bot","hambot","iajabot","news bot",
+                "irobot","socialradarbot","ko_yappo_robot","skimbot","psbot","rixbot","seznambot","careerbot",
+                "simbot","solbot","mail.ru_bot","spiderbot","blekkobot","bitlybot","techbot","void-bot",
+                "vwbot_k","diffbot","friendfeedbot","archive.org_bot","woriobot","crystalsemanticsbot","wepbot",
+                "spbot","tweetedtimes bot","mj12bot","who.is bot","psbot","robot","jbot","bbot","bot"
+            };
+
+            bool iscrawler = Crawlers.Contains(userAgent);
+            return iscrawler;
         }
     }
 }

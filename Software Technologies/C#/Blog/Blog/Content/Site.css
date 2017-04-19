@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Set distance between buttons */
+.btn-addDistance {
+    margin-left: 3px;
+}
