@@ -21,7 +21,7 @@ namespace Blog.Controllers
         {
             using (var database = new BlogDbContext())
             {
-                var categories = database.Categories.ToList();
+                var categories = database.Categories.Include(c => c.Articles).ToList();
 
                 return View(categories);
             }

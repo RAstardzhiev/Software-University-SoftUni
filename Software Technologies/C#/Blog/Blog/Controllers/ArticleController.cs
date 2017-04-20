@@ -256,6 +256,7 @@ namespace Blog.Controllers
                     .Include(a => a.Author)
                     .Include(a => a.Tags)
                     .Include(a => a.Category)
+                    .Include(a => a.Comments)
                     .FirstOrDefault();
 
                 if (article == null)

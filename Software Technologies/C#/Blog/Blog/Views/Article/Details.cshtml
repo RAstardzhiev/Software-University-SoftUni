@@ -15,33 +15,50 @@
             @Model.Content
         </p>
         <small class="author">
-            <p>
-                <div>Category: @Html.ActionLink(Model.Category.Name, "ListArticles", "Home", new { @categoryId = Model.Category.Id }, null)</div>
-                <div>Tags: 
-                @foreach (var tag in Model.Tags)
-                {
-                    @Html.ActionLink(tag.Name, "List", "Tag", new { @id = tag.Id }, new { @class = "btn btn-default btn-xs btn-addDistance" })
-                }
-                </div>
-            </p>
-            <div>
-                Author: @Model.Author.FullName
-            </div>
-            <div>
-                Date: @ViewBag.DateString
-            </div>
-            <div>
-                Visits: @Model.Visits
-            </div>
+            Category: @Html.ActionLink(Model.Category.Name, "ListArticles", "Home", new { @categoryId = Model.Category.Id }, null)
+        </small>
+        <small class="author">
+            Tags:
+            @foreach (var tag in Model.Tags)
+            {
+                @Html.ActionLink(tag.Name, "List", "Tag", new { @id = tag.Id }, new { @class = "btn btn-default btn-xs btn-addDistance" })
+            }
+        </small>
+        <small class="author mt-20">
+            Author: @Model.Author.FullName
+        </small>
+        <small class="author">
+            Date: @ViewBag.DateString
+        </small>
+        <small class="author">
+            Visits: @Model.Visits
         </small>
         <footer class="pull-right">
-            @if (User.IsInRole("Admin") || Model.IsAuthor(User.Identity.Name))
+            @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.IsAuthor(User.Identity.Name)))
             {
+                @Html.ActionLink("Comment", "Create", "Comment", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs btn-addDistance", @target = "_blank" })
                 @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs btn-addDistance" })
                 @Html.ActionLink("Delete", "Delete", "Article", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs btn-addDistance" })
             }
             @Html.ActionLink("Back", "Index", "Article", null, new { @class = "btn btn-default btn-xs" })
         </footer>
     </article>
+
+    @if (Model.Comments.Count > 0)
+    {
+        <div class="mt-50">
+            <hr />
+            <h4>Comments</h4>
+            @foreach (var comment in Model.Comments)
+            {
+                <div class="comments mt-20">
+                    @Html.ActionLink(comment.Author.FullName, "ArticlesByAuthor", new { authorId = comment.AuthorId }) - 
+                    <small>@comment.DateCreated.ToString("dd.MM.yyyy")</small>
+                    <hr />
+                    @comment.Content
+                </div>
+            }
+        </div>
+    }
 </div>
 <hr />

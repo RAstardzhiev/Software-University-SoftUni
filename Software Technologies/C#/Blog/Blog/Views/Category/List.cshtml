@@ -21,7 +21,7 @@
                     {
                         <tr>
                             <td>@category.Id</td>
-                            <td>@category.Name</td>
+                            <td>@Html.ActionLink(string.Format($"{category.Name} ({category.Articles.Count})"), "ListArticles", "Home", new { @categoryId = category.Id }, null)</td>
                             <td>
                                 @Html.ActionLink("Edit", "Edit", "Category", new { @id = category.Id }, null)
                                 @Html.ActionLink("Delete", "Delete", "Category", new { @id = category.Id }, null)

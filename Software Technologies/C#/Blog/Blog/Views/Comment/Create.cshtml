@@ -1,0 +1,31 @@
+﻿@model Blog.Models.CommentViewModel
+@{
+    ViewBag.Title = "Comment";
+}
+
+<div class="container">
+    <div class="well">
+        <h2>Leave a Comment</h2>
+        @using (Html.BeginForm("Create", "Comment", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            
+            @Html.HiddenFor(m => m.ArticleId)
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Content, new { @class = "control-label col-sm-4" })
+                <div class="col-sm-4">
+                    @Html.TextAreaFor(m => m.Content, new { @class = "form-control", @rows = "7" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-4">
+                    @Html.ActionLink("Cancel", "Details", "Article", null, new { @class = "btn btn-default", @id = Model.ArticleId })
+                    <input type="submit" value="Comment" class="btn btn-success" />
+                </div>
+            </div>
+        }
+    </div>
+</div>

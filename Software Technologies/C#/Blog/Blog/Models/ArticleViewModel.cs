@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Blog.Models
@@ -23,7 +22,7 @@ namespace Blog.Models
 
         public ICollection<Article> Articles { get; set; }
 
-        public virtual IList<Category> Categories { get; set; }
+        public IList<Category> Categories { get; set; }
 
         [Required]
         public string Tags { get; set; }

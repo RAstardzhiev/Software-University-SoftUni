@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Blog.Models.Comment>
+
+<h4>Comments</h4>
+@foreach (var comment in Model)
+{
+    <div class="comments">
+        @Html.ActionLink(comment.AuthorName, "ArticlesByAuthor", new { authorId = comment.AuthorId })
+        @comment.DateCreated.ToString("dd.MM.yyyy");
+        <hr />
+        @comment.Content
+    </div>
+}
