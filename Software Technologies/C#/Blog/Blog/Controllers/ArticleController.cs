@@ -282,6 +282,7 @@ namespace Blog.Controllers
         //
         // POST: Article/Details
         [HttpPost]
+        [Authorize]
         public ActionResult Comment(Article model)
         {
             using (var database = new BlogDbContext())

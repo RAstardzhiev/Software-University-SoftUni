@@ -14,7 +14,7 @@ namespace Blog.Controllers
         }
 
         //
-        // GET: Article/Details/Create
+        // GET: Comment/Create
         [Authorize]
         [HttpGet]
         public ActionResult Create(int id)
@@ -27,7 +27,7 @@ namespace Blog.Controllers
         }
 
         //
-        // POST: Article/Details/Create
+        // POST: Comment/Create
         [Authorize]
         [HttpPost]
         public ActionResult Create(CommentViewModel model)

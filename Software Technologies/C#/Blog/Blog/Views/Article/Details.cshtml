@@ -44,11 +44,10 @@
         </footer>
     </article>
 
-    @if (Model.Comments.Count > 0)
+    @if (User.Identity.IsAuthenticated)
     {
         <div class="mt-50">
             <hr />
-            
             <div class="container">
                 <div class="well">
                     <h2>Leave a Comment</h2>
@@ -74,20 +73,23 @@
                     }
                 </div>
             </div>
+        </div>
+    }
 
-            <div class="mt-50">
-                <hr />
-                <h4>Comments</h4>
-                @foreach (var comment in Model.Comments)
-                {
-                    <div class="comments mt-20">
-                        @Html.ActionLink(comment.Author.FullName, "ArticlesByAuthor", new { authorId = comment.AuthorId }) -
-                        <small>@comment.DateCreated.ToString("dd.MM.yyyy")</small>
-                        <hr />
-                        @comment.Content
-                    </div>
-                }
-            </div>
+    @if (Model.Comments.Count > 0)
+            {
+        <div class="mt-50">
+            <hr />
+            <h4>Comments</h4>
+            @foreach (var comment in Model.Comments)
+            {
+                <div class="comments mt-20">
+                    @Html.ActionLink(comment.Author.FullName, "ArticlesByAuthor", new { authorId = comment.AuthorId }) -
+                    <small>@comment.DateCreated.ToString("dd.MM.yyyy")</small>
+                    <hr />
+                    @comment.Content
+                </div>
+            }
         </div>
     }
 </div>
