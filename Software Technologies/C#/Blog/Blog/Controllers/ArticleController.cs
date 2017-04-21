@@ -5,6 +5,7 @@ using System.Net;
 using System.Web.Mvc;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNet.Identity;
 
 namespace Blog.Controllers
 {
@@ -275,6 +276,28 @@ namespace Blog.Controllers
                 ViewBag.DateString = DateToString(article.DateCreated);
 
                 return View(article);
+            }
+        }
+
+        //
+        // POST: Article/Details
+        [HttpPost]
+        public ActionResult Comment(Article model)
+        {
+            using (var database = new BlogDbContext())
+            {
+                var article = database.Articles.Where(a => a.Id == model.Id);
+
+                if (article != null)
+                {
+                    var authorId = User.Identity.GetUserId();
+                    var comment = new Comment(authorId, model.Id, model.Comment);
+
+                    database.Comments.Add(comment);
+                    database.SaveChanges();
+                }
+
+                return RedirectToAction("Details", new { id = model.Id });
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿using Blog.Models;
 using Microsoft.AspNet.Identity;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Blog.Controllers
@@ -33,17 +34,21 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-                var authorName = User.Identity.Name;
-                var authorId = User.Identity.GetUserId();
-                var comment = new Comment(authorId, model.ArticleId, model.Content);
-
                 using (var database = new BlogDbContext())
                 {
-                    database.Comments.Add(comment);
-                    database.SaveChanges();
+                    var article = database.Articles.Where(a => a.Id == model.ArticleId);
+
+                    if (article != null)
+                    {
+                        var authorId = User.Identity.GetUserId();
+                        var comment = new Comment(authorId, model.ArticleId, model.Content);
+
+                        database.Comments.Add(comment);
+                        database.SaveChanges();
+                    }
                 }
 
-                return RedirectToAction("Details", "Article", new { id = comment.ArticleId });
+                return RedirectToAction("Details", "Article", new { id = model.ArticleId });
             }
 
             return View(model);

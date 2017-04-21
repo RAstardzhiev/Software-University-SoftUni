@@ -22,7 +22,7 @@
 
             <div class="form-group">
                 <div class="col-sm-4 col-sm-offset-4">
-                    @Html.ActionLink("Cancel", "Details", "Article", null, new { @class = "btn btn-default", @id = Model.ArticleId })
+                    @Html.ActionLink("Cancel", "Details", "Article", new { @id = Model.ArticleId }, new { @class = "btn btn-default" })
                     <input type="submit" value="Comment" class="btn btn-success" />
                 </div>
             </div>

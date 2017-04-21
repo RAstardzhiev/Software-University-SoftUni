@@ -50,6 +50,8 @@ namespace Blog.Models
 
         public virtual Category Category { get; set; }
 
+        public string Comment { get; set; }
+
         public bool IsAuthor(string name)
         {
             return this.Author.UserName.Equals(name);
