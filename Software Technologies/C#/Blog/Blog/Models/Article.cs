@@ -31,10 +31,14 @@ namespace Blog.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(225)]
+        [StringLength(50)]
         public string Title { get; set; }
-
+        
+        [Required]
+        [MinLength(300, ErrorMessage = "Article must be at least 300 symbols")]
         public string Content { get; set; }
+
+        public string Summary { get { return this.Content.Substring(0, 200) + "..."; } }
 
         [ForeignKey("Author")]
         public string AuthorId { get; set; }

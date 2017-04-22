@@ -12,6 +12,7 @@ namespace Blog.Models
         public string Title { get; set; }
 
         [Required]
+        [MinLength(300, ErrorMessage = "Article must be at least 300 symbols")]
         public string Content { get; set; }
 
         public string AuthorId { get; set; }

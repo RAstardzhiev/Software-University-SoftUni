@@ -10,7 +10,33 @@ namespace Blog.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("ListCategories");
+            var database = new BlogDbContext();
+            var articles = database.Articles.ToList();
+            var model = new HomeViewModel();
+
+            model.NewestArticles = articles
+                .OrderByDescending(a => a.DateCreated)
+                .Take(2)
+                .ToList();
+
+            model.MostViewedArticles = articles
+                .OrderByDescending(a => a.Visits)
+                .Take(2)
+                .ToList();
+
+            model.Categories = database.Categories
+                .OrderByDescending(c => c.Articles.Count)
+                .ThenBy(c => c.Name)
+                .Take(5)
+                .ToList();
+
+            model.Tags = database.Tags
+                .OrderByDescending(t => t.Articles.Count)
+                .ThenBy(t => t.Name)
+                .Take(5)
+                .ToList();
+
+            return View(model);
         }
 
         public ActionResult ListCategories()
@@ -26,7 +52,7 @@ namespace Blog.Controllers
             }
         }
 
-        public ActionResult ListArticles(int? categoryId)
+        public ActionResult ListByCategory(int? categoryId)
         {
             if (categoryId == null)
             {
@@ -41,7 +67,7 @@ namespace Blog.Controllers
                     .Include(a => a.Tags)
                     .ToList();
 
-                return View(articles);
+                return View("ListArticles", articles);
             }
         }
     }

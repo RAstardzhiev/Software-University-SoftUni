@@ -216,6 +216,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\EditUserViewModel.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Tag.cs" />

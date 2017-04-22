@@ -20,7 +20,7 @@ namespace Blog.Controllers
 
         //
         // GET: Article/List
-        public ActionResult List()
+        public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null)
         {
             using (var database = new BlogDbContext())
             {
@@ -29,6 +29,20 @@ namespace Blog.Controllers
                     .Include(a => a.Author)
                     .Include(a => a.Tags)
                     .ToList();
+
+                // Check for arguments
+                if (authorId != null)
+                {
+                    articles = articles.Where(a => a.Author.Id.Equals(authorId)).ToList();
+                }
+                else if (categoryId != null)
+                {
+                    articles = articles.Where(a => a.Category.Id == categoryId).ToList();
+                }
+                else if (tagId != null)
+                {
+                    articles = database.Tags.Where(t => t.Id == tagId).FirstOrDefault().Articles.ToList();
+                }
 
                 return View(articles);
             }
@@ -100,7 +114,7 @@ namespace Blog.Controllers
                     database.SaveChanges();
 
                     // Redirect to index page
-                    return RedirectToAction("ListArticles", "Home", new { categoryId = article.CategoryId });
+                    return RedirectToAction("Details", "Article", new { id = article.CategoryId });
                 }
             }
 
@@ -179,6 +193,15 @@ namespace Blog.Controllers
                     return HttpNotFound();
                 }
 
+                // Check if tag will be empty
+                foreach (var tag in article.Tags.ToList())
+                {
+                    if (tag.Articles.Count <= 1)
+                    {
+                        database.Tags.Remove(tag);
+                    }
+                }
+
                 // Delete article from database
                 database.Articles.Remove(article);
                 database.SaveChanges();
@@ -228,11 +251,11 @@ namespace Blog.Controllers
                     database.Articles.Add(article);
                     database.SaveChanges();
 
-                    return RedirectToAction("ListArticles", "Home", new { categoryId = article.CategoryId });
+                    return RedirectToAction("Index", "Home");
                 }
             }
 
-            // Create Categories
+            // Give Categories to the mopdel
             using (var database = new BlogDbContext())
             {
                 model.Categories = database.Categories.OrderBy(c => c.Name).ToList();
@@ -280,6 +303,7 @@ namespace Blog.Controllers
         }
 
         //
+        // For creating comments directly from the details page
         // POST: Article/Details
         [HttpPost]
         [Authorize]

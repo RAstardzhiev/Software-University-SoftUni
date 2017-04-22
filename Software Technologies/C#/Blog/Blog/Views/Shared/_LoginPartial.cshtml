@@ -13,6 +13,7 @@
                 <ul class="dropdown-menu" role="menu">
                     <li>@Html.ActionLink("Users", "List", "User")</li>
                     <li>@Html.ActionLink("Categories", "List", "Category")</li>
+                    <li>@Html.ActionLink("Tags", "All", "Tag")</li>
                 </ul>
             </li>
         }
@@ -20,7 +21,11 @@
             @Html.ActionLink("Create", "Create", "Article")
         </li>
         <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hello @User.Identity.GetUserName()<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>@Html.ActionLink("Manage", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
+                <li>@Html.ActionLink("My Posts", "List", "Article", new { authorId = User.Identity.GetUserId() }, null)</li>
+            </ul>
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>

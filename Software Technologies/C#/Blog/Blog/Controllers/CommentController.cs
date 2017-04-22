@@ -41,6 +41,7 @@ namespace Blog.Controllers
                     if (article != null)
                     {
                         var authorId = User.Identity.GetUserId();
+
                         var comment = new Comment(authorId, model.ArticleId, model.Content);
 
                         database.Comments.Add(comment);

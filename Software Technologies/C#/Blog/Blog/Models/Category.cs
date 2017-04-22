@@ -18,8 +18,9 @@ namespace Blog.Models
 
         [Required]
         [Index(IsUnique = true)]
-        [StringLength(20)]
+        [StringLength(15)]
         [Display(Name = "Category")]
+        [RegularExpression(@"^\w+$", ErrorMessage = "Use letters only please")]
         public string Name { get; set; }
 
         public virtual ICollection<Article> Articles { get; set; }

@@ -16,8 +16,9 @@ namespace Blog.Models
         [Key]
         public int Id { get; set; }
 
-        [StringLength(20)]
+        [StringLength(15)]
         [Index(IsUnique = true)]
+        [RegularExpression(@"^\w+$", ErrorMessage = "Use letters only please")]
         public string Name { get; set; }
 
         public virtual ICollection<Article> Articles

@@ -84,7 +84,7 @@
             @foreach (var comment in Model.Comments)
             {
                 <div class="comments mt-20">
-                    @Html.ActionLink(comment.Author.FullName, "ArticlesByAuthor", new { authorId = comment.AuthorId }) -
+                    @Html.ActionLink(comment.AuthorName, "List", "Aritcla", new { authorId = comment.AuthorId }, null) -
                     <small>@comment.DateCreated.ToString("dd.MM.yyyy")</small>
                     <hr />
                     @comment.Content

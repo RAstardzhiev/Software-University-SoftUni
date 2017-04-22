@@ -1,4 +1,10 @@
-﻿body {
+﻿@media only screen and (max-width: 767px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -28,7 +34,6 @@ textarea {
     margin-left: 3px;
 }
 
-/* Set padding for horizontal in Article/Details separating the content from comments */
 .mt-50 {
     margin-top: 45px;
 }
@@ -37,6 +42,21 @@ textarea {
     margin-top: 20px;
 }
 
+.mt-15 {
+    margin-top: 15px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.tcw {
+    color: white;
+}
 
 /* Comment <div> styling */
 div.comments {
@@ -46,4 +66,12 @@ div.comments {
     margin-left: 10px;
     margin-right: 10px;
     padding: 15px;
+}
+
+.home-separation {
+    padding-bottom: 50px;
+}
+
+pad-right-10 {
+    padding-right: 10px;
 }

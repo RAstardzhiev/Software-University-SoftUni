@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace Blog.Models
 {
@@ -19,6 +20,10 @@ namespace Blog.Models
             this.DateCreated = DateTime.Now;
             this.ArticleId = articleId;
             this.Content = content;
+            this.AuthorName = new BlogDbContext().Users
+                            .Where(u => u.Id.Equals(AuthorId))
+                            .FirstOrDefault()
+                            .FullName;
         }
 
         [Key]
@@ -28,6 +33,8 @@ namespace Blog.Models
         public string AuthorId { get; set; }
 
         public virtual ApplicationUser Author { get; set; }
+
+        public string AuthorName { get; set; }
 
         public int ArticleId { get; set; }
 

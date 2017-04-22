@@ -7,6 +7,8 @@
 <div class="container">
     <div class="well">
         <h2>Edit Category</h2>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
         @using (Html.BeginForm("Edit", "Category", FormMethod.Post, new { @class = "form-horizontal" }))
         {
             <div class="form-group">

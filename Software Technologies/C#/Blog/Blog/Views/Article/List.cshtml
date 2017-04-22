@@ -11,22 +11,19 @@
             <div class="col-sm-6">
                 <article>
                     <header>
-                        <h2>
+                        <h3>
                             @Html.ActionLink(@article.Title, "Details", "Article", new { @id = article.Id }, null)
-                        </h2>
+                        </h3>
                     </header>
                     <p>
-                        @article.Content
+                        @article.Summary
                     </p>
-                    <footer>
-                        <div class="pull-left">
-                            @foreach (var tag in article.Tags)
-                            {
-                                @Html.ActionLink(tag.Name, "List", "Tag", new { @id = tag.Id }, new { @class = "btn btn-default btn-xs" })
-                            }
-                        </div>
-                        <small class="author pull-right">
-                            --author @article.Author.FullName
+                    <footer class="author">
+                        <small class="pull-left">
+                            @article.DateCreated.ToString("dd.MM.yyyy")
+                        </small>
+                        <small class="pull-right">
+                            --author @Html.ActionLink(article.Author.FullName, "List", "Article", new { @authorId = article.Author.Id }, null)
                         </small>
                     </footer>
                 </article>

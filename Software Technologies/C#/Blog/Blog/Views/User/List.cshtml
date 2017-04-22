@@ -12,6 +12,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Name</th>
                     <th>Email</th>
                     <th>Actions</th>
                 </tr>
@@ -29,6 +30,7 @@
                         @:<tr>
                     }
                     <td>@user.Id</td>
+                    <td>@Html.ActionLink(user.FullName, "ArticlesByAuthor", new { @id = user.Id })</td>
                     <td>@user.Email</td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", "User", new { @id = user.Id }, null)

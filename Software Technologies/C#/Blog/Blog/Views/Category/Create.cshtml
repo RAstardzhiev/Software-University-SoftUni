@@ -7,6 +7,8 @@
 <div class="container">
     <div class="well">
         <h2>Create Category</h2>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
         @using (@Html.BeginForm("Create", "Category", FormMethod.Post, new { @class = "form-horizontal" }))
         {
             <div class="form-group span=8 offset=2">
