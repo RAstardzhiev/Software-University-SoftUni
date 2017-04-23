@@ -29,6 +29,7 @@
 
         </div>
 
+        <!-- Newest Articles -->
         <h2 class="text-center">Newest Articles</h2>
         @foreach (var article in Model.NewestArticles)
         {
@@ -54,7 +55,8 @@
             </div>
         }
 
-            <h2 class="text-center">Most Viewed</h2>
+        <!-- Most Viewed Articles -->
+        <h2 class="text-center">Most Viewed</h2>
         @foreach (var article in Model.MostViewedArticles)
         {
             <div class="col-sm-5">

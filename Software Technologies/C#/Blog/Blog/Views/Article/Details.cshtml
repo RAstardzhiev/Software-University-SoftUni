@@ -15,13 +15,13 @@
             @Model.Content
         </p>
         <small class="author">
-            Category: @Html.ActionLink(Model.Category.Name, "ListArticles", "Home", new { @categoryId = Model.Category.Id }, null)
+            Category: @Html.ActionLink(Model.Category.Name, "List", "Article", new { @categoryId = Model.Category.Id }, null)
         </small>
         <small class="author">
             Tags:
             @foreach (var tag in Model.Tags)
             {
-                @Html.ActionLink(tag.Name, "List", "Tag", new { @id = tag.Id }, new { @class = "btn btn-default btn-xs btn-addDistance" })
+                @Html.ActionLink(tag.Name, "List", "Article", new { @tagId = tag.Id }, new { @class = "btn btn-default btn-xs btn-addDistance" })
             }
         </small>
         <small class="author mt-20">

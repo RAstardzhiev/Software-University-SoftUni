@@ -290,12 +290,11 @@
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Delete.cshtml" />
-    <Content Include="Views\Home\ListArticles.cshtml" />
     <Content Include="Views\Home\ListCategories.cshtml" />
-    <Content Include="Views\Tag\List.cshtml" />
     <Content Include="Views\Tag\All.cshtml" />
     <Content Include="Views\Comment\Create.cshtml" />
     <Content Include="Views\Article\_CommentsPartial.cshtml" />
+    <Content Include="Views\Article\My.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

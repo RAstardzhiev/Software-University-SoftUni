@@ -19,6 +19,47 @@ namespace Blog.Controllers
         }
 
         //
+        // GET: Article/My
+        public ActionResult My(string authorId, string sortArgs)
+        {
+            if (authorId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            // Verify that the request is from the author
+            if (this.User.Identity.GetUserId() != authorId && !this.User.IsInRole("Admin"))
+            {
+                return RedirectToAction("List", new { authorId = authorId });
+            }
+
+            using (var dataabase = new BlogDbContext())
+            {
+                // Get articles
+                var articles = dataabase.Articles
+                    .Where(a => a.AuthorId.Equals(authorId))
+                    .ToList();
+
+                // check for sorting argument
+                switch (sortArgs)
+                {
+                    case null:
+                        break;
+                    case "Views":
+                        articles = articles.OrderByDescending(a => a.Visits).ToList();
+                        break;
+                    case "Date":
+                        articles = articles.OrderByDescending(a => a.DateCreated).ToList();
+                        break;
+                    default:
+                        break;
+                }
+
+                return View(articles);
+            }
+        }
+
+        //
         // GET: Article/List
         public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null)
         {
@@ -44,12 +85,18 @@ namespace Blog.Controllers
                     articles = database.Tags.Where(t => t.Id == tagId).FirstOrDefault().Articles.ToList();
                 }
 
+                if (articles == null)
+                {
+                    return HttpNotFound();
+                }
+
                 return View(articles);
             }
         }
 
         //
         // GET: Article/Edit
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -92,6 +139,7 @@ namespace Blog.Controllers
         //
         // POST: Article/Edit
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(ArticleViewModel model)
         {
             // Check if model state is valid
@@ -114,7 +162,7 @@ namespace Blog.Controllers
                     database.SaveChanges();
 
                     // Redirect to index page
-                    return RedirectToAction("Details", "Article", new { id = article.CategoryId });
+                    return RedirectToAction("Details", "Article", new { id = article.Id });
                 }
             }
 
@@ -128,6 +176,7 @@ namespace Blog.Controllers
 
         //
         // GET: Article/Delete
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -170,6 +219,7 @@ namespace Blog.Controllers
 
         //
         // POST: Article/Delete
+        [Authorize]
         [HttpPost]
         [ActionName("Delete")]
         public ActionResult DeleteConfirmed(int? id)
@@ -200,6 +250,13 @@ namespace Blog.Controllers
                     {
                         database.Tags.Remove(tag);
                     }
+                }
+
+                // Remove comments
+                var comments = article.Comments;
+                foreach (var comment in comments.ToList())
+                {
+                    database.Comments.Remove(comment);
                 }
 
                 // Delete article from database
@@ -368,7 +425,7 @@ namespace Blog.Controllers
             return date.ToString("dd-MM-yyyy");
         }
 
-        public static bool IsCrawlByBot(string userAgent)
+        private static bool IsCrawlByBot(string userAgent)
         {
             List<string> Crawlers = new List<string>()
             {

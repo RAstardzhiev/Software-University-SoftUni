@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNet.Identity
+
+@model List<Blog.Models.Article>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="container">
+    <div class="well">
+        <h2>Posts</h2>
+
+        <ul class="nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sort by:<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>@Html.ActionLink("Newest", "My", new { authorId = User.Identity.GetUserId(), sortArgs = "Date" })</li>
+                    <li>@Html.ActionLink("Popularity", "My", new { authorId = User.Identity.GetUserId(), sortArgs = "Views" })</li>
+                </ul>
+            </li>
+        </ul>
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            @foreach (var article in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(@article.Title, "Details", "Article", new { @id = article.Id }, null)
+                    </td>
+                    <td>
+                        @article.DateCreated.ToString("dd.MM.yyyy")
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Article", new { @id = article.Id }, new { @class = "btn btn-success btn-xs btn-addDistance" })
+                        @Html.ActionLink("Delete", "Delete", "Article", new { @id = article.Id }, new { @class = "btn btn-danger btn-xs btn-addDistance" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+<hr />

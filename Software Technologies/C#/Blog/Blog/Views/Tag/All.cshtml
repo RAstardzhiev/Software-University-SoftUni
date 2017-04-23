@@ -9,7 +9,7 @@
         <p>
             @foreach (var tag in Model)
             {
-                <span class="btn btn-link">@Html.ActionLink(@tag.Name, "List", "Tag", new { @id = tag.Id }, null)</span>
+                <span class="btn btn-link">@Html.ActionLink(@tag.Name, "List", "Article", new { @tagId = tag.Id }, null)</span>
             }
         </p>
     </div>

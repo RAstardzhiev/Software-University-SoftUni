@@ -51,25 +51,5 @@ namespace Blog.Controllers
                 return View(categories);
             }
         }
-
-        public ActionResult ListByCategory(int? categoryId)
-        {
-            if (categoryId == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            using (var database = new BlogDbContext())
-            {
-                var articles = database.Articles
-                    .Where(a => a.CategoryId == categoryId)
-                    .Include(a => a.Author)
-                    .Include(a => a.Tags)
-                    .ToList();
-
-                return View("ListArticles", articles);
-            }
-        }
     }
-
 }

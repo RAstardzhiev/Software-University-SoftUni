@@ -30,14 +30,24 @@
                         @:<tr>
                     }
                     <td>@user.Id</td>
-                    <td>@Html.ActionLink(user.FullName, "ArticlesByAuthor", new { @id = user.Id })</td>
+                    <td>
+                        <ul class="nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@user.FullName<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>@Html.ActionLink("Detailed list", "List", "Article", new { authorId = user.Id }, null)</li>
+                                    <li>@Html.ActionLink("Control panel", "My", "Article", new { authorId = user.Id }, null)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
                     <td>@user.Email</td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", "User", new { @id = user.Id }, null)
                         @Html.ActionLink("Delete", "Delete", "User", new { @id = user.Id }, null)
                     </td>
                 }
-</tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
+</div>
 </div>

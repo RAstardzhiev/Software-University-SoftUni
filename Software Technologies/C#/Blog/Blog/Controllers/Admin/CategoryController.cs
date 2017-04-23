@@ -29,16 +29,28 @@ namespace Blog.Controllers
 
         //
         // GET: Category/Create
+        [Authorize]
         public ActionResult Create()
         {
+            if (!IsAdmin())
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+            }
+
             return View();
         }
 
         //
         // POST: Category/Create
         [HttpPost]
+        [Authorize]
         public ActionResult Create(Category category)
         {
+            if (!IsAdmin())
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+            }
+
             if (ModelState.IsValid)
             {
                 using (var database = new BlogDbContext())
@@ -55,11 +67,17 @@ namespace Blog.Controllers
 
         //
         // GET: Category/Edit
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            if (!IsAdmin())
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
             }
 
             using (var database = new BlogDbContext())
@@ -77,9 +95,15 @@ namespace Blog.Controllers
 
         //
         // POST: Category/Edit
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(Category category)
         {
+            if (!IsAdmin())
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+            }
+
             if (ModelState.IsValid)
             {
                 using (var database = new BlogDbContext())
@@ -96,11 +120,17 @@ namespace Blog.Controllers
 
         //
         // GET: Category/Delete
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            if (!IsAdmin())
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
             }
 
             using (var database = new BlogDbContext())
@@ -118,10 +148,16 @@ namespace Blog.Controllers
 
         //
         // POST: Category/Delete
+        [Authorize]
         [HttpPost]
         [ActionName("Delete")]
         public ActionResult DeleteConfirmed(int? id)
         {
+            if (!IsAdmin())
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+            }
+
             using (var database = new BlogDbContext())
             {
                 var category = database.Categories.FirstOrDefault(c => c.Id == id);
@@ -138,6 +174,11 @@ namespace Blog.Controllers
 
                 return RedirectToAction("Index");
             }
+        }
+
+        public bool IsAdmin()
+        {
+            return this.User.IsInRole("Admin");
         }
     }
 }
