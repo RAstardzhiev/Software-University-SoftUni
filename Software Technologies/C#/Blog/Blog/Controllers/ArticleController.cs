@@ -161,7 +161,7 @@ namespace Blog.Controllers
                     database.Entry(article).State = EntityState.Modified;
                     database.SaveChanges();
 
-                    // Redirect to index page
+                    // Redirect to Details page
                     return RedirectToAction("Details", "Article", new { id = article.Id });
                 }
             }

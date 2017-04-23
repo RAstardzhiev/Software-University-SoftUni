@@ -16,14 +16,21 @@ namespace Blog.Models
 
         public Comment(string authirId, int articleId, string content)
         {
-            this.AuthorId = authirId;
-            this.DateCreated = DateTime.Now;
-            this.ArticleId = articleId;
-            this.Content = content;
-            this.AuthorName = new BlogDbContext().Users
-                            .Where(u => u.Id.Equals(AuthorId))
-                            .FirstOrDefault()
-                            .FullName;
+            using (var databasse = new BlogDbContext())
+            {
+                this.AuthorId = authirId;
+                this.DateCreated = DateTime.Now;
+                this.ArticleId = articleId;
+                this.Content = content;
+                this.AuthorName = databasse.Users
+                                .Where(u => u.Id.Equals(AuthorId))
+                                .First()
+                                .FullName;
+                this.AuthorUserName = databasse.Users
+                                .Where(u => u.Id.Equals(AuthorId))
+                                .First()
+                                .UserName;
+            }
         }
 
         [Key]
@@ -35,6 +42,8 @@ namespace Blog.Models
         public virtual ApplicationUser Author { get; set; }
 
         public string AuthorName { get; set; }
+
+        public string AuthorUserName { get; set; }
 
         public int ArticleId { get; set; }
 

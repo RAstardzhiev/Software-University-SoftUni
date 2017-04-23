@@ -1,6 +1,8 @@
 ﻿using Blog.Models;
 using Microsoft.AspNet.Identity;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web.Mvc;
 
 namespace Blog.Controllers
@@ -50,6 +52,64 @@ namespace Blog.Controllers
                 }
 
                 return RedirectToAction("Details", "Article", new { id = model.ArticleId });
+            }
+
+            return View(model);
+        }
+
+        //
+        // GET: Comment/Edit
+        [Authorize]
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            // Get comment from database
+            var comment = new BlogDbContext().Comments
+                .Where(c => c.Id == id)
+                .FirstOrDefault();
+
+            // Check if there is such a comment
+            if (comment == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Check user permissions
+            if (!comment.AuthorId.Equals(User.Identity.GetUserId()) && !User.IsInRole("Admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+            }
+
+            // Create view model
+            var model = new CommentViewModel();
+            model.Id = comment.Id;
+            model.Content = comment.Content;
+            model.ArticleId = comment.ArticleId;
+
+            return View(model);
+        }
+
+        //
+        // POST: Comment/Edit
+        [Authorize]
+        [HttpPost]
+        public ActionResult Edit(CommentViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var database = new BlogDbContext())
+                {
+                    var comment = database.Comments
+                    .Where(c => c.Id == model.Id)
+                    .FirstOrDefault();
+
+                    comment.Content = model.Content;
+
+                    database.Entry(comment).State = EntityState.Modified;
+                    database.SaveChanges();
+
+                    return RedirectToAction("Details", "Article", new { @id = comment.ArticleId });
+                }
             }
 
             return View(model);

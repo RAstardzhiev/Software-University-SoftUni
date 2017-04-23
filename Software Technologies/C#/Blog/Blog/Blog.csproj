@@ -295,6 +295,7 @@
     <Content Include="Views\Comment\Create.cshtml" />
     <Content Include="Views\Article\_CommentsPartial.cshtml" />
     <Content Include="Views\Article\My.cshtml" />
+    <Content Include="Views\Comment\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,7 +25,7 @@
             }
         </small>
         <small class="author mt-20">
-            Author: @Model.Author.FullName
+            Author: @Html.ActionLink(@Model.Author.FullName, "List", "Article", new { authorId = Model.AuthorId }, null)
         </small>
         <small class="author">
             Date: @ViewBag.DateString
@@ -84,8 +84,15 @@
             @foreach (var comment in Model.Comments)
             {
                 <div class="comments mt-20">
-                    @Html.ActionLink(comment.AuthorName, "List", "Aritcla", new { authorId = comment.AuthorId }, null) -
+                    @Html.ActionLink(comment.AuthorName, "List", "Article", new { authorId = comment.AuthorId }, null) -
                     <small>@comment.DateCreated.ToString("dd.MM.yyyy")</small>
+                    @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || comment.AuthorUserName.Equals(User.Identity.Name)))
+                    {
+                        <div class="pull-right">
+                            @Html.ActionLink("Edit", "Edit", "Comment", new { @id = comment.Id }, new { @class = "btn btn-success btn-xs btn-addDistance" })
+                            @Html.ActionLink("Delete", "Delete", "Comment", new { @id = comment.Id }, new { @class = "btn btn-danger btn-xs btn-addDistance" })
+                        </div>
+                    }
                     <hr />
                     @comment.Content
                 </div>
