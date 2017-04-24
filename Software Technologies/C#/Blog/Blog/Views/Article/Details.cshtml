@@ -1,7 +1,7 @@
 ﻿@model Blog.Models.Article
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.Title;
 }
 
 <div class="container">
@@ -11,9 +11,15 @@
                 @Model.Title
             </h2>
         </header>
-        <p>
+        @foreach (var paragraph in Model.Content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
+        {
+            <p>
+                @paragraph
+            </p>
+        }
+        @*<p>
             @Model.Content
-        </p>
+        </p>*@
         <small class="author">
             Category: @Html.ActionLink(Model.Category.Name, "List", "Article", new { @categoryId = Model.Category.Id }, null)
         </small>
