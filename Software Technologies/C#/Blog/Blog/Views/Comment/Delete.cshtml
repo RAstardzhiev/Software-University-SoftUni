@@ -1,12 +1,12 @@
 ﻿@model Blog.Models.CommentViewModel
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Delete";
 }
 
 <div class="container">
     <div class="well">
         <h2>Leave a Comment</h2>
-        @using (Html.BeginForm("Edit", "Comment", FormMethod.Post, new { @class = "form-horizontal" }))
+        @using (Html.BeginForm("Delete", "Comment", FormMethod.Post, new { @class = "form-horizontal" }))
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary("", new { @class = "text-danger" })
@@ -16,14 +16,14 @@
             <div class="form-group">
                 @Html.LabelFor(m => m.Content, new { @class = "control-label col-sm-4" })
                 <div class="col-sm-4">
-                    @Html.TextAreaFor(m => m.Content, new { @class = "form-control", @rows = "7" })
+                    @Html.TextAreaFor(m => m.Content, new { @class = "form-control", @readonly = "readonly" })
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-4 col-sm-offset-4">
                     @Html.ActionLink("Cancel", "Details", "Article", new { @id = Model.ArticleId }, new { @class = "btn btn-default" })
-                    <input type="submit" value="Edit" class="btn btn-success" />
+                    <input type="submit" value="Delete" class="btn btn-danger" />
                 </div>
             </div>
         }
