@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
+using System.Web;
 
 namespace Blog.Controllers
 {
@@ -287,7 +288,7 @@ namespace Blog.Controllers
         // POST: Article/Create
         [HttpPost]
         [Authorize]
-        public ActionResult Create(ArticleViewModel model)
+        public ActionResult Create(ArticleViewModel model, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
             {
@@ -301,6 +302,25 @@ namespace Blog.Controllers
 
                     // Create article
                     var article = new Article(authorId, model.Title, model.Content, model.CategoryId);
+
+                    // Check for image
+                    if (image != null)
+                    {
+                        var imageAllowedFormats = new[] { "image/jpeg", "image/jpg", "image/png", "image/gif" };
+
+                        if (imageAllowedFormats.Contains(image.ContentType))
+                        {
+                            var imagesPath = "/Content/Images/";
+                            var fileName = image.FileName;
+
+                            var uploadPath = imagesPath + fileName;
+
+                            // Without Server.MapPath() the directory will be C:/{uploadPath}
+                            image.SaveAs(Server.MapPath(uploadPath));
+
+                            article.ImagePath = uploadPath;
+                        }
+                    }
 
                     this.SetArticleTags(article, model, database);
 

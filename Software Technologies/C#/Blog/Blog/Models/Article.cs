@@ -31,7 +31,7 @@ namespace Blog.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(60)]
         public string Title { get; set; }
         
         [Required]
@@ -39,6 +39,8 @@ namespace Blog.Models
         public string Content { get; set; }
 
         public string Summary { get { return this.Content.Substring(0, 200) + "..."; } }
+
+        public string ImagePath { get; set; }
 
         [ForeignKey("Author")]
         public string AuthorId { get; set; }

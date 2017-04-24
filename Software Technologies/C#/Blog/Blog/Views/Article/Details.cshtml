@@ -11,15 +11,16 @@
                 @Model.Title
             </h2>
         </header>
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <img src="@Model.ImagePath" alt="@string.Join(" ", Model.Tags.Select(t => t.Name))" width="350px" class="pull-right disappearing img-rounded" />
+        }
         @foreach (var paragraph in Model.Content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
         {
             <p>
                 @paragraph
             </p>
         }
-        @*<p>
-            @Model.Content
-        </p>*@
         <small class="author">
             Category: @Html.ActionLink(Model.Category.Name, "List", "Article", new { @categoryId = Model.Category.Id }, null)
         </small>
