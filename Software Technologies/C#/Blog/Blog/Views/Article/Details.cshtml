@@ -13,7 +13,7 @@
         </header>
         @if (!string.IsNullOrEmpty(Model.ImagePath))
         {
-            <img src="@Model.ImagePath" alt="@string.Join(" ", Model.Tags.Select(t => t.Name))" width="350px" class="pull-right disappearing img-rounded" />
+            <img src="@Model.ImagePath" alt="@string.Join(" ", Model.Tags.Select(t => t.Name))" width="350px" class="pull-right disappearing img-responsive img-rounded img-thumbnail" />
         }
         @foreach (var paragraph in Model.Content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
         {

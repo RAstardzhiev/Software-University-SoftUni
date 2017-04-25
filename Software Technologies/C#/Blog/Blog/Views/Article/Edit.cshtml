@@ -7,7 +7,7 @@
 <div class="container">
     <div class="well">
         <h2>Edit Article</h2>
-        @using (Html.BeginForm("Edit", "Article", FormMethod.Post, new { @class = "form-horizontal" }))
+        @using (Html.BeginForm("Edit", "Article", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary("", new { @class = "text-danger" })
@@ -29,6 +29,24 @@
                 </div>
             </div>
 
+            if (Model.ImagePath != null)
+            {
+                <div class="form-group">
+                    <div class="checkbox col-sm-offset-4 col-sm-4">
+                        <label>
+                            @Html.CheckBoxFor(m => m.DeleteImage) Delete Image
+                        </label>
+                    </div>
+                </div>
+            }
+
+            <div class="form-group">
+                @Html.Label("image", @Model.ImagePath != null ? "Change Image" : "Image", new { @class = "control-label col-sm-4" })
+                <div class="col-sm-4">
+                    @Html.TextBox("image", null, new { type = "file", @class = "form-control col-sm-4" })
+                </div>
+            </div>
+
             <div class="form-group">
                 @Html.LabelFor(m => m.CategoryId, new { @class = "control-label col-sm-4" })
                 <div class="dropdown col-sm-4">
@@ -38,19 +56,19 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                @Html.LabelFor(m => m.Tags, new { @class = "control-label col-sm-4" })
-                <div class="col-sm-4">
-                    @Html.TextBoxFor(m => m.Tags, new { @class = "form-control col-sm-4" })
-                </div>
-            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Tags, new { @class = "control-label col-sm-4" })
+                        <div class="col-sm-4">
+                            @Html.TextBoxFor(m => m.Tags, new { @class = "form-control col-sm-4" })
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                <div class="col-sm-4 col-sm-offset-4">
-                    @Html.ActionLink("Cancel", "Index", "Article", null, new { @class = "btn btn-default" })
-                    <input type="submit" value="Edit" class="btn btn-success" />
-                </div>
-            </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            @Html.ActionLink("Cancel", "Index", "Article", null, new { @class = "btn btn-default" })
+                            <input type="submit" value="Edit" class="btn btn-success" />
+                        </div>
+                    </div>
         }
     </div>
 </div>

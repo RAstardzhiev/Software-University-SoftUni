@@ -131,6 +131,7 @@ namespace Blog.Controllers
                 model.CategoryId = article.CategoryId;
                 model.Categories = database.Categories.OrderBy(c => c.Name).ToList();
                 model.Tags = string.Join(", ", article.Tags.Select(t => t.Name));
+                model.ImagePath = article.ImagePath;
 
                 // Pass the view mode to view
                 return View(model);
@@ -141,7 +142,7 @@ namespace Blog.Controllers
         // POST: Article/Edit
         [HttpPost]
         [Authorize]
-        public ActionResult Edit(ArticleViewModel model)
+        public ActionResult Edit(ArticleViewModel model, HttpPostedFileBase image)
         {
             // Check if model state is valid
             if (ModelState.IsValid)
@@ -157,6 +158,16 @@ namespace Blog.Controllers
                     article.Content = model.Content;
                     article.CategoryId = model.CategoryId;
                     this.SetArticleTags(article, model, database);
+
+                    if (image != null && article.ImagePath != null)
+                    {
+                        DeleteImage(article);
+                        SetImage(article, image);
+                    }
+                    else if (model.DeleteImage)
+                    {
+                        DeleteImage(article);
+                    }
 
                     // Save article state in database
                     database.Entry(article).State = EntityState.Modified;
@@ -306,20 +317,7 @@ namespace Blog.Controllers
                     // Check for image
                     if (image != null)
                     {
-                        var imageAllowedFormats = new[] { "image/jpeg", "image/jpg", "image/png", "image/gif" };
-
-                        if (imageAllowedFormats.Contains(image.ContentType))
-                        {
-                            var imagesPath = "/Content/Images/";
-                            var fileName = image.FileName;
-
-                            var uploadPath = imagesPath + fileName;
-
-                            // Without Server.MapPath() the directory will be C:/{uploadPath}
-                            image.SaveAs(Server.MapPath(uploadPath));
-
-                            article.ImagePath = uploadPath;
-                        }
+                        SetImage(article, image);
                     }
 
                     this.SetArticleTags(article, model, database);
@@ -400,6 +398,31 @@ namespace Blog.Controllers
                 }
 
                 return RedirectToAction("Details", new { id = model.Id });
+            }
+        }
+
+        public void DeleteImage(Article article)
+        {
+            string imageFilePAth = Server.MapPath(article.ImagePath);
+            System.IO.File.Delete(imageFilePAth);
+            article.ImagePath = null;
+        }
+
+        public void SetImage(Article article, HttpPostedFileBase image)
+        {
+            var imageAllowedFormats = new[] { "image/jpeg", "image/jpg", "image/png", "image/gif" };
+
+            if (imageAllowedFormats.Contains(image.ContentType))
+            {
+                var imagesPath = "/Content/Images/";
+                var fileName = image.FileName;
+
+                var uploadPath = imagesPath + fileName;
+
+                // Without Server.MapPath() the directory will be C:/{uploadPath}
+                image.SaveAs(Server.MapPath(uploadPath));
+
+                article.ImagePath = uploadPath;
             }
         }
 

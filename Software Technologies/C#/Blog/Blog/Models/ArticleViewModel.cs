@@ -15,8 +15,13 @@ namespace Blog.Models
         [MinLength(300, ErrorMessage = "Article must be at least 300 symbols")]
         public string Content { get; set; }
 
+        public string ImagePath { get; set; }
+
+        public bool DeleteImage { get; set; }
+
         public string AuthorId { get; set; }
 
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
 
         public virtual Category Category { get; set; }
