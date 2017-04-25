@@ -286,6 +286,12 @@ namespace Blog.Controllers
                     database.Comments.Remove(comment);
                 }
 
+                // Remove Image
+                if (article.ImagePath != null)
+                {
+                    DeleteImage(article);
+                }
+
                 // Delete article from database
                 database.Articles.Remove(article);
                 database.SaveChanges();
