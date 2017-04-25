@@ -75,15 +75,26 @@ namespace Blog.Controllers
                 // Check for arguments
                 if (authorId != null)
                 {
-                    articles = articles.Where(a => a.Author.Id.Equals(authorId)).ToList();
+                    articles = articles
+                        .Where(a => a.Author.Id.Equals(authorId))
+                        .OrderByDescending(a => a.DateCreated)
+                        .ToList();
                 }
                 else if (categoryId != null)
                 {
-                    articles = articles.Where(a => a.Category.Id == categoryId).ToList();
+                    articles = articles
+                        .Where(a => a.Category.Id == categoryId)
+                        .OrderByDescending(a => a.DateCreated)
+                        .ToList();
                 }
                 else if (tagId != null)
                 {
-                    articles = database.Tags.Where(t => t.Id == tagId).FirstOrDefault().Articles.ToList();
+                    articles = database.Tags
+                        .Where(t => t.Id == tagId)
+                        .FirstOrDefault()
+                        .Articles
+                        .OrderByDescending(a => a.DateCreated)
+                        .ToList();
                 }
 
                 if (articles == null)
@@ -159,9 +170,13 @@ namespace Blog.Controllers
                     article.CategoryId = model.CategoryId;
                     this.SetArticleTags(article, model, database);
 
-                    if (image != null && article.ImagePath != null)
+                    if (image != null)
                     {
-                        DeleteImage(article);
+                        if (article.ImagePath != null)
+                        {
+                            DeleteImage(article);
+                        }
+
                         SetImage(article, image);
                     }
                     else if (model.DeleteImage)

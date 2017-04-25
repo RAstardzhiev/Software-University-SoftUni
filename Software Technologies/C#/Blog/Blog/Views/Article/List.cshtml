@@ -6,24 +6,28 @@
 
 <div class="container">
     <div class="row">
-        @foreach (var article in Model)
+        @for (int i = 0; i < Model.Count; i++)
         {
+            if (i % 2 == 0 && i != 0)
+            {
+                <div class="row"></div>
+            }
             <div class="col-sm-6">
                 <article>
                     <header>
                         <h3>
-                            @Html.ActionLink(@article.Title, "Details", "Article", new { @id = article.Id }, null)
+                            @Html.ActionLink(@Model[i].Title, "Details", "Article", new { @id = Model[i].Id }, null)
                         </h3>
                     </header>
                     <p>
-                        @article.Summary
+                        @Model[i].Summary
                     </p>
                     <footer class="author">
                         <small class="pull-left">
-                            @article.DateCreated.ToString("dd.MM.yyyy")
+                            @Model[i].DateCreated.ToString("dd.MM.yyyy")
                         </small>
                         <small class="pull-right">
-                            --author @Html.ActionLink(article.Author.FullName, "List", "Article", new { @authorId = article.Author.Id }, null)
+                            --author @Html.ActionLink(Model[i].Author.FullName, "List", "Article", new { @authorId = Model[i].Author.Id }, null)
                         </small>
                     </footer>
                 </article>
