@@ -1,4 +1,4 @@
-﻿@model List<Blog.Models.Article>
+﻿@model Blog.Models.ArticleListViewModel
 
 @{
     ViewBag.Title = "List";
@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        @for (int i = 0; i < Model.Count; i++)
+        @for (int i = 0; i < Model.Articles.Count; i++)
         {
             if (i % 2 == 0 && i != 0)
             {
@@ -16,18 +16,18 @@
                 <article>
                     <header>
                         <h3>
-                            @Html.ActionLink(@Model[i].Title, "Details", "Article", new { @id = Model[i].Id }, null)
+                            @Html.ActionLink(@Model.Articles[i].Title, "Details", "Article", new { @id = Model.Articles[i].Id }, null)
                         </h3>
                     </header>
                     <p>
-                        @Model[i].Summary
+                        @Model.Articles[i].Summary
                     </p>
                     <footer class="author">
                         <small class="pull-left">
-                            @Model[i].DateCreated.ToString("dd.MM.yyyy")
+                            @Model.Articles[i].DateCreated.ToString("dd.MM.yyyy")
                         </small>
                         <small class="pull-right">
-                            --author @Html.ActionLink(Model[i].Author.FullName, "List", "Article", new { @authorId = Model[i].Author.Id }, null)
+                            --author @Html.ActionLink(Model.Articles[i].Author.FullName, "List", "Article", new { @authorId = Model.Articles[i].Author.Id }, null)
                         </small>
                     </footer>
                 </article>
@@ -35,17 +35,39 @@
         }
     </div>
 
-    @if (!Model.Any())
-    {
-        <h2 class="text-center mt-50">No more Posts!!!</h2>
-    }
-
     <div class="text-center mt-50">
-        @Html.ActionLink("| <", "List", null, new { @class = $"btn btn-sm btn-primary {(ViewBag.CurrentPage == 1 ? "disabled" : string.Empty)}" })
-        @Html.ActionLink("<<", "List", new { page = ViewBag.CurrentPage - 1 }, new { @class = $"btn btn-sm btn-primary {(ViewBag.CurrentPage == 1 ? "disabled" : string.Empty)}" })
+        @if (Model.CurrentPage != 1)
+        {
+            @Html.ActionLink("| <", "List", new { filterArgs = Model.FilterArgs }, new { @class = "btn-default badge page-links" })
+            @Html.ActionLink("<<", "List", new { page = Model.CurrentPage - 1, filterArgs = Model.FilterArgs }, new { @class = "btn-default badge page-links" })
+        }
+        
+        @{
+            var numbersCount = Model.PagesCount <= 3 ? Model.PagesCount : 5;
+            var pageNumber = Model.CurrentPage <= 2 ? 1 : Model.CurrentPage - 2;
+            while (numbersCount > 0 && pageNumber <= Model.PagesCount)
+            {
+                @Html.ActionLink($"{pageNumber}", "List", new { page = pageNumber, filterArgs = Model.FilterArgs }, new { @class = $"btn-default badge page-links {(Model.CurrentPage == pageNumber ? "active" : string.Empty)}" })
+                numbersCount--;
+                pageNumber++;
+            }
+        }
 
-        @Html.ActionLink(">>", "List", new { page = ViewBag.CurrentPage + 1 }, new { @class = $"btn btn-sm btn-primary {(!Model.Any() || Model.Count < 2 ? "disabled" : string.Empty)}" })
-        @Html.ActionLink("> |", "List", new { page = ViewBag.CurrentPage + 1 }, new { @class = $"btn btn-sm btn-primary {(!Model.Any() || Model.Count < 2 ? "disabled" : string.Empty)}" })
+        @if (Model.CurrentPage != Model.PagesCount)
+        {
+            @Html.ActionLink(">>", "List", new { page = Model.CurrentPage + 1 }, new { @class = "btn-default badge page-links" })
+            @Html.ActionLink("> |", "List", new { page = Model.PagesCount, filterArgs = Model.FilterArgs }, new { @class = "btn-default badge page-links" })
+        }
+
+        <div class="small">
+            Showing @Model.FirstPostOnPage to
+            @if (Model.CurrentPage != Model.PagesCount)
+            {
+                @Model.LastPostOnPage @:out of
+            }
+
+            @Model.TotalPostsCount posts
+        </div>
     </div>
 
 </div>

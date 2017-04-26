@@ -62,8 +62,27 @@ namespace Blog.Controllers
 
         //
         // GET: Article/List
-        public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null, int page = 1)
+        public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null, int page = 1, string filterArgs = null)
         {
+            // Check for filter arguments
+            if (filterArgs != null)
+            {
+                var idStartIndex = filterArgs.IndexOf("=") + 1;
+
+                if (filterArgs.IndexOf("author") >= 0)
+                {
+                    authorId = filterArgs.Substring(idStartIndex);
+                }
+                else if (filterArgs.IndexOf("category") >= 0)
+                {
+                    categoryId = int.Parse(filterArgs.Substring(idStartIndex));
+                }
+                else if (filterArgs.IndexOf("tag") >= 0)
+                {
+                    tagId = int.Parse(filterArgs.Substring(idStartIndex));
+                }
+            }
+
             using (var database = new BlogDbContext())
             {
                 // Get articles from the database
@@ -74,21 +93,21 @@ namespace Blog.Controllers
                 // Check for arguments
                 if (authorId != null)
                 {
+                    filterArgs = $"authorId={authorId}";
                     articles = articles
                         .Where(a => a.Author.Id.Equals(authorId));
                 }
                 else if (categoryId != null)
                 {
+                    filterArgs = $"categoryId={categoryId}";
                     articles = articles
                         .Where(a => a.Category.Id == categoryId);
                 }
                 else if (tagId != null)
                 {
-                    articles = database.Tags
-                        .Where(t => t.Id == tagId)
-                        .FirstOrDefault()
-                        .Articles
-                        .AsQueryable();
+                    filterArgs = $"tagId={tagId}";
+                    articles = articles
+                        .Where(a => a.Tags.Select(t => t.Id).ToList().Contains((int)tagId));
                 }
 
                 if (articles == null)
@@ -97,21 +116,34 @@ namespace Blog.Controllers
                 }
 
                 // Set the paging
-                var pageSize = 2;
-
                 if (page < 1)
                 {
                     page = 1;
                 }
+
+                var pageSize = 2;
+                var totalPostsCount = articles.Count();
+                var pagesCount = (int)Math.Ceiling(totalPostsCount * 1.0 / pageSize);
 
                 articles = articles
                     .OrderByDescending(a => a.DateCreated)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
 
-                ViewBag.CurrentPage = page;
+                // Create model
+                var model = new ArticleListViewModel()
+                {
+                    Articles = articles.ToList(),
+                    PageSize = pageSize,
+                    CurrentPage = page,
+                    TotalPostsCount = totalPostsCount,
+                    FirstPostOnPage = ((page - 1) * pageSize) + 1,
+                    LastPostOnPage = ((page - 1) * pageSize) + pageSize,
+                    PagesCount = pagesCount,
+                    FilterArgs = filterArgs
+                };
 
-                return View(articles.ToList());
+                return View(model);
             }
         }
 

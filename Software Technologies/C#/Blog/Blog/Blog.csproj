@@ -211,6 +211,7 @@
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\ArticleListViewModel.cs" />
     <Compile Include="Models\BlogDbContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />

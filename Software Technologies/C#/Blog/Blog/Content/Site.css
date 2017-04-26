@@ -76,6 +76,11 @@ div.comments {
     padding: 15px;
 }
 
+.page-links {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
 input.search {
     width: 15px;
     box-sizing: border-box;
