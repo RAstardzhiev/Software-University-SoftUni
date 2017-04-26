@@ -8,7 +8,7 @@ namespace Blog.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(60)]
+        [StringLength(150)]
         public string Title { get; set; }
 
         [Required]

@@ -12,7 +12,7 @@
             {
                 <div class="row"></div>
             }
-            <div class="col-sm-6">
+            <div class="col-sm-6 pt-20">
                 <article>
                     <header>
                         <h3>
@@ -34,5 +34,19 @@
             </div>
         }
     </div>
+
+    @if (!Model.Any())
+    {
+        <h2 class="text-center mt-50">No more Posts!!!</h2>
+    }
+
+    <div class="text-center mt-50">
+        @Html.ActionLink("| <", "List", null, new { @class = $"btn btn-sm btn-primary {(ViewBag.CurrentPage == 1 ? "disabled" : string.Empty)}" })
+        @Html.ActionLink("<<", "List", new { page = ViewBag.CurrentPage - 1 }, new { @class = $"btn btn-sm btn-primary {(ViewBag.CurrentPage == 1 ? "disabled" : string.Empty)}" })
+
+        @Html.ActionLink(">>", "List", new { page = ViewBag.CurrentPage + 1 }, new { @class = $"btn btn-sm btn-primary {(!Model.Any() || Model.Count < 2 ? "disabled" : string.Empty)}" })
+        @Html.ActionLink("> |", "List", new { page = ViewBag.CurrentPage + 1 }, new { @class = $"btn btn-sm btn-primary {(!Model.Any() || Model.Count < 2 ? "disabled" : string.Empty)}" })
+    </div>
+
 </div>
 <hr />

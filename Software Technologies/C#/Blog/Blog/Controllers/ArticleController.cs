@@ -62,30 +62,25 @@ namespace Blog.Controllers
 
         //
         // GET: Article/List
-        public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null)
+        public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null, int page = 1)
         {
             using (var database = new BlogDbContext())
             {
                 // Get articles from the database
                 var articles = database.Articles
                     .Include(a => a.Author)
-                    .Include(a => a.Tags)
-                    .ToList();
+                    .Include(a => a.Tags);
 
                 // Check for arguments
                 if (authorId != null)
                 {
                     articles = articles
-                        .Where(a => a.Author.Id.Equals(authorId))
-                        .OrderByDescending(a => a.DateCreated)
-                        .ToList();
+                        .Where(a => a.Author.Id.Equals(authorId));
                 }
                 else if (categoryId != null)
                 {
                     articles = articles
-                        .Where(a => a.Category.Id == categoryId)
-                        .OrderByDescending(a => a.DateCreated)
-                        .ToList();
+                        .Where(a => a.Category.Id == categoryId);
                 }
                 else if (tagId != null)
                 {
@@ -93,8 +88,7 @@ namespace Blog.Controllers
                         .Where(t => t.Id == tagId)
                         .FirstOrDefault()
                         .Articles
-                        .OrderByDescending(a => a.DateCreated)
-                        .ToList();
+                        .AsQueryable();
                 }
 
                 if (articles == null)
@@ -102,7 +96,22 @@ namespace Blog.Controllers
                     return HttpNotFound();
                 }
 
-                return View(articles);
+                // Set the paging
+                var pageSize = 2;
+
+                if (page < 1)
+                {
+                    page = 1;
+                }
+
+                articles = articles
+                    .OrderByDescending(a => a.DateCreated)
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize);
+
+                ViewBag.CurrentPage = page;
+
+                return View(articles.ToList());
             }
         }
 

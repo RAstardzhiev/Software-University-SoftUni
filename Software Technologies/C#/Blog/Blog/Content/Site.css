@@ -58,6 +58,10 @@ textarea {
     padding-bottom: 10px;
 }
 
+.pt-20 {
+    padding-top: 20px;
+}
+
 .tcw {
     color: white;
 }
@@ -72,6 +76,30 @@ div.comments {
     padding: 15px;
 }
 
-pad-right-10 {
-    padding-right: 10px;
+input.search {
+    width: 15px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 5px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input.search:focus {
+    width: 100%;
+}
+
+form.search {
+    opacity: 0.5;
+    text-align: left;
+    margin-top: 7px;
+}
+
+form.search:hover {
+    opacity: 1.0;
 }
