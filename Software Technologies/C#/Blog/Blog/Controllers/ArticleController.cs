@@ -455,11 +455,14 @@ namespace Blog.Controllers
                     .Include(a => a.Comments)
                     .FirstOrDefault();
 
+                article.Comments = article.Comments.OrderByDescending(c => c.DateCreated).ToList();
+
                 if (article == null)
                 {
                     return HttpNotFound();
                 }
 
+                // Check for bot
                 string userAgent = System.Web.HttpContext.Current.Request.UserAgent.ToLower();
                 if (!IsCrawlByBot(userAgent))
                 {
@@ -468,7 +471,20 @@ namespace Blog.Controllers
                     database.SaveChanges();
                 }
 
-                ViewBag.DateString = DateToString(article.DateCreated);
+                // Paging comments
+                var commentsInDetailsPage = 5;
+
+                if (article.Comments.Count > commentsInDetailsPage)
+                {
+                    ViewBag.IsCommentCountGreaterThanAllowed = true;
+                    article.Comments = article.Comments
+                        .Take(commentsInDetailsPage)
+                        .ToList();
+                }
+                else
+                {
+                    ViewBag.IsCommentCountGreaterThanAllowed = false;
+                }
 
                 return View(article);
             }
@@ -481,6 +497,11 @@ namespace Blog.Controllers
         [Authorize]
         public ActionResult Comment(Article model)
         {
+            if (string.IsNullOrEmpty(model.Comment))
+            {
+                return RedirectToAction("Details", new { id = model.Id });
+            }
+
             using (var database = new BlogDbContext())
             {
                 var article = database.Articles.Where(a => a.Id == model.Id);
@@ -558,11 +579,6 @@ namespace Blog.Controllers
                 // Add tag to article tags
                 article.Tags.Add(tag);
             }
-        }
-
-        private string DateToString(DateTime date)
-        {
-            return date.ToString("dd-MM-yyyy");
         }
 
         private static bool IsCrawlByBot(string userAgent)

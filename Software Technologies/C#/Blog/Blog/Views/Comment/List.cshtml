@@ -1,0 +1,62 @@
+﻿@model Blog.Models.CommentListViewModel
+
+@{
+    ViewBag.Title = "Comments";
+}
+
+<h2 class="text-center">
+    All Comments for 
+    @Html.ActionLink(Model.ArticleTitle, "Details", "Article", new { id = Model.ArticleId }, null)
+</h2>
+<div class="text-center small">
+    by @Html.ActionLink(Model.ArticleAuthorName, "List", "Article", new { authorId = Model.ArticleAuthorId }, null) from 
+    @Model.ArticleDate.ToString("dd.MM.yyyy")
+</div>
+
+@foreach (var comment in Model.Comments)
+{
+    <div class="comments mt-20">
+        @Html.ActionLink(comment.AuthorName, "List", "Article", new { authorId = comment.AuthorId }, null) -
+        <small>@comment.DateCreated.ToString("dd.MM.yyyy")</small>
+
+        @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || comment.AuthorUserName.Equals(User.Identity.Name)))
+        {
+            <div class="pull-right">
+                @Html.ActionLink("Edit", "Edit", "Comment", new { @id = comment.Id }, new { @class = "btn btn-success btn-xs btn-addDistance" })
+                @Html.ActionLink("Delete", "Delete", "Comment", new { @id = comment.Id }, new { @class = "btn btn-danger btn-xs btn-addDistance" })
+            </div>
+        }
+
+        <hr />
+        @comment.Content
+    </div>
+}
+
+<div class="text-center mt-50">
+    @if (Model.CurrentPage != 1)
+    {
+        @Html.ActionLink("| <", "List", new { articleId = Model.ArticleId }, new { @class = "btn-default badge page-links" })
+        @Html.ActionLink("<<", "List", new { page = Model.CurrentPage - 1, articleId = Model.ArticleId }, new { @class = "btn-default badge page-links" })
+    }
+
+    @{
+        var numbersCount = Model.PagesCount <= 3 ? Model.PagesCount : 5;
+        var pageNumber = Model.CurrentPage <= 2 ? 1 : Model.CurrentPage - 2;
+        while (numbersCount > 0 && pageNumber <= Model.PagesCount)
+        {
+            @Html.ActionLink($"{pageNumber}", "List", new { page = pageNumber, articleId = Model.ArticleId }, new { @class = $"btn-default badge page-links {(Model.CurrentPage == pageNumber ? "active" : string.Empty)}" })
+            numbersCount--;
+            pageNumber++;
+        }
+    }
+
+    @if (Model.CurrentPage != Model.PagesCount)
+    {
+        @Html.ActionLink(">>", "List", new { page = Model.CurrentPage + 1, articleId = Model.ArticleId }, new { @class = "btn-default badge page-links" })
+        @Html.ActionLink("> |", "List", new { page = Model.PagesCount, articleId = Model.ArticleId }, new { @class = "btn-default badge page-links" })
+    }
+
+</div>
+
+@Html.ActionLink("Back to the Article", "Details", "Article", new { id = Model.ArticleId }, new { @class = "btn btn-default mt-10" })
+<hr />

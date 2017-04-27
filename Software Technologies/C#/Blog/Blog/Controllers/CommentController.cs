@@ -1,5 +1,6 @@
 ﻿using Blog.Models;
 using Microsoft.AspNet.Identity;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -13,6 +14,57 @@ namespace Blog.Controllers
         public ActionResult Index()
         {
             return RedirectToAction("Index", "Home");
+        }
+
+        //
+        // GET: Comment/List
+        public ActionResult List(int? articleId, int page = 1)
+        {
+            if (articleId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            using (var database = new BlogDbContext())
+            {
+                var article = database.Articles
+                    .Where(a => a.Id == articleId)
+                    .Include(a => a.Author)
+                    .FirstOrDefault();
+
+                if (article == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Set the paging
+                if (page < 1)
+                {
+                    page = 1;
+                }
+
+                var pageSize = 2;
+
+                var comments = article.Comments
+                    .OrderByDescending(c => c.DateCreated)
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList();
+
+                var model = new CommentListViewModel()
+                {
+                    ArticleAuthorId = article.AuthorId,
+                    ArticleAuthorName = article.Author.FullName,
+                    ArticleDate = article.DateCreated,
+                    ArticleId = article.Id,
+                    ArticleTitle = article.Title,
+                    Comments = comments,
+                    CurrentPage = page,
+                    PagesCount = (int)Math.Ceiling(article.Comments.Count * 1.0 / pageSize)
+                };
+
+                return View(model);
+            }
         }
 
         //

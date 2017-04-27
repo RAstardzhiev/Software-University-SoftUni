@@ -83,3 +83,8 @@ div.comments {
     margin-right: 10px;
     padding: 15px;
 }
+
+.page-links {
+    margin-left: 1px;
+    margin-right: 1px;
+}

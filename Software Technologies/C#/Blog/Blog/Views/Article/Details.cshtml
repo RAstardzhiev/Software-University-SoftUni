@@ -35,7 +35,7 @@
             Author: @Html.ActionLink(@Model.Author.FullName, "List", "Article", new { authorId = Model.AuthorId }, null)
         </small>
         <small class="author">
-            Date: @ViewBag.DateString
+            Date: @Model.DateCreated.ToString("dd-MM-yyyy")
         </small>
         <small class="author">
             Visits: @Model.Visits
@@ -84,10 +84,17 @@
     }
 
     @if (Model.Comments.Count > 0)
-            {
+    {
         <div class="mt-50">
             <hr />
-            <h4>Comments</h4>
+            <h4>
+                Comments
+                @if (ViewBag.IsCommentCountGreaterThanAllowed)
+                {
+                    <span class="small"> - Showing the Latest 5</span><br />
+                    @Html.ActionLink("All Comments", "List", "Comment", new { articleId = Model.Id }, new { @class = "btn btn-success btn-sm mt-10" })
+                }
+            </h4>
             @foreach (var comment in Model.Comments)
             {
                 <div class="comments mt-20">
@@ -103,6 +110,11 @@
                     <hr />
                     @comment.Content
                 </div>
+            }
+
+            @if (ViewBag.IsCommentCountGreaterThanAllowed)
+            {
+                @Html.ActionLink("All Comments", "List", "Comment", new { articleId = Model.Id }, new { @class = "btn btn-success btn-sm mt-10" })
             }
         </div>
     }
