@@ -155,7 +155,7 @@ namespace Blog.Controllers
                     page = 1;
                 }
 
-                var pageSize = 2;
+                var pageSize = 6;
                 var totalPostsCount = articles.Count();
                 var pagesCount = (int)Math.Ceiling(totalPostsCount * 1.0 / pageSize);
 
@@ -563,6 +563,12 @@ namespace Blog.Controllers
             // Set new article tags
             foreach (var tagStering in tagsStrings)
             {
+                // Check tag name Length
+                if (tagStering.Length > 15)
+                {
+                    continue;
+                }
+
                 // Get tag from databaase by its name
                 Tag tag = database.Tags.FirstOrDefault(t => t.Name.Equals(tagStering));
 
