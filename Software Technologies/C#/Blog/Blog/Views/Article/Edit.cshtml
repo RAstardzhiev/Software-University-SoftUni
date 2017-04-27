@@ -65,7 +65,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-4 col-sm-offset-4">
-                            @Html.ActionLink("Cancel", "Index", "Article", null, new { @class = "btn btn-default" })
+                            @Html.ActionLink("Cancel", "Details", "Article", new { id = Model.Id }, new { @class = "btn btn-default" })
                             <input type="submit" value="Edit" class="btn btn-success" />
                         </div>
                     </div>

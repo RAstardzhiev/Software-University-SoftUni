@@ -403,10 +403,7 @@ namespace Blog.Controllers
                 using (var database = new BlogDbContext())
                 {
                     // Get author id
-                    var authorId = database.Users
-                        .Where(u => u.UserName == this.User.Identity.Name)
-                        .First()
-                        .Id;
+                    var authorId = User.Identity.GetUserId();
 
                     // Create article
                     var article = new Article(authorId, model.Title, model.Content, model.CategoryId);
