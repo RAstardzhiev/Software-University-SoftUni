@@ -61,8 +61,28 @@ namespace Blog.Controllers
         }
 
         //
+        // GET: Article/Search
+        public ActionResult Search(ArticleListViewModel model)
+        {
+            return View(model);
+        }
+
+        //
+        // POST: Article/Post
+        [HttpPost]
+        public ActionResult Search(string searchKey)
+        {
+            if (searchKey == null)
+            {
+                return RedirectToAction("Search");
+            }
+
+            return RedirectToAction("List", new { searchKey = searchKey });
+        }
+
+        //
         // GET: Article/List
-        public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null, int page = 1, string filterArgs = null)
+        public ActionResult List(string authorId = null, int? categoryId = null, int? tagId = null, int page = 1, string filterArgs = null, string searchKey = null)
         {
             // Check for filter arguments
             if (filterArgs != null)
@@ -109,6 +129,20 @@ namespace Blog.Controllers
                     articles = articles
                         .Where(a => a.Tags.Select(t => t.Id).ToList().Contains((int)tagId));
                 }
+                else if (!string.IsNullOrEmpty(searchKey))
+                {
+                    articles = articles
+                        .Where(a => a.Title.Contains(searchKey));
+
+                    if (articles.Count() < 1)
+                    {
+                        return RedirectToAction("Search", new ArticleListViewModel()
+                        {
+                            SearchKey = searchKey,
+                            NotFound = true
+                        });
+                    }
+                }
 
                 if (articles == null)
                 {
@@ -140,7 +174,8 @@ namespace Blog.Controllers
                     FirstPostOnPage = ((page - 1) * pageSize) + 1,
                     LastPostOnPage = ((page - 1) * pageSize) + pageSize,
                     PagesCount = pagesCount,
-                    FilterArgs = filterArgs
+                    FilterArgs = filterArgs,
+                    SearchKey = searchKey
                 };
 
                 return View(model);

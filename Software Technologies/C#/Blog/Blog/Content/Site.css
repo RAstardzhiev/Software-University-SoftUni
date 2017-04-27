@@ -50,6 +50,14 @@ textarea {
     margin-top: 15px;
 }
 
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
 .pl-10 {
     padding-left: 10px;
 }
@@ -74,37 +82,4 @@ div.comments {
     margin-left: 10px;
     margin-right: 10px;
     padding: 15px;
-}
-
-.page-links {
-    margin-left: 1px;
-    margin-right: 1px;
-}
-
-input.search {
-    width: 15px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 5px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-input.search:focus {
-    width: 100%;
-}
-
-form.search {
-    opacity: 0.5;
-    text-align: left;
-    margin-top: 7px;
-}
-
-form.search:hover {
-    opacity: 1.0;
 }

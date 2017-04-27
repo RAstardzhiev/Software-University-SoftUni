@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Blog.Models
 {
@@ -19,5 +20,10 @@ namespace Blog.Models
         public int PageSize { get; set; }
 
         public string FilterArgs { get; set; }
+
+        [Display(Name = "Search")]
+        public string SearchKey { get; set; }
+
+        public bool NotFound { get; set; }
     }
 }
