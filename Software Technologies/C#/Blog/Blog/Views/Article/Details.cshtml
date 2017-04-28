@@ -41,9 +41,9 @@
             Visits: @Model.Visits
         </small>
         <footer class="pull-right">
+            @Html.ActionLink("Comment", "Create", "Comment", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs btn-addDistance", @target = "_blank" })
             @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.IsAuthor(User.Identity.Name)))
             {
-                @Html.ActionLink("Comment", "Create", "Comment", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs btn-addDistance", @target = "_blank" })
                 @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs btn-addDistance" })
                 @Html.ActionLink("Delete", "Delete", "Article", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs btn-addDistance" })
             }
