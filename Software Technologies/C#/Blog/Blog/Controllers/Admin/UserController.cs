@@ -226,6 +226,15 @@ namespace Blog.Controllers.Admin
                     database.Articles.Remove(article);
                 }
 
+                // Get user Comments from database
+                var comments = database.Comments.Where(c => c.AuthorId.Equals(user.Id));
+
+                // Delete user Comments
+                foreach (var comment in comments)
+                {
+                    database.Comments.Remove(comment);
+                }
+
                 // Delete user and save changes
                 database.Users.Remove(user);
                 database.SaveChanges();
