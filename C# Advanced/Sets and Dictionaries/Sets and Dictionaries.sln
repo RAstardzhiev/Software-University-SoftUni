@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Population Counter", "1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Logs Aggregator", "11. Logs Aggregator\11. Logs Aggregator.csproj", "{F6E592CF-E4AC-4582-908D-2892F9BACDD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Legendary Farming", "12. Legendary Farming\12. Legendary Farming.csproj", "{0C9739A0-2B85-494E-98C4-43120AF19778}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Srabsko Unleashed", "13. Srabsko Unleashed\13. Srabsko Unleashed.csproj", "{FE544BE8-F8DB-4D73-9782-D739619277BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{F6E592CF-E4AC-4582-908D-2892F9BACDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6E592CF-E4AC-4582-908D-2892F9BACDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6E592CF-E4AC-4582-908D-2892F9BACDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C9739A0-2B85-494E-98C4-43120AF19778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C9739A0-2B85-494E-98C4-43120AF19778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C9739A0-2B85-494E-98C4-43120AF19778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C9739A0-2B85-494E-98C4-43120AF19778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE544BE8-F8DB-4D73-9782-D739619277BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE544BE8-F8DB-4D73-9782-D739619277BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE544BE8-F8DB-4D73-9782-D739619277BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE544BE8-F8DB-4D73-9782-D739619277BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
