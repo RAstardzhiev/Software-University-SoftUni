@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17. Lego Blocks", "17. Lego
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18. Radioactive Bunnies", "18. Radioactive Bunnies\18. Radioactive Bunnies.csproj", "{37770644-3F37-4C45-AE60-70500E193FC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19. Crossfire", "19. Crossfire\19. Crossfire.csproj", "{3F9BCFB9-4BD8-433B-8A04-7EC2D8FD39D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18. Radioactive Bunnies vs2", "18. Radioactive Bunnies vs2\18. Radioactive Bunnies vs2.csproj", "{0CE89C15-437D-4278-A6E0-90D84C0FD4C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,14 @@ Global
 		{37770644-3F37-4C45-AE60-70500E193FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37770644-3F37-4C45-AE60-70500E193FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37770644-3F37-4C45-AE60-70500E193FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F9BCFB9-4BD8-433B-8A04-7EC2D8FD39D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F9BCFB9-4BD8-433B-8A04-7EC2D8FD39D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F9BCFB9-4BD8-433B-8A04-7EC2D8FD39D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F9BCFB9-4BD8-433B-8A04-7EC2D8FD39D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE89C15-437D-4278-A6E0-90D84C0FD4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE89C15-437D-4278-A6E0-90D84C0FD4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE89C15-437D-4278-A6E0-90D84C0FD4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE89C15-437D-4278-A6E0-90D84C0FD4C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
