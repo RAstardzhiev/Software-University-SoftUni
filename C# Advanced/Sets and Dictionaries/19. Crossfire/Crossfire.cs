@@ -16,7 +16,7 @@
         {
             for (int i = 0; i < matrix.Length; i++)
             {
-                Console.WriteLine(string.Join(" ", matrix[i]));
+                Console.WriteLine(string.Join(" ", matrix[i].Where(c => c != -1)));
             }
         }
 
@@ -45,33 +45,37 @@
 
         private static int[][] DestroyMatrix(int[][] matrix, int hitRow, int hitCol, int hitWave)
         {
-            // Mark destroyed cells
-            for (int i = 0; i < matrix.Length; i++)
+            // Mark destroyed part of the column
+            for (int row = hitRow - hitWave; row <= hitRow + hitWave; row++)
             {
-                for (int j = 0; j < matrix[i].Length; j++)
+                if (IsInMatrix(row, hitCol, matrix))
                 {
-                    if ((i == hitRow) && (j == hitCol) ||
-                        (i == hitRow) && (j >= hitCol - hitWave) && (j <= hitCol + hitWave) ||
-                        (j == hitCol) && (i >= hitRow - hitWave) && (i <= hitRow + hitWave))
-                    {
-                        matrix[i][j] = -1;
-                    }
+                    matrix[row][hitCol] = -1;
+                }
+            }
+
+            // Mark destroyed part of the row
+            for (int col = hitCol - hitWave; col <= hitCol + hitWave; col++)
+            {
+                if (IsInMatrix(hitRow, col, matrix))
+                {
+                    matrix[hitRow][col] = -1;
                 }
             }
 
             // Remove destroyed cells
             for (int i = 0; i < matrix.Length; i++)
             {
+                // Remove destroyed cells if there is ones
                 for (int j = 0; j < matrix[i].Length; j++)
                 {
-                    if (matrix[i][j] == -1)
+                    if (matrix[i][j] < 0)
                     {
                         matrix[i] = matrix[i].Where(n => n > 0).ToArray();
-                        break;
                     }
                 }
 
-                // Check for empty row
+                // Remove empty rows
                 if (matrix[i].Count() < 1)
                 {
                     matrix = matrix.Take(i).Concat(matrix.Skip(i + 1)).ToArray();
@@ -80,6 +84,11 @@
             }
 
             return matrix;
+        }
+
+        private static bool IsInMatrix(int row, int col, int[][] matrix)
+        {
+            return row >= 0 && col >= 0 && row < matrix.Length && col < matrix[row].Length;
         }
 
         private static int[][] InitializeMatrix()
