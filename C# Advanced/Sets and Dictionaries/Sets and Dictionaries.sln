@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20. The Heigan Dance", "20.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21. Parking System", "21. Parking System\21. Parking System.csproj", "{CDD29C1B-B837-4DCD-910F-F8452800F20F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21.vs2. Parking System", "21.vs2. Parking System\21.vs2. Parking System.csproj", "{9368B4CE-8D3E-40AD-B9BE-4A8DB9146AC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{CDD29C1B-B837-4DCD-910F-F8452800F20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD29C1B-B837-4DCD-910F-F8452800F20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD29C1B-B837-4DCD-910F-F8452800F20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9368B4CE-8D3E-40AD-B9BE-4A8DB9146AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9368B4CE-8D3E-40AD-B9BE-4A8DB9146AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9368B4CE-8D3E-40AD-B9BE-4A8DB9146AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9368B4CE-8D3E-40AD-B9BE-4A8DB9146AC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
