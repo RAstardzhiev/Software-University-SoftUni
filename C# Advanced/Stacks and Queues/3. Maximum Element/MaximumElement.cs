@@ -31,7 +31,7 @@
                         {
                             stack.Push(command[1]);
 
-                            if (command[1] > maxHistory.Peek())
+                            if (command[1] >= maxHistory.Peek())
                             {
                                 maxHistory.Push(command[1]);
                             }
