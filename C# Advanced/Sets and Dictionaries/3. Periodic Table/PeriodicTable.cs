@@ -2,13 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class PeriodicTable
     {
         public static void Main()
         {
             var n = int.Parse(Console.ReadLine());
-            var elements = new SortedSet<string>();
+            var elements = new HashSet<string>();
 
             for (int i = 0; i < n; i++)
             {
@@ -21,7 +22,7 @@
                 }
             }
 
-            Console.WriteLine(string.Join(" ", elements));
+            Console.WriteLine(string.Join(" ", elements.OrderBy(x => x)));
         }
     }
 }
