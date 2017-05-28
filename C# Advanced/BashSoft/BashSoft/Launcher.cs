@@ -4,7 +4,9 @@
     {
         public static void Main()
         {
-            IOManager.TraverseDirectory(@"D:\Java Blog");
+            StudentsRepository.InitializeData();
+            // StudentsRepository.GetAllStudentsFromCourse("Unity");
+            StudentsRepository.GetStudentScoresFromCourse("Unity", "Ivan");
         }
     }
 }
