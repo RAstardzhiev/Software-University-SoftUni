@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. Extract Hyperlinks", "8.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. Query Mess", "9. Query Mess\9. Query Mess.csproj", "{6157C8E0-DC44-4F2E-B8EC-D63E1222EAF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Use Your Chains, Buddy", "10. Use Your Chains, Buddy\10. Use Your Chains, Buddy.csproj", "{2C927EF5-A38F-4B08-92C0-1CA26A333BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Semantic HTML", "11. Semantic HTML\11. Semantic HTML.csproj", "{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{6157C8E0-DC44-4F2E-B8EC-D63E1222EAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6157C8E0-DC44-4F2E-B8EC-D63E1222EAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6157C8E0-DC44-4F2E-B8EC-D63E1222EAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C927EF5-A38F-4B08-92C0-1CA26A333BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C927EF5-A38F-4B08-92C0-1CA26A333BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C927EF5-A38F-4B08-92C0-1CA26A333BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C927EF5-A38F-4B08-92C0-1CA26A333BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
