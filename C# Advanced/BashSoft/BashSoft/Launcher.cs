@@ -4,9 +4,14 @@
     {
         public static void Main()
         {
-            StudentsRepository.InitializeData();
-            // StudentsRepository.GetAllStudentsFromCourse("Unity");
-            StudentsRepository.GetStudentScoresFromCourse("Unity", "Ivan");
+            IOManager.ChangeCurrentDirectoryRelative("..");
+            IOManager.ChangeCurrentDirectoryRelative("..");
+            IOManager.ChangeCurrentDirectoryRelative("..");
+            IOManager.ChangeCurrentDirectoryRelative("..");
+            IOManager.ChangeCurrentDirectoryRelative("..");
+            IOManager.ChangeCurrentDirectoryRelative("..");
+            IOManager.ChangeCurrentDirectoryRelative("..");
+            IOManager.ChangeCurrentDirectoryRelative("..");
         }
     }
 }
