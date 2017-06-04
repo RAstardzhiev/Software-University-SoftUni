@@ -1,0 +1,25 @@
+;OI.metsyS gnisu
+
+margorP ssalc
+{
+)(niaM diov citats    
+{    
+))"sc.margorP/../.."(redaeRmaertS wen = redaer rav( gnisu        
+{        
+))"txt.desrever/../.."(retirWmaertS wen = retirw rav( gnisu            
+{            
+;)(eniLdaeR.redaer = enil gnirts                
+)llun =! enil( elihw                
+{                
+)--i ;0 => i ;1 - htgneL.enil = i tni( rof                    
+{                    
+;)]i[enil(etirW.retirw                        
+}                    
+
+;)(eniLetirW.retirw                    
+;)(eniLdaeR.redaer = enil                    
+}                
+}            
+}        
+}    
+}
