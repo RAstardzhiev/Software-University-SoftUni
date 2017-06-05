@@ -9,8 +9,8 @@
         public static void Main()
         {
             Console.Write("Copy file - ");
-            var inputFile = UserInterface.GetFile();
-            var outputFile = UserInterface.SetOutputFileInSameFolderAsInputFile(inputFile, "Coppyed");
+            var inputFile = Paths.GetFile();
+            var outputFile = Paths.SetOutputFileInSameFolderAsInputFile(inputFile, "Coppyed");
 
             using (var reader = new FileStream(inputFile, FileMode.Open))
             {

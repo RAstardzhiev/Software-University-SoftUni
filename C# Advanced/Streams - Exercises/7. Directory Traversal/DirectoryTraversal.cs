@@ -35,7 +35,7 @@
 
         private static Dictionary<string, Dictionary<string, long>> GetFilesFromDirectory()
         {
-            var dir = UserInterface.GetDirectory();
+            var dir = Paths.GetDirectory();
             var files = Directory.GetFiles(dir);
 
             // The files should be grouped by their extension

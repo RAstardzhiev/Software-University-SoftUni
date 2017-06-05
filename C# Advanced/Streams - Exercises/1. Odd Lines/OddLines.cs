@@ -10,7 +10,7 @@
         public static void Main()
         {
             Console.Write("Odd lines - ");
-            var file = UserInterface.GetFile();
+            var file = Paths.GetFile();
             var resultedOddLines = new StringBuilder();
 
             using (var reader = new StreamReader(file))

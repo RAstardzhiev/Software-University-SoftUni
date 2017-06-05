@@ -12,7 +12,7 @@
         public static void Main()
         {
             var folders = new Queue<string>();
-            folders.Enqueue(UserInterface.GetDirectory());
+            folders.Enqueue(Paths.GetDirectory());
 
             var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             var reportPath = Path.Combine(desktopPath, "report.txt");

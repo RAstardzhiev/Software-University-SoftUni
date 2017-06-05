@@ -43,7 +43,7 @@
                     Assemble(files, destinationDirectory);
                     break;
                 case 2: // Slice
-                    var sourceFile = UserInterface.GetFile();
+                    var sourceFile = Paths.GetFile();
                     var dir = sourceFile.Substring(0, sourceFile.LastIndexOf('\\'));
                     destinationDirectory = Path.Combine(dir, $"Sliced - {DateTime.Now:dd-MM-yyyy - hh-mm}");
                     Directory.CreateDirectory(destinationDirectory);
@@ -187,7 +187,7 @@
 
         private static List<string> GetFilesFromDirectory()
         {
-            var dir = UserInterface.GetDirectory();
+            var dir = Paths.GetDirectory();
             return Directory.GetFiles(dir).ToList();
         }
 

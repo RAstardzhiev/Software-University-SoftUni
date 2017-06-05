@@ -13,7 +13,7 @@
         public static void Main()
         {
             Console.Write("Words file - ");
-            var wordsFile = UserInterface.GetFile();
+            var wordsFile = Paths.GetFile();
 
             var keysCounter = InitializeKeysCounter(wordsFile);
 
@@ -39,8 +39,8 @@
         private static void CountKeyOccurances(Dictionary<string, int> keysCounter, out string outputFile)
         {
             Console.Write("Text file - ");
-            var textFile = UserInterface.GetFile();
-            outputFile = UserInterface.SetOutputFileInSameFolderAsInputFile(textFile, "Counted keys");
+            var textFile = Paths.GetFile();
+            outputFile = Paths.SetOutputFileInSameFolderAsInputFile(textFile, "Counted keys");
 
             var text = ReadFile(textFile);
 

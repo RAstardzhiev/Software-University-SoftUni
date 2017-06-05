@@ -9,8 +9,8 @@
         public static void Main()
         {
             System.Console.Write("Line Numbers - ");
-            var file = UserInterface.GetFile();
-            var outputFile = UserInterface.SetOutputFileInSameFolderAsInputFile(file, "Numbered");
+            var file = Paths.GetFile();
+            var outputFile = Paths.SetOutputFileInSameFolderAsInputFile(file, "Numbered");
 
             using (var reader = new StreamReader(file))
             {
