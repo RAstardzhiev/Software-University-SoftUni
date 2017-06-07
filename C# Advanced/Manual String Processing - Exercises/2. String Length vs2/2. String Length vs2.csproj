@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4A440BF-CB3A-4389-BF48-27C7676B763B}</ProjectGuid>
+    <ProjectGuid>{7672C90F-2C59-4E22-A0B6-0A0370CF31D3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_5.Concatenate_Strings_vs2</RootNamespace>
-    <AssemblyName>_5.Concatenate_Strings_vs2</AssemblyName>
+    <RootNamespace>_2.String_Length_vs2</RootNamespace>
+    <AssemblyName>_2.String_Length_vs2</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConcatenateStringsVs2.cs" />
+    <Compile Include="StringLengthVs2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

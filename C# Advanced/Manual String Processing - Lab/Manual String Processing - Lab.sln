@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Special Words", "4. Spec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Concatenate Strings", "5. Concatenate Strings\5. Concatenate Strings.csproj", "{DDC22680-23B3-4E81-9B81-F0FD2CFBB17B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Concatenate Strings vs2", "5. Concatenate Strings vs2\5. Concatenate Strings vs2.csproj", "{C4A440BF-CB3A-4389-BF48-27C7676B763B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DDC22680-23B3-4E81-9B81-F0FD2CFBB17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDC22680-23B3-4E81-9B81-F0FD2CFBB17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDC22680-23B3-4E81-9B81-F0FD2CFBB17B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A440BF-CB3A-4389-BF48-27C7676B763B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A440BF-CB3A-4389-BF48-27C7676B763B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A440BF-CB3A-4389-BF48-27C7676B763B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A440BF-CB3A-4389-BF48-27C7676B763B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
