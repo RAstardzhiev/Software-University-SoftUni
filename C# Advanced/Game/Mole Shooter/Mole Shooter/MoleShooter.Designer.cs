@@ -30,11 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timerGameLoop = new System.Windows.Forms.Timer(this.components);
+            this.mouseXpos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timerGameLoop
             // 
             this.timerGameLoop.Tick += new System.EventHandler(this.timerGameLoop_Tick);
+            // 
+            // mouseXpos
+            // 
+            this.mouseXpos.Location = new System.Drawing.Point(28, 22);
+            this.mouseXpos.Name = "mouseXpos";
+            this.mouseXpos.Size = new System.Drawing.Size(80, 20);
+            this.mouseXpos.TabIndex = 0;
+            this.mouseXpos.Text = "label1";
             // 
             // MoleShooter
             // 
@@ -42,6 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Mole_Shooter.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.mouseXpos);
             this.MaximumSize = new System.Drawing.Size(600, 600);
             this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "MoleShooter";
@@ -54,6 +64,7 @@
         #endregion
 
         private System.Windows.Forms.Timer timerGameLoop;
+        private System.Windows.Forms.Label mouseXpos;
     }
 }
 
