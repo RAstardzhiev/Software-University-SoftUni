@@ -19,12 +19,18 @@ namespace Mole_Shooter
         int _cursY = 0;
 #endif
         CMole _mole;
+        CBlood _blood;
+        CSign _sign;
+        CScoreFrame _scoreFrame;
 
         public MoleShooter()
         {
             InitializeComponent();
 
+            _scoreFrame = new CScoreFrame() { Left = 10, Top = 10 };
+            _sign = new CSign() { Left  = 280, Top = 35 };
             _mole = new CMole() { Left = 10, Top = 340 }; // Top Range 340-500
+            _blood = new CBlood();
         }
 
         private void timerGameLoop_Tick(object sender, EventArgs e)
@@ -35,6 +41,9 @@ namespace Mole_Shooter
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics dc = e.Graphics;
+
+            _sign.DrowImage(dc);
+            _scoreFrame.DrowImage(dc);
 #if My_Debug
             TextFormatFlags flags = TextFormatFlags.Left | TextFormatFlags.EndEllipsis;
             Font _font = new System.Drawing.Font("Stencil", 12, FontStyle.Regular);

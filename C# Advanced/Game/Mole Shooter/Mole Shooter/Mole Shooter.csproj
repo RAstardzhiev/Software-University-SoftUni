@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CBlood.cs" />
     <Compile Include="CImageBase.cs" />
     <Compile Include="CMole.cs" />
+    <Compile Include="CScoreFrame.cs" />
+    <Compile Include="CSign.cs" />
     <Compile Include="MoleShooter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +90,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Mole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score Frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blood.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
