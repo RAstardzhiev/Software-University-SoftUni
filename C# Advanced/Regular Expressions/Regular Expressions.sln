@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Use Your Chains, Buddy"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Semantic HTML", "11. Semantic HTML\11. Semantic HTML.csproj", "{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Replace a tag vs2", "4. Replace a tag vs2\4. Replace a tag vs2.csproj", "{327F3984-7ECB-41CB-9980-22F2C7E23402}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{598EB8C2-707F-4E7B-B295-4C3BAB0C36E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{327F3984-7ECB-41CB-9980-22F2C7E23402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{327F3984-7ECB-41CB-9980-22F2C7E23402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{327F3984-7ECB-41CB-9980-22F2C7E23402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{327F3984-7ECB-41CB-9980-22F2C7E23402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,29 +1,27 @@
-﻿namespace _4.Replace_a_tag
+﻿namespace _4.Replace_a_tag_vs2
 {
     using System;
-    using System.Collections.Generic;
+    using System.Text;
     using System.Text.RegularExpressions;
 
-    public class ReplaceATag
+    public class ReplaceATagVs2
     {
         public static void Main()
         {
             var pattern = @"<a.{0,}?(href=?(['|""]?).+?\2).{0,}?>(.+?)<\/a>";
-
-            // Vs2 with StringBuilder is FASTER
-            Queue<string> replacedHtml = new Queue<string>();
+            var replacedHtml = new StringBuilder();
 
             var input = Console.ReadLine();
 
             while (input != "end")
             {
                 var replacedLine = Regex.Replace(input, pattern, m => $"[URL {m.Groups[1].Value}]{m.Groups[3].Value}[/URL]");
-                replacedHtml.Enqueue(replacedLine);
+                replacedHtml.Append($"{replacedLine}{Environment.NewLine}");
 
                 input = Console.ReadLine();
             }
 
-            Console.WriteLine(string.Join(Environment.NewLine, replacedHtml));
+            Console.Write(replacedHtml.ToString());
         }
     }
 }
