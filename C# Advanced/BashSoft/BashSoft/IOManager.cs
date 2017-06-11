@@ -20,12 +20,12 @@
             }
         }
 
-        public static void TraverseDirectory()
+        public static void TraverseDirectory(int depth)
         {
-            TraverseDirectory(SessionData.currentPath);
+            TraverseDirectory(SessionData.currentPath, depth);
         }
 
-        public static void TraverseDirectory(string path)
+        public static void TraverseDirectory(string path, int depth)
         {
             OutputWriter.WriteEmptyLine();
             int initialIdentation = path.Split('\\').Length;
@@ -36,6 +36,11 @@
             {
                 var currentPath = subFolders.Dequeue();
                 int identation = currentPath.Split('\\').Length;
+
+                if (identation - initialIdentation >= depth)
+                {
+                    return;
+                }
 
                 OutputWriter.WriteMessageOnNewLine($"{new string('-', identation)}{currentPath}");
 

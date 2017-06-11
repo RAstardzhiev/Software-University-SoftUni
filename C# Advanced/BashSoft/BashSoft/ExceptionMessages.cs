@@ -11,5 +11,6 @@
         public const string ComparisonOfFilesWithDifferentSizes = "Files not of equal size, certain mismatch.";
         public const string ForbiddenSymbolsContainedInName = "The given name contains symbols that are not allowed to be used in names of files and folders.";
         public const string UnableToGoHigherInPartitionHierarchy = "Impossible operation. There is no higher folder than current one.";
+        public const string UnableToParseNumber = "The sequence you've written is not a valid number.";
     }
 }
