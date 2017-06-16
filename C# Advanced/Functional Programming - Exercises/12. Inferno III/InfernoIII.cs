@@ -21,10 +21,16 @@
         private static void ExecuteCommands(List<int> gems)
         {
             var input = Console.ReadLine().Split(';');
-            var exclusionFilters = new Stack<KeyValuePair<string, int>>();
+            var exclusionFilters = new Queue<KeyValuePair<string, int>>();
 
             while (input[0] != "Forge")
             {
+                if (input.Length < 3)
+                {
+                    input = Console.ReadLine().Split(';');
+                    continue;
+                }
+
                 // {command;filter type;filter parameter} eg.: Exclude;Sum Left Right;9
                 var command = input[0]; // Commands can be: "Exclude", "Reverse" or "Forge".
                 var filterType = input[1]; // Filter types are: "Sum Left", "Sum Right" and "Sum Left Right". 
@@ -33,12 +39,12 @@
                 switch (command)
                 {
                     case "Exclude":
-                        exclusionFilters.Push(new KeyValuePair<string, int>(filterType, filterParamenter));
+                        exclusionFilters.Enqueue(new KeyValuePair<string, int>(filterType, filterParamenter));
                         break;
                     case "Reverse":
                         if (exclusionFilters.Count > 0)
                         {
-                            exclusionFilters.Pop();
+                            exclusionFilters.Dequeue();
                         }
 
                         break;
@@ -52,7 +58,7 @@
             ExecuteExclusions(gems, exclusionFilters);
         }
 
-        private static void ExecuteExclusions(List<int> gems, Stack<KeyValuePair<string, int>> exclusionFilters)
+        private static void ExecuteExclusions(List<int> gems, Queue<KeyValuePair<string, int>> exclusionFilters)
         {
             foreach (var filter in exclusionFilters.Reverse())
             {
@@ -90,14 +96,16 @@
 
         private static void FilterRight(int value, List<int> gems)
         {
-            while (gems.Last() == value && gems.Count > 0)
+            while (gems.Count > 0 && gems.Last() == value)
             {
                 gems.RemoveAt(gems.Count - 1);
             }
 
-            for (int i = 0; i < gems.Count - 1; i++)
+            for (int i = 0; i < gems.Count; i++)
             {
-                if (gems[i] + gems[i + 1] == value)
+                var rightNum = (i == gems.Count - 1) ? 0 : gems[i + 1];
+
+                if (gems[i] + rightNum == value)
                 {
                     gems.RemoveAt(i);
                     i--;
@@ -107,14 +115,16 @@
 
         private static void FilterLeft(int value, List<int> gems)
         {
-            while (gems.First() == value && gems.Count > 0)
+            while (gems.Count > 0 && gems.First() == value)
             {
                 gems.RemoveAt(0);
             }
 
-            for (int i = gems.Count - 1; i > 0; i--)
+            for (int i = gems.Count - 1; i >= 0; i--)
             {
-                if (gems[i] + gems[i - 1] == value)
+                var leftNum = (i > 0) ? gems[i - 1] : 0;
+
+                if (gems[i] + leftNum == value)
                 {
                     gems.RemoveAt(i);
                 }

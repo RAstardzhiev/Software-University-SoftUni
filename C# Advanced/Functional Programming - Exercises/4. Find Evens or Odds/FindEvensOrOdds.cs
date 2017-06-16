@@ -13,14 +13,27 @@
             var end = input[1];
 
             var targetNumbers = Console.ReadLine().Trim().ToLower();
-            var targetReminder = (targetNumbers == "odd") ? 1 : (targetNumbers == "even") ? 0 : -1;
+            Predicate<int> predicate;
 
-            var result = EvensOrOdds(start, end, n => n % 2 == targetReminder);
+            switch (targetNumbers)
+            {
+                case "odd":
+                    predicate = n => n % 2 != 0;
+                    break;
+                case "even":
+                    predicate = n => n % 2 == 0;
+                    break;
+                default:
+                    predicate = null;
+                    break;
+            }
+
+            var result = EvensOrOdds(start, end, predicate);
             Console.WriteLine(string.Join(" ", result));
 
         }
 
-        public static Queue<int> EvensOrOdds(int lowerBound, int upperBound, Func<int, bool> filter)
+        public static Queue<int> EvensOrOdds(int lowerBound, int upperBound, Predicate<int> filter)
         {
             var numbers = new Queue<int>();
 

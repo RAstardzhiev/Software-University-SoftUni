@@ -13,9 +13,13 @@
 
             Queue<int> numbers = new Queue<int>();
 
-            for (int i = 0; i <= endNumber; i++)
+            var predicates = dividers
+                .Select(div => (Func<int, bool>)(n => n % div == 0))
+                .ToArray();
+
+            for (int i = 1; i <= endNumber; i++)
             {
-                if (IsValidNumber(i, dividers, n => i % n == 0 ))
+                if (IsValid(predicates, i))
                 {
                     numbers.Enqueue(i);
                 }
@@ -24,11 +28,11 @@
             Console.WriteLine(string.Join(" ", numbers));
         }
 
-        private static bool IsValidNumber(int number, IEnumerable<int> dividers, Func<int, bool> isDivisible)
+        private static bool IsValid(Func<int, bool>[] predicates, int num)
         {
-            foreach (var num in dividers)
+            foreach (var predicate in predicates)
             {
-                if (!isDivisible(num))
+                if (!predicate(num))
                 {
                     return false;
                 }

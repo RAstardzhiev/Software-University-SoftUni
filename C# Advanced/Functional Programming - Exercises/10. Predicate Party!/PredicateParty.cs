@@ -8,27 +8,47 @@
     {
         public static void Main()
         {
-            var comming = new List<string>();
-            AddNames(comming);
+            var comming = Console.ReadLine()
+                .Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
+
             ExecuteCommands(comming);
             PrintCommingList(comming);
         }
 
         private static void PrintCommingList(List<string> comming)
         {
-            var names = string.Join(", ", comming.OrderBy(n => n));
-            Console.WriteLine($"{names} are going to the party!");
+            if (comming.Any())
+            {
+                var names = string.Join(", ", comming.OrderBy(n => n));
+                Console.WriteLine($"{names} are going to the party!");
+            }
+            else
+            {
+                Console.WriteLine("Nobody is going to the party!");
+            }
+
+            //var guestsNames = string.Join(", ", comming);
+            //if (!guestsNames.Any())
+            //{
+            //    Console.WriteLine("Nobody is going to the party!");
+            //    return;
+            //}
+
+            //Console.WriteLine($"{guestsNames} are going to the party!");
         }
 
         private static void ExecuteCommands(List<string> comming)
         {
-            var command = Console.ReadLine().Split();
+            var command = Console.ReadLine()
+                .Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
 
             while (command[0] != "Party!")
             {
                 if (command.Length < 3)
                 {
-                    command = Console.ReadLine().Split();
+                    command = Console.ReadLine()
+                        .Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                     continue;
                 }
 
@@ -47,7 +67,8 @@
                         break;
                 }
 
-                command = Console.ReadLine().Split();
+                command = Console.ReadLine()
+                    .Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
             }
         }
 
@@ -69,16 +90,6 @@
                             break;
                     }
                 }
-            }
-        }
-
-        private static void AddNames(List<string> comming)
-        {
-            var input = Console.ReadLine().Split();
-
-            foreach (var name in input)
-            {
-                comming.Add(name);
             }
         }
     }
