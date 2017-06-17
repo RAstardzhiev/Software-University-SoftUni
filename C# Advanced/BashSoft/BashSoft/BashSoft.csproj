@@ -47,6 +47,8 @@
     <Compile Include="ExceptionMessages.cs" />
     <Compile Include="InputReader.cs" />
     <Compile Include="IOManager.cs" />
+    <Compile Include="RepositoryFilters.cs" />
+    <Compile Include="RepositorySorters.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="OutputWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
