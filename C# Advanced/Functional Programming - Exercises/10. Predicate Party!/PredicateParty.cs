@@ -20,22 +20,13 @@
         {
             if (comming.Any())
             {
-                var names = string.Join(", ", comming.OrderBy(n => n));
+                var names = string.Join(", ", comming);
                 Console.WriteLine($"{names} are going to the party!");
             }
             else
             {
                 Console.WriteLine("Nobody is going to the party!");
             }
-
-            //var guestsNames = string.Join(", ", comming);
-            //if (!guestsNames.Any())
-            //{
-            //    Console.WriteLine("Nobody is going to the party!");
-            //    return;
-            //}
-
-            //Console.WriteLine($"{guestsNames} are going to the party!");
         }
 
         private static void ExecuteCommands(List<string> comming)
