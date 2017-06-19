@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     class RepositoryFilters
     {
@@ -9,15 +10,15 @@
         {
             if (wantedFilter == "excellent")
             {
-                FilterAndTake(wantedData, ExcelentFilter, studentsToTake);
+                FilterAndTake(wantedData, x => x >= 5, studentsToTake);
             }
             else if (wantedFilter == "average")
             {
-                FilterAndTake(wantedData, AverageFilter, studentsToTake);
+                FilterAndTake(wantedData, x => x < 5 && x >= 3.50, studentsToTake);
             }
             else if (wantedFilter == "poor")
             {
-                FilterAndTake(wantedData, PoorFilter, studentsToTake);
+                FilterAndTake(wantedData, x => x < 3.50, studentsToTake);
             }
             else
             {
@@ -36,7 +37,7 @@
                     break;
                 }
 
-                double averageMark = Average(userName_Points.Value);
+                double averageMark = userName_Points.Value.Average();
 
                 if (givenFilter(averageMark))
                 {
@@ -44,36 +45,6 @@
                     counterForPrinted++;
                 }
             }
-        }
-
-        private static bool ExcelentFilter(double mark)
-        {
-            return mark >= 5.0;
-        }
-
-        private static bool AverageFilter(double mark)
-        {
-            return mark < 5.0 && mark >= 3.50;
-        }
-
-        private static bool PoorFilter(double mark)
-        {
-            return mark < 3.50;
-        }
-
-        private static double Average(List<int> scoresOnTaska)
-        {
-            int totalScore = 0;
-
-            foreach (var score in scoresOnTaska)
-            {
-                totalScore += score;
-            }
-
-            var percentageOfAll = totalScore / scoresOnTaska.Count * 100;
-            var mark = percentageOfAll * 4 + 2;
-
-            return mark;
         }
     }
 }
