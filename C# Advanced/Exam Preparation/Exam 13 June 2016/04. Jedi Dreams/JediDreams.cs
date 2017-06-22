@@ -11,13 +11,6 @@
         public const string MethodDeclarationPattern = @"static\s+.*\s+([a-zA-Z]*[A-Z][a-zA-Z]*)\s*\(";
         public const string CallPattern = @"([a-zA-Z]*[A-Z][a-zA-Z]*)\s*\(";
 
-        public class Method
-        {
-            public string Name { get; set; }
-
-            public Queue<string> CalledMethods { get; set; }
-        }
-
         public static void Main()
         {
             var methods = GetMethodsFromInput();
