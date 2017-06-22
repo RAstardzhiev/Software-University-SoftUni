@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Jedi Meditation", "01. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Jedi Dreams", "04. Jedi Dreams\04. Jedi Dreams.csproj", "{A19266B9-7E6D-4AC7-8A4B-F40203C8257F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Jedi Galaxy", "02. Jedi Galaxy\02. Jedi Galaxy.csproj", "{E7E0F2D4-DA4A-4615-8B3B-C5ABB05C6BE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A19266B9-7E6D-4AC7-8A4B-F40203C8257F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A19266B9-7E6D-4AC7-8A4B-F40203C8257F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A19266B9-7E6D-4AC7-8A4B-F40203C8257F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E0F2D4-DA4A-4615-8B3B-C5ABB05C6BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E0F2D4-DA4A-4615-8B3B-C5ABB05C6BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E0F2D4-DA4A-4615-8B3B-C5ABB05C6BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E0F2D4-DA4A-4615-8B3B-C5ABB05C6BE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
