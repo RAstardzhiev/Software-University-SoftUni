@@ -17,28 +17,29 @@
 <hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th width="50%" align="left"><span style="text-decoration: underline;"><strong>Programming Basics - September 2016</strong></span>: 17.09.2016 - 20.11..2016<br /><br /> Grade: 6.00 (out of 6.00)<br /> Issue Date: 22/11/2016</th>
-  <th width="40%"></th>
-<th align="center width="10%"">
+<tr><th align="center" width="50%">Programming Basics - September 2016: <br /><br />17.09.2016 - 20.11..2016</th>
+  <th width="40%">
+    Grade: 6.00 (out of 6.00)<br /><br />
+    Issue Date: 22/11/2016
+  </th>
+  
+  <th align="center width=">
 <p><a title="Programming Basics" href="https://softuni.bg/certificates/details/15477/8823af04" target="_blank">Certificate</a></p>
 </th></tr>
-<tr>
-<td colspan="3">&nbsp;</td>
-</tr>
+  
 <tr>
 <td width="50%">
 <p><a title="Logical Checks" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Simple-Conditions" target="_blank">Logical Checks</a></p>
 </td>
-<td width="50%" colspan="2">
+<td colspan="2" width="50%">
 <p><a title="More complex logical checks" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Complex-Conditions" target="_blank">More complex logical checks</a></p>
 </td>
 </tr>
-
 <tr>
 <td width="50%">
 <p><a title="Repeats (Loops)" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Loops" target="_blank">Repeats (Loops)</a></p>
 </td>
-<td width="50%" colspan="2">
+<td colspan="2" width="50%">
 <p><a title="Advanced Loops" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Advanced-Loops" target="_blank">Advanced Loops</a></p>
 </td>
 </tr>
@@ -46,13 +47,13 @@
 <td width="50%">
 <p><a title="Drawing Shapes with Loops" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Draw-with-Loops" target="_blank">Drawing Shapes with Loops</a></p>
 </td>
-  <td width="50%" colspan="2"></td>
+<td colspan="2" width="50%">&nbsp;</td>
 </tr>
 <tr>
 <td width="50%">
 <p><a title="Exam Preparation" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Last%20Exams" target="_blank">Exam Preparation</a></p>
 </td>
-<td width="50%" colspan="2">
+<td colspan="2" width="50%">
 <p><a title="Practical Entrance Exam" href="https://github.com/RAstardzhiev/SoftUni-C-Scharp/tree/master/Programming%20Basics/Exam%20Programming%20Basics" target="_blank">Practical Entrance Exam</a></p>
 </td>
 </tr>
