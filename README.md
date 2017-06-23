@@ -5,8 +5,6 @@
 <td align="center" width="33%">
 <h1><a href="https://softuni.bg/">SoftUni</a></h1>
 <h2>C#</h2>
-<h4>ASP.NET MVC 5</h4>
-<h4>ASP.NET Core</h4>
 </td>
 <td align="center" width="33%"><img src="https://avatars1.githubusercontent.com/u/24620088?v=3&amp;u=5e1a11ac5228356808410702d2f8c5ff3209d2a9&amp;s=400" alt="" />
 <p>Author: <strong>Radoslav Astardzhiev</strong></p>
@@ -17,9 +15,11 @@
 <hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">Programming Basics - September 2016: <br /><br />17.09.2016 - 20.11..2016</th>
+<tr><th align="center" width="50%">Programming Basics - September 2016: <br />
+  17.09.2016 - 20.11..2016
+  </th>
   <th width="40%">
-    Grade: 6.00 (out of 6.00)<br /><br />
+    Grade: 6.00 (out of 6.00)<br />
     Issue Date: 22/11/2016
   </th>
   
