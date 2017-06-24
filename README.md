@@ -110,17 +110,14 @@ Issue Date:01/03/2017
 <p><a title="Exam Preparation II" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20II" target="_blank">Exam Preparation II</a></p>
 </td>
 </tr>
-  <tr>
+<tr>
 <td width="50%">
-<p><a title="Exam Preparation III href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20III" target="_blank">Exam Preparation III</a></p>
+<p><a title="Exam Preparation III" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20III" target="_blank">Exam Preparation III</a></p>
 </td>
 <td colspan="2" width="50%">
-<p><a title="Exam Preparation IV href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20IV" target="_blank">Exam Preparation IV</a></p>
+<p><a title="Exam Preparation IV" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20IV" target="_blank">Exam Preparation IV</a></p>
 </td>
 </tr>
-</tbody>
-</table>
-<hr />
 <!-- Course End -->
 
 <!-- Course Start -->
