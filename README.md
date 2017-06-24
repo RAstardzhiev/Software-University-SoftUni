@@ -15,6 +15,79 @@
 </table>
 <!-- Head End -->
 
+<!-- Software Technologies Start -->
+<hr />
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">Software Technologies - February 2017: <br />
+27.02.2017 - 29.04..2017</th>
+<th width="40%">
+Grade: 6.00 (out of 6.00)<br />
+Issue Date: 06/05/2017
+</th>
+<th align="center width=">
+<p><a title="Software Technologies" href="https://softuni.bg/certificates/details/19161/62f0730a" target="_blank">Certificate</a></p>
+</th></tr>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="PHP First Steps - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/PHP/PHP%20First%20Steps%20-%20Lab" target="_blank">PHP First Steps - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="PHP First Steps - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/PHP/PHP%20First%20Steps%20-%20Exercises" target="_blank">PHP First Steps - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<p><strong>PHP: MVC & Symfony</strong> -
+ building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="JavaScript - Syntax, Basic Web - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/JavaScript/JavaScript%20-%20Syntax%2C%20Basic%20Web%20-%20Lab" target="_blank">JavaScript - Syntax, Basic Web - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="JavaScript Basics - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/JavaScript/JavaScript%20Basics%20-%20Exercises" target="_blank">JavaScript Basics - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<p><strong>JavaScript: ExpressJS</strong> -
+ building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
+</td>
+</tr><tr>
+<td width="50%">
+<p><a title="Java Basics - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/Java/Java%20Basics%20-%20Lab" target="_blank">Java Basics - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Java Basics - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/Java/Java%20Basics%20-%20Exercises" target="_blank">Java Basics - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<p><a title="Java: Spring MVC" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/Java/Simple%20Blog" target="_blank">Java: Spring MVC</a> - simple blog with basic Admin and User functionality</p>
+</td>
+</tr>
+  
+
+<tr>
+<td colspan="3">
+  <p><a title="C#: Calculator" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/C%23/Calculator" target="_blank">C#: Calculator</a> - semple web calculator</p>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<p><a title="C#: ASP.NET MVC" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/C%23/Blog" target="_blank">C#: ASP.NET MVC</a> - Blog</p>
+<p>Evaluation made upon a defence over this project in ftont of SoftUni's team</p>
+</td>
+</tr>
+  
+</tbody>
+</table>
+<hr />
+<!-- Software Technologies End -->
+
 <!-- Programming Fundamentals Start -->
 <hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
