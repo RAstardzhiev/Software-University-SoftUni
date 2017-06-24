@@ -15,7 +15,7 @@
 </table>
 <!-- Head End -->
 
-<!-- Course Start -->
+<!-- Programming Fundamentals Start -->
 <hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
@@ -118,9 +118,10 @@ Issue Date:01/03/2017
 <p><a title="Exam Preparation IV" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20IV" target="_blank">Exam Preparation IV</a></p>
 </td>
 </tr>
-<!-- Course End -->
+<hr />
+<!-- Programming Fundamentals End -->
 
-<!-- Course Start -->
+<!-- Programming Basics Start -->
 <hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
@@ -168,4 +169,4 @@ Issue Date: 22/11/2016
 </tbody>
 </table>
 <hr />
-<!-- Course End -->
+<!-- Programming Basics End -->
