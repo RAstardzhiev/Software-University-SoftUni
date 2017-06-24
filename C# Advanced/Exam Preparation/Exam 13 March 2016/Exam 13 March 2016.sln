@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Arrange Numbers vs2", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Monopoly", "02. Monopoly\02. Monopoly.csproj", "{2D5B20FF-33EE-4BED-8021-6B9D50D3E1D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Basic Markup Language", "03. Basic Markup Language\03. Basic Markup Language.csproj", "{8531B874-D4E3-418B-B28C-06252B16237F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2D5B20FF-33EE-4BED-8021-6B9D50D3E1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D5B20FF-33EE-4BED-8021-6B9D50D3E1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D5B20FF-33EE-4BED-8021-6B9D50D3E1D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8531B874-D4E3-418B-B28C-06252B16237F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8531B874-D4E3-418B-B28C-06252B16237F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8531B874-D4E3-418B-B28C-06252B16237F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8531B874-D4E3-418B-B28C-06252B16237F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
