@@ -28,7 +28,6 @@ Issue Date:01/03/2017
 <th align="center width=">
 <p><a title="Programming Fundamentals" href="#" target="_blank">Certificate</a></p>
 </th></tr>
-
 <!-- Course Body -->
 <tr>
 <td width="50%">
@@ -118,6 +117,8 @@ Issue Date:01/03/2017
 <p><a title="Exam Preparation IV" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20IV" target="_blank">Exam Preparation IV</a></p>
 </td>
 </tr>
+</tbody>
+</table>
 <hr />
 <!-- Programming Fundamentals End -->
 
@@ -134,7 +135,6 @@ Issue Date: 22/11/2016
 <th align="center width=">
 <p><a title="Programming Basics" href="https://softuni.bg/certificates/details/15477/8823af04" target="_blank">Certificate</a></p>
 </th></tr>
-  
 <!-- Course Body -->
 <tr>
 <td width="50%">
