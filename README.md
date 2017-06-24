@@ -70,10 +70,11 @@ Issue Date: 06/05/2017
 </td>
 </tr>
   
-
-<tr>
-<td colspan="3">
-  <p><a title="C#: Calculator" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/C%23/Calculator" target="_blank">C#: Calculator</a> - semple web calculator</p>
+  </tr><tr>
+<td width="50%">
+<p><a title="C#: Calculator" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/C%23/Calculator" target="_blank">C#: Calculator</a> - semple web calculator</p>
+</td>
+<td colspan="2" width="50%">
 </td>
 </tr>
 <tr>
