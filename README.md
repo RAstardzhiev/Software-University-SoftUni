@@ -14,7 +14,6 @@
 </tbody>
 </table>
 <!-- Head End -->
-<p>&nbsp;</p>
 <!-- C# Advanced Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
@@ -106,8 +105,8 @@
 </tr>
 </tbody>
 </table>
-<hr /><!-- C# Advanced End -->
-<p>&nbsp;</p>
+<hr />
+<!-- C# Advanced End -->
 <!-- Software Technologies Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
@@ -168,8 +167,8 @@
 </tr>
 </tbody>
 </table>
-<hr /><!-- Software Technologies End -->
-<p>&nbsp;</p>
+<hr />
+<!-- Software Technologies End -->
 <!-- Programming Fundamentals Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
@@ -268,8 +267,8 @@
 </tr>
 </tbody>
 </table>
-<hr /><!-- Programming Fundamentals End -->
-<p>&nbsp;</p>
+<hr />
+<!-- Programming Fundamentals End -->
 <!-- Programming Basics Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
