@@ -14,18 +14,104 @@
 </tbody>
 </table>
 <!-- Head End -->
-
-<!-- Software Technologies Start -->
-<hr />
+<p>&nbsp;</p>
+<!-- C# Advanced Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">Software Technologies - February 2017: <br />
-27.02.2017 - 29.04..2017</th>
-<th width="40%">
-Grade: 6.00 (out of 6.00)<br />
-Issue Date: 06/05/2017
-</th>
-<th align="center width=">
+<tr><th align="center" width="50%">C# Advanced - May 2017: <br /> 23.05.2017 - 25.06..2017</th><th width="40%">Grade: <br /> Issue Date:</th><th align="center width=">
+<p>Certificate</p>
+</th></tr>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="Stacks and Queues - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Stacks%20and%20Queues%20-%20Lab" target="_blank">Stacks and Queues - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Stacks and Queues - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Stacks%20and%20Queues" target="_blank">Stacks and Queues - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Sets and Dictionaries - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Sets%20and%20Dictionaries%20-%20Lab" target="_blank">Sets and Dictionaries - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Sets and Dictionaries - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Sets%20and%20Dictionaries" target="_blank">Sets and Dictionaries - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Multidimensional Arrays - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Multidimensional%20Arrays%20-%20Lab" target="_blank">Multidimensional Arrays - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Matrices - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Matrices%20-%20Exercises" target="_blank">Matrices - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Streams - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Streams%20-%20Lab" target="_blank">Streams - Lab</a></p>
+<p><a title="Files And Directories" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Files%20And%20Directories" target="_blank">Files And Directories</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Streams - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Streams%20-%20Exercises" target="_blank">Streams - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Manual String Processing - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Manual%20String%20Processing%20-%20Lab" target="_blank">Manual String Processing - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Manual String Processing - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Manual%20String%20Processing%20-%20Exercises" target="_blank">Manual String Processing - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Regular Expressions - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Regular%20Expressions%20-%20Lab" target="_blank">Regular Expressions - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Regular Expressions - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Regular%20Expressions" target="_blank">Regular Expressions - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Functional Programming - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Functional%20Programming%20-%20Lab" target="_blank">Functional Programming - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Functional Programming - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Functional%20Programming%20-%20Exercises" target="_blank">Functional Programming - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="LINQ - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/LINQ%20-%20Lab" target="_blank">LINQ - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="LINQ - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/LINQ%20-%20Exercises" target="_blank">LINQ - Exercises</a></p>
+</td>
+</tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
+<tr>
+<td width="50%">
+<p><a title="Exam 13 June 2016" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Exam%20Preparation/Exam%2013%20June%202016" target="_blank">Exam 13 June 2016</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Exam 13 March 2016" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Exam%20Preparation/Exam%2013%20March%202016" target="_blank">Exam 13 March 2016</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Exam 19 June 2016" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Exam%20Preparation/Exam%2019%20June%202016" target="_blank">Exam 19 June 2016</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Exam 22 August 2016" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20Advanced/Exam%20Preparation/Exam%2022%20August%202016" target="_blank">Exam 22 August 2016</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr /><!-- C# Advanced End -->
+<p>&nbsp;</p>
+<!-- Software Technologies Start --><hr />
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">Software Technologies - February 2017: <br /> 27.02.2017 - 29.04..2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 06/05/2017</th><th align="center width=">
 <p><a title="Software Technologies" href="https://softuni.bg/certificates/details/19161/62f0730a" target="_blank">Certificate</a></p>
 </th></tr>
 <!-- Course Body -->
@@ -39,8 +125,7 @@ Issue Date: 06/05/2017
 </tr>
 <tr>
 <td colspan="3">
-<p><strong>PHP: MVC & Symfony</strong> -
- building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
+<p><strong>PHP: MVC &amp; Symfony</strong> - building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
 </td>
 </tr>
 <tr>
@@ -53,10 +138,10 @@ Issue Date: 06/05/2017
 </tr>
 <tr>
 <td colspan="3">
-<p><strong>JavaScript: ExpressJS</strong> -
- building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
+<p><strong>JavaScript: ExpressJS</strong> - building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
 </td>
-</tr><tr>
+</tr>
+<tr>
 <td width="50%">
 <p><a title="Java Basics - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/Java/Java%20Basics%20-%20Lab" target="_blank">Java Basics - Lab</a></p>
 </td>
@@ -69,13 +154,11 @@ Issue Date: 06/05/2017
 <p><a title="Java: Spring MVC" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/Java/Simple%20Blog" target="_blank">Java: Spring MVC</a> - simple blog with basic Admin and User functionality</p>
 </td>
 </tr>
-  
-  </tr><tr>
+<tr>
 <td width="50%">
 <p><a title="C#: Calculator" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Software%20Technologies/C%23/Calculator" target="_blank">C#: Calculator</a> - semple web calculator</p>
 </td>
-<td colspan="2" width="50%">
-</td>
+<td colspan="2" width="50%">&nbsp;</td>
 </tr>
 <tr>
 <td colspan="3">
@@ -83,24 +166,15 @@ Issue Date: 06/05/2017
 <p>Evaluation made upon a defence over this project in ftont of SoftUni's team</p>
 </td>
 </tr>
-  
 </tbody>
 </table>
-<hr />
-<!-- Software Technologies End -->
-
-<!-- Programming Fundamentals Start -->
-<hr />
+<hr /><!-- Software Technologies End -->
+<p>&nbsp;</p>
+<!-- Programming Fundamentals Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">Programming Fundamentals - януари 2017: <br />
-17.09.2016 - 20.11..2016</th>
-<th width="40%">
-Grade: <br />
-Issue Date:01/03/2017
-</th>
-<th align="center width=">
-<p><a title="Programming Fundamentals" href="#" target="_blank">Certificate</a></p>
+<tr><th align="center" width="50%">Programming Fundamentals - януари 2017: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: <br /> Issue Date:</th><th align="center width=">
+<p>Certificate</p>
 </th></tr>
 <!-- Course Body -->
 <tr>
@@ -175,6 +249,7 @@ Issue Date:01/03/2017
 <p><a title="Regex - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Regex%20-%20Exercise" target="_blank">Regex - Exercise</a></p>
 </td>
 </tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
 <tr>
 <td width="50%">
 <p><a title="Exam Preparation I" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Exam%20Preparation%20I" target="_blank">Exam Preparation I</a></p>
@@ -193,20 +268,12 @@ Issue Date:01/03/2017
 </tr>
 </tbody>
 </table>
-<hr />
-<!-- Programming Fundamentals End -->
-
-<!-- Programming Basics Start -->
-<hr />
+<hr /><!-- Programming Fundamentals End -->
+<p>&nbsp;</p>
+<!-- Programming Basics Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">Programming Basics - September 2016: <br />
-17.09.2016 - 20.11..2016</th>
-<th width="40%">
-Grade: 6.00 (out of 6.00)<br />
-Issue Date: 22/11/2016
-</th>
-<th align="center width=">
+<tr><th align="center" width="50%">Programming Basics - September 2016: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 22/11/2016</th><th align="center width=">
 <p><a title="Programming Basics" href="https://softuni.bg/certificates/details/15477/8823af04" target="_blank">Certificate</a></p>
 </th></tr>
 <!-- Course Body -->
@@ -242,5 +309,4 @@ Issue Date: 22/11/2016
 </tr>
 </tbody>
 </table>
-<hr />
-<!-- Programming Basics End -->
+<hr /><!-- Programming Basics End -->
