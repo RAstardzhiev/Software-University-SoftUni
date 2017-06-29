@@ -11,15 +11,9 @@
             this.pressure = pressure;
         }
 
-        public int Age
-        {
-            get { return this.age; }
-        }
-
         public double Pressure
         {
             get { return this.pressure; }
-            set { this.pressure = value; }
         }
     }
 }

@@ -30,19 +30,16 @@
         public Engine Engine
         {
             get { return this.engine; }
-            set { this.engine = value; }
         }
 
         public Cargo Cargo
         {
             get { return this.cargo; }
-            set { this.cargo = value; }
         }
 
         public Tire[] Tires
         {
             get { return this.tires; }
-            set { this.tires = value; }
         }
     }
 }

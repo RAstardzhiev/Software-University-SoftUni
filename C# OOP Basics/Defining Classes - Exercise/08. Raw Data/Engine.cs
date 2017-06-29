@@ -11,11 +11,6 @@
             this.power = power;
         }
 
-        public int Speed
-        {
-            get { return this.speed; }
-        }
-
         public int Power
         {
             get { return this.power; }
