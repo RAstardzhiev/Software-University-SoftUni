@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Animal Farm", "03. Anim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Shopping Spree", "04. Shopping Spree\04. Shopping Spree.csproj", "{61E2592B-67BF-4B9B-9F37-FE2784D21590}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Pizza Calories", "05. Pizza Calories\05. Pizza Calories.csproj", "{7BD6CD4A-698E-4552-BD49-8F7C6D267DD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Pizza Calories", "05. Pizza Calories\05. Pizza Calories.csproj", "{3C1AD80D-7F3E-45A6-AC7C-895350033799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{61E2592B-67BF-4B9B-9F37-FE2784D21590}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61E2592B-67BF-4B9B-9F37-FE2784D21590}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61E2592B-67BF-4B9B-9F37-FE2784D21590}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BD6CD4A-698E-4552-BD49-8F7C6D267DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BD6CD4A-698E-4552-BD49-8F7C6D267DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BD6CD4A-698E-4552-BD49-8F7C6D267DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BD6CD4A-698E-4552-BD49-8F7C6D267DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1AD80D-7F3E-45A6-AC7C-895350033799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1AD80D-7F3E-45A6-AC7C-895350033799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1AD80D-7F3E-45A6-AC7C-895350033799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1AD80D-7F3E-45A6-AC7C-895350033799}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
