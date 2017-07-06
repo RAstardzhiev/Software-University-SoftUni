@@ -8,7 +8,6 @@
 <li>Add(double, double, double): <strong>double</strong></li>
 <li>Add(decimal, decimal, decimal): <strong>decimal</strong></li>
 </ul>
-<p>You should be able to use the class like this:</p>
 <table width="695">
 <tbody>
 <tr>
