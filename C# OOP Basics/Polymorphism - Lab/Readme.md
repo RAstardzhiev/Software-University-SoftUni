@@ -8,6 +8,7 @@
 <li>Add(double, double, double): <strong>double</strong></li>
 <li>Add(decimal, decimal, decimal): <strong>decimal</strong></li>
 </ul>
+<p>You should be able to use the class like this:</p>
 <table width="695">
 <tbody>
 <tr>
@@ -51,10 +52,7 @@
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
-<h3>Solution</h3>
-<p>Created MathOperation class should look like this:</p>
-<p>&nbsp;</p>
+<p>&nbsp;&nbsp;</p>
 <h2>2.&nbsp;&nbsp; Animals</h2>
 <p>Create a class Animal, which hold two fields:</p>
 <ul>
@@ -104,8 +102,7 @@ Console.WriteLine(dog.ExplainMyself());</td>
 </tr>
 </tbody>
 </table>
-<h3>Solution</h3>
-<h2>3.&nbsp;&nbsp; Shapes</h2>
+<h2><br />3.&nbsp;&nbsp; Shapes</h2>
 <p>Create class hierarchy, starting with <strong>abstract</strong> class Shape:</p>
 <ul>
 <li><strong>Abstract methods:</strong>
