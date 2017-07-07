@@ -4,13 +4,13 @@
     {
         private double fuelAmount;
         private double fuelConsumption;
-        private double isAirConditioningOn;
+        private double airConditioningConsumption;
 
-        public Vehicle(double fuelAmount, double fuelConsumption, double isAirConditioningOn)
+        public Vehicle(double fuelAmount, double fuelConsumption, double airConditioningConsumption)
         {
             this.fuelAmount = fuelAmount;
             this.fuelConsumption = fuelConsumption;
-            this.isAirConditioningOn = isAirConditioningOn;
+            this.airConditioningConsumption = airConditioningConsumption;
         }
 
         public virtual void Refuel(double fuel)
@@ -20,7 +20,7 @@
 
         public string Drive(double distance)
         {
-            var neededFuel = (this.fuelConsumption + isAirConditioningOn) * distance;
+            var neededFuel = (this.fuelConsumption + airConditioningConsumption) * distance;
 
             if (neededFuel > this.fuelAmount)
             {

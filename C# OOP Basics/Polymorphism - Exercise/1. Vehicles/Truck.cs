@@ -4,8 +4,8 @@
     {
         private const double TakenFuelInCharging = 0.95;
 
-        public Truck(double fuelAmount, double fuelConsumption, double isAirConditioningOn) 
-            : base(fuelAmount, fuelConsumption, isAirConditioningOn)
+        public Truck(double fuelAmount, double fuelConsumption, double airConditioningConsumption) 
+            : base(fuelAmount, fuelConsumption, airConditioningConsumption)
         {
         }
 
