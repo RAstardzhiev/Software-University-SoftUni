@@ -6,10 +6,5 @@
             : base(fuelAmount, fuelConsumption, airConditioningConsumption)
         {
         }
-
-        public void FromCar()
-        {
-
-        }
     }
 }
