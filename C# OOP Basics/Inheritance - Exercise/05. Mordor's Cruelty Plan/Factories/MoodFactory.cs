@@ -4,17 +4,21 @@
 
     public class MoodFactory
     {
+        private const int AngryTopBorder = -6;
+        private const int SadTopBorder = 0;
+        private const int HappyTopBorder = 15;
+
         public static Mood GetMood(int happinessPoints)
         {
-            if (happinessPoints < -5)
+            if (happinessPoints <= AngryTopBorder)
             {
                 return new Angry(happinessPoints);
             }
-            else if (happinessPoints <= 0)
+            else if (happinessPoints <= SadTopBorder)
             {
                 return new Sad(happinessPoints);
             }
-            else if (happinessPoints <= 15)
+            else if (happinessPoints <= HappyTopBorder)
             {
                 return new Happy(happinessPoints);
             }
