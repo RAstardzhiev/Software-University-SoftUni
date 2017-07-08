@@ -14,11 +14,6 @@
 
         protected override double FuelAmount
         {
-            get
-            {
-                return base.FuelAmount;
-            }
-
             set
             {
                 if (value > this.FuelTankCapacity)

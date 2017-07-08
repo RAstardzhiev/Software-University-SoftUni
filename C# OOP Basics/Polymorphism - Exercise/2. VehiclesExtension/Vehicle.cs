@@ -41,6 +41,11 @@
 
         public virtual void Refuel(double fuel)
         {
+            if (fuel <= 0)
+            {
+                throw new ArgumentException("Fuel must be a positive number");
+            }
+
             this.FuelAmount += fuel;
         }
 
