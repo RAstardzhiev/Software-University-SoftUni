@@ -43,6 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\CourseNotFoundException.cs" />
+    <Compile Include="Exceptions\DataNotInitializedExceptionMessage.cs" />
+    <Compile Include="Exceptions\DuplicateEntryInStructureException.cs" />
+    <Compile Include="Exceptions\InvalidComparisonQueryException.cs" />
+    <Compile Include="Exceptions\InvalidFileNameException.cs" />
+    <Compile Include="Exceptions\InvalidPathException.cs" />
+    <Compile Include="Exceptions\InvalidStringException.cs" />
+    <Compile Include="Exceptions\InvalidStudentFilterException.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="IO\CommandInterpreter.cs" />
     <Compile Include="Static data\ExceptionMessages.cs" />

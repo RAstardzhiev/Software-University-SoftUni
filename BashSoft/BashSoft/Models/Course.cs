@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using Exceptions;
     using System;
     using System.Collections.Generic;
 
@@ -28,7 +29,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException(nameof(this.name), ExceptionMessages.NullOrEmptyValue);
+                    throw new InvalidStringException(nameof(this.name));
                 }
 
                 name = value;
@@ -47,7 +48,7 @@
         {
             if (this.studentsByName.ContainsKey(student.UserName))
             {
-                throw new InvalidOperationException(ExceptionMessages.StudentAlreadyEnrolledInGivenCourse);
+                throw new DuplicateEntryInStructureException(student.UserName, this.name);
             }
 
             this.studentsByName[student.UserName] = student;

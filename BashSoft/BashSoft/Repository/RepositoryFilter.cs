@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -22,7 +23,7 @@
             }
             else
             {
-                OutputWriter.DisplayException(ExceptionMessages.InvalidStudentFilter);
+                throw new InvalidStudentFilterException();
             }
         }
 

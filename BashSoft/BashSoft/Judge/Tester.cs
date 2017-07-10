@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using Exceptions;
     using System;
     using System.IO;
 
@@ -24,7 +25,7 @@
             }
             catch (FileNotFoundException)
             {
-                throw new FileNotFoundException(ExceptionMessages.InvalidPath);
+                throw new InvalidPathException();
             }
         }
 
@@ -43,7 +44,7 @@
                 }
                 catch (DirectoryNotFoundException)
                 {
-                    OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
+                    throw new InvalidPathException();
                 }
 
                 return;

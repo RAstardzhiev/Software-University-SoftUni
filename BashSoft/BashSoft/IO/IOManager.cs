@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -16,7 +17,7 @@
             }
             catch (ArgumentException)
             {
-                throw new ArgumentException(ExceptionMessages.ForbiddenSymbolsContainedInName);
+                throw new InvalidFileNameException();
             }
         }
 
@@ -78,7 +79,7 @@
                 }
                 catch (ArgumentOutOfRangeException)
                 {
-                    throw new ArgumentOutOfRangeException(ExceptionMessages.InvalidPath);
+                    throw new InvalidPathException();
                 }
             }
             else
@@ -93,7 +94,7 @@
         {
             if (!Directory.Exists(absolutePath))
             {
-                throw new DirectoryNotFoundException(ExceptionMessages.InvalidPath);
+                throw new InvalidPathException();
             }
 
             SessionData.currentPath = absolutePath;

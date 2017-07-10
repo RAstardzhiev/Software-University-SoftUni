@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -28,7 +29,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException(nameof(this.userName), ExceptionMessages.NullOrEmptyValue);
+                    throw new InvalidStringException(nameof(this.userName));
                 }
 
                 this.userName = value;
@@ -55,7 +56,7 @@
         {
             if (this.enrolledCourses.ContainsKey(course.Name))
             {
-                throw new InvalidOperationException(ExceptionMessages.StudentAlreadyEnrolledInGivenCourse);
+                throw new DuplicateEntryInStructureException(this.userName, course.Name);
             }
 
             this.enrolledCourses[course.Name] = course;
@@ -65,12 +66,12 @@
         {
             if (!this.enrolledCourses.ContainsKey(courseName))
             {
-                throw new InvalidOperationException(ExceptionMessages.NotEnrolledInCourse);
+                throw new CourseNotFoundException();
             }
 
             if (scores.Length > Course.NumberOfTasksOnExam)
             {
-                throw new InvalidOperationException(ExceptionMessages.InvalidNumberOfScores);
+                OutputWriter.DisplayException(ExceptionMessages.InvalidNumberOfScores);
             }
 
             this.marksByCourseName[courseName] = CalculateMark(scores);

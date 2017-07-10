@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -24,7 +25,7 @@
             }
             else
             {
-                throw new InvalidOperationException(ExceptionMessages.InvalidComparisonQuery);
+                throw new InvalidComparisonQueryException();
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -10,13 +11,9 @@
     {
         private Dictionary<string, Course> courses;
         private Dictionary<string, Student> students;
-        //private Dictionary<string, Dictionary<string, List<int>>> studentByCourse;
         private bool isDataInitialized = false;
         private RepositoryFilter filter;
         private RepositorySorter sorter;
-
-        // Dictionary<courseName, Dictionary<userName, scores>>
-        // private Dictionary<string, Dictionary<string, List<int>>> studentsByCourse;
 
         public StudentsRepository(RepositoryFilter filter, RepositorySorter sorter)
         {
@@ -94,7 +91,7 @@
             }
             else
             {
-                throw new ArgumentException(ExceptionMessages.DataNotInitializedExceptionMessage);
+                throw new DataNotInitializedExceptionMessage();
             }
         }
 
@@ -210,7 +207,7 @@
         {
             if (!this.isDataInitialized)
             {
-                throw new NullReferenceException(ExceptionMessages.DataNotInitializedExceptionMessage);
+                throw new DataNotInitializedExceptionMessage();
             }
 
             this.students = null;
