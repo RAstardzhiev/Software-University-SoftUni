@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Car" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEAABAACAAgBAAEAAAAEAAAAAAAAAQAkAgAAAAJAAg=</HashCode>
+      <FileName>Models\Cars\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PerformanceCar" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAEAABAEAAACAAAAAAAAAAAAAAAUAA=</HashCode>
+      <FileName>Models\Cars\PerformanceCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShowCar" Collapsed="true">
+    <Position X="3" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAEAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Cars\ShowCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Garage" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAADAAAA=</HashCode>
+      <FileName>Models\Garage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CasualRace" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\Races\CasualRace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DragRace" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\Races\DragRace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DriftRace" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\Races\DriftRace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Race" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAAAAEAAAEAEAgAABAAAAAIAAAACAAAAAAAAo=</HashCode>
+      <FileName>Models\Races\Race.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartUp" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>StartUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarManager" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAECBAIgQAAAAAGAAAAAABQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\CarManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
