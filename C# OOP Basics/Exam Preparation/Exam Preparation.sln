@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avatar - 12 July 2017", "Av
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Need For Speed - 11 July 2017", "Need For Speed - 11 July 2017\Need For Speed - 11 July 2017.csproj", "{9509D007-6403-4676-AA45-359AF1E7E954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paw Inc - 25 August 2016", "Paw Inc - 25 August 2016\Paw Inc - 25 August 2016.csproj", "{EC3070A2-9087-4852-AA2B-4E3A718BA878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9509D007-6403-4676-AA45-359AF1E7E954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9509D007-6403-4676-AA45-359AF1E7E954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9509D007-6403-4676-AA45-359AF1E7E954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3070A2-9087-4852-AA2B-4E3A718BA878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3070A2-9087-4852-AA2B-4E3A718BA878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3070A2-9087-4852-AA2B-4E3A718BA878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3070A2-9087-4852-AA2B-4E3A718BA878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
