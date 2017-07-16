@@ -1,33 +1,37 @@
-﻿using System.Collections.Generic;
-
-public abstract class Center
+﻿namespace Paw_Inc___25_August_2016.Centers
 {
-    private string name;
-    private List<Animal> animals;
+    using Animals;
+    using System.Collections.Generic;
 
-    public Center(string name)
+    public abstract class Center
     {
-        this.name = name;
-        this.animals = new List<Animal>();
-    }
+        private string name;
+        private List<Animal> animals;
 
-    public string Name => this.name;
-
-    protected List<Animal> Animals
-    {
-        get
+        public Center(string name)
         {
-            return this.animals;
+            this.name = name;
+            this.animals = new List<Animal>();
         }
 
-        set
-        {
-            this.animals = value;
-        }
-    }
+        public string Name => this.name;
 
-    public void AddAnimal(Animal animal)
-    {
-        this.animals.Add(animal);
+        protected List<Animal> Animals
+        {
+            get
+            {
+                return this.animals;
+            }
+
+            set
+            {
+                this.animals = value;
+            }
+        }
+
+        public void AddAnimal(Animal animal)
+        {
+            this.animals.Add(animal);
+        }
     }
 }

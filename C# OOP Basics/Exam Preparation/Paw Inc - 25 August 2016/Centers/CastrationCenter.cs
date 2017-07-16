@@ -1,41 +1,45 @@
-﻿using System.Collections.Generic;
-
-public class CastrationCenter : Center
+﻿namespace Paw_Inc___25_August_2016.Centers
 {
-    private List<Animal> castratedAnimals;
-    private Dictionary<string, List<Animal>> clientAnimals;
+    using Animals;
+    using System.Collections.Generic;
 
-    public CastrationCenter(string name) : base(name)
+    public class CastrationCenter : Center
     {
-        this.clientAnimals = new Dictionary<string, List<Animal>>();
-        this.castratedAnimals = new List<Animal>();
-    }
+        private List<Animal> castratedAnimals;
+        private Dictionary<string, List<Animal>> clientAnimals;
 
-    public IReadOnlyList<Animal> CastratedAnimals => this.castratedAnimals as IReadOnlyList<Animal>;
-
-    public IReadOnlyDictionary<string, List<Animal>> ClientAnimals => this.clientAnimals as IReadOnlyDictionary<string, List<Animal>>;
-
-    public void AcceptAnimals(string adoptionCenterName, List<Animal> animals)
-    {
-        if (!this.clientAnimals.ContainsKey(adoptionCenterName))
+        public CastrationCenter(string name) : base(name)
         {
-            this.clientAnimals[adoptionCenterName] = new List<Animal>();
+            this.clientAnimals = new Dictionary<string, List<Animal>>();
+            this.castratedAnimals = new List<Animal>();
         }
 
-        this.clientAnimals[adoptionCenterName].AddRange(animals);
-        this.Animals.AddRange(animals);
-    }
+        public IReadOnlyList<Animal> CastratedAnimals => this.castratedAnimals as IReadOnlyList<Animal>;
 
-    public void Castrate()
-    {
-        this.clientAnimals.Clear();
+        public IReadOnlyDictionary<string, List<Animal>> ClientAnimals => this.clientAnimals as IReadOnlyDictionary<string, List<Animal>>;
 
-        foreach (var animal in this.Animals)
+        public void AcceptAnimals(string adoptionCenterName, List<Animal> animals)
         {
-            animal.IsCastrated = true;
+            if (!this.clientAnimals.ContainsKey(adoptionCenterName))
+            {
+                this.clientAnimals[adoptionCenterName] = new List<Animal>();
+            }
+
+            this.clientAnimals[adoptionCenterName].AddRange(animals);
+            this.Animals.AddRange(animals);
         }
 
-        this.castratedAnimals.AddRange(this.Animals);
-        this.Animals.Clear();
+        public void Castrate()
+        {
+            this.clientAnimals.Clear();
+
+            foreach (var animal in this.Animals)
+            {
+                animal.IsCastrated = true;
+            }
+
+            this.castratedAnimals.AddRange(this.Animals);
+            this.Animals.Clear();
+        }
     }
 }

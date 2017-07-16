@@ -1,49 +1,53 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-public class CleansingCenter : Center
+﻿namespace Paw_Inc___25_August_2016.Centers
 {
-    private List<Animal> cleansedStat;
-    private Dictionary<string, List<Animal>> clientNameAndAnimals;
+    using Animals;
+    using System.Collections.Generic;
+    using System.Linq;
 
-    public CleansingCenter(string name) : base(name)
+    public class CleansingCenter : Center
     {
-        this.clientNameAndAnimals = new Dictionary<string, List<Animal>>();
-        this.cleansedStat = new List<Animal>();
-    }
+        private List<Animal> cleansedStat;
+        private Dictionary<string, List<Animal>> clientNameAndAnimals;
 
-    public IReadOnlyDictionary<string, List<Animal>> ClientNameAndAnimals => this.clientNameAndAnimals as IReadOnlyDictionary<string, List<Animal>>;
-
-    public IReadOnlyList<Animal> CleansedStat => this.cleansedStat as IReadOnlyList<Animal>;
-
-    public int AwaitingCleansing => this.Animals.Where(a => !a.IsCleansed).Count();
-
-    public void Cleanse()
-    {
-        this.clientNameAndAnimals.Clear();
-
-        foreach (var animal in this.Animals)
+        public CleansingCenter(string name) : base(name)
         {
-            animal.IsCleansed = true;
+            this.clientNameAndAnimals = new Dictionary<string, List<Animal>>();
+            this.cleansedStat = new List<Animal>();
         }
 
-        this.cleansedStat.AddRange(this.Animals);
-        this.Animals.Clear();
-    }
+        public IReadOnlyDictionary<string, List<Animal>> ClientNameAndAnimals => this.clientNameAndAnimals as IReadOnlyDictionary<string, List<Animal>>;
 
-    public void AddAnimalsForCleansing(IEnumerable<Animal> animals, string adoptionCenterName)
-    {
-        if (animals == null)
+        public IReadOnlyList<Animal> CleansedStat => this.cleansedStat as IReadOnlyList<Animal>;
+
+        public int AwaitingCleansing => this.Animals.Where(a => !a.IsCleansed).Count();
+
+        public void Cleanse()
         {
-            return;
+            this.clientNameAndAnimals.Clear();
+
+            foreach (var animal in this.Animals)
+            {
+                animal.IsCleansed = true;
+            }
+
+            this.cleansedStat.AddRange(this.Animals);
+            this.Animals.Clear();
         }
 
-        if (!this.clientNameAndAnimals.ContainsKey(adoptionCenterName))
+        public void AddAnimalsForCleansing(IEnumerable<Animal> animals, string adoptionCenterName)
         {
-            this.clientNameAndAnimals[adoptionCenterName] = new List<Animal>();
-        }
+            if (animals == null)
+            {
+                return;
+            }
 
-        this.clientNameAndAnimals[adoptionCenterName].AddRange(animals);
-        this.Animals.AddRange(animals);
+            if (!this.clientNameAndAnimals.ContainsKey(adoptionCenterName))
+            {
+                this.clientNameAndAnimals[adoptionCenterName] = new List<Animal>();
+            }
+
+            this.clientNameAndAnimals[adoptionCenterName].AddRange(animals);
+            this.Animals.AddRange(animals);
+        }
     }
 }

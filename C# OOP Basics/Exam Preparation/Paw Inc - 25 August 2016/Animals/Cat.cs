@@ -1,9 +1,12 @@
-﻿public class Cat : Animal
+﻿namespace Paw_Inc___25_August_2016.Animals
 {
-    private int intelligenceCoefficient;
-
-    public Cat(string name, int age, int intelligenceCoefficient) : base(name, age)
+    public class Cat : Animal
     {
-        this.intelligenceCoefficient = intelligenceCoefficient;
+        private int intelligenceCoefficient;
+
+        public Cat(string name, int age, int intelligenceCoefficient) : base(name, age)
+        {
+            this.intelligenceCoefficient = intelligenceCoefficient;
+        }
     }
 }

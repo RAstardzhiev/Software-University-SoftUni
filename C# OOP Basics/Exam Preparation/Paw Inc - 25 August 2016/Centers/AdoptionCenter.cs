@@ -1,41 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-public class AdoptionCenter : Center
+﻿namespace Paw_Inc___25_August_2016.Centers
 {
-    private List<Animal> adoptedAnimals;
+    using Animals;
+    using System.Collections.Generic;
+    using System.Linq;
 
-    public AdoptionCenter(string name) : base(name)
+    public class AdoptionCenter : Center
     {
-        this.adoptedAnimals = new List<Animal>();
-    }
-    public IReadOnlyList<Animal> AdoptedAnimals => this.adoptedAnimals as IReadOnlyList<Animal>;
+        private List<Animal> adoptedAnimals;
 
-    public int WaitingAdoptionCount => this.Animals.Where(a => a.IsCleansed).Count();
+        public AdoptionCenter(string name) : base(name)
+        {
+            this.adoptedAnimals = new List<Animal>();
+        }
+        public IReadOnlyList<Animal> AdoptedAnimals => this.adoptedAnimals as IReadOnlyList<Animal>;
 
-    public IEnumerable<Animal> GetUncleansedAnimals()
-    {
-        var uncleansedAnimals = this.Animals.Where(a => !a.IsCleansed);
-        this.Animals = this.Animals.Where(a => a.IsCleansed).ToList();
-        return uncleansedAnimals;
-    }
+        public int WaitingAdoptionCount => this.Animals.Where(a => a.IsCleansed).Count();
 
-    public void AddAnimals(IEnumerable<Animal> animals)
-    {
-        this.Animals.AddRange(animals);
-    }
+        public IEnumerable<Animal> GetUncleansedAnimals()
+        {
+            var uncleansedAnimals = this.Animals.Where(a => !a.IsCleansed);
+            this.Animals = this.Animals.Where(a => a.IsCleansed).ToList();
+            return uncleansedAnimals;
+        }
 
-    public void AdoptAllCleansedAnimals()
-    {
-        this.adoptedAnimals.AddRange(this.Animals.Where(a => a.IsCleansed));
-        this.Animals = this.Animals.Where(a => !a.IsCleansed).ToList();
-    }
+        public void AddAnimals(IEnumerable<Animal> animals)
+        {
+            this.Animals.AddRange(animals);
+        }
 
-    public List<Animal> GetAllAnimals()
-    {
-        var allAnimals = new List<Animal>(this.Animals);
-        this.Animals.Clear();
-        return allAnimals;
+        public void AdoptAllCleansedAnimals()
+        {
+            this.adoptedAnimals.AddRange(this.Animals.Where(a => a.IsCleansed));
+            this.Animals = this.Animals.Where(a => !a.IsCleansed).ToList();
+        }
+
+        public List<Animal> GetAllAnimals()
+        {
+            var allAnimals = new List<Animal>(this.Animals);
+            this.Animals.Clear();
+            return allAnimals;
+        }
     }
 }

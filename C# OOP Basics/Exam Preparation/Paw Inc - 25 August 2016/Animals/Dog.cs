@@ -1,9 +1,12 @@
-﻿public class Dog : Animal
+﻿namespace Paw_Inc___25_August_2016.Animals
 {
-    private int amountOfCommands;
-
-    public Dog(string name, int age, int amountOfCommands) : base(name, age)
+    public class Dog : Animal
     {
-        this.amountOfCommands = amountOfCommands;
+        private int amountOfCommands;
+
+        public Dog(string name, int age, int amountOfCommands) : base(name, age)
+        {
+            this.amountOfCommands = amountOfCommands;
+        }
     }
 }
