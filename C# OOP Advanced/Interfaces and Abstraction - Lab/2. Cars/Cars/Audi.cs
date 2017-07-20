@@ -7,8 +7,8 @@
     {
         public Audi(string model, string color)
         {
-            Model = model;
-            Color = color;
+            this.Model = model;
+            this.Color = color;
         }
 
         public string Model { get; private set; }

@@ -32,7 +32,6 @@
             {
                 for (double x = -this.Radius; x < r_out; x += 0.5)
                 {
-
                     double value = x * x + y * y;
 
                     if (value >= r_in * r_in && value <= r_out * r_out)

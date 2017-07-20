@@ -1,9 +1,15 @@
 ﻿namespace _1.Shapes
 {
-    class Rectangle : IDrawable
+    public class Rectangle : IDrawable
     {
         private double width;
         private double height;
+
+        public Rectangle(int width, int height)
+        {
+            this.Width = width;
+            this.Height = height;
+        }
 
         public double Width
         {
@@ -31,24 +37,17 @@
             }
         }
 
-        public Rectangle(int width, int height)
-        {
-            this.Width = width;
-            this.Height = height;
-        }
-
         public void Draw()
         {
-            DrawLine(this.Width, '*', '*');
+            this.DrawLine(this.Width, '*', '*');
 
             for (int i = 1; i < this.Height - 1; ++i)
             {
-                DrawLine(this.Width, '*', ' ');
+                this.DrawLine(this.Width, '*', ' ');
             }
 
-            DrawLine(this.Width, '*', '*');
+            this.DrawLine(this.Width, '*', '*');
         }
-
 
         private void DrawLine(double width, char end, char mid)
         {
