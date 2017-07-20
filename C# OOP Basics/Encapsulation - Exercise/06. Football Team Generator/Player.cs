@@ -26,53 +26,6 @@
             this.skillLevel = (endurance + sprint + dribble + passing + shooting) / 5;
         }
 
-        public double SkillLevel { get { return this.skillLevel; } }
-
-        private double Shooting
-        {
-            set
-            {
-                ValidateStat(value, nameof(Shooting));
-                this.shooting = value;
-            }
-        }
-
-        private double Passing
-        {
-            set
-            {
-                ValidateStat(value, nameof(Passing));
-                this.passing = value;
-            }
-        }
-
-        private double Dribble
-        {
-            set
-            {
-                ValidateStat(value, nameof(Dribble));
-                this.dribble = value;
-            }
-        }
-
-        private double Sprint
-        {
-            set
-            {
-                ValidateStat(value, nameof(Sprint));
-                this.sprint = value;
-            }
-        }
-
-        private double Endurance
-        {
-            set
-            {
-                ValidateStat(value, nameof(Endurance));
-                this.endurance = value;
-            }
-        }
-
         public string Name
         {
             get
@@ -88,6 +41,53 @@
                 }
 
                 this.name = value;
+            }
+        }
+
+        public double SkillLevel { get { return this.skillLevel; } }
+
+        private double Shooting
+        {
+            set
+            {
+                this.ValidateStat(value, nameof(this.Shooting));
+                this.shooting = value;
+            }
+        }
+
+        private double Passing
+        {
+            set
+            {
+                this.ValidateStat(value, nameof(this.Passing));
+                this.passing = value;
+            }
+        }
+
+        private double Dribble
+        {
+            set
+            {
+                this.ValidateStat(value, nameof(this.Dribble));
+                this.dribble = value;
+            }
+        }
+
+        private double Sprint
+        {
+            set
+            {
+                this.ValidateStat(value, nameof(this.Sprint));
+                this.sprint = value;
+            }
+        }
+
+        private double Endurance
+        {
+            set
+            {
+                this.ValidateStat(value, nameof(this.Endurance));
+                this.endurance = value;
             }
         }
 

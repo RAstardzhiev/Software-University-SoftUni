@@ -12,6 +12,7 @@
         {
             this.adoptedAnimals = new List<Animal>();
         }
+
         public IReadOnlyList<Animal> AdoptedAnimals => this.adoptedAnimals as IReadOnlyList<Animal>;
 
         public int WaitingAdoptionCount => this.Animals.Where(a => a.IsCleansed).Count();

@@ -5,11 +5,17 @@
         private int id;
         private double balance;
 
-        public BankAccount() : this(0, 0) { }
+        public BankAccount() : this(0, 0)
+        {
+        }
 
-        public BankAccount(int id) : this(id, 0.0) { }
+        public BankAccount(int id) : this(id, 0.0)
+        {
+        }
 
-        public BankAccount(double balance) : this(0, balance) { }
+        public BankAccount(double balance) : this(0, balance)
+        {
+        }
 
         public BankAccount(int id, double balance)
         {

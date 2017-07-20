@@ -17,7 +17,7 @@
 
             while (input != "Cops Are Here")
             {
-                ExecuteCommand(input.Split());
+                this.ExecuteCommand(input.Split());
                 input = Console.ReadLine();
             }
         }

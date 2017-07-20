@@ -1,4 +1,4 @@
-﻿namespace _6.Animals.Animals.Kinds
+﻿namespace _06.Animals.Animals.Kinds
 {
     public class Cat : Animal
     {

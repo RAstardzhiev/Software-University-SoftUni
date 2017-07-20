@@ -102,7 +102,7 @@
         public void IssueWar(string nationsType)
         {
             this.warStat.AddNewWar(nationsType);
-            var nations = new Nation[] { airNation, waterNation, fireNation, earthNation };
+            var nations = new Nation[] { this.airNation, this.waterNation, this.fireNation, this.earthNation };
 
             foreach (var looser in nations.OrderByDescending(n => n.GetTotalPower()).Skip(1))
             {

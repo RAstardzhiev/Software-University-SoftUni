@@ -19,6 +19,7 @@
 
                 persons.Add(person);
             }
+
             var bonus = double.Parse(Console.ReadLine());
             persons.ForEach(p => Console.WriteLine(p.ToString()));
         }

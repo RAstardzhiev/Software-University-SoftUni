@@ -23,6 +23,7 @@
             {
                 return this.firtsName;
             }
+
             set
             {
                 if (value.Length < 3)
@@ -53,6 +54,7 @@
             {
                 return this.age;
             }
+
             set
             {
                 if (value <= 0)

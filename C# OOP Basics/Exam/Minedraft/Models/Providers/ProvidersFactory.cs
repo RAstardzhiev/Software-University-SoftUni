@@ -7,9 +7,9 @@
             switch (type)
             {
                 case "Solar":
-                    return (new SolarProvider(id, energyOutput));
+                    return new SolarProvider(id, energyOutput);
                 case "Pressure":
-                    return (new PressureProvider(id, energyOutput));
+                    return new PressureProvider(id, energyOutput);
                 default:
                     return null;
             }

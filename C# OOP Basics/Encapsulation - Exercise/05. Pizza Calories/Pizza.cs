@@ -67,11 +67,11 @@
 
         public string GetTotalCalories()
         {
-            var totalCalories =  this.dough.GetCalories() + this.toppings.Select(t => t.GetCalories()).Sum();
+            var totalCalories = this.dough.GetCalories() + this.toppings.Select(t => t.GetCalories()).Sum();
             return $"{this.Name} - {totalCalories:F2} Calories.";
         }
 
-        public void addTopping(Topping topping)
+        public void AddTopping(Topping topping)
         {
             this.toppings.Enqueue(topping);
             this.NumberOfToppings = this.toppings.Count;

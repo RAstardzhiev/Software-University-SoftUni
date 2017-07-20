@@ -23,24 +23,6 @@
                                 .FirstOrDefault() != null
                             : c.Engine.Power > 250)
                         .Select(c => c.Model)));
-
-            //switch (command)
-            //{
-            //    case "fragile":
-            //        Console.WriteLine(string.Join(Environment.NewLine, cars
-            //            .Where(c => c.Cargo.Type == "fragile" && c.Tires
-            //                .Where(t => t.Pressure < 1)
-            //                .FirstOrDefault() != null)
-            //            .Select(c => c.Model)));
-            //        break;
-            //    case "flamable":
-            //        Console.WriteLine(string.Join(Environment.NewLine, cars
-            //            .Where(c => c.Cargo.Type == "flamable" && c.Engine.Power > 250)
-            //            .Select(c => c.Model)));
-            //        break;
-            //    default:
-            //        break;
-            //}
         }
 
         private static Queue<Car> GetCars()

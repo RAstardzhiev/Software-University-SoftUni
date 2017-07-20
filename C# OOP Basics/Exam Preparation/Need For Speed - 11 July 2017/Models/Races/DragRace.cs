@@ -1,6 +1,4 @@
-﻿using Need_For_Speed___11_July_2017.Models.Cars;
-
-namespace Need_For_Speed___11_July_2017.Models.Races
+﻿namespace Need_For_Speed___11_July_2017.Models.Races
 {
     using Cars;
 

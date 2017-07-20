@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Bus : Vehicle
+    public class Bus : Vehicle
     {
         private bool isAirConditionerTurnedOn;
 

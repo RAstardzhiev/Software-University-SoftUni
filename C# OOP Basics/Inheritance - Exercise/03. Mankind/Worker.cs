@@ -48,7 +48,7 @@
         private decimal GetSalaryPerHour()
         {
             var salaryPerDay = this.weekSalary / 5;
-            return salaryPerDay / (decimal)workHoursPerDay;
+            return salaryPerDay / (decimal)this.workHoursPerDay;
         }
 
         public override string ToString()

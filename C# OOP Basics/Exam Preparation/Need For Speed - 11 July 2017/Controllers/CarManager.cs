@@ -36,7 +36,7 @@
 
         public string Check(int id)
         {
-            return cars[id].ToString();
+            return this.cars[id].ToString();
         }
 
         public void Open(int id, string type, int length, string route, int prizePool)
@@ -95,7 +95,7 @@
                 car.WaitingRaces--;
             }
 
-            var raceWinners = races[id].ToString();
+            var raceWinners = this.races[id].ToString();
             this.races.Remove(id);
 
             return raceWinners;

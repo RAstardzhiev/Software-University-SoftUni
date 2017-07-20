@@ -1,4 +1,4 @@
-﻿namespace _6.Animals
+﻿namespace _06.Animals
 {
     using Animals;
     using System;

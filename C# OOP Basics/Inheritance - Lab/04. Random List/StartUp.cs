@@ -7,7 +7,7 @@
         public static void Main()
         {
             var rl = new RandomList();
-            Console.WriteLine(rl.randomInteger());
+            Console.WriteLine(rl.RandomInteger());
             rl.Add("ggg");
             rl.Add(1);
             rl.Add("ttt");

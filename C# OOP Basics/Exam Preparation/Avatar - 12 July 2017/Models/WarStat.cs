@@ -15,8 +15,8 @@
 
         public void AddNewWar(string warIssuedByElement)
         {
-            warsCounter++;
-            statBuilder.AppendLine($"War {this.warsCounter} issued by {warIssuedByElement}");
+            this.warsCounter++;
+            this.statBuilder.AppendLine($"War {this.warsCounter} issued by {warIssuedByElement}");
         }
 
         public override string ToString()

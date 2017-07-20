@@ -18,7 +18,7 @@
         }
 
         public Employee(string name, decimal salary, string position, string department, string email, int age)
-            :this(name, salary, position, department)
+            : this(name, salary, position, department)
         {
             this.email = email;
             this.age = age;

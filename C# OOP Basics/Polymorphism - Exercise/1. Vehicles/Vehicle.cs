@@ -20,7 +20,7 @@
 
         public string Drive(double distance)
         {
-            var neededFuel = (this.fuelConsumption + airConditioningConsumption) * distance;
+            var neededFuel = (this.fuelConsumption + this.airConditioningConsumption) * distance;
 
             if (neededFuel > this.fuelAmount)
             {

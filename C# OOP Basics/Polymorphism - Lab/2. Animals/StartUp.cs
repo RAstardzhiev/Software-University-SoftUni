@@ -11,7 +11,6 @@
 
             Console.WriteLine(cat.ExplainMyself());
             Console.WriteLine(dog.ExplainMyself());
-
         }
     }
 }

@@ -54,7 +54,7 @@
             for (int i = 0; i < toppingsCount; i++)
             {
                 var toppingData = Console.ReadLine().Split();
-                pizza.addTopping(new Topping(toppingData[1], int.Parse(toppingData[2])));
+                pizza.AddTopping(new Topping(toppingData[1], int.Parse(toppingData[2])));
             }
 
             return pizza;

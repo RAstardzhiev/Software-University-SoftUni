@@ -1,4 +1,4 @@
-﻿namespace _6.Animals.Animals
+﻿namespace _06.Animals.Animals
 {
     using System;
 
@@ -48,7 +48,6 @@
                 if (string.IsNullOrWhiteSpace(value) || value == string.Empty)
                 {
                     throw new ArgumentException("Invalid input!");
-
                 }
 
                 this.gender = value;

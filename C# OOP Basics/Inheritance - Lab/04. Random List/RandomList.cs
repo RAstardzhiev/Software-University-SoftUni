@@ -12,11 +12,11 @@
             this.rdn = new Random();
         }
 
-        public int randomInteger()
+        public int RandomInteger()
         {
             return this.rdn.Next();
         }
 
-        public int randomString() => randomInteger();
+        public int RandomString() => this.RandomInteger();
     }
 }

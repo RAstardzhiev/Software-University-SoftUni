@@ -2,7 +2,7 @@
 {
     using Foods;
 
-    class Cat : Felime
+    public class Cat : Felime
     {
         private string breed;
 

@@ -184,7 +184,7 @@
                 : $"Adopted Animals: {string.Join(", ", totalAdoptedAnimals.OrderBy(name => name))}");
 
             List<string> totalCleansedAnimals = new List<string>();
-            foreach (var cleansingCenter in cleansingCenters)
+            foreach (var cleansingCenter in this.cleansingCenters)
             {
                 totalCleansedAnimals.AddRange(cleansingCenter.CleansedStat.Select(a => a.Name));
             }

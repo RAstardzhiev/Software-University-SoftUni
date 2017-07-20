@@ -2,8 +2,8 @@
 {
     public class Animal
     {
-        string name;
-        string favouriteFood;
+        private string name;
+        private string favouriteFood;
 
         public Animal(string name, string favouriteFood)
         {

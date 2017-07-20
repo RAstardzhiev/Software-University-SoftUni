@@ -62,6 +62,7 @@
                                 default:
                                     break;
                             }
+
                             break;
                         case "DriveEmpty":
                             bus.IsAirConditionerTurnedOn = false;

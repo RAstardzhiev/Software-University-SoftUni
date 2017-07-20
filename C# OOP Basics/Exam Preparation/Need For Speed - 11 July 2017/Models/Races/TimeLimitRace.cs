@@ -42,7 +42,7 @@
         {
             var car = this.Participants[0];
             var timePerformance = this.GetPerformancePoints(car);
-            var earnedTime = GetEarnedTime(timePerformance);
+            var earnedTime = this.GetEarnedTime(timePerformance);
             var prizeWon = earnedTime == "Gold"
                 ? (int)(this.PrizePool * GoldTimePrizePercentage)
                 : earnedTime == "Silver"

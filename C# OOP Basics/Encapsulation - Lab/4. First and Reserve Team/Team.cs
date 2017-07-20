@@ -29,11 +29,11 @@
         {
             if (person.Age < 40)
             {
-                firstTeam.Add(person);
+                this.firstTeam.Add(person);
             }
             else
             {
-                reserveTeam.Add(person);
+                this.reserveTeam.Add(person);
             }
         }
     }

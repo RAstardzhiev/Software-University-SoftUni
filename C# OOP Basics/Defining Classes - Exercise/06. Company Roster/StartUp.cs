@@ -68,8 +68,7 @@
                     }
                 }
 
-                employees.Push(new Employee
-                    (
+                employees.Push(new Employee (
                         personData[0],
                         decimal.Parse(personData[1]),
                         personData[2],

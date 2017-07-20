@@ -70,7 +70,7 @@
             }
         }
 
-        public  int Seconds
+        public int Seconds
         {
             get
             {

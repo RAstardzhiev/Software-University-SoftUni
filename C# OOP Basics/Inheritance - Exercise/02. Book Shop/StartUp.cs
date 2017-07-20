@@ -4,7 +4,7 @@
 
     public class StartUp
     {
-        static void Main()
+        public static void Main()
         {
             try
             {
@@ -23,6 +23,5 @@
                 Console.WriteLine(ae.Message);
             }
         }
-
     }
 }

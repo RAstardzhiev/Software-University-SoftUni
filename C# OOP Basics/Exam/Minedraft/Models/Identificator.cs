@@ -13,12 +13,12 @@
         {
             get
             {
-                return id;
+                return this.id;
             }
 
             protected set
             {
-                id = value;
+                this.id = value;
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace _6.Animals.Animals
+﻿namespace _06.Animals.Animals
 {
     using Kinds;
     using System;
@@ -14,7 +14,7 @@
                 case "Cat":
                     return new Cat(name, age, gender);
                 case "Frog":
-                    return new Frog(name , age, gender);
+                    return new Frog(name, age, gender);
                 case "Kitten":
                     return new Kitten(name, age);
                 case "Tomcat":

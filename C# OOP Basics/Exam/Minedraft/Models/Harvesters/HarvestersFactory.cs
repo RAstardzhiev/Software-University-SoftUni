@@ -4,7 +4,6 @@
 
     public class HarvesterFactory
     {
-
         public Harvester RegisterHarvester(string id, double oreOutput, double energyRequirement)
         {
             return new HammerHarvester(id, oreOutput, energyRequirement);

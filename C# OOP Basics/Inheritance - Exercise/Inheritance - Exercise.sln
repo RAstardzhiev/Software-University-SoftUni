@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Online Radio Database",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Mordor's Cruelty Plan", "05. Mordor's Cruelty Plan\05. Mordor's Cruelty Plan.csproj", "{375C28C2-CE5C-47E9-ADD7-8298BD9EFF7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Animals", "6. Animals\6. Animals.csproj", "{4E2D1F76-24A9-41DB-9EE1-6F4358FDC902}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Animals", "06. Animals\06. Animals.csproj", "{4E2D1F76-24A9-41DB-9EE1-6F4358FDC902}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

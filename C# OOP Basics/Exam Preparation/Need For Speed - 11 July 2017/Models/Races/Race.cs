@@ -24,13 +24,13 @@
             this.participants = new List<Car>();
         }
 
+        public IReadOnlyList<Car> Participants => this.participants as IReadOnlyList<Car>;
+
         protected int Length => this.length;
 
         protected string Route => this.route;
 
         protected int PrizePool => this.prizePool;
-
-        public IReadOnlyList<Car> Participants => this.participants as IReadOnlyList<Car>;
 
         public virtual void RegisterCar(Car car)
         {
@@ -48,7 +48,7 @@
                 .Select(c => new
                 {
                     Car = c,
-                    PerformancePoints = GetPerformancePoints(c)
+                    PerformancePoints = this.GetPerformancePoints(c)
                 })
                 .OrderByDescending(obj => obj.PerformancePoints)
                 .Take(3)

@@ -25,7 +25,7 @@
 
         public override string ToString()
         {
-            var mood = GetMentalCondition();
+            var mood = this.GetMentalCondition();
             return $"{this.HappinessPoints}{Environment.NewLine}{mood.GetType().Name}";
         }
     }

@@ -31,7 +31,6 @@
             }
         }
 
-
         public override string ToString()
         {
             return $"{this.firtsName} {this.lastName} get {this.salary:F2} leva";

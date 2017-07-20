@@ -56,7 +56,6 @@
 
             while (playerData[0] != "Tournament")
             {
-
                 var trainerName = playerData[0];
                 var pokemonName = playerData[1];
                 var element = playerData[2];
