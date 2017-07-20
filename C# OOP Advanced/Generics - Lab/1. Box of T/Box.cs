@@ -1,5 +1,6 @@
 ﻿namespace _1.Box_of_T
 {
+    using System;
     using System.Linq;
 
     public class Box<T> : Ibox<T>
@@ -12,6 +13,20 @@
         }
 
         public int Count { get; private set; }
+
+        // Indexer
+        public T this[int index]
+        {
+            get
+            {
+                if (index >= this.Count)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
+                return this.data[index];
+            }
+        }
 
         public void Add(T element)
         {
