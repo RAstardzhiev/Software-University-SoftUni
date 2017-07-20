@@ -4,6 +4,8 @@
     {
         int Count { get; }
 
+        T this[int index] { get; }
+
         void Add(T element);
 
         T Remove();
