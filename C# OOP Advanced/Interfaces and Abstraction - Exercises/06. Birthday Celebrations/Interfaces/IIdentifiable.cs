@@ -1,4 +1,4 @@
-﻿namespace _06.Birthday_Celebrations.Models
+﻿namespace _06.Birthday_Celebrations.Interfaces
 {
     public interface IIdentifiable
     {

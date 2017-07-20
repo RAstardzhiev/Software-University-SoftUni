@@ -1,5 +1,7 @@
-﻿namespace _06.Birthday_Celebrations.Models.Abstraction
+﻿namespace _06.Birthday_Celebrations.Models
 {
+    using Interfaces;
+
     public abstract class Buyer : LivingBeing, IBuyer
     {
         public Buyer(string birthDate, string name) : base(birthDate, name)

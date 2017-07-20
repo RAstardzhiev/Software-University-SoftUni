@@ -1,7 +1,5 @@
 ﻿namespace _06.Birthday_Celebrations.Models
 {
-    using Abstraction;
-
     public class Rebel : Buyer
     {
         private string group;

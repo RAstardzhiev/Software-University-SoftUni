@@ -44,12 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Engine.cs" />
-    <Compile Include="Models\Abstraction\Buyer.cs" />
-    <Compile Include="Models\Abstraction\IBuyer.cs" />
-    <Compile Include="Models\Abstraction\LivingBeing.cs" />
+    <Compile Include="Models\Buyer.cs" />
+    <Compile Include="Interfaces\IBuyer.cs" />
+    <Compile Include="Models\LivingBeing.cs" />
     <Compile Include="Models\Citizen.cs" />
-    <Compile Include="Models\Abstraction\IBirthable.cs" />
-    <Compile Include="Models\Abstraction\IIdentifiable.cs" />
+    <Compile Include="Interfaces\IBirthable.cs" />
+    <Compile Include="Interfaces\IIdentifiable.cs" />
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\Rebel.cs" />
     <Compile Include="Models\Robot.cs" />

@@ -7,19 +7,11 @@
       <FileName>Controllers\Engine.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_06.Birthday_Celebrations.Models.Abstraction.Buyer" Collapsed="true">
+  <Class Name="_06.Birthday_Celebrations.Models.Buyer" Collapsed="true">
     <Position X="1.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAAA=</HashCode>
-      <FileName>Models\Abstraction\Buyer.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="_06.Birthday_Celebrations.Models.Abstraction.LivingBeing" Collapsed="true">
-    <Position X="2.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Abstraction\LivingBeing.cs</FileName>
+      <FileName>Models\Buyer.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -29,6 +21,14 @@
       <HashCode>AAACAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Models\Citizen.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="_06.Birthday_Celebrations.Models.LivingBeing" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LivingBeing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="_06.Birthday_Celebrations.Models.Pet" Collapsed="true">
     <Position X="5" Y="1.75" Width="1.5" />
@@ -59,25 +59,25 @@
       <FileName>StartUp.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="_06.Birthday_Celebrations.Models.Abstraction.IBuyer" Collapsed="true">
-    <Position X="9.25" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAAA=</HashCode>
-      <FileName>Models\Abstraction\IBuyer.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="_06.Birthday_Celebrations.Models.IBirthable" Collapsed="true">
+  <Interface Name="_06.Birthday_Celebrations.Interfaces.IBirthable" Collapsed="true">
     <Position X="7.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Abstraction\IBirthable.cs</FileName>
+      <FileName>Interfaces\IBirthable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="_06.Birthday_Celebrations.Models.IIdentifiable" Collapsed="true">
+  <Interface Name="_06.Birthday_Celebrations.Interfaces.IBuyer" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAAA=</HashCode>
+      <FileName>Interfaces\IBuyer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_06.Birthday_Celebrations.Interfaces.IIdentifiable" Collapsed="true">
     <Position X="7.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Abstraction\IIdentifiable.cs</FileName>
+      <FileName>Interfaces\IIdentifiable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

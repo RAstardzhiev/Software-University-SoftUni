@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace _01.Define_an_Interface_IPerson
+﻿namespace _01.Define_an_Interface_IPerson
 {
+    using Interfaces;
+
     public class Citizen : IPerson
     {
         public Citizen(string name, int age, string id, string birthdate)

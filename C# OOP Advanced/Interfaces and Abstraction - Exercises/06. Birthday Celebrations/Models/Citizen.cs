@@ -1,7 +1,5 @@
 ﻿namespace _06.Birthday_Celebrations.Models
 {
-    using Abstraction;
-
     public class Citizen : Buyer
     {
         private int age;

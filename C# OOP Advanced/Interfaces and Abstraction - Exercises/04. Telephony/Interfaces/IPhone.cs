@@ -1,4 +1,4 @@
-﻿namespace _04.Telephony.Phones
+﻿namespace _04.Telephony.Interfaces
 {
     public interface IPhone
     {

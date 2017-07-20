@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace _04.Telephony.Phones
+﻿namespace _04.Telephony.Models.Phones
 {
+    using Interfaces;
+
     public class Smartphone : ISmartphone
     {
         public Smartphone(string model)

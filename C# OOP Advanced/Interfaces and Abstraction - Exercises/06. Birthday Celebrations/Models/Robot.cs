@@ -1,5 +1,7 @@
 ﻿namespace _06.Birthday_Celebrations.Models
 {
+    using Interfaces;
+
     public class Robot : IIdentifiable
     {
         private string model;

@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Phones\IPhone.cs" />
-    <Compile Include="Phones\ISmartphone.cs" />
-    <Compile Include="Phones\Smartphone.cs" />
+    <Compile Include="Interfaces\IPhone.cs" />
+    <Compile Include="Interfaces\ISmartphone.cs" />
+    <Compile Include="Models\Phones\Smartphone.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

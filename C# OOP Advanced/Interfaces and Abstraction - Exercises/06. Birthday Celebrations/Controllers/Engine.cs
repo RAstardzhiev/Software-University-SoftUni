@@ -1,7 +1,7 @@
 ﻿namespace _06.Birthday_Celebrations.Controllers
 {
+    using Interfaces;
     using Models;
-    using Models.Abstraction;
     using System;
     using System.Collections.Generic;
     using System.Linq;

@@ -1,7 +1,8 @@
 ﻿namespace _04.Telephony
 {
     using System;
-    using Phones;
+    using Models.Phones;
+    using Interfaces;
 
     public class StartUp
     {
@@ -11,7 +12,7 @@
             TestPhone(phone);
         }
 
-        private static void TestPhone(Smartphone phone)
+        private static void TestPhone(ISmartphone phone)
         {
             var numbersToCall = Console.ReadLine().Split();
 
