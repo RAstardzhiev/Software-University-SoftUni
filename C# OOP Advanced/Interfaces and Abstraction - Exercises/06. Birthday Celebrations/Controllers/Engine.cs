@@ -13,7 +13,7 @@
         internal void Run()
         {
             // BirthdayCelebrationsImplementation();
-            FoodShortageImplementation();
+            this.FoodShortageImplementation();
         }
 
         private void FoodShortageImplementation()
@@ -42,7 +42,7 @@
                 numberOfPeople--;
             }
 
-            GoShopping(people);
+            this.GoShopping(people);
             Console.WriteLine(people.Sum(p => p.Food));
         }
 
@@ -97,7 +97,7 @@
                     .Split(new char[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             }
 
-            PrintBirethDaysInParticularYear(livingBeings);
+            this.PrintBirethDaysInParticularYear(livingBeings);
         }
 
         private void PrintBirethDaysInParticularYear(Queue<IBirthable> livingBeings)

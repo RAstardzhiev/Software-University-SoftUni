@@ -6,8 +6,8 @@
     {
         public LivingBeing(string birthDate, string name)
         {
-            BirthDate = birthDate;
-            Name = name;
+            this.BirthDate = birthDate;
+            this.Name = name;
         }
 
         public string BirthDate { get; private set; }

@@ -13,12 +13,22 @@
 
         public string Browse(string url)
         {
-            if (IsUrlValid(url))
+            if (this.IsUrlValid(url))
             {
                 return $"Browsing: {url}!";
             }
 
             return "Invalid URL!";
+        }
+
+        public string Call(string phoneNumber)
+        {
+            if (this.IsNumberValid(phoneNumber))
+            {
+                return $"Calling... {phoneNumber}";
+            }
+
+            return "Invalid number!";
         }
 
         private bool IsUrlValid(string url)
@@ -32,16 +42,6 @@
             }
 
             return true;
-        }
-
-        public string Call(string phoneNumber)
-        {
-            if (IsNumberValid(phoneNumber))
-            {
-                return $"Calling... {phoneNumber}";
-            }
-
-            return "Invalid number!";
         }
 
         private bool IsNumberValid(string phoneNumber)
