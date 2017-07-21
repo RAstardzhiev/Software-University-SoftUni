@@ -1,6 +1,6 @@
 ﻿namespace _03.Ferrari.Cars
 {
-    class Ferrari : ICar
+    public class Ferrari : ICar
     {
         public Ferrari(string driver, string model)
         {
