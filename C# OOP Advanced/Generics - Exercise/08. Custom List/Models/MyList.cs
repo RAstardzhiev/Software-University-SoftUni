@@ -1,20 +1,21 @@
 ﻿namespace _08.Custom_List.Models
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
 
-    public class MyList<T> : IMyList<T> 
+    public class MyList<T> : IMyList<T>, IEnumerable<T>
         where T : IComparable<T>
     {
-        private const int initialcapacity = 15;
+        private const int Initialcapacity = 16;
 
         private T[] data;
         private int length;
 
         public MyList()
         {
-            this.data = new T[initialcapacity];
+            this.data = new T[Initialcapacity];
         }
 
         public void Add(T element)
@@ -39,19 +40,12 @@
 
             foreach (var item in this.data)
             {
-                if (comparer.Equals(item, element))
+                // if (item.Equals(element)) // Input: Contains null -> NullReferenceException
+                if (comparer.Equals(item, element)) // This has a check for null
                 {
                     return true;
                 }
             }
-
-            //foreach (var item in this.data)
-            //{
-            //    if (item.CompareTo(element) == 0)
-            //    {
-            //        return true;
-            //    }
-            //}
 
             return false;
         }
@@ -124,6 +118,15 @@
             return element;
         }
 
+        public void Sort()
+        {
+            this.data = this.data
+                .Take(this.length)
+                .OrderBy(x => x)
+                .Concat(new T[this.data.Length - this.length])
+                .ToArray();
+        }
+
         public void Swap(int index1, int index2)
         {
             if (this.length == 0 || index1 >= this.length || index2 >= this.length || index1 < 0 || index2 < 0)
@@ -134,6 +137,16 @@
             var temp = this.data[index1];
             this.data[index1] = this.data[index2];
             this.data[index2] = temp;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return this.data.Take(this.length).GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.data.Take(this.length).GetEnumerator();
         }
 
         public override string ToString()

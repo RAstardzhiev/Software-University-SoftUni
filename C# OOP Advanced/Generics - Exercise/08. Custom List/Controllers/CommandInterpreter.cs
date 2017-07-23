@@ -47,7 +47,15 @@
                     Console.WriteLine(this.myList.Min());
                     break;
                 case "Print": // Print - Prints all elements in the list, each on a separate line
-                    Console.WriteLine(this.myList);
+                    // Console.WriteLine(this.myList);
+                    foreach (var item in this.myList)
+                    {
+                        Console.WriteLine(item);
+                    }
+
+                    break;
+                case "Sort":
+                    this.myList.Sort();
                     break;
                 default:
                     break;

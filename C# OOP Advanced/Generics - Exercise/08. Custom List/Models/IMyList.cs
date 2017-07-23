@@ -1,6 +1,8 @@
 ﻿namespace _08.Custom_List.Models
 {
-    public interface IMyList<T>
+    using System.Collections.Generic;
+
+    public interface IMyList<T> : IEnumerable<T>
     {
         void Add(T element);
 
@@ -15,5 +17,7 @@
         T Max();
 
         T Min();
+
+        void Sort();
     }
 }
