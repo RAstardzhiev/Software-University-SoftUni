@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90539302-D7C3-4197-A7B7-1502A26774E9}</ProjectGuid>
+    <ProjectGuid>{28145BCF-5E3C-4D9B-86AC-9CEDCF3847AB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BashSoft</RootNamespace>
     <AssemblyName>BashSoft</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -43,53 +42,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\CourseNotFoundException.cs" />
-    <Compile Include="Exceptions\DataNotInitializedExceptionMessage.cs" />
-    <Compile Include="Exceptions\DuplicateEntryInStructureException.cs" />
-    <Compile Include="Exceptions\InvalidCommandException.cs" />
-    <Compile Include="Exceptions\InvalidComparisonQueryException.cs" />
-    <Compile Include="Exceptions\InvalidFileNameException.cs" />
-    <Compile Include="Exceptions\InvalidNumberException.cs" />
-    <Compile Include="Exceptions\InvalidPathException.cs" />
-    <Compile Include="Exceptions\InvalidStringException.cs" />
-    <Compile Include="Exceptions\InvalidStudentFilterException.cs" />
-    <Compile Include="IO\Commands\ChangeAbsolutePathCommand.cs" />
-    <Compile Include="IO\Commands\ChangeRelativePathCommand.cs" />
+    <Compile Include="Contracts\IDirectoryChanger.cs" />
+    <Compile Include="Contracts\IDirectoryCreator.cs" />
+    <Compile Include="Contracts\IDirectoryManager.cs" />
+    <Compile Include="Contracts\IDirectoryTraverser.cs" />
+    <Compile Include="Contracts\IInterpreter.cs" />
+    <Compile Include="Contracts\IReader.cs" />
+    <Compile Include="Execptions\DuplicateEntryInStructureException.cs" />
+    <Compile Include="Execptions\InvalidCommandException.cs" />
+    <Compile Include="Execptions\InvalidFileNameException.cs" />
+    <Compile Include="Execptions\InvalidNumberParseException.cs" />
+    <Compile Include="Execptions\InvalidPathException.cs" />
+    <Compile Include="Execptions\InvalidStringException.cs" />
+    <Compile Include="Execptions\InvalidTakeQueryParamterException.cs" />
+    <Compile Include="Execptions\CourseNotFoundException .cs" />
+    <Compile Include="Contracts\IExecutable.cs" />
+    <Compile Include="IO\CommandInterpreter.cs" />
+    <Compile Include="IO\Commands\ChangePathAbsoluteCommand.cs" />
+    <Compile Include="IO\Commands\ChangePathRelativelyCommand.cs" />
     <Compile Include="IO\Commands\Command.cs" />
     <Compile Include="IO\Commands\CompareFilesCommand.cs" />
-    <Compile Include="IO\Commands\DropDatabaseCommand.cs" />
+    <Compile Include="IO\Commands\DropDbCommand.cs" />
+    <Compile Include="IO\Commands\FilterAndTakeCommand.cs" />
     <Compile Include="IO\Commands\GetHelpCommand.cs" />
     <Compile Include="IO\Commands\MakeDirectoryCommand.cs" />
     <Compile Include="IO\Commands\OpenFileCommand.cs" />
-    <Compile Include="IO\Commands\PrintFilteredStudentsCommand.cs" />
-    <Compile Include="IO\Commands\PrintOrderedStudentsCommand.cs" />
-    <Compile Include="IO\Commands\ReadDatabaseCommand.cs" />
-    <Compile Include="IO\Commands\ShowCourseCommand.cs" />
+    <Compile Include="IO\Commands\OrderAndTakeCommand.cs" />
+    <Compile Include="IO\Commands\ReadDatabaseFromFileCommand.cs" />
+    <Compile Include="IO\Commands\ShowWantedDataCommand.cs" />
     <Compile Include="IO\Commands\TraverseFoldersCommand.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="IO\CommandInterpreter.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Static data\ExceptionMessages.cs" />
     <Compile Include="IO\InputReader.cs" />
     <Compile Include="IO\IOManager.cs" />
-    <Compile Include="Repository\RepositoryFilter.cs" />
-    <Compile Include="Repository\RepositorySorter.cs" />
-    <Compile Include="StartUp.cs" />
+    <Compile Include="Launcher.cs" />
     <Compile Include="IO\OutputWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\RepositoryFilter.cs" />
+    <Compile Include="Repository\RepositorySorter.cs" />
     <Compile Include="Static data\SessionData.cs" />
     <Compile Include="Repository\StudentsRepository.cs" />
     <Compile Include="Judge\Tester.cs" />
-    <Compile Include="Models\Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

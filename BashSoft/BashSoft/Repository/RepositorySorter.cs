@@ -1,39 +1,39 @@
 ﻿namespace BashSoft
 {
-    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
     public class RepositorySorter
     {
-        public void OrderAndTake(Dictionary<string, double> studentsWithMarks, string comparison, int studentToTake)
+        public void OrderAndTake(Dictionary<string, double> studentsWithMark, string comparison, int studentsToTake)
         {
             comparison = comparison.ToLower();
-
             if (comparison == "ascending")
             {
-                PrintStudents(studentsWithMarks.OrderBy(x => x.Value)
-                    .Take(studentToTake)
-                    .ToDictionary(pair => pair.Key, kvp => kvp.Value));
+                this.PrintStudents(studentsWithMark
+                    .OrderBy(x => x.Value)
+                    .Take(studentsToTake)
+                    .ToDictionary(x => x.Key, x => x.Value));
             }
-            else if (comparison == "descending")
+            else if(comparison == "descending")
             {
-                PrintStudents(studentsWithMarks.OrderByDescending(x => x.Value)
-                    .Take(studentToTake)
-                    .ToDictionary(pair => pair.Key, kvp => kvp.Value));
+                this.PrintStudents(studentsWithMark
+                    .OrderByDescending(x => x.Value)
+                    .Take(studentsToTake)
+                    .ToDictionary(x => x.Key, x => x.Value));
             }
             else
             {
-                throw new InvalidComparisonQueryException();
+                throw new ArgumentOutOfRangeException(ExceptionMessages.InvalidQueryComparison);
             }
         }
 
-        private void PrintStudents(Dictionary<string, double> studentsWithMarks)
+        public void PrintStudents(Dictionary<string, double> studentsSorted)
         {
-            foreach (var kvp in studentsWithMarks)
+            foreach (var kv in studentsSorted)
             {
-                OutputWriter.PrintStudent(kvp);
+                OutputWriter.PrintStudent(kv);
             }
         }
     }

@@ -1,13 +1,12 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Exceptions;
+    using Execptions;
+    using Contracts;
 
     public class TraverseFoldersCommand : Command
     {
-        public TraverseFoldersCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager) 
-            : base(input, data, judge, repository, inputOutputManager)
-        {
-        }
+        public TraverseFoldersCommand(string input, string[] data, Tester judge, StudentsRepository repository,
+            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) {}
 
         public override void Execute()
         {
@@ -15,18 +14,17 @@
             {
                 this.InputOutputManager.TraverseDirectory(0);
             }
-            else if (this.Data.Length == 2)
+            else
             {
                 int depth;
-                bool hasParsed = int.TryParse(this.Data[1], out depth);
-
-                if (hasParsed)
+                var success = int.TryParse(this.Data[1], out depth);
+                if (success)
                 {
                     this.InputOutputManager.TraverseDirectory(depth);
                 }
                 else
                 {
-                    throw new InvalidNumberException(this.Data[1]);
+                    throw new InvalidNumberParseException();
                 }
             }
         }

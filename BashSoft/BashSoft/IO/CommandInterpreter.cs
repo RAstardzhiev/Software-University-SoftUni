@@ -1,16 +1,17 @@
 ﻿namespace BashSoft
 {
-    using Exceptions;
-    using IO.Commands;
     using System;
+    using Execptions;
+    using IO.Commands;
+    using Contracts;
 
-    public class CommandInterpreter
+    public class CommandInterpreter : IInterpreter
     {
         private Tester judge;
         private StudentsRepository repository;
-        private IOManager inputOutputManager;
+        private IDirectoryManager inputOutputManager;
 
-        public CommandInterpreter(Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        public CommandInterpreter(Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager)
         {
             this.judge = judge;
             this.repository = repository;
@@ -24,17 +25,16 @@
 
             try
             {
-                Command command = this.ParseCommand(input, commandName, data);
+                IExecutable command = this.ParseCommand(input, commandName, data);
                 command.Execute();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                OutputWriter.DisplayException(ex.Message);
+                OutputWriter.DisplayException(e.Message);
             }
-
         }
 
-        private Command ParseCommand(string input, string command, string[] data)
+        private IExecutable ParseCommand(string input, string command, string[] data)
         {
             switch (command)
             {
@@ -42,34 +42,35 @@
                     return new OpenFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "mkdir":
                     return new MakeDirectoryCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "is":
+                case "ls":
                     return new TraverseFoldersCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "cmp":
                     return new CompareFilesCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "cdRel":
-                    return new ChangeRelativePathCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new ChangePathRelativelyCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "cdAbs":
-                    return new ChangeAbsolutePathCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new ChangePathAbsoluteCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "readDb":
-                    return new ReadDatabaseCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new ReadDatabaseFromFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "help":
                     return new GetHelpCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "show":
-                    return new ShowCourseCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "filter":
-                    return new PrintFilteredStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "decOrder":
+                    return new FilterAndTakeCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "order":
-                    return new PrintOrderedStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new OrderAndTakeCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "dropdb":
-                    return new DropDatabaseCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "download":
-                    // TODO: implement after functionality is implemented
-                case "downloadAsynch":
-                    // TODO: implement after functionality is implemented
+                    return new DropDbCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                case "show":
+                    return new ShowWantedDataCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                //case "decOrder":
+                //    break;
+                //case "download":
+                //    break;
+                //case "downloadAsynch":
+                //    break;
                 default:
                     throw new InvalidCommandException(input);
             }
-        }
+        }        
     }
 }

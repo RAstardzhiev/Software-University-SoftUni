@@ -1,17 +1,19 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Exceptions;
     using System;
+    using Execptions;
+    using Contracts;
 
-    public abstract class Command
+    public abstract class Command : IExecutable
     {
         private string input;
         private string[] data;
+
         private Tester judge;
         private StudentsRepository repository;
-        private IOManager inputOutputManager;
+        private IDirectoryManager inputOutputManager;
 
-        public Command(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        public Command(string input, string[] data, Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager)
         {
             this.Input = input;
             this.Data = data;
@@ -19,65 +21,46 @@
             this.repository = repository;
             this.inputOutputManager = inputOutputManager;
         }
-
-        protected string Input
+        
+        public string[] Data
         {
-            get
-            {
-                return this.input;
-            }
-
-            private set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new InvalidStringException();
-                }
-
-                this.input = value;
-            }
-        }
-
-        protected string[] Data
-        {
-            get
-            {
-                return this.data;
-            }
-
+            get { return this.data; }
             private set
             {
                 if (value == null || value.Length == 0)
                 {
                     throw new NullReferenceException();
                 }
-
                 this.data = value;
+            }
+        }  
+
+        public string Input
+        {
+            get { return this.input; }
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new InvalidStringException();
+                }
+                this.input = value;
             }
         }
 
         protected Tester Judge
         {
-            get
-            {
-                return this.judge;
-            }
+            get { return this.judge; }
         }
 
         protected StudentsRepository Repository
         {
-            get
-            {
-                return this.repository;
-            }
+            get { return this.repository; }
         }
 
-        protected IOManager InputOutputManager
+        protected IDirectoryManager InputOutputManager
         {
-            get
-            {
-                return this.inputOutputManager;
-            }
+            get { return this.inputOutputManager; }
         }
 
         public abstract void Execute();

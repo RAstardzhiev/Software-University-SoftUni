@@ -1,8 +1,7 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.Models
 {
-    using Exceptions;
-    using System;
     using System.Collections.Generic;
+    using Execptions;
 
     public class Course
     {
@@ -10,6 +9,7 @@
         public const int MaxScoreOnExamTask = 100;
 
         private string name;
+
         private Dictionary<string, Student> studentsByName;
 
         public Course(string name)
@@ -20,39 +20,30 @@
 
         public string Name
         {
-            get
-            {
-                return this.name;
-            }
-
-            private set
+            get { return this.name; }
+            set
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new InvalidStringException(nameof(this.name));
+                    throw new InvalidStringException();
                 }
-
-                name = value;
+                this.name = value;
             }
         }
 
         public IReadOnlyDictionary<string, Student> StudentsByName
         {
-            get
-            {
-                return this.studentsByName;
-            }
+            get { return this.studentsByName; }
         }
-
+        
         public void EnrollStudent(Student student)
         {
-            if (this.studentsByName.ContainsKey(student.UserName))
+            if (this.studentsByName.ContainsKey(student.Username))
             {
-                throw new DuplicateEntryInStructureException(student.UserName, this.name);
+                throw new DuplicateEntryInStructureException(student.Username, this.name);
             }
 
-            this.studentsByName[student.UserName] = student;
+            this.studentsByName.Add(student.Username, student);
         }
-
     }
 }

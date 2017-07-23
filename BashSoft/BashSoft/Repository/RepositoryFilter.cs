@@ -1,47 +1,42 @@
 ﻿namespace BashSoft
 {
-    using Exceptions;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
 
     public class RepositoryFilter
     {
-        public void FilterAndTake(Dictionary<string, double> studentsWithMarks, string wantedFilter, int studentsToTake)
+        public void FilterAndTake(Dictionary<string, double> studentsWithMarks, string wantedFilters, int studentsToTake)
         {
-            if (wantedFilter == "excellent")
+            if (wantedFilters == "excellent")
             {
-                FilterAndTake(studentsWithMarks, x => x >= 5, studentsToTake);
+               FilterAndTake(studentsWithMarks, x => x >= 5, studentsToTake); 
             }
-            else if (wantedFilter == "average")
+            else if (wantedFilters == "average")
             {
-                FilterAndTake(studentsWithMarks, x => x < 5 && x >= 3.50, studentsToTake);
+                FilterAndTake(studentsWithMarks, x => x >= 3.5 && x < 5, studentsToTake);
             }
-            else if (wantedFilter == "poor")
+            else if (wantedFilters == "poor")
             {
-                FilterAndTake(studentsWithMarks, x => x < 3.50, studentsToTake);
+                FilterAndTake(studentsWithMarks, x => x < 3.5, studentsToTake);
             }
             else
             {
-                throw new InvalidStudentFilterException();
+                throw new ArgumentException(ExceptionMessages.InvalidStudentFilter);
             }
         }
 
         private void FilterAndTake(Dictionary<string, double> studentsWithMarks, Predicate<double> givenFilter, int studentsToTake)
         {
-            int counterForPrinted = 0;
-
-            foreach (var studentMark in studentsWithMarks)
+            int counter = 0;
+            foreach (var username_score in studentsWithMarks)
             {
-                if (counterForPrinted == studentsToTake)
-                {
+                if (counter == studentsToTake)
                     break;
-                }
 
-                if (givenFilter(studentMark.Value))
+                if (givenFilter(username_score.Value))
                 {
-                    OutputWriter.PrintStudent(studentMark);
-                    counterForPrinted++;
+                    OutputWriter.PrintStudent(username_score);
+                    counter++;
                 }
             }
         }

@@ -1,13 +1,14 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Exceptions;
     using System.Diagnostics;
+    using Execptions;
+    using Contracts;
 
     public class OpenFileCommand : Command
     {
-        public OpenFileCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager) 
-            : base(input, data, judge, repository, inputOutputManager)
+        public OpenFileCommand(string input, string[] data, Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
         {
+            
         }
 
         public override void Execute()
@@ -17,10 +18,8 @@
                 throw new InvalidCommandException(this.Input);
             }
 
-            string fileName = this.Data[1];
-
-            // Open files with their default program
-            Process.Start($"{SessionData.currentPath}\\{fileName}");
+            var filename = this.Data[1];
+            Process.Start(SessionData.currentPath + "\\" + filename);
         }
     }
 }

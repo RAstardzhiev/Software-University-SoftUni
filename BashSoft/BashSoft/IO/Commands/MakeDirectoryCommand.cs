@@ -1,11 +1,12 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Exceptions;
+    using Execptions;
+    using Contracts;
 
     public class MakeDirectoryCommand : Command
     {
-        public MakeDirectoryCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager) 
-            : base(input, data, judge, repository, inputOutputManager)
+        public MakeDirectoryCommand(string input, string[] data, Tester judge, StudentsRepository repository,
+            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
         {
         }
 
@@ -16,8 +17,8 @@
                 throw new InvalidCommandException(this.Input);
             }
 
-            string folderName = this.Data[1];
-            this.InputOutputManager.CreateDirectoryInCurrentFolder(folderName);
+            var folderName = this.Data[1];
+            base.InputOutputManager.CreateDirectoryInCurrentFolder(folderName);
         }
     }
 }
