@@ -42,12 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IContentComparer.cs" />
+    <Compile Include="Contracts\ICourse.cs" />
+    <Compile Include="Contracts\IDataFilter.cs" />
+    <Compile Include="Contracts\IDataSorter.cs" />
     <Compile Include="Contracts\IDirectoryChanger.cs" />
     <Compile Include="Contracts\IDirectoryCreator.cs" />
     <Compile Include="Contracts\IDirectoryManager.cs" />
     <Compile Include="Contracts\IDirectoryTraverser.cs" />
     <Compile Include="Contracts\IInterpreter.cs" />
     <Compile Include="Contracts\IReader.cs" />
+    <Compile Include="Contracts\IStudent.cs" />
+    <Compile Include="Contracts\Repository\IDatabase.cs" />
+    <Compile Include="Contracts\Repository\IFilteredTaker.cs" />
+    <Compile Include="Contracts\Repository\IOrderedTaker.cs" />
+    <Compile Include="Contracts\Repository\IRequester.cs" />
     <Compile Include="Execptions\DuplicateEntryInStructureException.cs" />
     <Compile Include="Execptions\InvalidCommandException.cs" />
     <Compile Include="Execptions\InvalidFileNameException.cs" />
@@ -71,8 +80,8 @@
     <Compile Include="IO\Commands\ReadDatabaseFromFileCommand.cs" />
     <Compile Include="IO\Commands\ShowWantedDataCommand.cs" />
     <Compile Include="IO\Commands\TraverseFoldersCommand.cs" />
-    <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\SoftUniCourse.cs" />
+    <Compile Include="Models\SoftUniStudent.cs" />
     <Compile Include="Static data\ExceptionMessages.cs" />
     <Compile Include="IO\InputReader.cs" />
     <Compile Include="IO\IOManager.cs" />

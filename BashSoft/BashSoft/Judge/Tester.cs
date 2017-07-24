@@ -3,8 +3,9 @@
     using System;
     using System.IO;
     using Execptions;
+    using Contracts;
 
-    public class Tester
+    public class Tester : IContentComparer
     {
         private string GetMismatchPath(string expectedOutputPath)
         {

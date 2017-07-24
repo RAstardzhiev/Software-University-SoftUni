@@ -1,11 +1,12 @@
 ﻿namespace BashSoft.IO.Commands
 {
     using Contracts;
+    using Contracts.Repository;
     using Execptions;
 
     public class DropDbCommand : Command
     {
-        public DropDbCommand(string input, string[] data, Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
+        public DropDbCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
 
         public override void Execute()
         {

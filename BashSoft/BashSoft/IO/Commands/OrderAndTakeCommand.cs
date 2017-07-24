@@ -1,11 +1,12 @@
 ﻿namespace BashSoft.IO.Commands
 {
     using Contracts;
+    using Contracts.Repository;
     using Execptions;
 
     public class OrderAndTakeCommand : Command
     {
-        public OrderAndTakeCommand(string input, string[] data, Tester judge, StudentsRepository repository,
+        public OrderAndTakeCommand(string input, string[] data, IContentComparer judge, IDatabase repository,
             IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
 
         private void TryParseParametersForOrderAndTake(string takeCommand, string takeQuantity, string courseName, string comparison)
