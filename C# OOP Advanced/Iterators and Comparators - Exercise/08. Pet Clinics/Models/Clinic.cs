@@ -32,6 +32,11 @@
             }
         }
 
+        public int CompareTo(Clinic other)
+        {
+            return this.name.CompareTo(other.name);
+        }
+
         internal bool AddPet(Pet petToAdd)
         {
             for (int i = 0; i <= this.firstRoomIndex; i++)
@@ -116,11 +121,6 @@
             {
                 throw new ArgumentException("Invalid Operation!");
             }
-        }
-
-        public int CompareTo(Clinic other)
-        {
-            return this.name.CompareTo(other.name);
         }
     }
 }

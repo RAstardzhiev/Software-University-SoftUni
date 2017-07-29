@@ -48,7 +48,7 @@
                             this.activityReport.AppendLine(this.manager.HasEmptyRooms(clinicName).ToString());
                             break;
                         case "Print":
-                            ProcessPrinting(command.Skip(1).ToArray());
+                            this.ProcessPrinting(command.Skip(1).ToArray());
                             break;
                         default:
                             break;

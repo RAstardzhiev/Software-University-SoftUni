@@ -66,8 +66,9 @@
 
         private class ListyIteratorEnumerator : IEnumerator<T>
         {
-            private int currentIndex;
             private readonly List<T> data;
+
+            private int currentIndex;
 
             public ListyIteratorEnumerator(List<T> data)
             {
@@ -75,7 +76,7 @@
                 this.data = data;
             }
 
-            public T Current => this.data[currentIndex];
+            public T Current => this.data[this.currentIndex];
 
             object IEnumerator.Current => this.Current;
 

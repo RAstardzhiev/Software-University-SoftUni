@@ -1,9 +1,9 @@
 ﻿namespace _08.Pet_Clinics.Controllers
 {
-    using Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Models;
 
     public class ClinicsManager
     {
@@ -30,7 +30,7 @@
 
         internal bool AddPetToAClinic(string petName, string clinicName)
         {
-            var currentPet = GetConcretePet(petName);
+            var currentPet = this.GetConcretePet(petName);
             var currentClinic = this.GetConcreteClinic(clinicName);
             return currentClinic.AddPet(currentPet);
         }

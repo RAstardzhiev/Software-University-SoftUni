@@ -2,9 +2,9 @@
 {
     public class Pet
     {
-        string name;
-        int age;
-        string kind;
+        private string name;
+        private int age;
+        private string kind;
 
         public Pet(string name, int age, string kind)
         {

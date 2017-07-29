@@ -4,8 +4,8 @@
     {
         public Person(string name, int age)
         {
-            Name = name;
-            Age = age;
+            this.Name = name;
+            this.Age = age;
         }
 
         public string Name { get; private set; }
