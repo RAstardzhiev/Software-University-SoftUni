@@ -9,6 +9,7 @@
     using Models;
     using Contracts;
     using Contracts.Repository;
+    using DataStructures;
 
     public class StudentsRepository : IDatabase
     {
@@ -201,6 +202,22 @@
                     this.GetStudentScoresFromCourse(courseName, studetMarksEntry.Key);
                 }
             }
+        }
+
+        public ISimpleOrderedBag<ICourse> GetAllCoursesSorted(IComparer<ICourse> cmp)
+        {
+            SimpleSortedList<ICourse> sortedCourses = new SimpleSortedList<ICourse>(cmp);
+            sortedCourses.AddAll(this.courses.Values);
+
+            return sortedCourses;
+        }
+
+        public ISimpleOrderedBag<IStudent> GetAllStudentsSorted(IComparer<IStudent> cmp)
+        {
+            SimpleSortedList<IStudent> sortedStudents = new SimpleSortedList<IStudent>(cmp);
+            sortedStudents.AddAll(this.students.Values);
+
+            return sortedStudents;
         }
     }
 }

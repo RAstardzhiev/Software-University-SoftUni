@@ -52,11 +52,13 @@
     <Compile Include="Contracts\IDirectoryTraverser.cs" />
     <Compile Include="Contracts\IInterpreter.cs" />
     <Compile Include="Contracts\IReader.cs" />
+    <Compile Include="Contracts\ISimpleOrderedBag.cs" />
     <Compile Include="Contracts\IStudent.cs" />
     <Compile Include="Contracts\Repository\IDatabase.cs" />
     <Compile Include="Contracts\Repository\IFilteredTaker.cs" />
     <Compile Include="Contracts\Repository\IOrderedTaker.cs" />
     <Compile Include="Contracts\Repository\IRequester.cs" />
+    <Compile Include="DataStructures\SimpleSortedList.cs" />
     <Compile Include="Execptions\DuplicateEntryInStructureException.cs" />
     <Compile Include="Execptions\InvalidCommandException.cs" />
     <Compile Include="Execptions\InvalidFileNameException.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="IO\Commands\ReadDatabaseFromFileCommand.cs" />
     <Compile Include="IO\Commands\ShowWantedDataCommand.cs" />
     <Compile Include="IO\Commands\TraverseFoldersCommand.cs" />
+    <Compile Include="IO\DisplayCommand.cs" />
     <Compile Include="Models\SoftUniCourse.cs" />
     <Compile Include="Models\SoftUniStudent.cs" />
     <Compile Include="Static data\ExceptionMessages.cs" />

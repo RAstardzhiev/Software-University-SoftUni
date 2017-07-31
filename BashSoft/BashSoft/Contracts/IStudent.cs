@@ -1,8 +1,9 @@
 ﻿namespace BashSoft.Contracts
 {
+    using System;
     using System.Collections.Generic;
 
-    public interface IStudent
+    public interface IStudent : IComparable<IStudent>
     {
         string Username { get; }
 

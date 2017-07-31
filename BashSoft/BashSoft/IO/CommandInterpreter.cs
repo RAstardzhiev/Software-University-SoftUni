@@ -63,6 +63,8 @@
                     return new DropDbCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "show":
                     return new ShowWantedDataCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                case "display":
+                    return new DisplayCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 //case "decOrder":
                 //    break;
                 //case "download":

@@ -72,6 +72,10 @@
             this.marksByCourseName.Add(courseName, CalculateMark(scores));
         }
 
+        public int CompareTo(IStudent other) => this.Username.CompareTo(other.Username);
+
+        public override string ToString() => this.Username;
+
         private double CalculateMark(int[] scores)
         {
             var percentageOfSolvedExam = scores.Sum() /

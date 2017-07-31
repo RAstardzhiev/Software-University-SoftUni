@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using Execptions;
     using Contracts;
+    using System;
 
     public class SoftUniCourse : ICourse
     {
@@ -46,5 +47,9 @@
 
             this.studentsByName.Add(student.Username, student);
         }
+
+        public int CompareTo(ICourse other) => this.Name.CompareTo(other.Name);
+
+        public override string ToString() => this.Name;
     }
 }
