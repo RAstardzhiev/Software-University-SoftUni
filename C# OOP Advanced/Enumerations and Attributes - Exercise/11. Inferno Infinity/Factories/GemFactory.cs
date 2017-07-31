@@ -1,4 +1,4 @@
-﻿namespace _11.Inferno_Infinity.Controllers
+﻿namespace _11.Inferno_Infinity.Factories
 {
     using System;
     using Enums;

@@ -44,12 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Engine.cs" />
-    <Compile Include="Controllers\GemFactory.cs" />
+    <Compile Include="Factories\GemFactory.cs" />
+    <Compile Include="Factories\WeaponFactory.cs" />
     <Compile Include="Controllers\WeaponManager.cs" />
     <Compile Include="Enums\GemClarity.cs" />
     <Compile Include="Enums\WeaponRarity.cs" />
     <Compile Include="Interfaces\IWeapon.cs" />
     <Compile Include="Interfaces\IGem.cs" />
+    <Compile Include="IO\InputReader.cs" />
+    <Compile Include="IO\OutputWriter.cs" />
     <Compile Include="Models\Gems\Amethyst.cs" />
     <Compile Include="Models\Gems\Emerald.cs" />
     <Compile Include="Models\Gems\Gem.cs" />

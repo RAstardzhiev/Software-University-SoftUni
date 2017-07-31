@@ -1,23 +1,27 @@
 ﻿namespace _11.Inferno_Infinity.Controllers
 {
-    using System;
     using System.Linq;
-    using Enums;
+    using IO;
+    using Factories;
 
     public class Engine
     {
         private WeaponManager manager;
         private GemFactory gemFactory;
+        private InputReader reader;
+        private OutputWriter writer;
 
         public Engine()
         {
             this.manager = new WeaponManager();
             this.gemFactory = new GemFactory();
+            this.reader = new InputReader();
+            this.writer = new OutputWriter();
         }
 
         public void Run()
         {
-            var command = Console.ReadLine().Split(';');
+            var command = this.reader.ReadLine().Split(';');
 
             while (command[0] != "END")
             {
@@ -38,10 +42,10 @@
                         break;
                 }
 
-                command = Console.ReadLine().Split(';');
+                command = this.reader.ReadLine().Split(';');
             }
 
-            Console.WriteLine(this.manager.GetAllWeapons());
+            this.writer.WriteLine(this.manager.GetAllWeapons());
         }
 
         private void ParseCommandForRemovingGemFromWeapon(string[] cmd)
@@ -71,13 +75,7 @@
             var weaponName = cmd[1];
             var weaponType = cmd[0].Split();
             var weaponKind = weaponType[1];
-            WeaponRarity weaponRarity;
-            var isRarityValid = Enum.TryParse(weaponType[0], out weaponRarity);
-
-            if (!isRarityValid)
-            {
-                return;
-            }
+            var weaponRarity = weaponType[0];
 
             this.manager.CreateWeapon(weaponKind, weaponName, weaponRarity);
         }

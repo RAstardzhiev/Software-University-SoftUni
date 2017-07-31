@@ -3,34 +3,26 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using Enums;
+    using Factories;
     using Interfaces;
-    using Models.Weapons;
 
     public class WeaponManager
     {
         private IList<IWeapon> weapons;
+        private WeaponFactory weaponFactory;
 
         public WeaponManager()
         {
             this.weapons = new List<IWeapon>();
+            this.weaponFactory = new WeaponFactory();
         }
 
-        internal void CreateWeapon(string weaponKind, string weaponName, WeaponRarity weaponRarity)
+        internal void CreateWeapon(string weaponKind, string weaponName, string weaponRarity)
         {
-            switch (weaponKind)
+            var weapon = this.weaponFactory.CreateWeapon(weaponKind, weaponName, weaponRarity);
+            if (weapon != null)
             {
-                case "Axe":
-                    this.weapons.Add(new Axe(weaponName, weaponRarity));
-                    break;
-                case "Sword":
-                    this.weapons.Add(new Sword(weaponName, weaponRarity));
-                    break;
-                case "Knife":
-                    this.weapons.Add(new Knife(weaponName, weaponRarity));
-                    break;
-                default:
-                    break;
+                this.weapons.Add(weapon);
             }
         }
 
