@@ -29,7 +29,7 @@
             this.database = new Database(collectionOfPeople);
 
             // Assert
-            Assert.AreEqual(2, this.database.Count);
+            Assert.AreEqual(2, this.database.Count, $"Constructor doesn't work with {typeof(IPerson)} as parameter");
         }
 
         [Test]
@@ -51,7 +51,7 @@
             this.database.Add(person);
 
             // Assert
-            Assert.AreEqual(1, this.database.Count);
+            Assert.AreEqual(1, this.database.Count, $"Add {typeof(IPerson)} doesn't work");
         }
 
         [Test]
@@ -86,7 +86,7 @@
             this.database.Remove(firstPerson);
 
             // Assert
-            Assert.AreEqual(0, this.database.Count);
+            Assert.AreEqual(0, this.database.Count, $"Remove {typeof(IPerson)} doesn't work");
         }
 
         [Test]
@@ -104,7 +104,7 @@
             var foundPerson = this.database.Find(keyId);
 
             // Assert
-            Assert.AreEqual(keyId, foundPerson.Id);
+            Assert.AreEqual(keyId, foundPerson.Id, $"Found {typeof(IPerson)} by Id is not the desired one");
         }
 
         [Test]
@@ -122,7 +122,7 @@
             var foundPerson = this.database.Find(keyUsername);
 
             // Assert
-            Assert.AreEqual(keyUsername, foundPerson.Username);
+            Assert.AreEqual(keyUsername, foundPerson.Username, $"Found {typeof(IPerson)} by Username is not the desired one");
         }
 
         [Test]
