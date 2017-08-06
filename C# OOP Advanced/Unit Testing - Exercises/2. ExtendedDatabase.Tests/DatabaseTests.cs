@@ -35,8 +35,6 @@
         [Test]
         public void DatabaseInitializeConstructorWithNullLeadsToEmptyDB()
         {
-            // Arrange
-            // Act
             // Assert
             Assert.DoesNotThrow(() => this.database = new Database(null));
         }
@@ -130,8 +128,7 @@
         {
             // Arrange 
             this.database.Add(new Person(1, "First"));
-
-            // Act
+            
             // Assert
             Assert.Throws<InvalidOperationException>(() => this.database.Find(2));
         }
@@ -139,8 +136,6 @@
         [Test]
         public void CannotFindNegativeId()
         {
-            // Arrange 
-            // Act
             // Assert
             Assert.Throws<ArgumentOutOfRangeException>(() => this.database.Find(-1));
         }
@@ -150,8 +145,7 @@
         {
             // Arrange 
             this.database.Add(new Person(1, "First"));
-
-            // Act
+            
             // Assert
             Assert.Throws<InvalidOperationException>(() => this.database.Find("fiRst"));
         }
@@ -161,8 +155,7 @@
         {
             // Arrange 
             this.database.Add(new Person(1, "First"));
-
-            // Act
+            
             // Assert
             Assert.Throws<ArgumentNullException>(() => this.database.Find(null));
         }

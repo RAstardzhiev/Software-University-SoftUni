@@ -12,9 +12,7 @@
         {
             // Arrange
             var person = new Person(123, "Test");
-
-            // Act
-
+            
             // Assert
             Assert.AreNotEqual(null, person);
             Assert.AreEqual(123, person.Id);
@@ -30,9 +28,7 @@
                 .GetProperties()
                 .Where(p => p.SetMethod.IsPublic)
                 .ToArray();
-
-            // Act
-
+            
             // Assert
             Assert.AreEqual(0, propertiesWithPublicSetters.Length);
         }

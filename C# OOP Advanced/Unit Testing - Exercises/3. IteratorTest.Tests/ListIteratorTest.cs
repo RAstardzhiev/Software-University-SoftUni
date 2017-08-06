@@ -22,8 +22,6 @@
         [Test]
         public void InitializationConstructorCannotWorkWithNull()
         {
-            // Arrange
-            // Act
             // Assert
             Assert.Throws<ArgumentNullException>(() => new ListIterator(null));
         }
@@ -31,8 +29,6 @@
         [Test]
         public void MoveReturnsTrueWhenSuccessful()
         {
-            // Arrange
-            // Act
             // Assert
             Assert.AreEqual(true, this.listIterator.Move());
             Assert.AreEqual(true, this.listIterator.Move());
@@ -41,7 +37,6 @@
         [Test]
         public void MoveReturnsFalseWhenThereIsNoMoreElements()
         {
-            // Arrange
             // Act
             this.listIterator.Move();
             this.listIterator.Move();
@@ -53,7 +48,6 @@
         [Test]
         public void MoveMovesTheInternalIndexToTheNextElementInTheCollection()
         {
-            // Arrange
             // Act
             this.listIterator.Move();
             var internalIndexValue = typeof(ListIterator)
@@ -68,7 +62,6 @@
         [Test]
         public void HasNextReturnsTrueIfThereIsNextElement()
         {
-            // Arrange
             // Act
             this.listIterator.Move();
 
@@ -79,7 +72,6 @@
         [Test]
         public void HasNextReturnsFalseIfThereIsNotNextElement()
         {
-            // Arrange
             // Act
             this.listIterator.Move();
             this.listIterator.Move();
@@ -94,7 +86,6 @@
         [TestCase(2)]
         public void PrintReturnsCurrentElement(int elementToreturn)
         {
-            // Arrange
             // Act
             for (int i = 0; i < elementToreturn; i++)
             {
@@ -112,8 +103,7 @@
         {
             // Arrange
             this.listIterator = new ListIterator(new string[0]);
-
-            // Act
+            
             // Assert
             var ex = Assert.Throws<InvalidOperationException>(() => this.listIterator.Print());
             Assert.AreEqual("Invalid Operation!", ex.Message, "Attempting to print over empty iterator throws exception with an incorrect message");

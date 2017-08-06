@@ -173,8 +173,6 @@
             // Arrange
             var testCollection = new int[DatabaseCapacity + 1];
 
-            // Act
-
             // Assert
             Assert.Throws<InvalidOperationException>(() => this.database = new Database(testCollection));
         }
@@ -182,8 +180,6 @@
         [Test]
         public void DatabaseInitializationWithNullResultsInEmptyDataBase()
         {
-            // Arrange
-            // Act
             // Assert
             Assert.DoesNotThrow(() => this.database = new Database(null));
         }
