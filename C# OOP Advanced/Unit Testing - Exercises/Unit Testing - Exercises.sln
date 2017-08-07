@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Integration Tests", "5. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. IntegrationTests.Tests", "5. IntegrationTests.Tests\5. IntegrationTests.Tests.csproj", "{FEE0DC8F-F51D-4DE5-8B66-6220BD4A216A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Twitter.Tests", "6. Twitter.Tests\6. Twitter.Tests.csproj", "{BD91F876-5F02-4583-88DA-9113C6B8D2C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Twitter", "6. Twitter\6. Twitter.csproj", "{E16174DE-60B2-4006-86BB-BCB1E26EF192}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{FEE0DC8F-F51D-4DE5-8B66-6220BD4A216A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE0DC8F-F51D-4DE5-8B66-6220BD4A216A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE0DC8F-F51D-4DE5-8B66-6220BD4A216A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD91F876-5F02-4583-88DA-9113C6B8D2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD91F876-5F02-4583-88DA-9113C6B8D2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD91F876-5F02-4583-88DA-9113C6B8D2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD91F876-5F02-4583-88DA-9113C6B8D2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16174DE-60B2-4006-86BB-BCB1E26EF192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16174DE-60B2-4006-86BB-BCB1E26EF192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16174DE-60B2-4006-86BB-BCB1E26EF192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16174DE-60B2-4006-86BB-BCB1E26EF192}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
