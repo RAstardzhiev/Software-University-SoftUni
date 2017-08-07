@@ -1,4 +1,4 @@
-﻿namespace _01.Harvesting_Fields
+﻿namespace _01.Harvesting_Fields_vs_Dictionary
 {
     using System;
     using System.Collections.Generic;
@@ -17,30 +17,21 @@
 
         internal string Run()
         {
-            var command = Console.ReadLine();
+            var requestedMod = Console.ReadLine();
             var fields = typeof(HarvestingFields).GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
-            while (command != "HARVEST")
+            var accModFilters = new Dictionary<string, Func<IEnumerable<FieldInfo>>>()
             {
-                switch (command)
-                {
-                    case "private":
-                        this.AppendFields(fields.Where(f => f.IsPrivate));
-                        break;
-                    case "protected":
-                        this.AppendFields(fields.Where(f => f.IsFamily));
-                        break;
-                    case "public":
-                        this.AppendFields(fields.Where(f => f.IsPublic));
-                        break;
-                    case "all":
-                        this.AppendFields(fields);
-                        break;
-                    default:
-                        break;
-                }
+                { "private", () => fields.Where(f => f.IsPrivate) },
+                { "protected", () => fields.Where(f => f.IsFamily) },
+                { "public", () => fields.Where(f => f.IsPublic) },
+                { "all", () => fields }
+            };
 
-                command = Console.ReadLine();
+            while (requestedMod != "HARVEST")
+            {
+                this.AppendFields(accModFilters[requestedMod]());
+                requestedMod = Console.ReadLine();
             }
 
             return this.sb.ToString().Trim();

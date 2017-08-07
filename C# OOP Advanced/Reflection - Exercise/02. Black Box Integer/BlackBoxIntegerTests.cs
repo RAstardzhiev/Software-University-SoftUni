@@ -1,9 +1,9 @@
 ﻿namespace _02.Black_Box_Integer
 {
     using System;
-    using System.Text;
-    using System.Reflection;
     using System.Linq;
+    using System.Reflection;
+    using System.Text;
 
     public class BlackBoxIntegerTests
     {
@@ -29,7 +29,7 @@
 
                 foreach (var field in fields)
                 {
-                    testResult.AppendLine(field.GetValue(classInstance).ToString());
+                    this.testResult.AppendLine(field.GetValue(classInstance).ToString());
                 }
 
                 command = Console.ReadLine().Split('_');

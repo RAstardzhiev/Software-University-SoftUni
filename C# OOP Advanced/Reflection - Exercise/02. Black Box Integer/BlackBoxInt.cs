@@ -1,6 +1,6 @@
 ﻿namespace _02.Black_Box_Integer
 {
-    class BlackBoxInt
+    public class BlackBoxInt
     {
         private static int DefaultValue = 0;
 
