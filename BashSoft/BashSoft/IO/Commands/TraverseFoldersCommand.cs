@@ -1,13 +1,19 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Execptions;
     using Contracts;
     using Contracts.Repository;
+    using Exceptions;
 
     public class TraverseFoldersCommand : Command
     {
-        public TraverseFoldersCommand(string input, string[] data, IContentComparer judge, IDatabase repository,
-            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) {}
+        public TraverseFoldersCommand(string input, 
+            string[] data, 
+            IContentComparer judge, 
+            IDatabase repository,
+            IDirectoryManager inputOutputManager) 
+                : base(input, data, judge, repository, inputOutputManager)
+        {
+        }
 
         public override void Execute()
         {

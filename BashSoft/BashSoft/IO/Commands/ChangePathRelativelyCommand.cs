@@ -2,12 +2,19 @@
 {
     using Contracts;
     using Contracts.Repository;
-    using Execptions;
+    using Exceptions;
 
     public class ChangePathRelativelyCommand : Command
     {
-        public ChangePathRelativelyCommand(string input, string[] data, IContentComparer judge, IDatabase repository,
-            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
+        public ChangePathRelativelyCommand(
+            string input, 
+            string[] data, 
+            IContentComparer judge, 
+            IDatabase repository,
+            IDirectoryManager inputOutputManager) 
+                : base(input, data, judge, repository, inputOutputManager)
+        {
+        }
 
         public override void Execute()
         {

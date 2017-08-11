@@ -1,12 +1,19 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Execptions;
     using Contracts;
     using Contracts.Repository;
+    using Exceptions;
 
     public class ShowWantedDataCommand : Command
     {
-        public ShowWantedDataCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) {}
+        public ShowWantedDataCommand(string input, 
+            string[] data, 
+            IContentComparer judge, 
+            IDatabase repository, 
+            IDirectoryManager inputOutputManager) 
+                : base(input, data, judge, repository, inputOutputManager)
+        {
+        }
 
         public override void Execute()
         {

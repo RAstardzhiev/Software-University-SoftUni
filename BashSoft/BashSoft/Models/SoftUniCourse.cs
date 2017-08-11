@@ -1,9 +1,8 @@
 ﻿namespace BashSoft.Models
 {
     using System.Collections.Generic;
-    using Execptions;
     using Contracts;
-    using System;
+    using Exceptions;
 
     public class SoftUniCourse : ICourse
     {
@@ -22,13 +21,18 @@
 
         public string Name
         {
-            get { return this.name; }
+            get
+            {
+                return this.name;
+            }
+
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
                     throw new InvalidStringException();
                 }
+
                 this.name = value;
             }
         }

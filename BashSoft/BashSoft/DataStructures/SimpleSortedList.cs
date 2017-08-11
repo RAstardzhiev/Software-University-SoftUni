@@ -1,10 +1,10 @@
 ﻿namespace BashSoft.DataStructures
 {
     using System;
-    using Contracts;
-    using System.Collections.Generic;
     using System.Collections;
+    using System.Collections.Generic;
     using System.Text;
+    using Contracts;
 
     public class SimpleSortedList<T> : ISimpleOrderedBag<T>
         where T : IComparable<T>
@@ -37,16 +37,6 @@
         }
 
         public int Size => this.size;
-        
-        private void InitializeInnearcollection(int capacity)
-        {
-            if (capacity < 0)
-            {
-                throw new ArgumentException("Capacity cannot be negative!");
-            }
-
-            this.innearCollection = new T[capacity];
-        }
 
         public void Add(T element)
         {
@@ -121,6 +111,16 @@
             T[] newCollection = new T[newSize];
             Array.Copy(this.innearCollection, newCollection, this.Size);
             this.innearCollection = newCollection;
+        }
+
+        private void InitializeInnearcollection(int capacity)
+        {
+            if (capacity < 0)
+            {
+                throw new ArgumentException("Capacity cannot be negative!");
+            }
+
+            this.innearCollection = new T[capacity];
         }
     }
 }

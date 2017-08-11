@@ -2,12 +2,33 @@
 {
     using Contracts;
     using Contracts.Repository;
-    using Execptions;
+    using Exceptions;
 
     public class OrderAndTakeCommand : Command
     {
-        public OrderAndTakeCommand(string input, string[] data, IContentComparer judge, IDatabase repository,
-            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
+        public OrderAndTakeCommand(string input, 
+            string[] data, 
+            IContentComparer judge, 
+            IDatabase repository,
+            IDirectoryManager inputOutputManager) 
+                : base(input, data, judge, repository, inputOutputManager)
+        {
+        }
+
+        public override void Execute()
+        {
+            if (this.Data.Length != 5)
+            {
+                throw new InvalidCommandException(this.Input);
+            }
+
+            var courseName = this.Data[1];
+            var comparison = this.Data[2].ToLower();
+            var takeCommand = this.Data[3].ToLower();
+            var takeQuantity = this.Data[4].ToLower();
+
+            this.TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, comparison);
+        }
 
         private void TryParseParametersForOrderAndTake(string takeCommand, string takeQuantity, string courseName, string comparison)
         {
@@ -36,21 +57,5 @@
                 throw new InvalidTakeQueryParamterException();
             }
         }
-
-        public override void Execute()
-        {
-            if (this.Data.Length != 5)
-            {
-                throw new InvalidCommandException(this.Input);
-            }
-
-            var courseName = this.Data[1];
-            var comparison = this.Data[2].ToLower();
-            var takeCommand = this.Data[3].ToLower();
-            var takeQuantity = this.Data[4].ToLower();
-
-            this.TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, comparison);
-        }
-
     }
 }

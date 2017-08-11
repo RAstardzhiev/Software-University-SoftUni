@@ -2,41 +2,42 @@
 {
     using System;
     using System.IO;
-    using Execptions;
     using Contracts;
+    using Exceptions;
 
     public class Tester : IContentComparer
     {
-        private string GetMismatchPath(string expectedOutputPath)
-        {
-            int indexOf = expectedOutputPath.LastIndexOf('\\');
-            string directoryPath = expectedOutputPath.Substring(0, indexOf);
-            string finalPath = directoryPath + @"\Mismatches.txt";
-            return finalPath;
-        }
-
         public void CompareContent(string userOutputPath, string expectedOutputPath)
         {
             try
             {
                 OutputWriter.WriteMessageOnNewLine("Reading files...");
 
-                string mismatchesPath = GetMismatchPath(expectedOutputPath);
+                string mismatchesPath = this.GetMismatchPath(expectedOutputPath);
 
                 string[] actualOutputLines = File.ReadAllLines(userOutputPath);
                 string[] expectedOutputLines = File.ReadAllLines(expectedOutputPath);
 
                 bool hasMismatch;
-                string[] mismatches =
-                    GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
+                string[] mismatches = this.GetLinesWithPossibleMismatches(actualOutputLines, 
+                    expectedOutputLines, 
+                    out hasMismatch);
 
-                PrintOutput(mismatches, hasMismatch, mismatchesPath);
+                this.PrintOutput(mismatches, hasMismatch, mismatchesPath);
                 OutputWriter.WriteMessageOnNewLine("Files read!");
             }
             catch (IOException)
             {
                 throw new InvalidPathException();
             }
+        }
+
+        private string GetMismatchPath(string expectedOutputPath)
+        {
+            int indexOf = expectedOutputPath.LastIndexOf('\\');
+            string directoryPath = expectedOutputPath.Substring(0, indexOf);
+            string finalPath = directoryPath + @"\Mismatches.txt";
+            return finalPath;
         }
 
         private string[] GetLinesWithPossibleMismatches(string[] actualOutputLines, string[] expectedOutputLines, out bool hasMismatch)

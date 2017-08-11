@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using Contracts;
     using Contracts.Repository;
-    using Execptions;
+    using Exceptions;
 
     internal class DisplayCommand : IExecutable
     {

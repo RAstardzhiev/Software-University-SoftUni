@@ -2,12 +2,33 @@
 {
     using Contracts;
     using Contracts.Repository;
-    using Execptions;
+    using Exceptions;
 
     public class FilterAndTakeCommand : Command
     {
-        public FilterAndTakeCommand(string input, string[] data, IContentComparer judge, IDatabase repository,
-            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
+        public FilterAndTakeCommand(string input, 
+            string[] data, 
+            IContentComparer judge, 
+            IDatabase repository,
+            IDirectoryManager inputOutputManager) 
+                : base(input, data, judge, repository, inputOutputManager)
+        {
+        }
+
+        public override void Execute()
+        {
+            if (this.Data.Length != 5)
+            {
+                throw new InvalidCommandException(this.Input);
+            }
+
+            var courseName = this.Data[1];
+            var filter = this.Data[2].ToLower();
+            var takeCommand = this.Data[3].ToLower();
+            var takeQuantity = this.Data[4].ToLower();
+
+            this.TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
+        }
 
         private void TryParseParametersForFilterAndTake(string takeCommand, string takeQuantity, string courseName, string filter)
         {
@@ -35,21 +56,6 @@
             {
                 throw new InvalidTakeQueryParamterException();
             }
-        }
-
-        public override void Execute()
-        {
-            if (this.Data.Length != 5)
-            {
-                throw new InvalidCommandException(this.Input);
-            }
-
-            var courseName = this.Data[1];
-            var filter = this.Data[2].ToLower();
-            var takeCommand = this.Data[3].ToLower();
-            var takeQuantity = this.Data[4].ToLower();
-
-            this.TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
         }
     }
 }

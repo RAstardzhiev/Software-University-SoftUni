@@ -1,7 +1,7 @@
 ﻿namespace BashSoft
 {
-    using Contracts;
     using System;
+    using Contracts;
 
     public class InputReader : IReader
     {
@@ -16,13 +16,13 @@
 
         public void StartReadingCommands()
         {
-            OutputWriter.WriteMessage($"{SessionData.currentPath}" + "> ");
+            OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
             string input = Console.ReadLine().Trim();
 
             while (input != EndCommand)
             {
                 this.interpreter.InterpretCommand(input);
-                OutputWriter.WriteMessage($"{SessionData.currentPath}" + "> ");
+                OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
                 input = Console.ReadLine().Trim();
             }
         }

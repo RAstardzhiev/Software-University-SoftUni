@@ -3,8 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Execptions;
     using Contracts;
+    using Exceptions;
 
     public class SoftUniStudent : IStudent
     {
@@ -49,7 +49,7 @@
 
         public void EnrollInCourse(ICourse course)
         {
-            if (enrolledCourses.ContainsKey(course.Name))
+            if (this.enrolledCourses.ContainsKey(course.Name))
             {
                 throw new DuplicateEntryInStructureException(this.Username, course.Name);
             }
@@ -69,7 +69,7 @@
                 throw new ArgumentOutOfRangeException(ExceptionMessages.InvalidNumberOfScores);
             }
 
-            this.marksByCourseName.Add(courseName, CalculateMark(scores));
+            this.marksByCourseName.Add(courseName, this.CalculateMark(scores));
         }
 
         public int CompareTo(IStudent other) => this.Username.CompareTo(other.Username);
@@ -80,7 +80,8 @@
         {
             var percentageOfSolvedExam = scores.Sum() /
                 (double)(SoftUniCourse.NumberOfTasksOnExam * SoftUniCourse.MaxScoreOnExamTask);
-            var mark = percentageOfSolvedExam * 4 + 2;
+
+            var mark = (percentageOfSolvedExam * 4) + 2;
 
             return mark;
         }

@@ -1,15 +1,19 @@
 ﻿namespace BashSoft.IO.Commands
 {
     using System.Diagnostics;
-    using Execptions;
     using Contracts;
     using Contracts.Repository;
+    using Exceptions;
 
     public class OpenFileCommand : Command
     {
-        public OpenFileCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
-        {
-            
+        public OpenFileCommand(string input, 
+            string[] data, 
+            IContentComparer judge, 
+            IDatabase repository, 
+            IDirectoryManager inputOutputManager) 
+                : base(input, data, judge, repository, inputOutputManager)
+        { 
         }
 
         public override void Execute()
@@ -20,7 +24,7 @@
             }
 
             var filename = this.Data[1];
-            Process.Start(SessionData.currentPath + "\\" + filename);
+            Process.Start(SessionData.CurrentPath + "\\" + filename);
         }
     }
 }
