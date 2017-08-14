@@ -22,9 +22,9 @@
             if (this.IsMessageValidLevel(reportLevel))
             {
                 var report = this.Layout.FormatReport(datetime, reportLevel, message);
-                File.Write(report);
-                System.IO.File.AppendAllText(filePath, report);
-                System.IO.File.AppendAllText(filePath, Environment.NewLine);
+                this.File.Write(report);
+                System.IO.File.AppendAllText(this.filePath, report);
+                System.IO.File.AppendAllText(this.filePath, Environment.NewLine);
                 this.MessagesCount++;
             }
         }

@@ -6,9 +6,9 @@
     {
         ILayout Layout { get; }
 
-        void Append(string datetime, string reportLevel, string message);
-
         ReportLevel ReportLevel { get; set; }
+
+        void Append(string datetime, string reportLevel, string message);
 
         bool IsMessageValidLevel(string messageLevel);
     }

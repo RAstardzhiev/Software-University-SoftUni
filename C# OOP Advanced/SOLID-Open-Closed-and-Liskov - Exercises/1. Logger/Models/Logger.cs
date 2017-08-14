@@ -1,7 +1,7 @@
 ﻿namespace _1.Logger.Models
 {
-    using System.Text;
     using System.Collections.Generic;
+    using System.Text;
     using Interfaces;
 
     public class Logger : ILogger

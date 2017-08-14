@@ -1,8 +1,8 @@
 ﻿namespace _1.Logger.Models
 {
+    using System.Linq;
     using System.Text;
     using Interfaces;
-    using System.Linq;
 
     public class LogFile : ILogFile
     {

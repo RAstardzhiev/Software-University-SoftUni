@@ -3,9 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Globalization;
-    using Interfaces;
-    using Factories;
     using Enums;
+    using Factories;
+    using Interfaces;
 
     public class Controller
     {

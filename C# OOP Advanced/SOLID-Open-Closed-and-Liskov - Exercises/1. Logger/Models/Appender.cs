@@ -1,9 +1,9 @@
 ﻿namespace _1.Logger.Models
 {
     using System;
+    using System.Globalization;
     using Enums;
     using Interfaces;
-    using System.Globalization;
 
     public abstract class Appender : IAppender
     {
