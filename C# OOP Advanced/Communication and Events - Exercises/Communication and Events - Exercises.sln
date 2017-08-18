@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Event Implementation", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Kings Gambit", "02. Kings Gambit\02. Kings Gambit.csproj", "{05653E87-C2D1-4521-B09B-C5AA8DEAD257}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Dependency Inversion", "03. Dependency Inversion\03. Dependency Inversion.csproj", "{E883ED96-44CC-4713-A274-3DBAAFF22430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Work Force", "04. Work Force\04. Work Force.csproj", "{18E0D071-CF7E-4D5C-9548-EC4849C6B6C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{05653E87-C2D1-4521-B09B-C5AA8DEAD257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05653E87-C2D1-4521-B09B-C5AA8DEAD257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05653E87-C2D1-4521-B09B-C5AA8DEAD257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E883ED96-44CC-4713-A274-3DBAAFF22430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E883ED96-44CC-4713-A274-3DBAAFF22430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E883ED96-44CC-4713-A274-3DBAAFF22430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E883ED96-44CC-4713-A274-3DBAAFF22430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E0D071-CF7E-4D5C-9548-EC4849C6B6C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E0D071-CF7E-4D5C-9548-EC4849C6B6C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E0D071-CF7E-4D5C-9548-EC4849C6B6C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E0D071-CF7E-4D5C-9548-EC4849C6B6C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
