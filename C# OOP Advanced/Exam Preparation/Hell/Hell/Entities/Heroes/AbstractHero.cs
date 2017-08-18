@@ -103,22 +103,6 @@ public abstract class AbstractHero : IHero, IComparable<AbstractHero>
         return string.Format(ItemAddedMessage, item.Name, this.Name);
     }
 
-    public string Inspect()
-    {
-        StringBuilder sb = new StringBuilder();
-
-        sb.AppendLine($"Hero: {this.Name}, Class: {this.GetType().Name}")
-            .AppendLine($"HitPoints: {this.HitPoints}, Damage: {this.Damage}")
-            .AppendLine($"Strength: {this.Strength}")
-            .AppendLine($"Agility: {this.Agility}")
-            .AppendLine($"Intelligence: {this.Intelligence}")
-            .AppendLine(this.Items.Count == 0 
-                ? "Items: None" 
-                : $"Items:{Environment.NewLine}{string.Join(Environment.NewLine, this.Items.Select(i => i.ToString()))}");
-
-        return sb.ToString().TrimEnd();
-    }
-
     public int CompareTo(AbstractHero other)
     {
         if (ReferenceEquals(this, other))
@@ -138,5 +122,21 @@ public abstract class AbstractHero : IHero, IComparable<AbstractHero>
         }
 
         return this.SecondaryStats.CompareTo(other.SecondaryStats);
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+
+        sb.AppendLine($"Hero: {this.Name}, Class: {this.GetType().Name}")
+            .AppendLine($"HitPoints: {this.HitPoints}, Damage: {this.Damage}")
+            .AppendLine($"Strength: {this.Strength}")
+            .AppendLine($"Agility: {this.Agility}")
+            .AppendLine($"Intelligence: {this.Intelligence}")
+            .AppendLine(this.Items.Count == 0
+                ? "Items: None"
+                : $"Items:{Environment.NewLine}{string.Join(Environment.NewLine, this.Items.Select(i => i.ToString()))}");
+
+        return sb.ToString().TrimEnd();
     }
 }

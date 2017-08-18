@@ -23,6 +23,4 @@ public interface IHero
     string AddRecipe(IRecipe recipe);
 
     string AddItem(IItem item);
-
-    string Inspect();
 }

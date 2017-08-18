@@ -83,7 +83,7 @@ public class HeroManager : IHeroManager
     {
         string heroName = arguments[0];
         IHero hero = this.GetHero(heroName);
-        return hero.Inspect();
+        return hero.ToString();
     }
 
     public override string ToString()
