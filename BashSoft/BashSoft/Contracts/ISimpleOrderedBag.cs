@@ -8,6 +8,12 @@
     {
         int Size { get; }
 
+        int Capacity { get; }
+
+        T this[int index] { get; }
+
+        bool Remove(T element);
+
         void Add(T element);
 
         void AddAll(ICollection<T> collection);

@@ -1,11 +1,11 @@
 ﻿namespace BashSoft
 {
     using System;
+    using System.Linq;
+    using System.Reflection;
     using Attributes;
     using Contracts;
     using Contracts.Repository;
-    using System.Reflection;
-    using System.Linq;
     using IO.Commands;
 
     public class CommandInterpreter : IInterpreter
@@ -65,9 +65,11 @@
                 {
                     if (fieldsOfInterpreter.Any(f => f.FieldType == commandField.FieldType))
                     {
-                        commandField.SetValue(exe, fieldsOfInterpreter
-                            .First(f => f.FieldType == commandField.FieldType)
-                            .GetValue(this));
+                        commandField.SetValue(
+                            exe, 
+                            fieldsOfInterpreter
+                                .First(f => f.FieldType == commandField.FieldType)
+                                .GetValue(this));
                     }
                 }
             }

@@ -19,7 +19,8 @@
                 string[] expectedOutputLines = File.ReadAllLines(expectedOutputPath);
 
                 bool hasMismatch;
-                string[] mismatches = this.GetLinesWithPossibleMismatches(actualOutputLines, 
+                string[] mismatches = this.GetLinesWithPossibleMismatches(
+                    actualOutputLines, 
                     expectedOutputLines, 
                     out hasMismatch);
 

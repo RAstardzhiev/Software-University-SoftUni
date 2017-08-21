@@ -1,7 +1,7 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Attributes;
     using System.Diagnostics;
+    using Attributes;
     using Exceptions;
 
     [Alias(InitializingCommand)]

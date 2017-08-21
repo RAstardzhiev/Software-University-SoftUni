@@ -1,8 +1,8 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Attributes;
     using System;
     using System.Collections.Generic;
+    using Attributes;
     using Contracts;
     using Contracts.Repository;
     using Exceptions;

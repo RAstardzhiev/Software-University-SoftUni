@@ -38,8 +38,28 @@
 
         public int Size => this.size;
 
+        public int Capacity => this.innearCollection.Length;
+
+        public T this[int index]
+        {
+            get
+            {
+                if (index >= this.Size)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
+                return this.innearCollection[index];
+            }
+        }
+
         public void Add(T element)
         {
+            if (element == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (this.innearCollection.Length == this.Size)
             {
                 this.Resize();
@@ -52,6 +72,11 @@
 
         public void AddAll(ICollection<T> collection)
         {
+            if (collection == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (this.Size + collection.Count >= this.innearCollection.Length)
             {
                 this.Multiresize(collection);
@@ -66,8 +91,48 @@
             Array.Sort(this.innearCollection, 0, this.Size, this.comparison);
         }
 
+        public bool Remove(T element)
+        {
+            if (element == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            bool hasBeenRemoved = false;
+            int indexOfRemovedElement = 0;
+
+            for (int i = 0; i < this.Size; i++)
+            {
+                if (this.innearCollection[i].Equals(element))
+                {
+                    indexOfRemovedElement = i;
+                    this.innearCollection[i] = default(T);
+                    hasBeenRemoved = true;
+                    break;
+                }
+            }
+
+            if (hasBeenRemoved)
+            {
+                for (int i = indexOfRemovedElement; i < this.Size - 1; i++)
+                {
+                    this.innearCollection[i] = this.innearCollection[i + 1];
+                }
+
+                this.innearCollection[this.Size - 1] = default(T);
+                this.size--;
+            }
+
+            return hasBeenRemoved;
+        }
+
         public string JoinWith(string joiner)
         {
+            if (joiner == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             StringBuilder builder = new StringBuilder();
 
             foreach (var element in this)
@@ -94,11 +159,7 @@
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 
-        private void Resize()
-        {
-            T[] newCollection = new T[this.Size * 2];
-            Array.Copy(this.innearCollection, newCollection, this.Size);
-        }
+        private void Resize() => Array.Resize(ref this.innearCollection, this.innearCollection.Length * 2);
 
         private void Multiresize(ICollection<T> collection)
         {
