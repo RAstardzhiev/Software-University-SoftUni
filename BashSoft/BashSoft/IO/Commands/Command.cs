@@ -2,7 +2,6 @@
 {
     using System;
     using Contracts;
-    using Contracts.Repository;
     using Exceptions;
 
     public abstract class Command : IExecutable
@@ -10,21 +9,10 @@
         private string input;
         private string[] data;
 
-        private IContentComparer judge;
-        private IDatabase repository;
-        private IDirectoryManager inputOutputManager;
-
-        public Command(string input, 
-            string[] data, 
-            IContentComparer judge, 
-            IDatabase repository, 
-            IDirectoryManager inputOutputManager)
+        public Command(string input, string[] data)
         {
             this.Input = input;
             this.Data = data;
-            this.judge = judge;
-            this.repository = repository;
-            this.inputOutputManager = inputOutputManager;
         }
         
         public string[] Data
@@ -61,21 +49,6 @@
 
                 this.input = value;
             }
-        }
-
-        protected IContentComparer Judge
-        {
-            get { return this.judge; }
-        }
-
-        protected IDatabase Repository
-        {
-            get { return this.repository; }
-        }
-
-        protected IDirectoryManager InputOutputManager
-        {
-            get { return this.inputOutputManager; }
         }
 
         public abstract void Execute();

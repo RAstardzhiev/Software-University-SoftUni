@@ -1,19 +1,17 @@
 ﻿namespace BashSoft.IO.Commands
 {
+    using Attributes;
     using System.Diagnostics;
-    using Contracts;
-    using Contracts.Repository;
     using Exceptions;
 
+    [Alias(InitializingCommand)]
     public class OpenFileCommand : Command
     {
-        public OpenFileCommand(string input, 
-            string[] data, 
-            IContentComparer judge, 
-            IDatabase repository, 
-            IDirectoryManager inputOutputManager) 
-                : base(input, data, judge, repository, inputOutputManager)
-        { 
+        private const string InitializingCommand = "open";
+
+        public OpenFileCommand(string input, string[] data) 
+            : base(input, data)
+        {
         }
 
         public override void Execute()

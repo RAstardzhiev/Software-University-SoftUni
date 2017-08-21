@@ -1,17 +1,18 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Contracts;
+    using Attributes;
     using Contracts.Repository;
     using Exceptions;
 
+    [Alias(InitializingCommand)]
     public class FilterAndTakeCommand : Command
     {
-        public FilterAndTakeCommand(string input, 
-            string[] data, 
-            IContentComparer judge, 
-            IDatabase repository,
-            IDirectoryManager inputOutputManager) 
-                : base(input, data, judge, repository, inputOutputManager)
+        private const string InitializingCommand = "filter";
+
+        [Inject]
+        private IDatabase repository;
+
+        public FilterAndTakeCommand(string input, string[] data) : base(input, data)
         {
         }
 
@@ -36,7 +37,7 @@
             {
                 if (takeQuantity == "all")
                 {
-                    this.Repository.FilterAndTake(courseName, filter, null);
+                    this.repository.FilterAndTake(courseName, filter, null);
                 }
                 else
                 {
@@ -44,7 +45,7 @@
                     var hasParsed = int.TryParse(takeQuantity, out studentsToTake);
                     if (hasParsed)
                     {
-                        this.Repository.FilterAndTake(courseName, filter, studentsToTake);
+                        this.repository.FilterAndTake(courseName, filter, studentsToTake);
                     }
                     else
                     {

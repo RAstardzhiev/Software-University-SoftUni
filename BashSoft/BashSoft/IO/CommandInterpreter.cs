@@ -1,9 +1,11 @@
 ﻿namespace BashSoft
 {
     using System;
+    using Attributes;
     using Contracts;
     using Contracts.Repository;
-    using Exceptions;
+    using System.Reflection;
+    using System.Linq;
     using IO.Commands;
 
     public class CommandInterpreter : IInterpreter
@@ -37,37 +39,40 @@
 
         private IExecutable ParseCommand(string input, string command, string[] data)
         {
-            switch (command)
+            object[] parametersForConstruction = new object[]
             {
-                case "open":
-                    return new OpenFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "mkdir":
-                    return new MakeDirectoryCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "ls":
-                    return new TraverseFoldersCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "cmp":
-                    return new CompareFilesCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "cdRel":
-                    return new ChangePathRelativelyCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "cdAbs":
-                    return new ChangePathAbsoluteCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "readDb":
-                    return new ReadDatabaseFromFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "help":
-                    return new GetHelpCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "filter":
-                    return new FilterAndTakeCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "order":
-                    return new OrderAndTakeCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "dropdb":
-                    return new DropDbCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "show":
-                    return new ShowWantedDataCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "display":
-                    return new DisplayCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                default:
-                    throw new InvalidCommandException(input);
+                input, data
+            };
+
+            Type commandType = Assembly
+                .GetExecutingAssembly()
+                .GetTypes()
+                .First(t => t.GetCustomAttributes(typeof(AliasAttribute))
+                    .Where(attr => attr.Equals(command))
+                    .ToArray()
+                    .Length > 0);
+
+            Type interpreterType = typeof(CommandInterpreter);
+            Command exe = (Command)Activator.CreateInstance(commandType, parametersForConstruction);
+
+            FieldInfo[] fieldsOfCommand = commandType.GetFields(BindingFlags.Instance | BindingFlags.NonPublic);
+            FieldInfo[] fieldsOfInterpreter = interpreterType.GetFields(BindingFlags.Instance | BindingFlags.NonPublic);
+
+            foreach (var commandField in fieldsOfCommand)
+            {
+                Attribute injectAttribute = commandField.GetCustomAttribute(typeof(InjectAttribute));
+                if (injectAttribute != null)
+                {
+                    if (fieldsOfInterpreter.Any(f => f.FieldType == commandField.FieldType))
+                    {
+                        commandField.SetValue(exe, fieldsOfInterpreter
+                            .First(f => f.FieldType == commandField.FieldType)
+                            .GetValue(this));
+                    }
+                }
             }
+
+            return exe;
         }        
     }
 }

@@ -1,17 +1,19 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Contracts;
+    using Attributes;
     using Contracts.Repository;
     using Exceptions;
 
+    [Alias(InitializingCommand)]
     public class ReadDatabaseFromFileCommand : Command
     {
-        public ReadDatabaseFromFileCommand(string input, 
-            string[] data, 
-            IContentComparer judge, 
-            IDatabase repository,
-            IDirectoryManager inputOutputManager) 
-                : base(input, data, judge, repository, inputOutputManager)
+        private const string InitializingCommand = "readDb";
+
+        [Inject]
+        private IDatabase repository;
+
+        public ReadDatabaseFromFileCommand(string input, string[] data) 
+            : base(input, data)
         {
         }
 
@@ -23,7 +25,7 @@
             }
 
             var databasePath = this.Data[1];
-            this.Repository.LoadData(databasePath);
+            this.repository.LoadData(databasePath);
         }
     }
 }

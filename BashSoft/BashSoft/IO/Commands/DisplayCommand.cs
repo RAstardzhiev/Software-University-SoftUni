@@ -1,37 +1,34 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO.Commands
 {
+    using Attributes;
     using System;
     using System.Collections.Generic;
     using Contracts;
     using Contracts.Repository;
     using Exceptions;
 
-    internal class DisplayCommand : IExecutable
+    [Alias(InitializingCommand)]
+    internal class DisplayCommand : Command
     {
-        private string[] data;
-        private string input;
-        private IDirectoryManager inputOutputManager;
-        private IContentComparer judge;
+        private const string InitializingCommand = "display";
+
+        [Inject]
         private IDatabase repository;
 
-        public DisplayCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
+        public DisplayCommand(string input, string[] data) 
+            : base(input, data)
         {
-            this.input = input;
-            this.data = data;
-            this.judge = judge;
-            this.repository = repository;
-            this.inputOutputManager = inputOutputManager;
         }
 
-        public void Execute()
+        public override void Execute()
         {
-            if (this.data.Length != 3)
+            if (this.Data.Length != 3)
             {
-                throw new InvalidCommandException(this.input);
+                throw new InvalidCommandException(this.Input);
             }
 
-            string entityToDisplay = this.data[1];
-            string sortType = this.data[2];
+            string entityToDisplay = this.Data[1];
+            string sortType = this.Data[2];
 
             if (entityToDisplay.Equals("students", StringComparison.OrdinalIgnoreCase))
             {
@@ -47,7 +44,7 @@
             }
             else
             {
-                throw new InvalidCommandException(this.input);
+                throw new InvalidCommandException(this.Input);
             }
         }
 
@@ -63,7 +60,7 @@
                 return Comparer<ICourse>.Create((first, second) => second.CompareTo(first));
             }
 
-            throw new InvalidCommandException(this.input);
+            throw new InvalidCommandException(this.Input);
         }
 
         private IComparer<IStudent> CreateStudentComparator(string sortType)
@@ -78,7 +75,7 @@
                 return Comparer<IStudent>.Create((studentOne, studentTwo) => studentTwo.CompareTo(studentOne));
             }
 
-            throw new InvalidCommandException(this.input);
+            throw new InvalidCommandException(this.Input);
         }
     }
 }

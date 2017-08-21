@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AliasAttribute.cs" />
+    <Compile Include="Attributes\InjectAttribute.cs" />
     <Compile Include="Contracts\IContentComparer.cs" />
     <Compile Include="Contracts\ICourse.cs" />
     <Compile Include="Contracts\IDataFilter.cs" />
@@ -82,7 +84,7 @@
     <Compile Include="IO\Commands\ReadDatabaseFromFileCommand.cs" />
     <Compile Include="IO\Commands\ShowWantedDataCommand.cs" />
     <Compile Include="IO\Commands\TraverseFoldersCommand.cs" />
-    <Compile Include="IO\DisplayCommand.cs" />
+    <Compile Include="IO\Commands\DisplayCommand.cs" />
     <Compile Include="Models\SoftUniCourse.cs" />
     <Compile Include="Models\SoftUniStudent.cs" />
     <Compile Include="Static data\ExceptionMessages.cs" />

@@ -1,18 +1,19 @@
 ﻿namespace BashSoft.IO.Commands
 {
+    using Attributes;
     using Contracts;
-    using Contracts.Repository;
     using Exceptions;
 
+    [Alias(InitializingCommand)]
     public class ChangePathRelativelyCommand : Command
     {
-        public ChangePathRelativelyCommand(
-            string input, 
-            string[] data, 
-            IContentComparer judge, 
-            IDatabase repository,
-            IDirectoryManager inputOutputManager) 
-                : base(input, data, judge, repository, inputOutputManager)
+        private const string InitializingCommand = "cdRel";
+
+        [Inject]
+        private IDirectoryManager inputOutputManager;
+
+        public ChangePathRelativelyCommand(string input, string[] data) 
+                : base(input, data)
         {
         }
 
@@ -24,7 +25,7 @@
             }
 
             var relPath = this.Data[1];
-            this.InputOutputManager.ChangeCurrentDirectoryRelative(relPath);
+            this.inputOutputManager.ChangeCurrentDirectoryRelative(relPath);
         }
     }
 }
