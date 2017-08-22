@@ -42,7 +42,7 @@
 <td width="50%">
 <p><a title="Iterators and Comparators - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Iterators%20and%20Comparators%20-%20Lab/01.%20Library" target="_blank">Iterators and Comparators - Lab</a></p>
 </td>
-<td width="50%">
+<td colspan="2" width="50%">
 <p><a title="Iterators and Comparators - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Iterators%20and%20Comparators%20-%20Exercise" target="_blank">Iterators and Comparators - Exercise</a></p>
 </td>
 </tr>
@@ -126,7 +126,7 @@
 <td width="50%">
 <p><a title="Inheritance - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Inheritance%20-%20Lab" target="_blank">Inheritance - Lab</a></p>
 </td>
-<td width="50%">
+<td colspan="2" width="50%">
 <p><a title="Inheritance - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Inheritance%20-%20Exercise" target="_blank">Inheritance - Exercise</a></p>
 </td>
 </tr>
