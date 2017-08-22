@@ -345,7 +345,7 @@
 </tr>
 <tr>
 <td width="50%">
-<p><a title="#" href="#" target="_blank">#</a></p>
+<p></p>
 </td>
 <td colspan="2" width="50%">
 <p><a title="Dictionaries Lambda LINQ - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Programming%20Fundamentals/Dictionaries%20Lambda%20LINQ%20-%20Exercises" target="_blank">Dictionaries Lambda LINQ - Exercises</a></p>
