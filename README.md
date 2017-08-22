@@ -14,6 +14,141 @@
 </tbody>
 </table>
 <!-- Head End -->
+<!-- C# OOP Advanced Start --><hr />
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">C# OOP Advanced - July 2017: <br /> 
+18.07.2017 - 20.08.2017</th><th width="40%">Grade: <br /> Issue Date: </th><th align="center width=">
+<p>Certificate</p>
+</th></tr>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="Interfaces and Abstraction - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Interfaces%20and%20Abstraction%20-%20Lab" target="_blank">Interfaces and Abstraction - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Interfaces and Abstraction - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Interfaces%20and%20Abstraction%20-%20Exercises" target="_blank">Interfaces and Abstraction - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Generics - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Generics%20-%20Lab" target="_blank">Generics - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Generics - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Generics%20-%20Exercise" target="_blank">Generics - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Iterators and Comparators - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Iterators%20and%20Comparators%20-%20Lab/01.%20Library" target="_blank">Iterators and Comparators - Lab</a></p>
+</td>
+<td width="50%">
+<p><a title="Iterators and Comparators - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Iterators%20and%20Comparators%20-%20Exercise" target="_blank">Iterators and Comparators - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Enumerations and Attributes - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Enumerations%20and%20Attributes%20-%20Lab" target="_blank">Enumerations and Attributes - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Enumerations and Attributes - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Enumerations%20and%20Attributes%20-%20Exercise" target="_blank">Enumerations and Attributes - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Reflection - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Reflection%20-%20Lab" target="_blank">Reflection - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Reflection - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Reflection%20-%20Exercise" target="_blank">Reflection - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Unit Testing - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Unit%20Testing%20-%20Lab" target="_blank">Unit Testing - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Unit Testing - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Unit%20Testing%20-%20Exercises" target="_blank">Unit Testing - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="SOLID - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/SOLID%20-%20Lab" target="_blank">SOLID - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="SOLID - Exercises (Open Closed and Liskov substitution)" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/SOLID-Open-Closed-and-Liskov%20-%20Exercises" target="_blank">SOLID - Exercises (Open Closed and Liskov substitution)</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Object Communication and Events - Exercises" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Communication%20and%20Events%20-%20Exercises" target="_blank">Object Communication and Events - Exercises</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Exam Preparation" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Advanced/Exam%20Preparation" target="_blank">Exam Preparation</a></p>
+</td>
+<td colspan="2" width="50%">
+<p>Exam</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<!-- C# OOP Advanced End -->
+<!-- C# OOP Basics Start --><hr />
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">C# OOP Basics - June 2017: <br /> 
+27.06.2017 - 16.07.2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 22/07/2017</th><th align="center width=">
+<p><a title="C# OOP Basics" href="https://softuni.bg/certificates/details/21693/000a71a8" target="_blank">Certificate</a></p>
+</th></tr>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="Defining Classes - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Defining%20Classes%20-%20Lab" target="_blank">Defining Classes - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Defining Classes - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Defining%20Classes%20-%20Exercise" target="_blank">Defining Classes - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Encapsulation - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Encapsulation%20-%20Lab" target="_blank">Encapsulation - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Encapsulation - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Encapsulation%20-%20Exercise" target="_blank">Encapsulation - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Inheritance - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Inheritance%20-%20Lab" target="_blank">Inheritance - Lab</a></p>
+</td>
+<td width="50%">
+<p><a title="Inheritance - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Inheritance%20-%20Exercise" target="_blank">Inheritance - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Polymorphism - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Polymorphism%20-%20Lab" target="_blank">Polymorphism - Lab</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Polymorphism - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Polymorphism%20-%20Exercise" target="_blank">Polymorphism - Exercise</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Exam Preparation" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Exam%20Preparation" target="_blank">Exam Preparation</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Exam" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/C%23%20OOP%20Basics/Exam" target="_blank">Exam</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr /><!-- C# OOP Basics End -->
 <!-- C# Advanced Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
