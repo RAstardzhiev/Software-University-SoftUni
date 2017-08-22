@@ -259,7 +259,7 @@
 </tr>
 <tr>
 <td colspan="3">
-<p><strong>PHP: MVC &amp; Symfony</strong> - building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
+<p><strong>PHP: MVC &amp; Symfony</strong> - building a simple blog with basic Admin and User functionality. It is not uploaded here (in GitHub) with the aim to avoid overloading their server.</p>
 </td>
 </tr>
 <tr>
@@ -272,7 +272,7 @@
 </tr>
 <tr>
 <td colspan="3">
-<p><strong>JavaScript: ExpressJS</strong> - building a simple blog with basic Admin and User functionality. It is not in here with the aim to avoid overloading the server of GitHub</p>
+<p><strong>JavaScript: ExpressJS</strong> - building a simple blog with basic Admin and User functionality. It is not uploaded here (in GitHub) with the aim to avoid overloading their server.</p>
 </td>
 </tr>
 <tr>
