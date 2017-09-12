@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. DateTime.Tests", "9. Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. DateTime", "9. DateTime\9. DateTime.csproj", "{E2514134-4273-4DF3-85EB-836D7922B42B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. TirePressureMonitoring", "10. TirePressureMonitoring\10. TirePressureMonitoring.csproj", "{4EBF6D61-DD91-4611-89E4-0A0BD362AE36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{E2514134-4273-4DF3-85EB-836D7922B42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2514134-4273-4DF3-85EB-836D7922B42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2514134-4273-4DF3-85EB-836D7922B42B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EBF6D61-DD91-4611-89E4-0A0BD362AE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EBF6D61-DD91-4611-89E4-0A0BD362AE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EBF6D61-DD91-4611-89E4-0A0BD362AE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EBF6D61-DD91-4611-89E4-0A0BD362AE36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
