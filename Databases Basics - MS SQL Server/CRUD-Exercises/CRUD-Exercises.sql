@@ -139,6 +139,12 @@ AS 'Full Naeme',
 JobTitle AS 'Job Title'
 FROM Employees; 
 
+/* !!!!! Same result as the above one */
+SELECT CONCAT(FirstName + ' ', MiddleName + ' ', LastName)
+AS 'Full Naeme', 
+JobTitle AS 'Job Title'
+FROM Employees; 
+
 /* *****************************************************
 	18.	 Distinct Job Titles
 ********************************************************/
