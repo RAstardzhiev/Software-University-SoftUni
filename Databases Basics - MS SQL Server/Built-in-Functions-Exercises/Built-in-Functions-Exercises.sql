@@ -135,7 +135,7 @@ USE Diablo;
 	Problem 12.	Games from 2011 and 2012 year
 *********************************************/
 
-SELECT TOP(50) Name, CAST(Start AS DATE) AS [Start]
+SELECT TOP(50) Name, FORMAT(CAST(Start AS DATE),'yyyy-MM-dd') AS [Start]
 FROM Games
 WHERE DATEPART(YEAR, Start) BETWEEN 2011 AND 2012
 ORDER BY Start, Name; 
