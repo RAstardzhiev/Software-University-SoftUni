@@ -14,8 +14,8 @@ USE TableRelations;
 
 CREATE TABLE Passports
 (
-             PassportID     INT NOT NULL,
-             PassportNumber VARCHAR(8) NOT NULL,
+             PassportID     INT IDENTITY(101, 1) NOT NULL,
+             PassportNumber CHAR(8) NOT NULL,
              CONSTRAINT PK_Passports PRIMARY KEY(PassportID)
 );
 
@@ -29,19 +29,17 @@ CREATE TABLE Persons
              CONSTRAINT PK_Persons PRIMARY KEY(PersonId),
              CONSTRAINT FK_Persons_Passports FOREIGN KEY(PassportID) REFERENCES Passports(PassportID) ON DELETE CASCADE
 );
+GO
 
 INSERT INTO Passports
 VALUES
 (
-       101,
        'N34FG21B'
 ),
 (
-       102,
        'K65LO4R7'
 ),
 (
-       103,
        'ZE657QP2'
 );
 
@@ -61,7 +59,7 @@ VALUES
        'Yana',
        60200.00,
        101
-); 
+);
 
 /* ******************************************
 	Problem 2.	One-To-Many Relationship
