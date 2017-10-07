@@ -5,11 +5,16 @@
     using System.IO;
     using System.Linq;
     using _4.Add_Minion.Models;
+    using System.Transactions;
 
     public class Startup
     {
+        private const string ConnectionString = @"
+                    Server=DESKTOP-5FMQC2G\SQLEXPRESS; 
+                    Database=MinionsDB; 
+                    Integrated Security=true;";
         private const string DefaultCoutryName = "Undefined";
-        
+
         private const string TownInsertionQueryPath = @"..\..\SQL Queries\Town insertion.sql";
         private const string CountryInsertionQueryPath = @"..\..\SQL Queries\Country insertion.sql";
         private const string MinionInsertionQueryPath = @"..\..\SQL Queries\Minion insertion.sql";
@@ -25,26 +30,26 @@
                 Minion minion = GetMinionFromConsole();
                 Villain villain = GeVillainFromConsole();
 
-                string connectionString = @"
-                    Server=DESKTOP-5FMQC2G\SQLEXPRESS; 
-                    Database=MinionsDB; 
-                    Integrated Security=true;";
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-
-                using (connection)
+                using (TransactionScope transaction = new TransactionScope())
                 {
-                    try
+                    using (SqlConnection connection = new SqlConnection(ConnectionString))
                     {
-                        AssureTownExists(minion.Town, connection);
-                        AssureMinionExists(minion, connection);
-                        AssureVillainExists(villain, connection);
-                        AddMinionToVillainServants(minion.Name, villain.Name, connection);
+                        connection.Open();
+
+                        try
+                        {
+                            AssureTownExists(minion.Town, connection);
+                            AssureMinionExists(minion, connection);
+                            AssureVillainExists(villain, connection);
+                            AddMinionToVillainServants(minion.Name, villain.Name, connection);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
                     }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                    }
+
+                    transaction.Complete();
                 }
 
                 AskToContinue();
@@ -75,10 +80,12 @@
         private static void AddMinionToVillainServants(string minionName, string villainName, SqlConnection connection)
         {
             string cmdText = File.ReadAllText(MinionVillainInsertionQueryPath);
-            SqlCommand command = new SqlCommand(cmdText, connection);
-            command.Parameters.AddWithValue("@minionName", minionName);
-            command.Parameters.AddWithValue("@villainName", villainName);
-            command.ExecuteNonQuery();
+            using (SqlCommand command = new SqlCommand(cmdText, connection))
+            {
+                command.Parameters.AddWithValue("@minionName", minionName);
+                command.Parameters.AddWithValue("@villainName", villainName);
+                command.ExecuteNonQuery();
+            }
 
             Console.WriteLine($"Successfully added {minionName} to be minion of {villainName}");
         }
@@ -91,10 +98,12 @@
             }
 
             string cmdText = File.ReadAllText(VillainInsertionQueryPath);
-            SqlCommand command = new SqlCommand(cmdText, connection);
-            command.Parameters.AddWithValue("@name", villain.Name);
-            command.Parameters.AddWithValue("@evilnessFactor", villain.EvilnessFactor);
-            command.ExecuteNonQuery();
+            using (SqlCommand command = new SqlCommand(cmdText, connection))
+            {
+                command.Parameters.AddWithValue("@name", villain.Name);
+                command.Parameters.AddWithValue("@evilnessFactor", villain.EvilnessFactor);
+                command.ExecuteNonQuery();
+            }
 
             Console.WriteLine($"Villain {villain.Name} was added to the database.");
         }
@@ -126,10 +135,12 @@
             AssureCountryIsAvailable(DefaultCoutryName, connection);
 
             string cmdText = File.ReadAllText(TownInsertionQueryPath);
-            SqlCommand command = new SqlCommand(cmdText, connection);
-            command.Parameters.AddWithValue("@countryName", DefaultCoutryName);
-            command.Parameters.AddWithValue("@townName", town);
-            command.ExecuteNonQuery();
+            using (SqlCommand command = new SqlCommand(cmdText, connection))
+            {
+                command.Parameters.AddWithValue("@countryName", DefaultCoutryName);
+                command.Parameters.AddWithValue("@townName", town);
+                command.ExecuteNonQuery();
+            }
 
             Console.WriteLine($"Town {town} was added to the database.");
         }
@@ -142,18 +153,23 @@
             }
 
             string cmdText = File.ReadAllText(CountryInsertionQueryPath);
-            SqlCommand command = new SqlCommand(cmdText, connection);
-            command.Parameters.AddWithValue("@countryName", coutryName);
-            command.ExecuteNonQuery();
+            using (SqlCommand command = new SqlCommand(cmdText, connection))
+            {
+                command.Parameters.AddWithValue("@countryName", coutryName);
+                command.ExecuteNonQuery();
+            }
         }
 
         private static bool IsRecordAvailable(string keyValue, string colName, string tableName, SqlConnection connection)
         {
+            object selection = null;
             string cmdText = $"SELECT {colName} FROM {tableName} WHERE {colName} = '{keyValue}';";
-            SqlCommand command = new SqlCommand(cmdText, connection);
-            command.Parameters.AddWithValue("@keyValue", keyValue);
+            using (SqlCommand command = new SqlCommand(cmdText, connection))
+            {
+                command.Parameters.AddWithValue("@keyValue", keyValue);
+                selection = command.ExecuteScalar();
+            }
 
-            object selection = command.ExecuteScalar();
             return selection != DBNull.Value && selection != null;
         }
 

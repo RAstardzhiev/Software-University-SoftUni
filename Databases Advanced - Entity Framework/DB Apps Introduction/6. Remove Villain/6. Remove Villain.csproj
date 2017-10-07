@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A8172CC-C274-4DFD-8800-2CBAC0BAC84D}</ProjectGuid>
+    <ProjectGuid>{975F3B35-5B5D-452A-96B2-CF73A82CF4D2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_4.Add_Minion</RootNamespace>
-    <AssemblyName>_4.Add_Minion</AssemblyName>
+    <RootNamespace>_6.Remove_Villain</RootNamespace>
+    <AssemblyName>_6.Remove_Villain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,20 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Minion.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Villain.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL Queries\MinionVillain insertion.sql" />
-    <Content Include="SQL Queries\Villain insertion.sql" />
-    <Content Include="SQL Queries\Country insertion.sql" />
-    <Content Include="SQL Queries\Minion insertion.sql" />
-    <Content Include="SQL Queries\Town insertion.sql" />
+    <Content Include="SQL Queries\Villain name by Id selection query.sql" />
+    <Content Include="SQL Queries\Villains delete by Id query.sql" />
+    <Content Include="SQL Queries\MinionsVillains deletion query.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

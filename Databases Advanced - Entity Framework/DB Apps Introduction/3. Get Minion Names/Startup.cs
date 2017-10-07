@@ -6,53 +6,60 @@
 
     public class Startup
     {
+        private const string ConnectionString = @"
+            Server=DESKTOP-5FMQC2G\SQLEXPRESS; 
+            Database=MinionsDB; 
+            Integrated Security=true;";
+        private const string SelectionQueryPath = @"..\..\Selection query.sql";
+
         public static void Main()
         {
             Console.Write("Enter a Villain ID: ");
             int villainId = int.Parse(Console.ReadLine());
 
-            SqlConnection connection = new SqlConnection($@"
-                Server=DESKTOP-5FMQC2G\SQLEXPRESS; 
-                Database=MinionsDB; 
-                Integrated Security=true;");
-
-            connection.Open();
-            string cmdText = string.Format(File.ReadAllText(@"..\..\Selection query.sql"), villainId);
-
-            using (connection)
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                SqlCommand command = new SqlCommand(cmdText, connection);
-                command.Parameters.AddWithValue("@villainId", villainId);
-;
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
+                connection.Open();
+                string cmdText = string.Format(File.ReadAllText(SelectionQueryPath), villainId);
+                using (SqlCommand command = new SqlCommand(cmdText, connection))
                 {
-                    reader.Read();
-                    Console.WriteLine($"Villain: {reader["VillainName"]}");
-
-                    if (reader.IsDBNull(1))
+                    command.Parameters.AddWithValue("@villainId", villainId);
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        Console.WriteLine("(no minions)");
+                        ProcessSelection(reader, villainId);
                     }
-                    else
-                    {
-                        int minionNumber = 1;
-                        while (true)
-                        {
-                            Console.WriteLine($"{minionNumber++}. {reader["MinionName"]} {reader["MinionAge"]}");
+                }
+            }
+        }
 
-                            if (!reader.Read())
-                            {
-                                break;
-                            }
-                        }
-                    }
+        private static void ProcessSelection(SqlDataReader reader, int villainId)
+        {
+            if (reader.HasRows)
+            {
+                reader.Read();
+                Console.WriteLine($"Villain: {reader["VillainName"]}");
+
+                if (reader.IsDBNull(1))
+                {
+                    Console.WriteLine("(no minions)");
                 }
                 else
                 {
-                    Console.WriteLine($"No villain with ID {villainId} exists in the database.");
+                    int minionNumber = 1;
+                    while (true)
+                    {
+                        Console.WriteLine($"{minionNumber++}. {reader["MinionName"]} {reader["MinionAge"]}");
+
+                        if (!reader.Read())
+                        {
+                            break;
+                        }
+                    }
                 }
+            }
+            else
+            {
+                Console.WriteLine($"No villain with ID {villainId} exists in the database.");
             }
         }
     }

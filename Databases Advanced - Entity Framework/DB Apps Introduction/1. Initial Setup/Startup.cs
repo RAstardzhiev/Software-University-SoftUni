@@ -5,43 +5,44 @@
 
     public class Startup
     {
+        private const string DbName = "MinionsDB";
+        private const string ServerName = @"DESKTOP-5FMQC2G\SQLEXPRESS";
+        private const string Authentication = "Integrated Security=true";
+
         public static void Main()
         {
-            string dbName = "MinionsDB";
-            string serverName = @"DESKTOP-5FMQC2G\SQLEXPRESS";
-            string authentication = "Integrated Security=true";
-            CreateDatabase(dbName, serverName, authentication);
+            CreateDatabase(DbName, ServerName, Authentication);
 
-            SqlConnection connection = new SqlConnection($@"
-                Server={serverName}; 
-                Database={dbName}; 
-                {authentication};");
+            string connectionString = $@"
+                Server={ServerName}; 
+                Database={DbName}; 
+                {Authentication};";
 
-            connection.Open();
-            string cmdText = File.ReadAllText(@"..\..\Tables Data.sql");
-            SqlCommand command = new SqlCommand(cmdText, connection);
-            using (connection)
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                command.ExecuteNonQuery();
+                connection.Open();
+                string cmdText = File.ReadAllText(@"..\..\Tables Data.sql");
+                using (SqlCommand command = new SqlCommand(cmdText, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
             }
         }
 
         private static void CreateDatabase(string dbName, string serverName, string authentication)
         {
-            SqlConnection connection = new SqlConnection($@"
+            string connectionString = $@"
                 Server={serverName}; 
                 Database=master; 
-                {authentication};");
+                {authentication};";
 
-            connection.Open();
-
-            using (connection)
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand($@"
-                CREATE DATABASE {dbName};",
-                connection);
-
-                command.ExecuteNonQuery();
+                connection.Open();
+                using (SqlCommand command = new SqlCommand($"CREATE DATABASE {dbName};", connection))
+                {
+                    command.ExecuteNonQuery();
+                }
             }
         }
     }

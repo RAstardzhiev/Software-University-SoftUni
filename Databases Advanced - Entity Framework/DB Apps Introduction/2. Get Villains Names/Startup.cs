@@ -6,38 +6,40 @@
 
     public class Startup
     {
+        private const string ConnectionString = @"
+            Server=DESKTOP-5FMQC2G\SQLEXPRESS; 
+            Database=MinionsDB; 
+            Integrated Security=true;";
+
         public static void Main()
         {
-            SqlConnection connection = new SqlConnection($@"
-                Server=DESKTOP-5FMQC2G\SQLEXPRESS; 
-                Database=MinionsDB; 
-                Integrated Security=true;");
-
-            connection.Open();
-
-            using (connection)
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
+                connection.Open();
                 string cmdText = File.ReadAllText(@"..\..\Minions Per Villain.sql");
-                SqlCommand command = new SqlCommand(cmdText, connection);
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
+                using (SqlCommand command = new SqlCommand(cmdText, connection))
                 {
-                    for (int i = 0; i < reader.FieldCount; i++)
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        Console.Write($"{reader.GetName(i), -20}");
-                    }
-                    
-                    Console.WriteLine();
-
-                    while (reader.Read())
-                    {
-                        for (int i = 0; i < reader.FieldCount; i++)
+                        if (reader.HasRows)
                         {
-                            Console.Write($"{reader[i], -20}");
-                        }
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                Console.Write($"{reader.GetName(i),-20}");
+                            }
 
-                        Console.WriteLine();
+                            Console.WriteLine();
+
+                            while (reader.Read())
+                            {
+                                for (int i = 0; i < reader.FieldCount; i++)
+                                {
+                                    Console.Write($"{reader[i],-20}");
+                                }
+
+                                Console.WriteLine();
+                            }
+                        }
                     }
                 }
             }
