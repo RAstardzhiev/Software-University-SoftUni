@@ -22,8 +22,7 @@
             using (connection)
             {
                 SqlCommand command = new SqlCommand(cmdText, connection);
-                SqlParameter villainIdParam = new SqlParameter("@villainId", villainId);
-                command.Parameters.Add(villainIdParam);
+                command.Parameters.AddWithValue("@villainId", villainId);
 ;
                 SqlDataReader reader = command.ExecuteReader();
 

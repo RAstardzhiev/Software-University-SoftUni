@@ -8,7 +8,7 @@ CREATE TABLE Countries
 CREATE TABLE Towns
 (
              Id        INT IDENTITY,
-             Name      NVARCHAR(50) NOT NULL,
+             Name      NVARCHAR(50) UNIQUE NOT NULL,
              CountryId INT NOT NULL,
              CONSTRAINT PK_Towns PRIMARY KEY(Id),
              CONSTRAINT FK_Towns_Countries FOREIGN KEY(CountryId) REFERENCES Countries(Id)
