@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{136EDA18-6C63-4487-A935-827B773BAA8F}</ProjectGuid>
+    <ProjectGuid>{C33F6BD2-A8CD-45CF-B26B-8964656A8764}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Introduction_to_Entity_Framework</RootNamespace>
-    <AssemblyName>SoftUniDatabaseSolutions</AssemblyName>
+    <RootNamespace>GringottsDatabaseSolutions</RootNamespace>
+    <AssemblyName>GringottsDatabaseSolutions</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,21 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engine.cs" />
-    <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\Department.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Project.cs" />
-    <Compile Include="SoftuniContext.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="GringiottsContext.cs" />
+    <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Town.cs" />
+    <Compile Include="Models\WizzardDeposit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Employees selection query.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

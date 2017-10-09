@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniDatabaseSolutions", "SoftUniDatabaseSolutions\SoftUniDatabaseSolutions.csproj", "{136EDA18-6C63-4487-A935-827B773BAA8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GringottsDatabaseSolutions", "GringottsDatabaseSolutions\GringottsDatabaseSolutions.csproj", "{C33F6BD2-A8CD-45CF-B26B-8964656A8764}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{136EDA18-6C63-4487-A935-827B773BAA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{136EDA18-6C63-4487-A935-827B773BAA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{136EDA18-6C63-4487-A935-827B773BAA8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33F6BD2-A8CD-45CF-B26B-8964656A8764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33F6BD2-A8CD-45CF-B26B-8964656A8764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33F6BD2-A8CD-45CF-B26B-8964656A8764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33F6BD2-A8CD-45CF-B26B-8964656A8764}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
