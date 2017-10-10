@@ -13,9 +13,10 @@
         {
             this.LastName = lastName;
             this.age = age;
+            this.DepositStartDate = DateTime.Now;
         }
 
-        public int Id { get; set; }
+        public int Id { get; private set; }
 
         [StringLength(50)]
         public string FirstName { get; set; }
@@ -68,7 +69,7 @@
         [StringLength(20)]
         public string DepositGroup { get; set; }
 
-        public DateTime? DepositStartDate { get; set; }
+        public DateTime DepositStartDate { get; private set; }
 
         public decimal? DepositAmount { get; set; }
 

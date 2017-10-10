@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Gringotts Database", "7. Gringotts Database\7. Gringotts Database.csproj", "{93557125-01A1-4F67-B0AF-AE1CDDA34726}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. Create User", "8. Create User\8. Create User.csproj", "{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{93557125-01A1-4F67-B0AF-AE1CDDA34726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93557125-01A1-4F67-B0AF-AE1CDDA34726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93557125-01A1-4F67-B0AF-AE1CDDA34726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
