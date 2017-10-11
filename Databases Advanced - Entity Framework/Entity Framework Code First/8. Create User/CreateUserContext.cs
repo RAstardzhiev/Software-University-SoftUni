@@ -10,6 +10,6 @@ namespace _8.Create_User
         {
         }
 
-        public DbSet<User> Users { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

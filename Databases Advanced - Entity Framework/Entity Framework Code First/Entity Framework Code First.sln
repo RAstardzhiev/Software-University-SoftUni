@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Gringotts Database", "7.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. Create User", "8. Create User\8. Create User.csproj", "{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. Hospital Database", "9. Hospital Database\9. Hospital Database.csproj", "{0D02EE4B-A2D5-4712-8253-DE88D7CFA6B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D02EE4B-A2D5-4712-8253-DE88D7CFA6B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D02EE4B-A2D5-4712-8253-DE88D7CFA6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D02EE4B-A2D5-4712-8253-DE88D7CFA6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D02EE4B-A2D5-4712-8253-DE88D7CFA6B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

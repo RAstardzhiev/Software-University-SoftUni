@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01FCDD4E-4585-415D-B0EC-D70A8C8F9672}</ProjectGuid>
+    <ProjectGuid>{0D02EE4B-A2D5-4712-8253-DE88D7CFA6B2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_8.Create_User</RootNamespace>
-    <AssemblyName>_8.Create_User</AssemblyName>
+    <RootNamespace>_9.Hospital_Database</RootNamespace>
+    <AssemblyName>_9.Hospital_Database</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,20 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateUserContext.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="HospitalContext.cs" />
+    <Compile Include="Modles\Diagnose.cs" />
+    <Compile Include="Modles\Doctor.cs" />
+    <Compile Include="Modles\Helpers\DataValidator.cs" />
+    <Compile Include="Modles\Medicament.cs" />
+    <Compile Include="Modles\Patient.cs" />
+    <Compile Include="Modles\Visitation.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SQL queries\Delete all marked users.sql" />
-    <Content Include="SQL queries\Username Email selection by email ends with.sql" />
-    <Content Include="SQL queries\Mark as deleted users with last login before date.sql" />
-    <Content Include="SQL queries\Users Data Insertion.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
