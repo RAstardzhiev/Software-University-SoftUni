@@ -1,0 +1,12 @@
+Open: Package Manager Console
+Type: Enable-Migrations
+Type: Add-Migration [Name] 
+Type: Update-Database
+
+**************************************
+
+To apply specific migration (including going to previous version):
+Type: Update-Database –TargetMigration: <Name>
+
+**************************************
+

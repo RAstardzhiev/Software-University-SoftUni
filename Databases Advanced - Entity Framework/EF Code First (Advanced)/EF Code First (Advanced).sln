@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Local Store", "1. Local Store\1. Local Store.csproj", "{0159BE29-570E-4093-A849-D1441CFF93D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Sales Database", "3. Sales Database\3. Sales Database.csproj", "{451B1E3C-FA4C-4D67-A2C7-99FD0929D95A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0159BE29-570E-4093-A849-D1441CFF93D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0159BE29-570E-4093-A849-D1441CFF93D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0159BE29-570E-4093-A849-D1441CFF93D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0159BE29-570E-4093-A849-D1441CFF93D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{451B1E3C-FA4C-4D67-A2C7-99FD0929D95A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451B1E3C-FA4C-4D67-A2C7-99FD0929D95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451B1E3C-FA4C-4D67-A2C7-99FD0929D95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451B1E3C-FA4C-4D67-A2C7-99FD0929D95A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDB5DE85-AD0D-4690-989F-2C94A0F5DE2F}
+	EndGlobalSection
+EndGlobal
