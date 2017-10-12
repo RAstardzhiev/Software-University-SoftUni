@@ -75,7 +75,7 @@
 
         public double? DepositInterest { get; set; }
 
-        public double? DepositCharge { get; set; }
+        public decimal? DepositCharge { get; set; }
 
         public DateTime? DepositExpirationDate { get; set; }
 
