@@ -8,7 +8,13 @@
 <h2>C#</h2>
 </td>
 <td align="center" width="33%"><img src="https://avatars1.githubusercontent.com/u/24620088?v=3&amp;u=5e1a11ac5228356808410702d2f8c5ff3209d2a9&amp;s=400" alt="" />
-<p>Author: <strong>Radoslav Astardzhiev</strong></p>
+<img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" />
+Author: 
+<strong>
+<a title="Author Radoslav Astardzhiev" href="https://www.linkedin.com/in/radoslav-astardzhiev-727602137" target="_blank">
+Radoslav Astardzhiev
+</a>
+</strong></p>
 </td>
 </tr>
 </tbody>
