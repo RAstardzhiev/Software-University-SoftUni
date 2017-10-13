@@ -11,7 +11,7 @@
 <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" />
 Author: 
 <strong>
-<a title="Author Radoslav Astardzhiev" href="https://www.linkedin.com/in/radoslav-astardzhiev-727602137" target="_blank">
+<a title="LinkedIn Radoslav Astardzhiev" href="https://www.linkedin.com/in/radoslav-astardzhiev-727602137" target="_blank">
 Radoslav Astardzhiev
 </a>
 </strong></p>
@@ -25,7 +25,7 @@ Radoslav Astardzhiev
 <tbody>
 <tr><th align="center" width="50%">C# OOP Advanced - July 2017: <br /> 
 18.07.2017 - 20.08.2017</th><th width="40%">Grade: <br /> Issue Date: </th><th align="center width=">
-<p>Certificate</p>
+<p><a title="C# OOP Advanced" href="https://softuni.bg/certificates/details/23427/a724189a" target="_blank">Certificate</a></p>
 </th></tr>
 <!-- Course Body -->
 <tr>
@@ -159,7 +159,7 @@ Radoslav Astardzhiev
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# Advanced - May 2017: <br /> 23.05.2017 - 25.06..2017</th><th width="40%">Grade: <br /> Issue Date:</th><th align="center width=">
-<p>Certificate</p>
+<p><a title="C# Advanced" href="https://softuni.bg/certificates/details/21532/d5366984" target="_blank">Certificate</a></p>
 </th></tr>
 <!-- Course Body -->
 <tr>
@@ -314,7 +314,7 @@ Radoslav Astardzhiev
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Programming Fundamentals - януари 2017: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: <br /> Issue Date:</th><th align="center width=">
-<p>Certificate</p>
+<p><a title="Programming Fundamentals" href="https://softuni.bg/certificates/details/17462/63d261c4" target="_blank">Certificate</a></p>
 </th></tr>
 <!-- Course Body -->
 <tr>
