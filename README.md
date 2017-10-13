@@ -24,7 +24,7 @@ Radoslav Astardzhiev
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# OOP Advanced - July 2017: <br /> 
-18.07.2017 - 20.08.2017</th><th width="40%">Grade: <br /> Issue Date: </th><th align="center width=">
+18.07.2017 - 20.08.2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 21/09/2017</th><th align="center width=">
 <p><a title="C# OOP Advanced" href="https://softuni.bg/certificates/details/23427/a724189a" target="_blank">Certificate</a></p>
 </th></tr>
 <!-- Course Body -->
