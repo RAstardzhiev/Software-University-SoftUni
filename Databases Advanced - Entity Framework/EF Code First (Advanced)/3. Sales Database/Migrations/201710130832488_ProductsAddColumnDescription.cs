@@ -1,8 +1,7 @@
 namespace _3.Sales_Database.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class ProductsAddColumnDescription : DbMigration
     {
         public override void Up()

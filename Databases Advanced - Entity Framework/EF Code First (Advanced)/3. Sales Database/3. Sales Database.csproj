@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201710130832488_ProductsAddColumnDescription.Designer.cs">
       <DependentUpon>201710130832488_ProductsAddColumnDescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710131840500_SalesAddDateDefault.cs" />
+    <Compile Include="Migrations\201710131840500_SalesAddDateDefault.Designer.cs">
+      <DependentUpon>201710131840500_SalesAddDateDefault.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710130832488_ProductsAddColumnDescription.resx">
       <DependentUpon>201710130832488_ProductsAddColumnDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710131840500_SalesAddDateDefault.resx">
+      <DependentUpon>201710131840500_SalesAddDateDefault.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

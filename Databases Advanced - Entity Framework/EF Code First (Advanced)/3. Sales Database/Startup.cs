@@ -9,10 +9,15 @@
         {
             using (var context = new SalesContext())
             {
-                // context.Database.Initialize(true);
-
-                ProductsMigration(context); // 4. Products Migration
+                // context.Database.Initialize(true); // 3.	Sales Database
+                // ProductsMigration(context); // 4. Products Migration
+                SalesMigrationThroughModifyingEmptyMigration(context); // 5. Sales Migration
             }
+        }
+
+        private static void SalesMigrationThroughModifyingEmptyMigration(SalesContext context)
+        {
+            throw new NotImplementedException();
         }
 
         private static void ProductsMigration(SalesContext context)
