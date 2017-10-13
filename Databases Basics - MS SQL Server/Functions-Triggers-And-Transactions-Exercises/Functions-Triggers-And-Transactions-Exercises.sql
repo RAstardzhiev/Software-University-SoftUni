@@ -155,7 +155,11 @@ AS
      END;
 
 /* *****************************************************
-	Problem 8.	* Delete Employees and Departments
+     ***** NOT FOR JUDGE ***** NOT FOR JUDGE *****
+/* *****************************************************
+	Understood from the old exercise explanation
+/* *****************************************************
+	Problem 8.1. * Delete Employees and Departments
 ********************************************************/
 
 CREATE PROCEDURE usp_DeleteEmployeesFromDepartment
@@ -229,8 +233,13 @@ EXECUTE usp_DeleteEmployeesFromDepartment
 
 ROLLBACK;
 
-/* Option without procedure */
-
+/* *****************************************************
+     ***** NOT FOR JUDGE ***** NOT FOR JUDGE *****
+/* *****************************************************
+	Understood from the old exercise explanation
+/* *****************************************************
+	Option without procedure 
+********************************************************/
 ALTER TABLE Employees ALTER COLUMN ManagerID INT;
 
 ALTER TABLE Employees ALTER COLUMN DepartmentID INT;
@@ -292,6 +301,76 @@ WHERE EmployeeID IN
     WHERE d.Name IN('Production', 'Production Control')
 )
 );
+
+/* *****************************************************
+ ****** FOR JUDGE ***** FOR JUDGE ***** FOR JUDGE *****
+/* *****************************************************
+	NEW exercise explanation
+/* *****************************************************
+	Problem 8.2. * Delete Employees and Departments
+********************************************************/
+
+CREATE PROCEDURE usp_DeleteEmployeesFromDepartment
+(
+                 @departmentId INT
+)
+AS
+     BEGIN
+         ALTER TABLE Employees ALTER COLUMN ManagerID INT;
+
+         ALTER TABLE Employees ALTER COLUMN DepartmentID INT;
+
+         UPDATE Employees
+           SET
+               DepartmentID = NULL
+         WHERE EmployeeID IN
+         (
+         (
+             SELECT EmployeeID
+             FROM Employees
+             WHERE DepartmentID = @departmentId
+         )
+         );
+
+         UPDATE Employees
+           SET
+               ManagerID = NULL
+         WHERE ManagerID IN
+         (
+         (
+             SELECT EmployeeID
+             FROM Employees
+             WHERE DepartmentID = @departmentId
+         )
+         );
+
+         ALTER TABLE Departments ALTER COLUMN ManagerID INT;
+
+         UPDATE Departments
+           SET
+               ManagerID = NULL
+         WHERE DepartmentID = @departmentId;
+
+         DELETE FROM Departments
+         WHERE DepartmentID = @departmentId;
+
+         DELETE FROM EmployeesProjects
+         WHERE EmployeeID IN
+         (
+         (
+             SELECT EmployeeID
+             FROM Employees
+             WHERE DepartmentID = @departmentId
+         )
+         );
+
+         DELETE FROM Employees
+         WHERE DepartmentID = @departmentId;
+
+         SELECT COUNT(*)
+         FROM Employees
+         WHERE DepartmentID = @departmentId;
+     END;
 
 /* *****************************************************
 	Problem 9.	Employees with Three Projects

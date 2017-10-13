@@ -324,8 +324,13 @@
 </tr>
 </tbody>
 </table>
-<h2>Problem 8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Delete Employees and Departments</h2>
+<h2>Problem 8.1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Delete Employees and Departments</h2>
 <p>Write a SQL query to delete all Employees from the <strong>Production</strong> and <strong>Production Control</strong> departments. <strong>Delete these departments from the Departments table </strong>too. Submit your query as Run skeleton, run queries and check DB. After that exercise restore your database to revert those changes.</p>
+<h3>Hint:</h3>
+<p>You may set <strong>ManagerID</strong> column in Departments table to <strong>nullable</strong> (using query "ALTER TABLE &hellip;").</p>
+<h2>Problem 8.2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Delete Employees and Departments</h2>
+<p>Write a <strong>procedure </strong>with the name <strong>usp_DeleteEmployeesFromDepartment</strong> <strong>(</strong><strong>@departmentId</strong> INT<strong>) which </strong><strong>deletes all Employees</strong> from a <strong>given</strong> <strong>department</strong>. <strong>Delete these departments </strong>from the<strong> Departments table </strong>too. <strong>Finally</strong><strong> SELECT </strong>the <strong>number</strong> of <strong>employees</strong> from the <strong>given department</strong>. If the delete statements are correct the select query should return 0.</p>
+<p>After completing that exercise restore your database to revert all changes.</p>
 <h3>Hint:</h3>
 <p>You may set <strong>ManagerID</strong> column in Departments table to <strong>nullable</strong> (using query "ALTER TABLE &hellip;").</p>
 <h2>Problem 9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Employees with Three Projects</h2>
