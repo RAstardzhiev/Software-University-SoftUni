@@ -11,6 +11,7 @@
         private string name;
         private double quantity;
         private decimal price;
+        private string description;
         private DataValidator dataValidator;
 
         private Product()
@@ -73,6 +74,26 @@
             {
                 this.dataValidator.NummericNonNegativeValidation(value, nameof(this.Price));
                 this.price = value;
+            }
+        }
+
+        public string Description
+        {
+            get
+            {
+                return this.description;
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    this.description = "No description";
+                }
+                else
+                {
+                    this.description = value;
+                }
             }
         }
 

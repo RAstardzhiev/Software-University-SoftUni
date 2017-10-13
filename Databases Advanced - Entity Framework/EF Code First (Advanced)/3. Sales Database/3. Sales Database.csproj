@@ -53,6 +53,15 @@
   <ItemGroup>
     <Compile Include="Helpers\DataValidator.cs" />
     <Compile Include="InitializeAndSeed.cs" />
+    <Compile Include="Migrations\201710130823384_InitialCreate.cs" />
+    <Compile Include="Migrations\201710130823384_InitialCreate.Designer.cs">
+      <DependentUpon>201710130823384_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710130832488_ProductsAddColumnDescription.cs" />
+    <Compile Include="Migrations\201710130832488_ProductsAddColumnDescription.Designer.cs">
+      <DependentUpon>201710130832488_ProductsAddColumnDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Sale.cs" />
@@ -64,6 +73,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710130823384_InitialCreate.resx">
+      <DependentUpon>201710130823384_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710130832488_ProductsAddColumnDescription.resx">
+      <DependentUpon>201710130832488_ProductsAddColumnDescription.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

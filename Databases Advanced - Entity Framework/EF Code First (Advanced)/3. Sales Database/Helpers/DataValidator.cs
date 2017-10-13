@@ -20,7 +20,7 @@
 
         public void StringMaxLengthValidator(string value, int maxLength, string propName)
         {
-            if (value.Length > maxLength)
+            if (value != null && value.Length > maxLength)
             {
                 throw new ArgumentException(string.Format(StringMoreThanMaxLengthExceptionMessage, propName, maxLength));
             }
@@ -28,7 +28,7 @@
 
         public void StringMinLengthValidator(string value, int minLength, string propName)
         {
-            if (value.Length < minLength)
+            if (value != null && value.Length < minLength)
             {
                 throw new ArgumentException(string.Format(StringLessThanMinLengthExceptionMessage, propName, minLength));
             }

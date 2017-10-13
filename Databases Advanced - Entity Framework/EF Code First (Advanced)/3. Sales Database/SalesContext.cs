@@ -8,7 +8,7 @@ namespace _3.Sales_Database
         public SalesContext()
             : base("name=SalesContext")
         {
-            Database.SetInitializer(new InitializeAndSeed());
+            // Database.SetInitializer(new InitializeAndSeed());
         }
 
         public virtual DbSet<Product> Products { get; set; }
