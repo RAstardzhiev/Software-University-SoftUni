@@ -6,12 +6,12 @@ namespace _3.Sales_Database.Migrations
     {
         public override void Up()
         {
-            AlterColumn("Sales", "Date", s => s.String(defaultValueSql: "GETDATE()"));
+            AlterColumn("Sales", "Date", system => system.DateTime(defaultValueSql: "GETDATE()"));
         }
         
         public override void Down()
         {
-            AlterColumn("Sales", "Date", s => s.String(defaultValueSql: "NULL"));
+            AlterColumn("Sales", "Date", system => system.String(defaultValueSql: "NULL"));
         }
     }
 }
