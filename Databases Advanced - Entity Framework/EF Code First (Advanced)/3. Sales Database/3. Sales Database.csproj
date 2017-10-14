@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201710140823416_AddAgeToCustomers.Designer.cs">
       <DependentUpon>201710140823416_AddAgeToCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710140914129_AddAddressToCustomers.cs" />
+    <Compile Include="Migrations\201710140914129_AddAddressToCustomers.Designer.cs">
+      <DependentUpon>201710140914129_AddAddressToCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710140823416_AddAgeToCustomers.resx">
       <DependentUpon>201710140823416_AddAgeToCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710140914129_AddAddressToCustomers.resx">
+      <DependentUpon>201710140914129_AddAddressToCustomers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

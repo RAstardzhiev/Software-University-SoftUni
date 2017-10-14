@@ -9,10 +9,12 @@
         private const int NameMaxLength = 50;
         private const int EmailMaxLength = 100;
         private const int CreditCardNumberExactLength = 16;
+        private const int AddressMaxAllowedLength = 255;
 
         private string firstName;
         private string lastName;
         private int? age;
+        private string address;
         private string email;
         private string creditCardNumber;
         private DataValidator dataValidator;
@@ -95,6 +97,21 @@
                 this.dataValidator.StringExistenceValidation(value, nameof(Customer), nameof(this.Email));
                 this.dataValidator.StringMaxLengthValidator(value, EmailMaxLength, nameof(this.Email));
                 this.email = value;
+            }
+        }
+
+        [StringLength(AddressMaxAllowedLength)]
+        public string Address
+        {
+            get
+            {
+                return this.address;
+            }
+
+            set
+            {
+                this.dataValidator.StringMaxLengthValidator(value, AddressMaxAllowedLength, nameof(this.Address));
+                this.address = value;
             }
         }
 

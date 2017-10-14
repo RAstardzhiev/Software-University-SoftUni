@@ -9,7 +9,7 @@
         {
             using (var context = new SalesContext())
             {
-                //context.Database.Initialize(true); // 3.	Sales Database
+                context.Database.Initialize(true); // 3.	Sales Database
                 //ProductsMigration(context); // 4. Products Migration
                 //SalesMigrationThroughModifyingEmptyMigration(context); // 5. Sales Migration
                 CustomesNameSeparatedToFirstAndLastName(context); // 6.	Customers Migration
