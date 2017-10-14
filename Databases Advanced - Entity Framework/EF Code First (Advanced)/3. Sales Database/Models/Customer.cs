@@ -10,7 +10,8 @@
         private const int EmailMaxLength = 100;
         private const int CreditCardNumberExactLength = 16;
 
-        private string name;
+        private string firstName;
+        private string lastName;
         private string email;
         private string creditCardNumber;
         private DataValidator dataValidator;
@@ -21,10 +22,11 @@
             this.Sales = new HashSet<Sale>();
         }
 
-        public Customer(string name, string email)
+        public Customer(string name, string lastName, string email)
             : this()
         {
-            this.Name = name;
+            this.FirstName = name;
+            this.LastName = lastName;
             this.Email = email;
         }
 
@@ -32,18 +34,35 @@
 
         [Required]
         [StringLength(NameMaxLength)]
-        public string Name
+        public string FirstName
         {
             get
             {
-                return this.name;
+                return this.firstName;
             }
 
             set
             {
-                this.dataValidator.StringExistenceValidation(value, nameof(Customer), nameof(this.Name));
-                this.dataValidator.StringMaxLengthValidator(value, NameMaxLength, nameof(this.Name));
-                this.name = value;
+                this.dataValidator.StringExistenceValidation(value, nameof(Customer), nameof(this.FirstName));
+                this.dataValidator.StringMaxLengthValidator(value, NameMaxLength, nameof(this.FirstName));
+                this.firstName = value;
+            }
+        }
+
+        [Required]
+        [StringLength(NameMaxLength)]
+        public string LastName
+        {
+            get
+            {
+                return this.lastName;
+            }
+
+            set
+            {
+                this.dataValidator.StringExistenceValidation(value, nameof(Customer), nameof(this.LastName));
+                this.dataValidator.StringMaxLengthValidator(value, NameMaxLength, nameof(this.LastName));
+                this.lastName = value;
             }
         }
 
