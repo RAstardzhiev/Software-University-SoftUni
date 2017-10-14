@@ -12,6 +12,7 @@
 
         private string firstName;
         private string lastName;
+        private int? age;
         private string email;
         private string creditCardNumber;
         private DataValidator dataValidator;
@@ -63,6 +64,20 @@
                 this.dataValidator.StringExistenceValidation(value, nameof(Customer), nameof(this.LastName));
                 this.dataValidator.StringMaxLengthValidator(value, NameMaxLength, nameof(this.LastName));
                 this.lastName = value;
+            }
+        }
+
+        public int? Age
+        {
+            get
+            {
+                return this.age;
+            }
+
+            set
+            {
+                this.dataValidator.NummericNonNegativeValidation(value, nameof(this.Age));
+                this.age = value;
             }
         }
 

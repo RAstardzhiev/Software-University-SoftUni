@@ -7,13 +7,13 @@ namespace _3.Sales_Database.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Customer_SplittedNameToFirstAndLastName : IMigrationMetadata
+    public sealed partial class AddAgeToCustomers : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Customer_SplittedNameToFirstAndLastName));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAgeToCustomers));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710131932185_Customer_SplittedNameToFirstAndLastName"; }
+            get { return "201710140823416_AddAgeToCustomers"; }
         }
         
         string IMigrationMetadata.Source

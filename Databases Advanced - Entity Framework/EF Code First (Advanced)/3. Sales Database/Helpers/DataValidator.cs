@@ -50,6 +50,14 @@
             }
         }
 
+        public void NummericNonNegativeValidation(int? value, string propName)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException(string.Format(NegativeNumberExceptionMessage, nameof(propName)));
+            }
+        }
+
         public void IdGreaterThanZeroValidation(int value)
         {
             if (value < 0)

@@ -10,6 +10,7 @@ namespace _3.Sales_Database.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "_3.Sales_Database.SalesContext";
         }
 

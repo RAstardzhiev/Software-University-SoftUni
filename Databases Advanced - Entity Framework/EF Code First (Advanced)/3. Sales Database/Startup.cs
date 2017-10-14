@@ -18,15 +18,9 @@
 
         private static void CustomesNameSeparatedToFirstAndLastName(SalesContext context)
         {
-            foreach (var sale in context.Sales
-                .Include("Product")
-                .Include("Customer")
-                .Include("StoreLocation"))
+            foreach (var person in context.Customers)
             {
-                Console.WriteLine($"{sale.Date.ToLocalTime()} - " +
-                    $"{sale.StoreLocation.LocationName} sold " +
-                    $"{sale.Product.Name} ({sale.Product.Description}) to " +
-                    $"{sale.Customer.FirstName} {sale.Customer.LastName}");
+                Console.WriteLine($"{person.FirstName} is {person.Age} yaers old");
             }
         }
 
