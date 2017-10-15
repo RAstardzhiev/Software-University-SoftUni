@@ -28,5 +28,7 @@ namespace _1.Code_First_Student_System
         public virtual DbSet<Picture> Pictures { get; set; }
 
         public virtual DbSet<Album> Albums { get; set; }
+
+        public virtual DbSet<Tag> Tags { get; set; }
     }
 }

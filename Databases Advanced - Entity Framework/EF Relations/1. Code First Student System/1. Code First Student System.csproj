@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201710151320303_AddedAlbumsAndPictures.Designer.cs">
       <DependentUpon>201710151320303_AddedAlbumsAndPictures.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710151858395_AddedTags.cs" />
+    <Compile Include="Migrations\201710151858395_AddedTags.Designer.cs">
+      <DependentUpon>201710151858395_AddedTags.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Homework.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710151320303_AddedAlbumsAndPictures.resx">
       <DependentUpon>201710151320303_AddedAlbumsAndPictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710151858395_AddedTags.resx">
+      <DependentUpon>201710151858395_AddedTags.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

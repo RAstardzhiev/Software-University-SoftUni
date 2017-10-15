@@ -38,5 +38,7 @@
         public virtual Photographer Photographer { get; set; }
 
         public virtual ICollection<Picture> Pictures { get; set; }
+
+        public virtual ICollection<Tag> Tags { get; set; }
     }
 }
