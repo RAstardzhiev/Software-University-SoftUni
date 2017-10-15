@@ -12,7 +12,7 @@ namespace _1.Code_First_Student_System.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 25),
+                        Name = c.String(nullable: false, maxLength: 20),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true);

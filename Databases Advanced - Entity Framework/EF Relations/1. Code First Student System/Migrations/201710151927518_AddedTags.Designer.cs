@@ -13,7 +13,7 @@ namespace _1.Code_First_Student_System.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201710151858395_AddedTags"; }
+            get { return "201710151927518_AddedTags"; }
         }
         
         string IMigrationMetadata.Source

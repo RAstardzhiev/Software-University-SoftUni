@@ -9,9 +9,11 @@
 
         private Tag()
         {
+            this.Albums = new HashSet<Album>();
         }
 
         public Tag(string name)
+            : this()
         {
             Name = name;
         }
@@ -19,7 +21,7 @@
         public int Id { get; set; }
 
         [Required]
-        [StringLength(25)]
+        [StringLength(20)]
         public string Name
         {
             get

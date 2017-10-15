@@ -11,6 +11,7 @@ namespace _1.Code_First_Student_System.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = false;
         }
 
         protected override void Seed(StudentSystemContext context)

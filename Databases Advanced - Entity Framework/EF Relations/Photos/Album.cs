@@ -9,6 +9,7 @@
         private Album()
         {
             this.Pictures = new HashSet<Picture>();
+            this.Tags = new HashSet<Tag>();
         }
 
         public Album(string name, string backgroundColor, bool isPublic)
@@ -31,11 +32,8 @@
 
         [Required]
         public bool IsPublic { get; set; }
-        
-        [ForeignKey("Photographer")]
-        public int PhotographerOwnerId { get; set; }
 
-        public virtual Photographer Photographer { get; set; }
+        public virtual ICollection<Photographer> Photographers { get; set; }
 
         public virtual ICollection<Picture> Pictures { get; set; }
 
