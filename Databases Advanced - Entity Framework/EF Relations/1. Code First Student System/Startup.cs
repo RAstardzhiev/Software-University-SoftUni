@@ -4,7 +4,10 @@
     {
         public static void Main()
         {
-
+            using (var context = new StudentSystemContext())
+            {
+                context.Database.Initialize(true);
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Homework
     {
@@ -9,18 +10,19 @@
         {
         }
 
-        public Homework(string contentPath, string contentType, DateTime submissionDate, int studentId)
+        public Homework(string contentPath, string contentType, DateTime submissionDate, Student student)
         {
             this.ContentPath = contentPath;
             this.ContentType = contentType;
             this.SubmissionDate = submissionDate;
-            this.StudentId = studentId;
+            this.Student = student;
         }
 
         public int Id { get; set; }
 
         [Required]
         [StringLength(100)]
+        [Index(IsUnique = true)]
         public string ContentPath { get; set; }
 
         [Required]
@@ -28,7 +30,7 @@
         public string ContentType { get; set; }
 
         [Required]
-        public DateTime SubmissionDate { get; set; }
+        public DateTime? SubmissionDate { get; set; }
 
         public int StudentId { get; set; }
 

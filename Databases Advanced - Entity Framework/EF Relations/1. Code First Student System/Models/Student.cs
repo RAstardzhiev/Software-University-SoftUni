@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Student
     {
@@ -22,16 +23,18 @@
 
         [Required]
         [StringLength(50)]
+        [Index("IX_Name_phoneNumber", 1, IsUnique = true)]
         public string Name { get; set; }
 
         [MinLength(10)]
         [MaxLength(20)]
+        [Index("IX_Name_phoneNumber", 2, IsUnique = true)]
         public string PhoneNumber { get; set; }
 
         [Required]
-        public DateTime RegistrationDate { get; private set; }
+        public DateTime? RegistrationDate { get; private set; }
 
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
 
         public virtual ICollection<Course> Cources { get; set; }
     }

@@ -1,6 +1,7 @@
 ﻿namespace _1.Code_First_Student_System.Models
 {
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Resource
     {
@@ -27,6 +28,7 @@
 
         [Required]
         [StringLength(100)]
+        [Index(IsUnique = true)]
         public string Url { get; set; }
     }
 }
