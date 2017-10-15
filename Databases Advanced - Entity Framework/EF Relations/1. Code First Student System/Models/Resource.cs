@@ -1,5 +1,6 @@
 ﻿namespace _1.Code_First_Student_System.Models
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,6 +8,7 @@
     {
         private Resource()
         {
+            this.Licenses = new HashSet<License>();
         }
 
         public Resource(string name, string resourceType, string url)
@@ -30,5 +32,7 @@
         [StringLength(100)]
         [Index(IsUnique = true)]
         public string Url { get; set; }
+
+        public virtual ICollection<License> Licenses { get; set; }
     }
 }

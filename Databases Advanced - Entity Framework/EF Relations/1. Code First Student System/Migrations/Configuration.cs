@@ -2,8 +2,9 @@ namespace _1.Code_First_Student_System.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    using Models;
     using System.Linq;
+    using Models;
+    using Photos;
 
     internal sealed class Configuration : DbMigrationsConfiguration<StudentSystemContext>
     {
@@ -13,6 +14,56 @@ namespace _1.Code_First_Student_System.Migrations
         }
 
         protected override void Seed(StudentSystemContext context)
+        {
+            this.MainModelsSeed(context);
+            this.PhotographersSeed(context);
+            this.PhotosSeed(context);
+        }
+
+        private void PhotosSeed(StudentSystemContext context)
+        {
+            if (context.Albums.Count() > 0)
+            {
+                return;
+            }
+
+            var firstPic = new Picture("One", "First Pic", @"..\..\Pics\First pic.jpg");
+            var secondPic = new Picture("Two", "Second Pic", @"..\..\Pics\Second pic.jpg");
+            var thirdPic = new Picture("Three", "Third Pic", @"..\..\Pics\Third pic.jpg");
+            var fourthPic = new Picture("Four", "Fourth Pic", @"..\..\Pics\Fourth pic.jpg");
+            var fifthPic = new Picture("Five", "Fifth Pic", @"..\..\Pics\Fifth pic.jpg");
+
+            foreach (var photographer in context.Photographers.Take(10))
+            {
+                var album = new Album($"{photographer.UserName}'s Album", "Red", true);
+                album.Pictures.Add(firstPic);
+                album.Pictures.Add(secondPic);
+                album.Pictures.Add(thirdPic);
+                album.Pictures.Add(fourthPic);
+                album.Pictures.Add(fifthPic);
+
+                photographer.Albums.Add(album);
+            }
+
+            context.SaveChanges();
+        }
+
+        private void PhotographersSeed(StudentSystemContext context)
+        {
+            if (context.Photographers.Count() > 0)
+            {
+                return;
+            }
+
+            var pOne = new Photographer("PhotoSnake", "ksksksks555", "PhotoSnake@abv.bg");
+            var pTwo = new Photographer("PhotoFreak", "ihjbsdfjsd", "sdjfbsdikjbkg@abv.bg");
+            var pThree = new Photographer("PhotoMania", "sdggdasfgdfh", "sdgfsdgdfgdf@abv.bg");
+
+            context.Photographers.AddOrUpdate(new[] { pOne, pTwo, pThree });
+            context.SaveChanges();
+        }
+
+        private void MainModelsSeed(StudentSystemContext context)
         {
             if (context.Courses.Count() > 0)
             {

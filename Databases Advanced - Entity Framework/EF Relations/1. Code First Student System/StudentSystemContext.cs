@@ -3,6 +3,7 @@ namespace _1.Code_First_Student_System
     using System.Data.Entity;
     using Models;
     using Migrations;
+    using Photos;
 
     public class StudentSystemContext : DbContext
     {
@@ -19,5 +20,13 @@ namespace _1.Code_First_Student_System
         public virtual DbSet<Resource> Resources { get; set; }
 
         public virtual DbSet<Homework> Homeworks { get; set; }
+
+        public virtual DbSet<License> Licenses { get; set; }
+
+        public virtual DbSet<Photographer> Photographers { get; set; }
+
+        public virtual DbSet<Picture> Pictures { get; set; }
+
+        public virtual DbSet<Album> Albums { get; set; }
     }
 }
