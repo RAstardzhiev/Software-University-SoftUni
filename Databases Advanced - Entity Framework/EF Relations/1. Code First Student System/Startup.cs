@@ -7,6 +7,10 @@
             using (var context = new StudentSystemContext())
             {
                 context.Database.Initialize(true);
+                /*
+                 * Next:
+                 * 10.	**Photographer Roles
+                 */
             }
         }
     }
