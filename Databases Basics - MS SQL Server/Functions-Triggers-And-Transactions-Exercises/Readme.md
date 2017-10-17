@@ -335,6 +335,8 @@
 <p>You may set <strong>ManagerID</strong> column in Departments table to <strong>nullable</strong> (using query "ALTER TABLE &hellip;").</p>
 <h2>Problem 9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Employees with Three Projects</h2>
 <p>Create a procedure <strong>usp_AssignProject(@emloyeeId, @projectID)</strong> that <strong>assigns</strong> <strong>projects</strong> to employee. If the employee has more than <strong>3</strong> project throw <strong>exception</strong> and <strong>rollback</strong> the changes. The exception message must be: "<strong>The employee has too many projects!</strong>" with Severity = 16, State = 1.</p>
+<h2>Problem 9.1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Delete Employees</h2>
+<p>Create a table Deleted_Employees(EmployeeId PK, FirstName, LastName, MiddleName, JobTitle, DepartmentId, Salary) that will hold information about fired(deleted) employees from the <strong>Employees</strong> table. Add a trigger to <strong>Employees</strong> table that inserts the corresponding information about the deleted records in Deleted_Employees.</p>
 <h1>PART II &ndash; Queries for Bank Database</h1>
 <h2>Problem 10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Find Full Name</h2>
 <p>You are given a database schema with tables <strong>AccountHolders(Id (PK), FirstName, LastName, SSN)</strong> and <strong>Accounts(Id (PK), AccountHolderId (FK), Balance)</strong>.&nbsp; Write a stored procedure <strong>usp_GetHoldersFullName</strong> that selects the full names of all people. Submit your query statement as Run skeleton, run queries &amp; check DB in Judge.</p>
