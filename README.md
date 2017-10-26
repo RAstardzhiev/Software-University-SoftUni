@@ -76,6 +76,8 @@ Radoslav Astardzhiev
 <td width="50%">
 <p><a title="Washing Machine Service" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Basics%20-%20MS%20SQL%20Server/Exam%20Preparation/Databases%20MSSQL%20Server%20Exam%20-%2024%20April%202017" target="_blank">Washing Machine Service</a></p>
 </td>
+<td colspan="2" width="50%">
+</td>
 <tr>
 </tbody>
 </table>
