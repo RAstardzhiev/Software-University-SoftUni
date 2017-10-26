@@ -78,7 +78,7 @@ Radoslav Astardzhiev
 </td>
 <td colspan="2" width="50%">
 </td>
-<tr>
+</tr>
 </tbody>
 </table>
 <hr />
