@@ -4,6 +4,7 @@
     using System.Data.SqlClient;
     using System.IO;
     using System.Linq;
+    using System.Text;
 
     public class Exercises
     {
@@ -20,6 +21,8 @@
         private const string SelectVillainIdByNameFilePath = @"SQL/SelectVillainIdByName.sql";
         private const string InsertVillainFilePath = @"SQL/InsertVillain.sql";
         private const string AddMinionToVillainFilePath = @"SQL/AddMinionToVillain.sql";
+        private const string UpdateTownsNamesByCountryFilePath = @"SQL/UpdateTownsNamesByCountry.sql";
+        private const string SelectTownsNamesFromCountryFilePath = @"SQL/SelectTownsNamesFromCountry.sql";
 
         internal void InitialSetup(string connectionString) // 1. Initial Setup
         {
@@ -98,6 +101,67 @@
                     transaction.Rollback();
                 }
             }
+        }
+
+        internal void ChangeTownNamesCasing(string minionsDBConnectionString) // 5. Change Town Names Casing
+        {
+            var affectedRows = 0;
+            var countryName = Console.ReadLine();
+            using (var connection = new SqlConnection(minionsDBConnectionString))
+            {
+                connection.Open();
+                var cmdText = File.ReadAllText(UpdateTownsNamesByCountryFilePath);
+                using (var command = new SqlCommand(cmdText, connection))
+                {
+                    command.Parameters.AddWithValue("@countryName", countryName);
+                    affectedRows = command.ExecuteNonQuery();
+                }
+
+                if (affectedRows > 0)
+                {
+                    Console.WriteLine($"{affectedRows} town names were affected.");
+                    this.PrintTownsnamesFromCountry(connection, countryName);
+                }
+                else
+                {
+                    Console.WriteLine("No town names were affected.");
+                }
+            }
+        }
+
+        internal void RemoveVillain(string minionsDBConnectionString) // 6. *Remove Villain 
+        {
+            throw new NotImplementedException();
+        }
+
+        private void PrintTownsnamesFromCountry(SqlConnection connection, string countryName)
+        {
+            var towns = string.Empty;
+            var cmdText = File.ReadAllText(SelectTownsNamesFromCountryFilePath);
+            using (var command = new SqlCommand(cmdText, connection))
+            {
+                command.Parameters.AddWithValue("@countryName", countryName);
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        var sb = new StringBuilder();
+                        sb.Append("[");
+
+                        while (reader.Read())
+                        {
+                            sb.Append($"{reader[0]}, ");
+                        }
+
+                        towns = sb
+                            .Remove(sb.Length - 2, 2)
+                            .Append("]")
+                            .ToString();
+                    }
+                }
+            }
+
+            Console.WriteLine(towns);
         }
 
         private void AddMinionToVillain(SqlConnection connection, SqlTransaction transaction, int minionId, int villainId)

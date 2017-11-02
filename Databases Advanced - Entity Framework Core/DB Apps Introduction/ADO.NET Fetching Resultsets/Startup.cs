@@ -32,7 +32,9 @@
             // exercises.InitialSetup(InitialConnectionString); // 1. Initial Setup
             // exercises.VillainNames(MinionsDBConnectionString); // 2. Villain Names
             // exercises.MinionNames(MinionsDBConnectionString); // 3. Minion Names
-            exercises.AddMinion(MinionsDBConnectionString); // 4. Add Minion
+            // exercises.AddMinion(MinionsDBConnectionString); // 4. Add Minion
+            // exercises.ChangeTownNamesCasing(MinionsDBConnectionString); // 5. Change Town Names Casing
+            exercises.RemoveVillain(MinionsDBConnectionString); // 6. *Remove Villain 
         }
     }
 }
