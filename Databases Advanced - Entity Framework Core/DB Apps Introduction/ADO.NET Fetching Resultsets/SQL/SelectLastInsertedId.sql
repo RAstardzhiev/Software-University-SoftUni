@@ -1,0 +1,1 @@
+﻿SELECT IDENT_CURRENT(@tableName);
