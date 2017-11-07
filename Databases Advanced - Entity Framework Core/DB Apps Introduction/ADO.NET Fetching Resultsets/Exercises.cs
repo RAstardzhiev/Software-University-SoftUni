@@ -131,7 +131,7 @@
 
         internal void RemoveVillain(string minionsDBConnectionString) // 6. *Remove Villain 
         {
-            throw new NotImplementedException();
+             throw new NotImplementedException();
         }
 
         private void PrintTownsnamesFromCountry(SqlConnection connection, string countryName)
