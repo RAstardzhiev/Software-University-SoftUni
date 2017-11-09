@@ -2,6 +2,6 @@
 {
     public class DbConfiguration
     {
-        public string ConnectionString { get; set; } = @"Server=DESKTOP-5FMQC2G\SQLEXPRESS;Database=SoftUni;Integrated Security=True;";
+        public const string ConnectionString = @"Server=DESKTOP-5FMQC2G\SQLEXPRESS;Database=SoftUni;Integrated Security=True;";
     }
 }

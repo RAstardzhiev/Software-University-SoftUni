@@ -14,20 +14,23 @@
         {
         }
 
-        public DbConfiguration Configuration { get; set; } = new DbConfiguration();
-
         public virtual DbSet<Address> Addresses { get; set; }
+
         public virtual DbSet<Department> Departments { get; set; }
+
         public virtual DbSet<Employee> Employees { get; set; }
+
         public virtual DbSet<EmployeeProject> EmployeesProjects { get; set; }
+
         public virtual DbSet<Project> Projects { get; set; }
+
         public virtual DbSet<Town> Towns { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(this.Configuration.ConnectionString);
+                optionsBuilder.UseSqlServer(DbConfiguration.ConnectionString);
             }
         }
 
