@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital_Startup", "Hospita
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalDatabaseInitializer", "HospitalDatabaseInitializer\HospitalDatabaseInitializer.csproj", "{CF2931FB-0AC0-4246-9A89-960FB34C5D16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_SalesDatabase", "P03_SalesDatabase\P03_SalesDatabase.csproj", "{C5CF4200-A1D3-41B3-8D85-A303AABB9252}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_SalesDatabase", "P03_SalesDatabase\P03_SalesDatabase.csproj", "{C5CF4200-A1D3-41B3-8D85-A303AABB9252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales_Startup", "Sales_Startup\Sales_Startup.csproj", "{93AB5DB9-45F6-445F-81B0-EBE33EE42128}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C5CF4200-A1D3-41B3-8D85-A303AABB9252}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5CF4200-A1D3-41B3-8D85-A303AABB9252}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5CF4200-A1D3-41B3-8D85-A303AABB9252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93AB5DB9-45F6-445F-81B0-EBE33EE42128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93AB5DB9-45F6-445F-81B0-EBE33EE42128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93AB5DB9-45F6-445F-81B0-EBE33EE42128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93AB5DB9-45F6-445F-81B0-EBE33EE42128}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

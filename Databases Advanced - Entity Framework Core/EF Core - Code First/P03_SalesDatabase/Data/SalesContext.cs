@@ -43,6 +43,12 @@
                     .IsUnicode(true)
                     .IsRequired(true);
 
+                entity.Property(e => e.Description)
+                    .HasMaxLength(250)
+                    .IsUnicode(true)
+                    .IsRequired(true)
+                    .HasDefaultValue("No description");
+
                 entity.Property(e => e.Quantity)
                     .IsRequired(true);
 
@@ -79,7 +85,7 @@
                 entity.HasKey(e => e.SaleId);
 
                 entity.Property(e => e.Date)
-                    .IsRequired(false)
+                    .IsRequired(true)
                     .HasDefaultValueSql("GETDATE()");
 
                 entity.Property(e => e.ProductId)
