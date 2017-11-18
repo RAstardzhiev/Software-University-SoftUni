@@ -79,7 +79,9 @@
                  * Due to the Anonymous Object produced by the select in PayBills(...), all instances are
                  * in a Detached state from the change tracker. 
                  */
-                context.Entry(card).State = EntityState.Modified;
+
+                // context.Entry(card).State = EntityState.Modified; // Will send aquery updating all the Entity's fields
+                context.Entry(card).State = EntityState.Unchanged;
 
                 if (card.LimitLeft >= amount)
                 {
@@ -100,7 +102,9 @@
                 * Due to the Anonymous Object produced by the select in PayBills(...), all instances are
                 * in a Detached state from the change tracker. 
                 */
-                context.Entry(account).State = EntityState.Modified;
+
+                // context.Entry(account).State = EntityState.Modified; // Will send aquery updating all the Entity's fields
+                context.Entry(account).State = EntityState.Unchanged;
 
                 if (account.Balance >= amount)
                 {
