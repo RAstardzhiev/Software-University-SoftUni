@@ -28,8 +28,37 @@
                 // Console.WriteLine(CountCopiesByAuthor(context)); // 11. Total Book Copies
                 // Console.WriteLine(GetTotalProfitByCategory(context)); // 12. Profit by Category
                 // Console.WriteLine(GetMostRecentBooks(context)); // 13. Most Recent Books
-                 // 14. Increase Prices
+                // Console.WriteLine(IncreasePrices(context)); // 14. Increase Prices
+                Console.WriteLine(RemoveBooks(context)); // 15. Remove Books
             }
+        }
+
+        public static int RemoveBooks(BookShopContext context, int lessThanCopies = 4200)
+        {
+            var books = context.Books
+                    .Where(b => b.Copies < lessThanCopies)
+                    .ToArray();
+
+            var removedBooks = books.Length;
+
+            context.Books.RemoveRange(books);
+            context.SaveChanges();
+
+            return removedBooks;
+        }
+
+        public static int IncreasePrices(BookShopContext context, decimal increasement = 5, int yearTopBorder = 2010)
+        {
+            var books = context.Books
+                .Where(b => b.ReleaseDate != null && b.ReleaseDate.Value.Year < yearTopBorder)
+                .ToArray();
+
+            foreach (var book in books)
+            {
+                book.Price += increasement;
+            }
+
+            return context.SaveChanges();
         }
 
         public static string GetMostRecentBooks(BookShopContext context)
