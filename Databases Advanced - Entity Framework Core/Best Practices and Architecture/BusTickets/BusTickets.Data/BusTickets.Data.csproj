@@ -6,11 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PhotoShare.Models\PhotoShare.Models.csproj" />
+    <ProjectReference Include="..\BusTickets.Models\BusTickets.Models.csproj" />
   </ItemGroup>
 
 </Project>
