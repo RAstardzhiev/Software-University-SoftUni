@@ -11,7 +11,7 @@
     {
         private EmployeesContext context;
 
-        public AddEmployeeCommand(string[] cmdArgs, EmployeesContext context) 
+        public AddEmployeeCommand(string[] cmdArgs, EmployeesContext context)
             : base(cmdArgs)
         {
             this.context = context;
@@ -33,11 +33,8 @@
             var dto = new EmployeeDto(firstName, lastName, salary);
             var employee = Mapper.Map<Employee>(dto);
 
-            using (this.context)
-            {
-                this.context.Employees.Add(employee);
-                this.context.SaveChanges();
-            }
+            this.context.Employees.Add(employee);
+            this.context.SaveChanges();
         }
     }
 }

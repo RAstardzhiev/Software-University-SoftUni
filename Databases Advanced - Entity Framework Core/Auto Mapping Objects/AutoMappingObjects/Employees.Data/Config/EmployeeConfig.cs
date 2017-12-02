@@ -19,6 +19,10 @@
                 .IsRequired(true)
                 .IsUnicode(true)
                 .HasMaxLength(30);
+
+            builder.HasOne(e => e.Manager)
+                .WithMany(e => e.ManagedEmployees)
+                .HasForeignKey(e => e.ManagerId);
         }
     }
 }

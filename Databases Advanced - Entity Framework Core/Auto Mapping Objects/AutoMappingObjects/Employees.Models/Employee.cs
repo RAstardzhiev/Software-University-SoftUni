@@ -2,6 +2,7 @@
 {
     using System;
     using System.Text;
+    using System.Collections.Generic;
 
     public class Employee
     {
@@ -27,6 +28,11 @@
         public string Address { get; set; }
 
         public DateTime? Birthday { get; set; }
+
+        public int? ManagerId { get; set; }
+        public Employee Manager { get; set; }
+
+        public ICollection<Employee> ManagedEmployees { get; set; }
 
         public override string ToString()
         {

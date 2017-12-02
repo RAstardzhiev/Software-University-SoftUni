@@ -9,6 +9,7 @@
         public MapperProfile()
         {
             CreateMap<EmployeeDto, Employee>();
+            CreateMap<ManagerDto, Employee>();
         }
     }
 }
