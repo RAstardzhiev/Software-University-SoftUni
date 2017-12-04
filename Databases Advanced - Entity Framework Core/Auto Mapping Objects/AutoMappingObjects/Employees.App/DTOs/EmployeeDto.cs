@@ -17,6 +17,6 @@
 
         public decimal Salary { get; set; }
 
-        public override string ToString() => $"ID: {this.Id} - {this.FirstName} {this.LastName} -  ${this.Salary:f2}";
+        public override string ToString() => $"ID: {this.Id} - {this.FirstName} {this.LastName} - ${this.Salary:f2}";
     }
 }

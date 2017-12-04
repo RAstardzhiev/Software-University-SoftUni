@@ -1,15 +1,14 @@
 ﻿namespace Employees.App
 {
-    using System;
-    using System.IO;
     using AutoMapper;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
     using Core;
     using Employees.App.Interfaces;
     using Employees.App.IO;
     using Employees.Data;
+    using Employees.Data.Config;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.DependencyInjection;
+    using System;
 
     public class Startup
     {
@@ -32,6 +31,8 @@
         private static IServiceProvider ConfigureServices()
         {
             var serviceCollection = new ServiceCollection();
+
+            /* JSON ConnectionString
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
@@ -39,6 +40,12 @@
 
             serviceCollection.AddDbContext<EmployeesContext>(options =>
                 options.UseSqlServer(config.GetConnectionString(ConnectionString))
+            );
+             */
+
+            /* Class config ConnectionCtring */
+            serviceCollection.AddDbContext<EmployeesContext>(options =>
+                options.UseSqlServer(DbConfig.ConnectionString)
             );
 
             serviceCollection.AddTransient<IWriter, ConsoleWriter>();
