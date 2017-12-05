@@ -23,25 +23,14 @@
 
         public override void Import()
         {
-            var users = DeserializeJson<User>(UsersJsonFilePath);
-            var products = DeserializeJson<Product>(ProductsJsonFilePath);
-            var categories = DeserializeJson<Category>(CategoriesJsonFilePath);
+            var users = Deserialize<User>(UsersJsonFilePath);
+            var products = Deserialize<Product>(ProductsJsonFilePath);
+            var categories = Deserialize<Category>(CategoriesJsonFilePath);
 
-            this.AssignUsersToProductsw(users, products);
-            var categoriesProducts = this.AddProductsToCategories(products, categories);
-
-            using (this.Context)
-            {
-                this.Context.Users.AddRange(users);
-                this.Context.Products.AddRange(products);
-                this.Context.Categories.AddRange(categories);
-                this.Context.CategoriesProducts.AddRange(categoriesProducts);
-
-                this.Context.SaveChanges();
-            }
+            base.SeedDatabase(users, products, categories);
         }
 
-        protected override TModel[] DeserializeJson<TModel>(string usersJsonFilePath)
+        protected TModel[] Deserialize<TModel>(string usersJsonFilePath)
         {
             var jsonString = File.ReadAllText(usersJsonFilePath);
             var collection = JsonConvert.DeserializeObject<IEnumerable<TModel>>(jsonString)

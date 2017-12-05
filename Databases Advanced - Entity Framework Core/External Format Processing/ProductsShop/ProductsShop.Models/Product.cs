@@ -9,12 +9,12 @@
             this.CategoriesProducts = new HashSet<CategoriesProducts>();
         }
 
-        public Product(string name, decimal price, int sellerId)
+        public Product(string name, decimal price, User seller)
             : this()
         {
             this.Name = name;
             this.Price = price;
-            this.SellerId = sellerId;
+            this.Seller = seller;
         }
 
         public int Id { get; set; }

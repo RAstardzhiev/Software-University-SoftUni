@@ -1,8 +1,8 @@
-﻿namespace ProductsShop.App.DTOs
+﻿namespace ProductsShop.App.DTOs.JsonExport
 {
     using Newtonsoft.Json;
 
-    public class ProductsInRangeDto
+    public class ProductsInRangeSellerDto
     {
         // [JsonIgnore] // Will exclude the property from Json conversion
         [JsonProperty("name")]

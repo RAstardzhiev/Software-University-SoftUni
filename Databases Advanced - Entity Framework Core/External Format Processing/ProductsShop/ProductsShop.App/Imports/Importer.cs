@@ -21,7 +21,21 @@
 
         public abstract void Import();
 
-        protected abstract TModel[] DeserializeJson<TModel>(string filePath);
+        protected void SeedDatabase(User[] users, Product[] products, Category[] categories)
+        {
+            this.AssignUsersToProductsw(users, products);
+            var categoriesProducts = this.AddProductsToCategories(products, categories);
+
+            using (this.Context)
+            {
+                this.Context.Users.AddRange(users);
+                this.Context.Products.AddRange(products);
+                this.Context.Categories.AddRange(categories);
+                this.Context.CategoriesProducts.AddRange(categoriesProducts);
+
+                this.Context.SaveChanges();
+            }
+        }
 
         protected HashSet<CategoriesProducts> AddProductsToCategories(Product[] products, Category[] categories)
         {
@@ -31,7 +45,9 @@
             {
                 var category = categories[this.random.Next(0, categories.Length)];
                 var product = products[i];
+
                 var mapping = new CategoriesProducts(category, product);
+
                 categoriesProducts.Add(mapping);
 
                 var isThereFurtherCategories = this.random.Next() % 2 == 0;

@@ -1,4 +1,4 @@
-﻿namespace ProductsShop.App.DTOs
+﻿namespace ProductsShop.App.DTOs.JsonExport
 {
     using System.Collections.Generic;
     using Newtonsoft.Json;
