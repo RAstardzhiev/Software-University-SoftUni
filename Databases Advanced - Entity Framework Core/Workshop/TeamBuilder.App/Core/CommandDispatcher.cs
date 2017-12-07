@@ -14,15 +14,18 @@
         private const string InvalidCommandNameExceptionMessage = "Command {0} not valid!";
 
         private Type[] commands;
+        private IUserSession session;
 
-        public CommandDispatcher()
+        public CommandDispatcher(IUserSession session)
         {
             this.commands = this.GetCommandTypes();
+            this.session = session;
         }
 
-        public CommandDispatcher(Type[] commandTypes)
+        public CommandDispatcher(Type[] commandTypes, IUserSession session)
         {
             this.commands = commandTypes;
+            this.session = session;
         }
 
         public TCommand InstantiateCommand(string cmdName, params string[] cmdParameters)
@@ -33,10 +36,10 @@
 
             if (cmdType == null)
             {
-                throw new ArgumentException(string.Format(InvalidCommandNameExceptionMessage, cmdName.Replace(CommandSuffix, string.Empty)));
+                throw new NotSupportedException(string.Format(InvalidCommandNameExceptionMessage, cmdName.Replace(CommandSuffix, string.Empty)));
             }
 
-            return (TCommand)Activator.CreateInstance(cmdType, new object[] { cmdParameters });
+            return (TCommand)Activator.CreateInstance(cmdType, new object[] { cmdParameters, this.session });
         }
 
         private Type[] GetCommandTypes()

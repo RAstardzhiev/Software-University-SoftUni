@@ -1,5 +1,6 @@
 ﻿namespace TeamBuilder.App.Commands
 {
+    using Microsoft.EntityFrameworkCore;
     using System;
     using System.Linq;
     using TeamBuilder.App.Commands.Abstractions;
@@ -14,6 +15,7 @@
 
         private const string TeamNotExistExceptionMessage = "Team {0} not found!";
         private const string MissingInvitationExceptionMessage = "Invite from {0} is not found!";
+        private const string AlreadyMemberExceptionMessage = "You are already a member of team {0}! Invitation not found.";
 
         public AcceptInviteCommand(string[] cmdArgs, IUserSession session) 
             : base(cmdArgs, session)
@@ -28,6 +30,11 @@
 
             var teamName = this.CmdArgs[0];
             var team = this.GetTeam(context, teamName);
+
+            if (team.TeamUsers.Any(tu => tu.UserId == this.Session.User.Id))
+            {
+                throw new ArgumentException(string.Format(AlreadyMemberExceptionMessage, teamName));
+            }
 
             var invitaition = context.Invitations
                 .SingleOrDefault(i => i.TeamId == team.Id && i.InvitedUserId == this.Session.User.Id);
@@ -53,6 +60,7 @@
         private Team GetTeam(TeamBuilderContext context, string teamName)
         {
             var team = context.Teams
+                .Include(t => t.TeamUsers)
                 .SingleOrDefault(t => t.Name.Equals(teamName, StringComparison.OrdinalIgnoreCase));
 
             if (team == null)

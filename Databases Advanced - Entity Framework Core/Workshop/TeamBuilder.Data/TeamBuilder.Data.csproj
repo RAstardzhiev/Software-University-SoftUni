@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Compile Remove="Migrations\20171206090033_Initial.cs" />
+    <Compile Remove="Migrations\20171207084920_Initial.cs" />
+    <Compile Remove="Migrations\20171207104302_Initial.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,10 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TeamBuilder.Models\TeamBuilder.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -33,8 +33,13 @@
             var username = this.CmdArgs[1];
             var teamName = this.CmdArgs[0];
 
-            this.AssureUserExists(context, username);
-            var team = this.GetTeam(context, teamName, username);
+            if (this.Session.User.Username.Equals(username, StringComparison.OrdinalIgnoreCase))
+            {
+                throw new InvalidOperationException(NotAllowedExistExceptionMessage);
+            }
+
+            var user = this.AssureUserExists(context, username);
+            var team = this.GetTeam(context, teamName, user);
 
             var mapping = team.TeamUsers.First();
             context.Remove(mapping);
@@ -43,16 +48,10 @@
             return string.Format(Success, username, teamName);
         }
 
-        private Team GetTeam(TeamBuilderContext context, string teamName, string username)
+        private Team GetTeam(TeamBuilderContext context, string teamName, User user)
         {
-            if (this.Session.User.Username.Equals(username, StringComparison.OrdinalIgnoreCase))
-            {
-                throw new InvalidOperationException(KikCreatorExistExceptionMessage);
-            }
-
             var team = context.Teams
-                .Include(t => t.TeamUsers
-                    .Where(tu => tu.User.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
+                .Include(t => t.TeamUsers)
                 .SingleOrDefault(t => t.Name.Equals(teamName, StringComparison.OrdinalIgnoreCase));
 
             if (team == null)
@@ -62,26 +61,32 @@
 
             if (team.CreatorId != this.Session.User.Id)
             {
-                throw new InvalidOperationException(NotAllowedExistExceptionMessage);
+                throw new InvalidOperationException(KikCreatorExistExceptionMessage);
             }
 
-            if (team.TeamUsers == null)
+            team.TeamUsers = team.TeamUsers
+                .Where(tu => tu.UserId == user.Id)
+                .ToList();
+
+            if (team.TeamUsers == null || team.TeamUsers.Count == 0)
             {
-                throw new ArgumentException(string.Format(NotAMemberExceptionMessage, username, teamName));
+                throw new ArgumentException(string.Format(NotAMemberExceptionMessage, user.Username, teamName));
             }
 
             return team;
         }
 
-        private void AssureUserExists(TeamBuilderContext context, string username)
+        private User AssureUserExists(TeamBuilderContext context, string username)
         {
-            var isUserFound = context.Users
-                .Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
+            var user = context.Users
+                .SingleOrDefault(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
 
-            if (!isUserFound)
+            if (user == null)
             {
                 throw new ArgumentException(string.Format(UserNotFoundExistExceptionMessage, username));
             }
+
+            return user;
         }
     }
 }

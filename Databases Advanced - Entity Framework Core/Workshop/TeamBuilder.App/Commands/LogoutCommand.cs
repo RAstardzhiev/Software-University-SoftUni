@@ -1,5 +1,6 @@
 ﻿namespace TeamBuilder.App.Commands
 {
+    using System;
     using TeamBuilder.App.Commands.Abstractions;
     using TeamBuilder.App.Interfaces;
     using TeamBuilder.Data;
@@ -15,6 +16,11 @@
 
         public override string Execute(TeamBuilderContext context)
         {
+            if (this.CmdArgs != null && this.CmdArgs.Length > 0)
+            {
+                throw new ArgumentException(InvalidCommandArgsExceptionMessage);
+            }
+
             base.MustBeLoggedIn();
             var username = this.Session.User.Username;
             this.Session.LogOut();

@@ -15,6 +15,7 @@
 
         private const string TeamNotFoundExceptionMessage = "Team {0} not found!";
         private const string MissingInvitationExceptionMessage = "You are not invated in team {0}!";
+        private const string AlreadyMemberExceptionMessage = "You are already a member of team {0}! Invitation not found.";
 
         public DeclineInviteCommand(string[] cmdArgs, IUserSession session) 
             : base(cmdArgs, session)
@@ -30,7 +31,12 @@
             var teamName = this.CmdArgs[0];
             var team = this.GetTeam(context, teamName);
 
-            if (team.Invitations == null)
+            if (team.TeamUsers.Any(tu => tu.UserId == this.Session.User.Id))
+            {
+                throw new ArgumentException(string.Format(AlreadyMemberExceptionMessage, teamName));
+            }
+
+            if (team.Invitations == null || team.Invitations.Count == 0)
             {
                 throw new ArgumentException(string.Format(MissingInvitationExceptionMessage, teamName));
             }
@@ -45,8 +51,8 @@
         private Team GetTeam(TeamBuilderContext context, string teamName)
         {
             var team = context.Teams
-                .Include(t => t.Invitations
-                    .Where(i => i.InvitedUserId == this.Session.User.Id && i.IsActive == true))
+                .Include(t => t.Invitations)
+                .Include(t => t.TeamUsers)
                 .SingleOrDefault(t => t.Name.Equals(teamName, StringComparison.OrdinalIgnoreCase));
 
             if (team == null)

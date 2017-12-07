@@ -6,7 +6,7 @@
 
     public abstract class Command : ICommand
     {
-        private const string InvalidCommandArgsExceptionMessage = "Invalid command arguments!";
+        protected const string InvalidCommandArgsExceptionMessage = "Invalid arguments count!";
         private const string LogOutFirstExceptionMessage = "You should logout first!";
         private const string LogInFirstExceptionMessage = "You should login first!";
 
@@ -26,7 +26,7 @@
         {
             if (this.CmdArgs == null || this.CmdArgs.Length != argsExactLength)
             {
-                throw new ArgumentException(InvalidCommandArgsExceptionMessage);
+                throw new FormatException(InvalidCommandArgsExceptionMessage);
             }
         }
 
@@ -34,7 +34,7 @@
         {
             if (this.CmdArgs == null || this.CmdArgs.Length < minLength)
             {
-                throw new ArgumentException(InvalidCommandArgsExceptionMessage);
+                throw new FormatException(InvalidCommandArgsExceptionMessage);
             }
         }
 
@@ -42,7 +42,7 @@
         {
             if (this.Session.IsLoggedIn)
             {
-                throw new InvalidOperationException(LogInFirstExceptionMessage);
+                throw new InvalidOperationException(LogOutFirstExceptionMessage);
             }
         }
 
@@ -50,7 +50,7 @@
         {
             if (!this.Session.IsLoggedIn)
             {
-                throw new InvalidOperationException(LogOutFirstExceptionMessage);
+                throw new InvalidOperationException(LogInFirstExceptionMessage);
             }
         }
 

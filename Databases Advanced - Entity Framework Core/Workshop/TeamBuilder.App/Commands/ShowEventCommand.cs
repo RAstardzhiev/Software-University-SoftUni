@@ -26,7 +26,24 @@
             base.CmdArgsExactLengthValidation(ArgsExactLength);
 
             var eventName = this.CmdArgs[0];
-            var @event = this.GetEvent(context, eventName);
+            var currentDate = DateTime.Now;
+            var @event = context.Events
+                .Select(e => new
+                {
+                    e.Name, 
+                    e.StartDate, 
+                    e.EndDate, 
+                    e.Description,
+                    Teams = e.EventTeams.Select(et => et.Team.Name)
+                })
+                .Where(e => e.StartDate != null)
+                .OrderByDescending(e => e.StartDate)
+                .FirstOrDefault(e => e.Name.Equals(eventName, StringComparison.OrdinalIgnoreCase));
+
+            if (@event == null)
+            {
+                throw new ArgumentException(string.Format(EventNotFoundExceptionMessage, eventName));
+            }
 
             var sb = new StringBuilder();
             sb.AppendLine($"{@event.Name} {@event.StartDate} {@event?.EndDate}");
@@ -37,29 +54,12 @@
             }
 
             sb.AppendLine("Teams:");
-            foreach (var name in @event.EventTeams.Select(et => et.Team.Name))
+            foreach (var name in @event.Teams)
             {
                 sb.AppendLine($"-{name}");
             }
 
             return sb.ToString().TrimEnd();
-        }
-
-        private Event GetEvent(TeamBuilderContext context, string eventName)
-        {
-            var currentDate = DateTime.Now;
-            var @event = context.Events
-                .Include(e => e.EventTeams)
-                .Where(e => e.StartDate != null)
-                .OrderBy(e => (e.StartDate.Value - currentDate).Days)
-                .FirstOrDefault(e => e.Name.Equals(eventName, StringComparison.OrdinalIgnoreCase));
-
-            if (@event == null)
-            {
-                throw new ArgumentException(string.Format(EventNotFoundExceptionMessage, eventName));
-            }
-
-            return @event;
         }
     }
 }

@@ -11,7 +11,7 @@
     class InviteToTeamCommand : Command
     {
         private const string Success = "Team {0} invited {1}!";
-        private const string AddedToTeam = "Team {0} added {1}!";
+        private const string AddedToTeam = "User {0} joined team {1}!";
         private const int ArgsExactLength = 2;
 
         private const string EntityDoesNotExistExceptionMessage = "Team or user does not exist!";
@@ -45,7 +45,7 @@
                 context.UsersTeams.Add(mapping);
                 context.SaveChanges();
 
-                return string.Format(AddedToTeam, teamName, username);
+                return string.Format(AddedToTeam, username, teamName);
             }
 
             // If the current user is not creator of the team nor part of it or user to invite is alredy a member

@@ -32,8 +32,8 @@
             var eventName = this.CmdArgs[0];
             var teamName = this.CmdArgs[1];
 
-            var @event = this.GetEvent(context, eventName, teamName);
             var team = this.GetTem(context, teamName);
+            var @event = this.GetEvent(context, eventName, team);
 
             var mapping = new TeamEvent();
             mapping.Event = @event;
@@ -58,7 +58,7 @@
             return team;
         }
 
-        private Event GetEvent(TeamBuilderContext context, string eventName, string teamName)
+        private Event GetEvent(TeamBuilderContext context, string eventName, Team team)
         {
             var @event = context.Events
                 .Include(e => e.EventTeams)
@@ -75,10 +75,12 @@
                 throw new InvalidOperationException(NotCreatorExceptionMessage);
             }
 
-            if (@event.EventTeams.Any(et => et.Team.Name.Equals(teamName, StringComparison.OrdinalIgnoreCase)))
+            if (@event.EventTeams.Any(et => et.TeamId == team.Id))
             {
                 throw new InvalidOperationException(TeamAddedExceptionMessage);
             }
+
+            return @event;
         }
     }
 }

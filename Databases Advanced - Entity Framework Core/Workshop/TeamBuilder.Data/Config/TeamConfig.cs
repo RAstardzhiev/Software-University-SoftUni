@@ -20,7 +20,7 @@
             builder.Property(e => e.Description)
                 .HasMaxLength(Constants.TeamDescriptionMaxLength);
 
-            builder.Property(e => e.Name)
+            builder.Property(e => e.Acronym)
                 .HasMaxLength(Constants.TeamAcronymExactLength)
                 .IsRequired(true);
 
