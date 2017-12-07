@@ -1,10 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
-
-namespace TeamBuilder.Data.Migrations
+﻿namespace TeamBuilder.Data.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Metadata;
+    using Microsoft.EntityFrameworkCore.Migrations;
+    using System;
+
     public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -49,7 +48,7 @@ namespace TeamBuilder.Data.Migrations
                         column: x => x.CreatorId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -93,7 +92,7 @@ namespace TeamBuilder.Data.Migrations
                         column: x => x.InvitedUserId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Invitations_Teams_TeamId",
                         column: x => x.TeamId,
@@ -117,7 +116,7 @@ namespace TeamBuilder.Data.Migrations
                         column: x => x.EventId,
                         principalTable: "Events",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TeamsEvents_Teams_TeamId",
                         column: x => x.TeamId,
@@ -141,7 +140,7 @@ namespace TeamBuilder.Data.Migrations
                         column: x => x.TeamId,
                         principalTable: "Teams",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_UsersTeams_Users_UserId",
                         column: x => x.UserId,

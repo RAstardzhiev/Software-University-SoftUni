@@ -17,8 +17,7 @@
 
             builder.HasOne(e => e.Team)
                 .WithMany(t => t.TeamUsers)
-                .HasForeignKey(e => e.TeamId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(e => e.TeamId);
         }
     }
 }

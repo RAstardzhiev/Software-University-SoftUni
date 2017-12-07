@@ -17,6 +17,7 @@
         private const string EntityDoesNotExistExceptionMessage = "Team or user does not exist!";
         private const string NotAllowedExceptionMessage = "Not allowed!";
         private const string InvitationAlreadySentExceptionMessage = "Invite is already sent!";
+        private const string AlreadyMemberExceptionMessage = "User {0} is already member of team {1}!";
 
         public InviteToTeamCommand(string[] cmdArgs, IUserSession session) 
             : base(cmdArgs, session)
@@ -34,6 +35,12 @@
 
             var invitedUser = this.GetUser(context, username);
             var team = this.GetTeam(context, teamName);
+
+            // If user is already a member
+            if (team.TeamUsers.Any(tu => tu.User.Id == invitedUser.Id))
+            {
+                throw new InvalidOperationException(string.Format(AlreadyMemberExceptionMessage, username, teamName));
+            }
 
             // If current user is Team Creator
             if (team.CreatorId == this.Session.User.Id)

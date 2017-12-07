@@ -20,8 +20,7 @@
 
             builder.HasOne(e => e.Creator)
                 .WithMany(u => u.Events)
-                .HasForeignKey(e => e.CreatorId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(e => e.CreatorId);
         }
     }
 }

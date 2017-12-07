@@ -12,8 +12,7 @@
 
             builder.HasOne(e => e.InvitedUser)
                 .WithMany(u => u.Invitations)
-                .HasForeignKey(e => e.InvitedUserId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(e => e.InvitedUserId);
 
             builder.HasOne(e => e.Team)
                 .WithMany(t => t.Invitations)

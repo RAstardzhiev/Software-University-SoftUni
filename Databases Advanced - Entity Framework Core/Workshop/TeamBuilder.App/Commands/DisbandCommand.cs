@@ -31,10 +31,6 @@
             var teamName = this.CmdArgs[0];
             var team = this.GetTeam(context, teamName);
 
-            context.UsersTeams.Where(tu => tu.TeamId == team.Id).Delete();
-            context.TeamsEvents.Where(te => te.TeamId == team.Id).Delete();
-            context.Invitations.Where(i => i.TeamId == team.Id).Delete();
-
             context.Remove(team);
             context.SaveChanges();
 
