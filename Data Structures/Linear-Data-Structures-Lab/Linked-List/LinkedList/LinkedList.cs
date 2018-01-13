@@ -6,9 +6,8 @@
 
     public class LinkedList<T> : IEnumerable<T>
     {
-        public Node<T> Head { get; set; }
-
-        public Node<T> Tail { get; set; }
+        private Node<T> head;
+        private Node<T> tail;
 
         public int Count { get; private set; }
 
@@ -18,19 +17,19 @@
 
             if (this.Count == 0)
             {
-                this.Tail = this.Head = node;
+                this.tail = this.head = node;
             }
             else if (this.Count == 1)
             {
-                this.Head = node;
-                this.Head.Next = this.Tail;
-                this.Tail.Previous = this.Head;
+                this.head = node;
+                this.head.Next = this.tail;
+                this.tail.Previous = this.head;
             }
             else
             {
-                node.Next = this.Head;
-                this.Head.Previous = node;
-                this.Head = node;
+                node.Next = this.head;
+                this.head.Previous = node;
+                this.head = node;
             }
 
             this.Count++;
@@ -42,19 +41,19 @@
 
             if (this.Count == 0)
             {
-                this.Head = this.Tail = node;
+                this.head = this.tail = node;
             }
             else if (this.Count == 1)
             {
-                this.Tail = node;
-                this.Tail.Previous = this.Head;
-                this.Head.Next = node;
+                this.tail = node;
+                this.tail.Previous = this.head;
+                this.head.Next = node;
             }
             else
             {
-                node.Previous = this.Tail;
-                this.Tail.Next = node;
-                this.Tail = node;
+                node.Previous = this.tail;
+                this.tail.Next = node;
+                this.tail = node;
             }
 
             Count++;
@@ -67,16 +66,16 @@
                 throw new InvalidOperationException();
             }
 
-            var removedItem = this.Head.Value;
+            var removedItem = this.head.Value;
 
             if (this.Count == 1)
             {
-                this.Head = this.Tail = null;
+                this.head = this.tail = null;
             }
             else
             {
-                this.Head = this.Head.Next;
-                this.Head.Previous = null;
+                this.head = this.head.Next;
+                this.head.Previous = null;
             }
 
             this.Count--;
@@ -91,16 +90,16 @@
                 throw new InvalidOperationException();
             }
 
-            var removedItem = this.Tail.Value;
+            var removedItem = this.tail.Value;
 
             if (this.Count == 1)
             {
-                this.Head = this.Tail = null;
+                this.head = this.tail = null;
             }
             else
             {
-                this.Tail = this.Tail.Previous;
-                this.Tail.Next = null;
+                this.tail = this.tail.Previous;
+                this.tail.Next = null;
             }
 
             this.Count--;
@@ -110,7 +109,7 @@
 
         public IEnumerator<T> GetEnumerator()
         {
-            var currentNode = this.Head;
+            var currentNode = this.head;
 
             while (currentNode != null)
             {
