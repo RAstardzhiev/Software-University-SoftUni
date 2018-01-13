@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Procedures>
+  <Procedure>
+    <Passport>acattee321</Passport>
+    <OwnerNumber>0887446123</OwnerNumber>
+    <DateTime>14-01-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Internal Deworming</Name>
+        <Price>8.00</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Nasal Bordetella</Name>
+        <Price>5.60</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>21.1</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>kljsdfk325</Passport>
+    <OwnerNumber>0899446676</OwnerNumber>
+    <DateTime>19-01-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>H3N2</Name>
+        <Price>28.00</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Lyme Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>43</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>ragjkll456</Passport>
+    <OwnerNumber>0897556446</OwnerNumber>
+    <DateTime>29-01-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Nasal Bordetella</Name>
+        <Price>5.60</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Lepto 4</Name>
+        <Price>15.90</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>21.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>barkeer355</Passport>
+    <OwnerNumber>0899450766</OwnerNumber>
+    <DateTime>03-02-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Injectable Bordetella</Name>
+        <Price>8.40</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Canine Heartworm Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>23.4</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>etyhGgH678</Passport>
+    <OwnerNumber>0897556446</OwnerNumber>
+    <DateTime>14-02-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>H3N2</Name>
+        <Price>28.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>28</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>jessiii355</Passport>
+    <OwnerNumber>0887446123</OwnerNumber>
+    <DateTime>23-03-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Canine Rabbies Vaccine</Name>
+        <Price>10.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>10</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>acattee321</Passport>
+    <OwnerNumber>0887446123</OwnerNumber>
+    <DateTime>04-04-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Lyme Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>15</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>bernied355</Passport>
+    <OwnerNumber>0889446123</OwnerNumber>
+    <DateTime>15-04-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Lyme Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>22.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>cleodog355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>25-04-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>H3N8</Name>
+        <Price>30.00</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Bordetella</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>37.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>cleodog355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>12-05-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Internal Deworming</Name>
+        <Price>8.00</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>15.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>jghjyuu355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>14-05-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Nasal Bordetella</Name>
+        <Price>5.60</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Lepto 4</Name>
+        <Price>15.90</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>H3N2</Name>
+        <Price>28.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>49.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>bergerr355</Passport>
+    <OwnerNumber>0887226234</OwnerNumber>
+    <DateTime>05-06-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Internal Deworming</Name>
+        <Price>8.00</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>15.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>arrowww355</Passport>
+    <OwnerNumber>0889650676</OwnerNumber>
+    <DateTime>17-06-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>H3N2</Name>
+        <Price>28.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>28</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>bernied355</Passport>
+    <OwnerNumber>0889446123</OwnerNumber>
+    <DateTime>17-06-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Nasal Bordetella</Name>
+        <Price>5.60</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Lepto 4</Name>
+        <Price>15.90</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>21.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>barkeer355</Passport>
+    <OwnerNumber>0899450766</OwnerNumber>
+    <DateTime>15-07-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Lepto 4</Name>
+        <Price>15.90</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Lyme Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>30.9</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>cleodog355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>17-07-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Canine Rabbies Vaccine</Name>
+        <Price>10.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>17.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>jghjyuu355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>19-07-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>7.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>cleodog355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>22-07-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>H3N8</Name>
+        <Price>30.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>30</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>ragjkll456</Passport>
+    <OwnerNumber>0897556446</OwnerNumber>
+    <DateTime>25-07-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Canine Rabbies Vaccine</Name>
+        <Price>10.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>10</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>cleodog355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>18-08-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Nasal Bordetella</Name>
+        <Price>5.60</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>PureVax Rabies</Name>
+        <Price>7.80</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>13.4</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>jghjyuu355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>19-08-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Injectable Bordetella</Name>
+        <Price>8.40</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>8.4</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>arrowww355</Passport>
+    <OwnerNumber>0889650676</OwnerNumber>
+    <DateTime>04-09-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Lyme Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>22.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>cleodog355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>29-09-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Canine Rabbies Vaccine</Name>
+        <Price>10.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>17.5</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>kljsdfk355</Passport>
+    <OwnerNumber>0889647676</OwnerNumber>
+    <DateTime>07-10-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Lepto 4</Name>
+        <Price>15.90</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Canine Heartworm Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>30.9</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>acattee321</Passport>
+    <OwnerNumber>0887446123</OwnerNumber>
+    <DateTime>22-10-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Lyme Test</Name>
+        <Price>15.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>15</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>cleodog355</Passport>
+    <OwnerNumber>+359897765122</OwnerNumber>
+    <DateTime>27-11-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>H3N8</Name>
+        <Price>30.00</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>30</TotalPrice>
+  </Procedure>
+  <Procedure>
+    <Passport>bergerr355</Passport>
+    <OwnerNumber>0887226234</OwnerNumber>
+    <DateTime>12-12-2016</DateTime>
+    <AnimalAids>
+      <AnimalAid>
+        <Name>Internal Deworming</Name>
+        <Price>8.00</Price>
+      </AnimalAid>
+      <AnimalAid>
+        <Name>Fecal Test</Name>
+        <Price>7.50</Price>
+      </AnimalAid>
+    </AnimalAids>
+    <TotalPrice>15.5</TotalPrice>
+  </Procedure>
+</Procedures>

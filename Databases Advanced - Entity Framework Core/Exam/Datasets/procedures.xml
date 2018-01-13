@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedures>
+    <Procedure>
+        <Vet>Niels Bohr</Vet>
+        <Animal>acattee321</Animal>
+		<DateTime>14-01-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Nasal Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Internal Deworming</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Jennifer Evans</Vet>
+        <Animal>bernied355</Animal>
+		<DateTime>15-04-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Michael Jordan</Vet>
+        <Animal>barkeer355</Animal>
+		<DateTime>03-02-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Injectable Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Canine Heartworm Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>bergerr355</Animal>
+		<DateTime>05-06-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Internal Deworming</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>bergerr355</Animal>
+		<DateTime>12-12-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Internal Deworming</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>arrowww355</Animal>
+		<DateTime>17-06-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>H3N2</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>arrowww355</Animal>
+		<DateTime>04-09-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Jennifer Evans</Vet>
+        <Animal>jessiii355</Animal>
+		<DateTime>23-03-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Canine Rabbies Vaccine</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>barkeer355</Animal>
+		<DateTime>15-07-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Lepto 4</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>jghjyuu355</Animal>
+		<DateTime>19-08-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Injectable Bordetella</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>18-08-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Nasal Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>PureVax Rabies</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Niels Bohr</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>25-04-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>H3N8</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Niels Bohr</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>12-05-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Internal Deworming</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>etyhGgH678</Animal>
+		<DateTime>14-02-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>H3N2</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>bernied355</Animal>
+		<DateTime>17-06-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Nasal Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lepto 4</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>ragjkll456</Animal>
+		<DateTime>25-07-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Canine Rabbies Vaccine</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>22-07-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>H3N8</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>27-11-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>H3N8</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>acattee321</Animal>
+		<DateTime>22-10-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>jessiii355</Animal>
+		<DateTime>03-12-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lepto 4</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Edmond Halley</Vet>
+        <Animal>acattee321</Animal>
+		<DateTime>04-04-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heisenberg</Vet>
+        <Animal>kljsdfk355</Animal>
+		<DateTime>07-10-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Canine Heartworm Test</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lepto 4</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Niels Bohr</Vet>
+        <Animal>kljsdfk325</Animal>
+		<DateTime>19-01-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>H3N2</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Jennifer Evans</Vet>
+        <Animal>ragjkll456</Animal>
+		<DateTime>29-01-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Nasal Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lepto 4</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Jennifer Evans</Vet>
+        <Animal>jghjyuu355</Animal>
+		<DateTime>19-07-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Jennifer Evans</Vet>
+        <Animal>jghjyuu355</Animal>
+		<DateTime>14-05-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Nasal Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lepto 4</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>H3N2</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Niels Bohr</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>17-07-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Canine Rabbies Vaccine</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Niels Bohr</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>29-09-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Canine Rabbies Vaccine</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Victor Bohr</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>07-08-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Canine Rabbies Vaccine</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Fecal Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Niels Bohr</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>17-08-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Canine Vaccine</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+    <Procedure>
+        <Vet>Werner Heinberg</Vet>
+        <Animal>cleodog355</Animal>
+		<DateTime>05-05-2016</DateTime>
+        <AnimalAids>
+            <AnimalAid>
+                <Name>Bordetella</Name>
+            </AnimalAid>
+            <AnimalAid>
+                <Name>Lyme Test</Name>
+            </AnimalAid>
+        </AnimalAids>
+    </Procedure>
+</Procedures>

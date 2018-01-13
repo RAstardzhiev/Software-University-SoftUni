@@ -1,0 +1,16 @@
+Record Internal Deworming successfully imported.
+Record Fecal Test successfully imported.
+Record H3N8 successfully imported.
+Record Nasal Bordetella successfully imported.
+Error: Invalid data.
+Record Bordetella successfully imported.
+Record Lepto 4 successfully imported.
+Record Injectable Bordetella successfully imported.
+Error: Invalid data.
+Error: Invalid data.
+Record H3N2 successfully imported.
+Record Canine Rabbies Vaccine successfully imported.
+Record Canine Heartworm Test successfully imported.
+Error: Invalid data.
+Record Lyme Test successfully imported.
+Record PureVax Rabies successfully imported.

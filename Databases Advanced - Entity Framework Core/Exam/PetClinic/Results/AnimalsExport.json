@@ -1,0 +1,16 @@
+[
+  {
+    "OwnerName": "Ivan Ivanov",
+    "AnimalName": "Jessy",
+    "Age": 3,
+    "SerialNumber": "jessiii355",
+    "RegisteredOn": "05-11-2015"
+  },
+  {
+    "OwnerName": "Ivan Ivanov",
+    "AnimalName": "Lucy",
+    "Age": 6,
+    "SerialNumber": "acattee321",
+    "RegisteredOn": "10-06-2015"
+  }
+]

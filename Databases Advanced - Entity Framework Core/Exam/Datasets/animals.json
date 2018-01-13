@@ -1,0 +1,233 @@
+[
+  {
+    "Name":"Bella",
+    "Type":"cat",
+    "Age": 2,
+    "Passport": {
+      "SerialNumber": "etyhGgH678",
+      "OwnerName": "Sheldon Cooper",
+      "OwnerPhoneNumber": "0897556446",
+      "RegistrationDate": "12-03-2014"
+    }
+  },
+  {
+    "Name":"Charlie",
+    "Type":"cat",
+    "Age": 3,
+    "Passport": {
+      "SerialNumber": "anothev650",
+      "OwnerName": "Magda Bjork",
+      "OwnerPhoneNumber": "+35989776512",
+      "RegistrationDate": "15-04-2015"
+    }
+  },
+  {
+    "Name":"Chester",
+    "Type":"dog",
+    "Age": 11,
+    "Passport": {
+      "SerialNumber": "adoggoo451",
+      "OwnerName": "Adriana Lima",
+      "OwnerPhoneNumber": "35989776512",
+      "RegistrationDate": "31-12-2016"
+    }
+  },
+  {
+    "Name":"Lucy",
+    "Type":"cat",
+    "Age": 6,
+    "Passport": {
+      "SerialNumber": "acattee321",
+      "OwnerName": "Ivan Ivanov",
+      "OwnerPhoneNumber": "0887446123",
+      "RegistrationDate": "10-06-2015"
+    }
+  },
+  {
+  "Name":"Chloe",
+  "Type":"dog",
+  "Age": 1,
+  "Passport": {
+    "SerialNumber": "ragjkll456",
+    "OwnerName": "Sheldon Cooper",
+    "OwnerPhoneNumber": "0897556446",
+    "RegistrationDate": "11-08-2015"
+    }
+  },
+  {
+    "Name":"Peanut",
+    "Type":"dog",
+    "Age": 7,
+    "Passport": {
+      "SerialNumber": "5klasdfk32",
+      "OwnerName": "Ivan Petrov",
+      "OwnerPhoneNumber": "0897556676",
+      "RegistrationDate": "10-06-2015"
+    }
+  },
+  {
+    "Name":"Maggie",
+    "Type":"dog",
+    "Age": 4,
+    "Passport": {
+      "SerialNumber": "clasdfk325",
+      "OwnerName": "Ivan Petrov",
+      "OwnerPhoneNumber": "0897556676",
+      "RegistrationDate": "30-07-2015"
+    }
+  },
+  {
+    "Name":"Shadow",
+    "Type":"dog",
+    "Age": 8,
+    "Passport": {
+      "SerialNumber": "clasdfk325",
+      "OwnerName": "Ivan Kazmukov",
+      "OwnerPhoneNumber": "0899556676",
+      "RegistrationDate": "30-11-2015"
+    }
+  },
+  {
+    "Name":"Shadow",
+    "Type":"dog",
+    "Age": 8,
+    "Passport": {
+      "SerialNumber": "kljsdfk325",
+      "OwnerName": "Simona Hristova",
+      "OwnerPhoneNumber": "0899446676",
+      "RegistrationDate": "30-11-2015"
+    }
+  },
+  {
+    "Name":"Abbie",
+    "Type":"cat",
+    "Age": 13,
+    "Passport": {
+      "SerialNumber": "kljsdfk35",
+      "OwnerName": "Jason Born",
+      "OwnerPhoneNumber": "0899647676",
+      "RegistrationDate": "06-11-2015"
+    }
+  },
+  {
+    "Name":"Alfie",
+    "Type":"cat",
+    "Age": 10,
+    "Passport": {
+      "SerialNumber": "kljsdfk355",
+      "OwnerName": "Jason Borne",
+      "OwnerPhoneNumber": "0889647676",
+      "RegistrationDate": "05-11-2015"
+    }
+  },
+  {
+    "Name":"Arrow",
+    "Type":"dog",
+    "Age": 10,
+    "Passport": {
+      "SerialNumber": "arrowww355",
+      "OwnerName": "Leonardo Dicaprio",
+      "OwnerPhoneNumber": "0889650676",
+      "RegistrationDate": "09-11-2015"
+    }
+  },
+  {
+    "Name":"Barker",
+    "Type":"dog",
+    "Age": 5,
+    "Passport": {
+      "SerialNumber": "barkeer355",
+      "OwnerName": "Tonny Dobrev",
+      "OwnerPhoneNumber": "0899450766",
+      "RegistrationDate": "10-11-2015"
+    }
+  },
+  {
+    "Name":"Jessy",
+    "Type":"cat",
+    "Age": 2,
+    "Passport": {
+      "SerialNumber": "jessy11355",
+      "OwnerName": "Jason Borne",
+      "OwnerPhoneNumber": "0889647676",
+      "RegistrationDate": "05-11-2015"
+    }
+  },
+  {
+    "Name":"Jessy",
+    "Type":"dog",
+    "Age": 3,
+    "Passport": {
+      "SerialNumber": "jessiii355",
+      "OwnerName": "Ivan Ivanov",
+      "OwnerPhoneNumber": "0887446123",
+      "RegistrationDate": "05-11-2015"
+    }
+  },
+  {
+    "Name":"Bernie",
+    "Type":"dog",
+    "Age": 3,
+    "Passport": {
+      "SerialNumber": "bernied355",
+      "OwnerName": "Annie Ivanov",
+      "OwnerPhoneNumber": "0889446123",
+      "RegistrationDate": "05-11-2015"
+    }
+  },
+  {
+    "Name":"Binky",
+    "Type":"dog",
+    "Age": 3,
+    "Passport": {
+      "SerialNumber": "binkBen355",
+      "OwnerName": "Annie Ivanov",
+      "OwnerPhoneNumber": "0883217446",
+      "RegistrationDate": "05-11-2015"
+    }
+  },
+  {
+    "Name":"Binky",
+    "Type":"dog",
+    "Age": 3,
+    "Passport": {
+      "SerialNumber": "binkdog355",
+      "OwnerName": "Thomas Berger",
+      "OwnerPhoneNumber": "0887226234",
+      "RegistrationDate": "19-12-2015"
+    }
+  },
+  {
+    "Name":"Charlie",
+    "Type":"dog",
+    "Age": 3,
+    "Passport": {
+      "SerialNumber": "bergerr355",
+      "OwnerName": "Thomas Berger",
+      "OwnerPhoneNumber": "0887226234",
+      "RegistrationDate": "19-12-2015"
+    }
+  },
+  {
+    "Name":"Cleo",
+    "Type":"dog",
+    "Age": 7,
+    "Passport": {
+      "SerialNumber": "cleodog355",
+      "OwnerName": "Renny Gabriel",
+      "OwnerPhoneNumber": "+359897765122",
+      "RegistrationDate": "22-06-2015"
+    }
+  },
+  {
+    "Name":"Leo",
+    "Type":"dog",
+    "Age": 9,
+    "Passport": {
+      "SerialNumber": "jghjyuu355",
+      "OwnerName": "Renny Gabriel",
+      "OwnerPhoneNumber": "+359897765122",
+      "RegistrationDate": "22-06-2015"
+    }
+  }
+]
