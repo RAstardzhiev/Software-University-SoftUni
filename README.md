@@ -20,6 +20,76 @@ Radoslav Astardzhiev
 </tbody>
 </table>
 <!-- Head End -->
+<!-- Entity Framework Core - Databases Advanced - Start --><hr />
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">Entity Framework Core - октомври 2017: <br /> 
+24.10.2017 - 10.12.2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 15/12/2017</th><th align="center width=">
+<p><a title="Entity Framework Core" href="https://softuni.bg/certificates/details/49620/47c8e341" target="_blank">Certificate</a></p>
+</th></tr>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="C# OOP Intro Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/OOP" target="_blank">C# OOP Intro Exercise</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Fetching Resultsets with ADO.NET & DB Apps Introduction" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/DB%20Apps%20Introduction" target="_blank">Fetching Resultsets with <strong>ADO.NET</strong> & DB Apps Introduction</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Introduction to Entity Framework" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Introduction%20to%20Entity%20Framework" target="_blank">Introduction to <strong>Entity Framework</strong></a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="EF Core - Code-First" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Code%20First" target="_blank">EF Core - Code-First</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Entity Relations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Entity%20Relations" target="_blank">Entity Relations</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Advanced Relations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Advanced%20Relations" target="_blank">Advanced Relations</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Advanced Querying" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Advanced%20Querying" target="_blank">Advanced Querying</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Best Practices and Architecture" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Best%20Practices%20and%20Architecture" target="_blank">Best Practices and Architecture</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Auto Mapping Objects" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Auto%20Mapping%20Objects" target="_blank">Auto Mapping Objects</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="External Format Processing" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/External%20Format%20Processing" target="_blank">External Format Processing</a></p>
+</td>
+</tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
+<tr>
+<td width="50%">
+<p><a title="Fast Food" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Fast%20Food" target="_blank">Fast Food</a></p>
+</td>
+<td colspan="2" width="50%">
+<p><a title="Instagraph" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Instagraph" target="_blank">Instagraph</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Stations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Stations" target="_blank">Stations</a></p>
+</td>
+<td colspan="2" width="50%"></td></tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam</p></td></tr>
+<tr><td colspan="3" align="center" width="100%">
+<p><a title="Pet Clinic" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam" target="_blank">Pet Clinic</a></p>
+</td></tr>
+</tbody>
+</table>
+<hr />
+<!-- Entity Framework Core - Databases Advanced - End -->
 <!-- Databases Basics - MS SQL Server Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
