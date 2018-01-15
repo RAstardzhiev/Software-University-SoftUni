@@ -92,7 +92,8 @@ Radoslav Astardzhiev
 <!-- Entity Framework 6 - Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th colspan="3" align="left" width="50%">Entity Framework 6</th></tr>
+<!-- Course Body -->
+<tr><th colspan="3" align="left" width="100%">Entity Framework 6</th></tr>
 <!-- Course Body -->
 <tr>
 <td width="50%">
