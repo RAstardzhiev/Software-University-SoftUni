@@ -1,19 +1,18 @@
 function printChessBoard(num) {
     let board = '<div class="chessboard">\n';
 
-    for(i = 0; i < num; i++) {
-        board = board.concat('\t<div>\n');
+    for(let i = 0; i < num; i++) {
+        board += '\t<div>\n';
 
-        for(j = 0; j < num; j++) {
+        for(let j = 0; j < num; j++) {
             var color = (i + j) % 2 == 0 ? 'black' : 'white';
-
-            board = board.concat(`\t\t<span class="${color}"></span>\n`);
+            board += `\t\t<span class="${color}"></span>\n`;
         }
 
-        board = board.concat('\t</div>\n');
+        board += '\t</div>\n';
     }
 
-    board = board.concat('</div>');
+    board += '</div>';
 
     console.log(board);
 }
