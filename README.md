@@ -58,23 +58,23 @@ Radoslav Astardzhiev
 <p>&nbsp;&nbsp;&nbsp;- <a title="Entity Relations EF 6" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/EF%20Relations" target="_blank">Entity Framework 6</a></p>
 </td>
 <td colspan="2" width="50%">
-<p><a title="Advanced Relations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Advanced%20Relations" target="_blank">Advanced Relations</a></p>
+<p>EF Core - <a title="Advanced Relations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Advanced%20Relations" target="_blank">Advanced Relations</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%">
-<p><a title="Advanced Querying" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Advanced%20Querying" target="_blank">Advanced Querying</a></p>
+<p>EF Core - <a title="Advanced Querying" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Advanced%20Querying" target="_blank">Advanced Querying</a></p>
 </td>
 <td colspan="2" width="50%">
-<p><a title="Best Practices and Architecture" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Best%20Practices%20and%20Architecture" target="_blank">Best Practices and Architecture</a></p>
+<p>EF Core - <a title="Best Practices and Architecture" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Best%20Practices%20and%20Architecture" target="_blank">Best Practices and Architecture</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%">
-<p><a title="Auto Mapping Objects" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Auto%20Mapping%20Objects" target="_blank">Auto Mapping Objects</a></p>
+<p>EF Core - <a title="Auto Mapping Objects" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Auto%20Mapping%20Objects" target="_blank">Auto Mapping Objects</a></p>
 </td>
 <td colspan="2" width="50%">
-<p><a title="External Format Processing" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/External%20Format%20Processing" target="_blank">External Format Processing</a></p>
+<p>EF Core - <a title="External Format Processing" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/External%20Format%20Processing" target="_blank">External Format Processing</a></p>
 </td>
 </tr>
 <tr><td colspan="3" align="center" width="100%"><p>Exam</p></td></tr>
