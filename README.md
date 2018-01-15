@@ -68,23 +68,23 @@ Radoslav Astardzhiev
 <p><a title="External Format Processing" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/External%20Format%20Processing" target="_blank">External Format Processing</a></p>
 </td>
 </tr>
-<tr><td colspan="3" align="center" width="100%"><p>Exam Preparation</p></td></tr>
+<tr><td colspan="3" align="center" width="100%"><p>Exam</p></td></tr>
 <tr>
 <td width="50%">
-<p><a title="Fast Food" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Fast%20Food" target="_blank">Fast Food</a></p>
+<p>Preparation: <a title="Fast Food" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Fast%20Food" target="_blank">Fast Food</a></p>
 </td>
 <td colspan="2" width="50%">
-<p><a title="Instagraph" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Instagraph" target="_blank">Instagraph</a></p>
+<p>Preparation: <a title="Instagraph" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Instagraph" target="_blank">Instagraph</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%">
-<p><a title="Stations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Stations" target="_blank">Stations</a></p>
+<p>Preparation: <a title="Stations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Stations" target="_blank">Stations</a></p>
 </td>
-<td colspan="2" width="50%"></td></tr>
-<tr><td colspan="3" align="center" width="100%">
+<td colspan="2" width="50%">
 <p>Exam: <a title="Pet Clinic" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam" target="_blank">Pet Clinic</a></p>
-</td></tr>
+</td>
+</tr>
 </tbody>
 </table>
 <hr />
