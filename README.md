@@ -82,9 +82,8 @@ Radoslav Astardzhiev
 <p><a title="Stations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam%20Preparation/Stations" target="_blank">Stations</a></p>
 </td>
 <td colspan="2" width="50%"></td></tr>
-<tr><td colspan="3" align="center" width="100%"><p>Exam</p></td></tr>
 <tr><td colspan="3" align="center" width="100%">
-<p><a title="Pet Clinic" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam" target="_blank">Pet Clinic</a></p>
+<p>Exam: <a title="Pet Clinic" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Exam" target="_blank">Pet Clinic</a></p>
 </td></tr>
 </tbody>
 </table>
