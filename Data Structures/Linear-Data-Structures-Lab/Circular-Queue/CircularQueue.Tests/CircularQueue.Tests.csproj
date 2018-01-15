@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7B22781-8445-43F4-B52F-8F550BBC5D0E}</ProjectGuid>
+    <ProjectGuid>{D852AD35-E7FC-499B-A913-11479BB76674}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tests.LinkedList</RootNamespace>
-    <AssemblyName>Tests.LinkedList</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>CircularQueue.Tests</RootNamespace>
+    <AssemblyName>CircularQueue.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -50,13 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="LinkedListTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestsCircularQueue.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LinkedList\LinkedList.csproj">
-      <Project>{67c2a7e9-c3fe-46d9-8a8b-c20dd6542d76}</Project>
-      <Name>LinkedList</Name>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CircularQueue\CircularQueue.csproj">
+      <Project>{2cb50f92-35af-47e5-ba6f-02446aacd536}</Project>
+      <Name>CircularQueue</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
