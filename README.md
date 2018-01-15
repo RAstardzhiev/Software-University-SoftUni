@@ -89,6 +89,35 @@ Radoslav Astardzhiev
 </table>
 <hr />
 <!-- Entity Framework Core - Databases Advanced - End -->
+<!-- Entity Framework 6 - Start --><hr />
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th colspan="2" align="left" width="50%">Entity Framework 6</th></tr>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="DB Apps Introduction" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/DB%20Apps%20Introduction" target="_blank">DB Apps Introduction</a></p>
+</td>
+<td width="50%">
+<p><a title="Introduction to Entity Framework" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/Introduction%20to%20Entity%20Framework" target="_blank">Introduction to <strong>Entity Framework 6</strong></a></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p><a title="Entity Framework 6 Code First" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/Entity%20Framework%20Code%20First" target="_blank">Entity Framework 6 Code First</a></p>
+</td>
+<td width="50%">
+<p><a title="EF 6 Code First (Advanced)" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/EF%20Code%20First%20(Advanced)" target="_blank">EF 6 Code First (Advanced)</strong></a></p>
+</td>
+</tr>
+<tr>
+<td colspan="2" width="50%">
+<p><a title="EF 6 Relations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/EF%20Relations" target="_blank">EF 6 Relations</a></p>
+</td>
+</tbody>
+</table>
+<hr />
+<!-- Entity Framework 6 - End -->
 <!-- Databases Basics - MS SQL Server Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
