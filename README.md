@@ -40,15 +40,21 @@ Radoslav Astardzhiev
 </tr>
 <tr>
 <td width="50%">
-<p><a title="Introduction to Entity Framework" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Introduction%20to%20Entity%20Framework" target="_blank">Introduction to <strong>Entity Framework</strong></a></p>
+<p><a title="Introduction to Entity Framework" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Introduction%20to%20Entity%20Framework" target="_blank">Introduction to <strong>Entity Framework Core</strong></a></p>
+<p><a title="Introduction to Entity Framework" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/Introduction%20to%20Entity%20Framework" target="_blank">Introduction to <strong>Entity Framework 6</strong></a></p>
 </td>
 <td colspan="2" width="50%">
-<p><a title="EF Core - Code-First" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Code%20First" target="_blank">EF Core - Code-First</a></p>
+<p>Code First:</p>
+<p>&nbsp;&nbsp;&nbsp;- <a title="Entity Framework Core - Code First" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Code%20First" target="_blank">Entity Framework Core - Code First</a></p>
+<p>&nbsp;&nbsp;&nbsp;- <a title="Entity Framework 6 - Code First" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/Entity%20Framework%20Code%20First" target="_blank">Entity Framework 6 - Code First</a></p>
+<p>&nbsp;&nbsp;&nbsp;- <a title="Entity Framework 6 - Code First Advanced" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/EF%20Code%20First%20(Advanced)" target="_blank">Entity Framework 6 - Code First Advanced</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%">
-<p><a title="Entity Relations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Entity%20Relations" target="_blank">Entity Relations</a></p>
+<p>Entity Relations:</p>
+<p>&nbsp;&nbsp;&nbsp;- <a title="Entity Relations EF Core" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/Entity%20Relations" target="_blank">Entity Framework Core</a></p>
+<p>&nbsp;&nbsp;&nbsp;- <a title="Entity Relations EF 6" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/EF%20Relations" target="_blank">Entity Framework 6</a></p>
 </td>
 <td colspan="2" width="50%">
 <p><a title="Advanced Relations" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/EF%20Core%20-%20Advanced%20Relations" target="_blank">Advanced Relations</a></p>
