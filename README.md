@@ -33,8 +33,12 @@ Radoslav Astardzhiev
 <p><a title="C# OOP Intro Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/OOP" target="_blank">C# OOP Intro Exercise</a></p>
 </td>
 <td colspan="2" width="50%">
+<ul>test
+<li></li>
+<li></li>
+</ul>
 <p>Fetching Resultsets with <strong>ADO.NET</strong> & DB Apps Introduction:</p>
-<p><a title="Fetching Resultsets with ADO.NET & DB Apps Introduction" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/DB%20Apps%20Introduction" target="_blank">Entity Framework Core</a></p>
+<p> - <a title="Fetching Resultsets with ADO.NET & DB Apps Introduction" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core/DB%20Apps%20Introduction" target="_blank">Entity Framework Core</a></p>
 <p> - <a title="DB Apps Introduction" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/Databases%20Advanced%20-%20Entity%20Framework%206/DB%20Apps%20Introduction" target="_blank">Entity Framework 6</a></p>
 </td>
 </tr>
