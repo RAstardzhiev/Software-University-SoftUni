@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06. Extract Parenthesis</title>
+</head>
+
+<body>
+    document.body.innerHTML = `
+    <p id="content">
+        This is some text. (this must be extracted). Some more text. (some more extract)
+    </p>`; let match = result('content'); expect(match).to.contains('this must be extracted', "Did not extract needed text.");
+    expect(match).to.contains('some more extract', "Did not extract needed text.");
+    <h1>
+        Extracted:
+        <u id="extractParenthesizedContent"></u>
+    </h1>
+    <script>
+        function extractParenthesizedContent(id) {
+            let text = document.getElementById(id).textContent;
+            let pattern = /\(([\s\S]+?)\)/gm;
+
+            let extractedContent = [];
+            let match = pattern.exec(text);
+            while (match) {
+                extractedContent.push(match[1]);
+                match = pattern.exec(text);
+            }
+
+            return extractedContent.join('; ');
+        }
+
+        let resultElement = document.getElementById('extractParenthesizedContent');
+        resultElement.textContent = extractParenthesizedContent('content');
+    </script>
+</body>
+
+</html>

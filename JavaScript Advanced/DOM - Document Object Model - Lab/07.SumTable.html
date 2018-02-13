@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07. Sum Table</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th>Product</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>Beer</td>
+                <td>2.88</td>
+            </tr>
+            <tr>
+                <td>Fries</td>
+                <td>2.15</td>
+            </tr>
+            <tr>
+                <td>Burger</td>
+                <td>4.59</td>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td id="sum"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="sum()">Sum</button>
+    <script>
+        function sum() {
+            // Make sure the result is not included in calculation
+            let resultElement = document.getElementById('sum');
+            resultElement.textContent = '';
+
+            // Find the correct table rows
+            let table = document.getElementsByTagName('table')[0];
+            let children = table.children;
+            while (children[0].localName !== 'tr') {
+                children = children[0].children;
+            }
+            
+            // Sum the last <td> content of each <tr>
+            let sum = 0;
+            for (let i = 1; i < children.length; i++) {
+                let valueToSum = children[i].lastElementChild.innerHTML;
+
+                if (!isNaN(valueToSum) && isFinite(valueToSum)) {
+                    sum += Number(valueToSum);
+                }
+            }
+
+            // Assign the result to the right place
+            resultElement.textContent = sum;
+        }
+    </script>
+</body>
+
+</html>

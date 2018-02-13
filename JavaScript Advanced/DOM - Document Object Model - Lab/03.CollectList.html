@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03. Collect List</title>
+</head>
+
+<body>
+    <ul id="fake">
+        <li>first fake</li>
+        <li>second fake</li>
+        <li>third fake</li>
+    </ul>
+    <ul id="items">
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ul>
+    <textarea id="result"></textarea>
+    <br>
+    <button onclick="extractText()">Extract Text</button>
+    <script>
+        function extractText() {
+            let lis = document.querySelectorAll('#items li');
+            let result = document.getElementById('result');
+            result.value = '';
+
+            for (let i = 0; i < lis.length; i++) {
+                result.value += lis[i].textContent + '\n';
+            }
+        }
+    </script>
+</body>
+
+</html>
