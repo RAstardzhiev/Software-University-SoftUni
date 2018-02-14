@@ -106,6 +106,7 @@ Practical Teamwork - ASP.NET Core MVC
 <td colspan="3">
 <p><a title="Personal Ads for Cars and Parts" href="https://github.com/kvadrat4o/SoftUni-Team-project--Personal-Ads-for-Cars-and-Parts" target="_blank">Personal Ads for Cars and Parts</a></p>
 </td>
+</tr>
 </tbody>
 </table>
 <hr />
