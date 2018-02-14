@@ -96,14 +96,14 @@ Radoslav Astardzhiev
 <!-- Practical Teamwork - ASP.NET Core MVC Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">
+<tr><th colspan="2" align="center" width="50%">
 Practical Teamwork - ASP.NET Core MVC
 </th><th align="center width=">
 <p><a title="Practical Teamwork - ASP.NET Core MVC" href="https://softuni.bg/certificates/details/51255/f697248a" target="_blank">Certificate</a></p>
 </th></tr>
 <!-- Course Body -->
 <tr>
-<td colspan="2">
+<td colspan="3">
 <p><a title="Personal Ads for Cars and Parts" href="https://github.com/kvadrat4o/SoftUni-Team-project--Personal-Ads-for-Cars-and-Parts" target="_blank">Personal Ads for Cars and Parts</a></p>
 </td>
 </tbody>
