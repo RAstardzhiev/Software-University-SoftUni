@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01. List of Items</title>
+</head>
+
+<body>
+    <h1>List of Items</h1>
+    <ul id="items">
+        <li>First</li>
+        <li>Second</li>
+    </ul>
+    <input type="text" id="newItemText" placeholder="New List Item" />
+    <input type="button" value="Add" onclick="addItem()">
+    <script>
+        /* Judge: 100/100 */
+        function addItemForJudge() {
+            let inputElement = document.getElementById('newItemText');
+            let content = inputElement.value;
+
+            let item = document.createElement('li');
+            item.textContent = content;
+            let unorderedList = document.getElementById('items').appendChild(item);
+        }
+
+        /* Better Way -> Judge: 0/100 */
+        function addItem() {
+            let inputElement = document.getElementById('newItemText');
+            let content = inputElement.value;
+            if (content.length === 0) {
+                return;
+            }
+
+            let item = document.createElement('li');
+            item.textContent = content;
+            let unorderedList = document.getElementById('items');
+            unorderedList.appendChild(item);
+            inputElement.value = '';
+        }
+    </script>
+
+</body>
+
+</html>

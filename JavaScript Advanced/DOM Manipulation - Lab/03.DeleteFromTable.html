@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03. Delete from Table</title>
+</head>
+
+<body>
+    <table border="1" id="customers">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>eve@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Nick</td>
+            <td>nick@yahooo.com</td>
+        </tr>
+        <tr>
+            <td>Didi</td>
+            <td>didi@didi.net</td>
+        </tr>
+        <tr>
+            <td>Tedy</td>
+            <td>tedy@tedy.com</td>
+        </tr>
+    </table>
+    Email:
+    <input type="text" name="email" placeholder="Email to delete" />
+    <button onclick="deleteByEmail()">Delete</button>
+    <div id="result" />
+    <script>
+        function deleteByEmail() {
+            let inputElement = document.getElementsByName('email')[0];
+            let emailToDelete = inputElement.value;
+            if (emailToDelete.length === 0) {
+                printResult('Not found.');
+                return;
+            }
+
+            inputElement.value = '';
+
+            // Localize row to delete
+            let customers = document.querySelectorAll('#customers tr');
+            let targetRow = null;
+            for (let i = 0; i < customers.length; i++) {
+                if (customers[i].lastElementChild.textContent === emailToDelete) {
+                    targetRow = customers[i];
+                    break;
+                }
+            }
+
+            // If found -> Remove 
+            if (targetRow !== null) {
+                targetRow.parentElement.removeChild(targetRow);
+                printResult('Deleted');
+            } else {
+                printResult('Not found.');
+            }
+            
+            // Print result message
+            function printResult(result) {
+                let element = document.getElementById('result');
+                element.textContent = result;
+            }
+        }
+    </script>
+</body>
+
+</html>

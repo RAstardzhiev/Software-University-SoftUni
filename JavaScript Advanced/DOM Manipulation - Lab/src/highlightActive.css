@@ -1,0 +1,16 @@
+div {
+    width: 470px;
+}
+
+div div {
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    border: 1px solid #999;
+}
+
+.focused {
+    background: #999999;
+}

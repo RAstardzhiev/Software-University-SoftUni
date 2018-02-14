@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02. Add / Delete</title>
+</head>
+
+<body>
+    <h1>List of Items</h1>
+    <ul id="items"></ul>
+    <input type="text" id="newText" placeholder="Item content" />
+    <input type="button" value="Add" onclick="addItem()">
+    <script>
+        function addItem() {
+            let inputElement = document.getElementById('newText');
+            let content = inputElement.value;
+            if (content.length === 0) {
+                return;
+            }
+
+            inputElement.value = '';
+
+            let item = document.createElement('li');
+            item.textContent = content + ' ';
+
+            let deleteLink = document.createElement('a');
+            deleteLink.href = '#';
+            deleteLink.textContent = '[Delete]';
+            deleteLink.addEventListener('click', deleteItem);
+
+            item.appendChild(deleteLink);
+            let unorderedList = document.getElementById('items');
+            unorderedList.appendChild(item);
+
+            function deleteItem() {
+                let itemToDelete = this.parentElement;
+                itemToDelete.parentElement.removeChild(itemToDelete);
+            }
+        }
+    </script>
+</body>
+
+</html>
