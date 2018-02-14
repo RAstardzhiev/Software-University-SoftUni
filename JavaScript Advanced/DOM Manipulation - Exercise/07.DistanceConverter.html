@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Distance Converter</title>
+    <link rel="stylesheet" href="src/distanceConverter.css" />
+    <script src="src/distanceConverter.js"></script>
+</head>
+
+<body onload="attachEventsListeners()">
+    <h1>Distance Converter</h1>
+    <div>
+        <label for="inputDistance">From:</label>
+        <input type="text" id="inputDistance">
+        <select id="inputUnits">
+            <option value="km">Kilometers</option>
+            <option value="m">Meters</option>
+            <option value="cm">Centimeters</option>
+            <option value="mm">Millimeters</option>
+            <option value="mi">Miles</option>
+            <option value="yrd">Yards</option>
+            <option value="ft">Feet</option>
+            <option value="in">Inches</option>
+        </select>
+        <input type="button" id="convert" value="Convert">
+    </div>
+    <div>
+        <label for="outputDistance">To:</label>
+        <input type="text" id="outputDistance" disabled="disabled">
+        <select id="outputUnits">
+            <option value="km">Kilometers</option>
+            <option value="m">Meters</option>
+            <option value="cm">Centimeters</option>
+            <option value="mm">Millimeters</option>
+            <option value="mi">Miles</option>
+            <option value="yrd">Yards</option>
+            <option value="ft">Feet</option>
+            <option value="in">Inches</option>
+        </select>
+    </div>
+</body>
+
+</html>

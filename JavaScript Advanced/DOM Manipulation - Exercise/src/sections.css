@@ -1,0 +1,17 @@
+#content {
+    width: 1000px;
+}
+
+#content div {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 2em;
+    background: #5555ff;
+    text-align: center;
+}
+
+#content div p {
+    color: white;
+    margin: 6em 3em 6em 3em;
+}

@@ -1,0 +1,26 @@
+#accordion {
+      border: 1px solid black;
+      display: inline-block;
+      width: 400px;
+    }
+
+    #accordion p {
+      margin: 1em;
+    }
+
+    .button {
+      float: right;
+      background: #5555ff;
+      padding: 0.1em 1em 0.1em 1em;
+      color: white;
+      cursor: pointer;
+    }
+
+    #extra {
+      display: none;
+    }
+
+    .head {
+      background: #ccccff;
+      padding: 1em;
+    }

@@ -1,0 +1,33 @@
+body { 
+    width: 600px; text-align: center; 
+}
+
+.header {
+  background-color: #5555ff;
+  color: white;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 0.5em;
+}
+
+#container {
+  position: relative;
+}
+
+.post {
+  margin: 48px;
+  text-align: left;
+}
+
+#notification {
+  float: right;
+  background: #119911;
+  color: #ffffff;
+  padding: 0.5em 2em 0.5em 2em;
+  margin: 1em;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
