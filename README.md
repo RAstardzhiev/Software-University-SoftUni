@@ -25,7 +25,7 @@ Radoslav Astardzhiev
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">JavaScript Fundamentals - January 2018: <br /> 
@@ -135,7 +135,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Entity Framework Core - октомври 2017: <br /> 
@@ -229,7 +229,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">MS SQL Server - September 2017: <br /> 
@@ -308,7 +308,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# OOP Advanced - July 2017: <br /> 
@@ -408,7 +408,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# OOP Basics - June 2017: <br /> 
@@ -475,7 +475,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# Advanced - May 2017: <br /> 23.05.2017 - 25.06..2017</th><th width="40%">Grade: <br /> Issue Date:</th><th>
@@ -582,7 +582,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Software Technologies - February 2017: <br /> 27.02.2017 - 29.04..2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 06/05/2017</th><th>
@@ -658,7 +658,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Programming Fundamentals - януари 2017: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: <br /> Issue Date:</th><th>
@@ -772,7 +772,7 @@ Practical Teamwork - ASP.NET Core MVC
 <!-- Summary Begin -->
 <details>
 <summary>
-<small> Click me for Details</small>
+<small><small> Click me for Details</small></small>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Programming Basics - September 2016: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 22/11/2016</th><th>
