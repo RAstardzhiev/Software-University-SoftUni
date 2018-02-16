@@ -586,7 +586,7 @@ Practical Teamwork - WinForms (Windows Forms) based Shooter Game: <br />
 <!-- Course Body -->
 <tr>
 <td width="50%">
-<p><a title="WinForms (Windows Forms) based Shooter Game" href="https://github.com/krasiymihajlov/CSharp_Game_Shooters" target="_blank">WinForms (Windows Forms) based Shooter Game</a></p>
+<p><a title="WinForms (Windows Forms) based Shooter Game" href="https://github.com/krasiymihajlov/CSharp_Game_Shooter" target="_blank">WinForms (Windows Forms) based Shooter Game</a></p>
 </td>
 <td colspan="2" width="50%"></td>
 </tr>
