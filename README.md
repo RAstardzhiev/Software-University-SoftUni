@@ -222,7 +222,21 @@ Practical Teamwork - ASP.NET Core MVC
 </details>
 <hr />
 <!-- Entity Framework Core - Databases Advanced - End -->
-<!-- Databases Basics - MS SQL Server Start --><hr />
+<!-- Databases Basics - MS SQL Server Start -->
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">MS SQL Server - September 2017: <br /> 
+18.09.2017 - 22.10.2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 25/10/2017</th><th>
+<p><a title="MS SQL Server" href="https://softuni.bg/certificates/details/23756/a4fff9f8" target="_blank">Certificate</a></p>
+</th></tr>
+</tbody>
+</table>
+</summary>
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">MS SQL Server - September 2017: <br /> 
@@ -283,9 +297,24 @@ Practical Teamwork - ASP.NET Core MVC
 </tr>
 </tbody>
 </table>
+</details>
 <hr />
 <!-- Databases Basics - MS SQL Server End -->
-<!-- C# OOP Advanced Start --><hr />
+<!-- C# OOP Advanced Start -->
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">C# OOP Advanced - July 2017: <br /> 
+18.07.2017 - 20.08.2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 21/09/2017</th><th>
+<p><a title="C# OOP Advanced" href="https://softuni.bg/certificates/details/23427/a724189a" target="_blank">Certificate</a></p>
+</th></tr>
+</tbody>
+</table>
+</summary>
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# OOP Advanced - July 2017: <br /> 
@@ -367,9 +396,23 @@ Practical Teamwork - ASP.NET Core MVC
 </tr>
 </tbody>
 </table>
+</details>
 <hr />
 <!-- C# OOP Advanced End -->
-<!-- C# OOP Basics Start --><hr />
+<!-- C# OOP Basics Start -->
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">C# OOP Basics - June 2017: <br /> 
+27.06.2017 - 16.07.2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 22/07/2017</th><th>
+<p><a title="C# OOP Basics" href="https://softuni.bg/certificates/details/21693/000a71a8" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# OOP Basics - June 2017: <br /> 
@@ -419,8 +462,22 @@ Practical Teamwork - ASP.NET Core MVC
 </tr>
 </tbody>
 </table>
-<hr /><!-- C# OOP Basics End -->
-<!-- C# Advanced Start --><hr />
+</details>
+<hr />
+<!-- C# OOP Basics End -->
+<!-- C# Advanced Start -->
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">C# Advanced - May 2017: <br /> 23.05.2017 - 25.06..2017</th><th width="40%">Grade: <br /> Issue Date:</th><th>
+<p><a title="C# Advanced" href="https://softuni.bg/certificates/details/21532/d5366984" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">C# Advanced - May 2017: <br /> 23.05.2017 - 25.06..2017</th><th width="40%">Grade: <br /> Issue Date:</th><th>
@@ -511,9 +568,22 @@ Practical Teamwork - ASP.NET Core MVC
 </tr>
 </tbody>
 </table>
+</details>
 <hr />
 <!-- C# Advanced End -->
-<!-- Software Technologies Start --><hr />
+<!-- Software Technologies Start -->
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">Software Technologies - February 2017: <br /> 27.02.2017 - 29.04..2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 06/05/2017</th><th>
+<p><a title="Software Technologies" href="https://softuni.bg/certificates/details/19161/62f0730a" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Software Technologies - February 2017: <br /> 27.02.2017 - 29.04..2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 06/05/2017</th><th>
@@ -573,9 +643,22 @@ Practical Teamwork - ASP.NET Core MVC
 </tr>
 </tbody>
 </table>
+</details>
 <hr />
 <!-- Software Technologies End -->
-<!-- Programming Fundamentals Start --><hr />
+<!-- Programming Fundamentals Start -->
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">Programming Fundamentals - януари 2017: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: <br /> Issue Date:</th><th>
+<p><a title="Programming Fundamentals" href="https://softuni.bg/certificates/details/17462/63d261c4" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Programming Fundamentals - януари 2017: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: <br /> Issue Date:</th><th>
@@ -673,9 +756,22 @@ Practical Teamwork - ASP.NET Core MVC
 </tr>
 </tbody>
 </table>
+</details>
 <hr />
 <!-- Programming Fundamentals End -->
-<!-- Programming Basics Start --><hr />
+<!-- Programming Basics Start -->
+<hr />
+<!-- Summary Begin -->
+<details>
+<summary> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">Programming Basics - September 2016: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 22/11/2016</th><th>
+<p><a title="Programming Basics" href="https://softuni.bg/certificates/details/15477/8823af04" target="_blank">Certificate</a></p>
+</th></tr>
+</table>
+</summary>
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">Programming Basics - September 2016: <br /> 17.09.2016 - 20.11..2016</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 22/11/2016</th><th>
@@ -714,4 +810,6 @@ Practical Teamwork - ASP.NET Core MVC
 </tr>
 </tbody>
 </table>
-<hr /><!-- Programming Basics End -->
+</details>
+<hr />
+<!-- Programming Basics End -->
