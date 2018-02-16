@@ -112,7 +112,8 @@ Radoslav Astardzhiev
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">
-Practical Teamwork - ASP.NET Core MVC
+Practical Teamwork - ASP.NET Core MVC: <br /> 
+19.12.2017 - 11.01.2018
 </th>
 <th width="40%"></th>
 <th>
@@ -571,6 +572,28 @@ Practical Teamwork - ASP.NET Core MVC
 </details>
 <hr />
 <!-- C# Advanced End -->
+<!-- Practical Teamwork - WinForms (Windows Forms) based Shooter Game - Start -->
+<hr />
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+<tr><th align="center" width="50%">
+Practical Teamwork - WinForms (Windows Forms) based Shooter Game: <br /> 
+07.05.2017 - 26.05.2017
+</th>
+<th width="40%"></th>
+<th>
+</th></tr>
+<!-- Course Body -->
+<tr>
+<td width="50%">
+<p><a title="WinForms (Windows Forms) based Shooter Game" href="https://github.com/krasiymihajlov/CSharp_Game_Shooters" target="_blank">WinForms (Windows Forms) based Shooter Game</a></p>
+</td>
+<td colspan="2" width="50%"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<!-- Practical Teamwork - WinForms (Windows Forms) based Shooter Game - Start -->
 <!-- Software Technologies Start -->
 <hr />
 <!-- Summary Begin -->
@@ -578,7 +601,7 @@ Practical Teamwork - ASP.NET Core MVC
 <summary> Click me for Details
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">Software Technologies - February 2017: <br /> 27.02.2017 - 29.04..2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 06/05/2017</th><th>
+<tr><th align="center" width="50%">Software Technologies - February 2017: <br /> 27.02.2017 - 29.04.2017</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 06/05/2017</th><th>
 <p><a title="Software Technologies" href="https://softuni.bg/certificates/details/19161/62f0730a" target="_blank">Certificate</a></p>
 </th></tr>
 </table>
