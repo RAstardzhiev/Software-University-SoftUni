@@ -22,10 +22,15 @@ Radoslav Astardzhiev
 <!-- Head End -->
 <!-- JavaScript Fundamentals Start -->
 <hr />
+<script>
+function displayClicked() {
+    console.dir('works')
+}
+</script>
 <!-- Summary Begin -->
-<details>
-<summary> Click me for Details
-<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<details onclick="displayClicked()">
+<summary onclick="displayClicked()"> Click me for Details
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center" onclick="displayClicked()">
 <tbody>
 <tr><th align="center" width="50%">JavaScript Fundamentals - January 2018: <br /> 
 15.01.2018 - 11.02.2018</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 14/02/2018</th><th>
