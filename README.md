@@ -24,7 +24,7 @@ Radoslav Astardzhiev
 <hr />
 <!-- Summary Begin -->
 <details>
-<summary>
+<summary> Click me for Details
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">JavaScript Fundamentals - January 2018: <br /> 
