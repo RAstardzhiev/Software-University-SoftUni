@@ -36,12 +36,17 @@ Radoslav Astardzhiev
 
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
+<tr><th align="center" width="50%">JavaScript Fundamentals - January 2018: <br /> 
+15.01.2018 - 11.02.2018</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 14/02/2018</th><th>
+<p><a title="JS Fundamentals" href="https://softuni.bg/certificates/details/51723/1b876af6" target="_blank">Certificate</a></p>
+</th></tr>
+<!-- Course Body -->
 <tr>
 <td width="50%">
 <p><a title="JavaScript Syntax - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/JavaScript%20Fundamentals/Introduction%20to%20JavaScript" target="_blank">JavaScript Syntax - Lab</a></p>
 <p><a title="Operators and Logic Flow - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/JavaScript%20Fundamentals/Control-Flow%20Logic" target="_blank">Operators and Logic Flow - Lab</a></p>
 </td>
-<td width="50%">
+<td colspan="2" width="50%">
 <p><a title="Syntax, Operators and Logic Flow - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/JavaScript%20Fundamentals/Data%20Types%2C%20Expressions%2C%20Statements" target="_blank">Syntax, Operators and Logic Flow - Exercise</a></p>
 </td>
 </tr>
