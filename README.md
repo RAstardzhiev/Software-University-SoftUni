@@ -41,7 +41,7 @@ Radoslav Astardzhiev
 <p><a title="JavaScript Syntax - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/JavaScript%20Fundamentals/Introduction%20to%20JavaScript" target="_blank">JavaScript Syntax - Lab</a></p>
 <p><a title="Operators and Logic Flow - Lab" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/JavaScript%20Fundamentals/Control-Flow%20Logic" target="_blank">Operators and Logic Flow - Lab</a></p>
 </td>
-<td colspan="2" width="50%">
+<td width="50%">
 <p><a title="Syntax, Operators and Logic Flow - Exercise" href="https://github.com/RAstardzhiev/Software-University-SoftUni/tree/master/JavaScript%20Fundamentals/Data%20Types%2C%20Expressions%2C%20Statements" target="_blank">Syntax, Operators and Logic Flow - Exercise</a></p>
 </td>
 </tr>
