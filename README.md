@@ -20,9 +20,10 @@ Radoslav Astardzhiev
 </tbody>
 </table>
 <!-- Head End -->
-<!-- JavaScript Fundamentals Start --><hr />
+<!-- JavaScript Fundamentals Start -->
+<hr />
+<!-- Summary Begin -->
 <details>
-
 <summary>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
@@ -33,7 +34,7 @@ Radoslav Astardzhiev
 </tbody>
 </table>
 </summary>
-
+<!-- Summary End -->
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
 <tr><th align="center" width="50%">JavaScript Fundamentals - January 2018: <br /> 
@@ -104,8 +105,8 @@ Radoslav Astardzhiev
 </tr>
 </tbody>
 </table>
-<hr />
 </details>
+<hr />
 <!-- JavaScript Fundamentals End -->
 <!-- Practical Teamwork - ASP.NET Core MVC Start --><hr />
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
