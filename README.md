@@ -36,9 +36,11 @@ Radoslav Astardzhiev
 
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-<tr><th align="center" width="50%">JavaScript Fundamentals - January 2018: <br /> 
-15.01.2018 - 11.02.2018</th><th width="40%">Grade: 6.00 (out of 6.00)<br /> Issue Date: 14/02/2018</th><th>
-<p><a title="JS Fundamentals" href="https://softuni.bg/certificates/details/51723/1b876af6" target="_blank">Certificate</a></p>
+<tr><th align="center" width="50%">
+</th><th width="40%">
+
+</th><th>
+
 </th></tr>
 <!-- Course Body -->
 <tr>

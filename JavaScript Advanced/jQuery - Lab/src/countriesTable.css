@@ -1,0 +1,8 @@
+td, th { 
+    background: #DDD; 
+    padding: 5px 10px;
+}
+
+input[type='text'] { 
+    width: 60px 
+}
