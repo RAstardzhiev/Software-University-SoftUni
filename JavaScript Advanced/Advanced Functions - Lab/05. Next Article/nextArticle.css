@@ -1,0 +1,11 @@
+div {
+    width: 600px;
+    text-align: center;
+    font-size: 1.5em
+}
+
+article {
+    border: 2px solid blue;
+    padding: 2em;
+    margin: 1em
+}

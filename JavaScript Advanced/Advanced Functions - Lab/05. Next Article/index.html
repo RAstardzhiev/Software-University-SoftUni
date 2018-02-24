@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Next Article</title>
+    <link rel="stylesheet" href="nextArticle.css">
+    <script src="../../jQuery.js"></script>
+    <script src="nextArticle.js"></script>
+</head>
+
+<body>
+    <div id="content"></div>
+    <div>
+        <button onclick="showNext()">Show Next Article</button>
+    </div>
+    <script>
+        let articles = [
+            "Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs.",
+            "A group of cats is called a clowder.",
+            "Cats have over 20 muscles that control their ears.",
+            "A cat has been mayor of Talkeetna, Alaska, for 15 years. His name is Stubbs.",
+            "The world's largest cat measured 48.5 inches long."
+        ];
+        let showNext = getArticleGenerator(articles);
+    </script>
+</body>
+
+</html>
