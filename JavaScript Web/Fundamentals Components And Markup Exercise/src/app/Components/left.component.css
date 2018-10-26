@@ -1,0 +1,86 @@
+@media only screen and (max-width: 725px) {
+    div.articles {
+        width: 100%;
+    }
+}
+
+.articles {
+    width: 50%;
+}
+
+.article-container {
+    margin: 5px;
+    background-color: lightblue;
+    border: 5px solid lightgray;
+    border-radius: 1em;
+}
+
+.article-container p, 
+.article-container h2 {
+    padding: 5px;
+    margin: 0;
+    border-radius: .75em;
+    text-align: justify;
+}
+
+.details {
+    background-color: lightcyan;
+    border: 2px solid lightgray;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+hr.wrapper {
+    width: 85%;
+    opacity: 0;
+}
+
+.details img {
+    width: 50%;
+    float: right;
+    margin: 5px;
+    border-radius: 15px;
+    border: 3px solid lightgray;
+}
+
+.controls {
+    text-align: right;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: lightcyan;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn:hover {
+    border-color: rgb(190, 190, 190);
+    background-color: rgb(207, 253, 253);
+}
+
+.font-controls > span {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.font-controls input {
+    margin: 10px;
+}
+
+.font-controls a {
+    text-decoration: none;
+    font-size: 24px;
+    color: lightcyan;
+}
+
+.font-controls a:hover {
+    color: rgb(207, 253, 253);  
+}
+

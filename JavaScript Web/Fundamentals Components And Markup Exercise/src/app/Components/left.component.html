@@ -1,0 +1,42 @@
+<div class="articles">
+    <div class="article-container" *ngFor="let item of articles; let i = index">
+        <h2 (click)="showDescriptionPartially(i)">{{ item.title }}</h2>
+        <div *ngIf="item.isDescriptionShown">
+            <div class="font-controls">
+                <span>
+                    <span>Font Size: </span>
+                    <a href="#" (click)="descriptionFontSizeUp()">&#x2B99;</a>
+                    <a href="#" (click)="descriptionFontSizeDown()">&#x2B9B;</a>
+                </span>
+                <span>
+                    <span>Font Color: </span>
+                    <input type="color" 
+                    [(value)]="descriptionColor"     
+                    (change)="fontColorChanged($event)">
+                </span>
+                <span>
+                    <span>Backgroung Color: </span>
+                    <input type="color" 
+                    [(value)]="descriptionBackgroundColor"     
+                    (change)="descriptionBackgroundColorChanged($event)">
+                </span>
+            </div>
+            <div class="details" [ngStyle]="{ 'background-color': descriptionBackgroundColor }">
+                <img [src]="item.imageURL" *ngIf="item.isImageVisible">
+                <p [ngStyle]="{ 
+                    'font-size': currentDescriptionFontSize + 'px', 
+                    'color': descriptionColor
+                }">
+                    {{ item.shortDescription }}
+                </p>
+                <hr class="wrapper">
+            </div>
+        </div>
+        <div class="controls" *ngIf="item.isDescriptionShown">
+            <a href="#" class="btn" *ngIf="item.isReadMoreAllowed" (click)="readMore(item)">Read more ...</a>
+            <a href="#" class="btn" (click)="showHideImage(item)">
+                {{ item.isImageVisible ? hideImage : showImage }}
+            </a>
+        </div>
+    </div>
+</div>
